@@ -10,26 +10,34 @@ const HeroCarousel = () => {
     {
       id: 1,
       image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&h=1080&fit=crop",
-      title: "Study in the USA",
+      title: "Study in the UK",
       subtitle: "Transform Your Future with World-Class Education",
-      description: "Join thousands of students achieving their dreams at top American universities",
-      cta: "Explore USA Programs"
+      description: "Join thousands of students achieving their dreams at top British universities",
+      cta: "Explore UK Programs"
     },
     {
       id: 2,
       image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1920&h=1080&fit=crop",
-      title: "Study in the UK",
-      subtitle: "Experience Excellence in British Education",
-      description: "Discover prestigious universities and rich academic traditions",
-      cta: "Explore UK Programs"
+      title: "Study in Canada",
+      subtitle: "Experience Excellence in Canadian Education",
+      description: "Discover prestigious universities and excellent post-study opportunities",
+      cta: "Explore Canada Programs"
     },
     {
       id: 3,
       image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1920&h=1080&fit=crop",
-      title: "Study in Canada",
-      subtitle: "Quality Education in a Welcoming Environment",
-      description: "Experience world-class education with excellent post-study opportunities",
-      cta: "Explore Canada Programs"
+      title: "Study in the USA",
+      subtitle: "Quality Education in Land of Opportunities",
+      description: "Experience world-class education with unlimited career possibilities",
+      cta: "Explore USA Programs"
+    },
+    {
+      id: 4,
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop",
+      title: "Study in Australia",
+      subtitle: "World-Class Education Down Under",
+      description: "Discover innovative programs in a multicultural environment",
+      cta: "Explore Australia Programs"
     }
   ];
 
@@ -56,24 +64,24 @@ const HeroCarousel = () => {
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="absolute inset-0 bg-black bg-opacity-50" />
+            <div className="absolute inset-0 bg-black bg-opacity-60" />
             <div className="relative z-10 flex items-center justify-center h-full">
               <div className="text-center text-white max-w-4xl px-4">
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
                   {slide.title}
                 </h1>
-                <h2 className="text-2xl md:text-3xl mb-6 text-orange-300 animate-fade-in delay-200">
+                <h2 className="text-2xl md:text-3xl mb-6 text-orange-400 animate-fade-in delay-200">
                   {slide.subtitle}
                 </h2>
                 <p className="text-xl md:text-2xl mb-8 text-gray-200 animate-fade-in delay-400">
                   {slide.description}
                 </p>
                 <div className="space-x-4 animate-fade-in delay-600">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-4 text-lg">
                     {slide.cta}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-slate-800 px-8 py-4 text-lg">
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg">
                     Free Consultation
                   </Button>
                 </div>
@@ -86,13 +94,13 @@ const HeroCarousel = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-3 rounded-full transition-all duration-200"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-3 rounded-full transition-all duration-200"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
