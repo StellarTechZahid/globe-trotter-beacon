@@ -1,31 +1,34 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const scrollToConsultation = () => {
+    const consultationSection = document.getElementById('consultation-form');
+    if (consultationSection) {
+      consultationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-black text-white border-t border-orange-500">
-      {/* Newsletter Section */}
+      {/* CTA Section */}
       <div className="bg-gradient-to-r from-orange-600 to-orange-700 py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-4 text-black">Stay Updated</h3>
+            <h3 className="text-3xl font-bold mb-4 text-black">Ready to Transform Your Future?</h3>
             <p className="text-xl text-black mb-8 opacity-90">
-              Get the latest updates on study abroad opportunities, scholarships, and application deadlines
+              Get personalized guidance from our expert counselors and take the first step towards your dream education abroad.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
-              <Input 
-                placeholder="Enter your email address" 
-                className="flex-1 h-12 bg-white text-black border-none"
-              />
-              <Button className="bg-black hover:bg-gray-800 text-white h-12 px-6">
-                Subscribe
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+            <Button 
+              onClick={scrollToConsultation}
+              className="bg-black hover:bg-gray-800 text-white h-12 px-8 font-semibold"
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Book Free Consultation Call
+            </Button>
           </div>
         </div>
       </div>
@@ -69,7 +72,7 @@ const Footer = () => {
                 <li><Link to="/services" className="text-gray-300 hover:text-orange-500 transition-colors">Our Services</Link></li>
                 <li><Link to="/countries" className="text-gray-300 hover:text-orange-500 transition-colors">Destinations</Link></li>
                 <li><Link to="/success-stories" className="text-gray-300 hover:text-orange-500 transition-colors">Success Stories</Link></li>
-                <li><Link to="/blogs" className="text-gray-300 hover:text-orange-500 transition-colors">Blog</Link></li>
+                <li><Link to="/blogs-news" className="text-gray-300 hover:text-orange-500 transition-colors">Blog & News</Link></li>
                 <li><Link to="/contact" className="text-gray-300 hover:text-orange-500 transition-colors">Contact Us</Link></li>
               </ul>
             </div>

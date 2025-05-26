@@ -2,8 +2,15 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroCarousel from '@/components/HeroCarousel';
+import AboutUsSection from '@/components/AboutUsSection';
+import StudyDestinationsSection from '@/components/StudyDestinationsSection';
+import OurServicesSection from '@/components/OurServicesSection';
+import PartnerUniversitiesSection from '@/components/PartnerUniversitiesSection';
+import OurImpactSection from '@/components/OurImpactSection';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import LatestInsightsSection from '@/components/LatestInsightsSection';
 import ConsultationForm from '@/components/ConsultationForm';
+import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -11,6 +18,11 @@ const Index = () => {
     <div className="min-h-screen bg-black">
       <Navbar />
       <HeroCarousel />
+      <AboutUsSection />
+      <StudyDestinationsSection />
+      <OurServicesSection />
+      <PartnerUniversitiesSection />
+      <OurImpactSection />
       
       {/* What Our Students Say Section */}
       <section className="bg-black py-20">
@@ -24,7 +36,11 @@ const Index = () => {
         </div>
       </section>
 
-      <ConsultationForm />
+      <LatestInsightsSection />
+      <div id="consultation-form">
+        <ConsultationForm />
+      </div>
+      <CTASection />
       <Footer />
     </div>
   );

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
+import { Phone, Mail, User, Globe, BookOpen, Calendar } from 'lucide-react';
 
 const ConsultationForm = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const ConsultationForm = () => {
 
   const countries = [
     'United Kingdom',
-    'United States',
+    'United States', 
     'Canada',
     'Australia',
     'Malaysia',
@@ -40,7 +41,7 @@ const ConsultationForm = () => {
   const intakes = [
     'September 2024',
     'January 2025',
-    'May 2025',
+    'May 2025', 
     'September 2025',
     'January 2026'
   ];
@@ -57,40 +58,45 @@ const ConsultationForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Replace with your Google Sheets API endpoint
-    // You'll need to set up Google Apps Script with Google Sheets
-    // Example endpoint: https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
-    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+    // Using Sheets.best integration (Replace YOUR_SHEETS_BEST_URL with actual URL)
+    const SHEETS_BEST_URL = 'https://sheet.best/api/sheets/YOUR_SHEETS_BEST_ID';
 
     try {
-      const response = await fetch(GOOGLE_SHEETS_URL, {
+      const response = await fetch(SHEETS_BEST_URL, {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString(),
-          source: 'Website Consultation Form'
+          Name: formData.name,
+          Email: formData.email,
+          Phone: formData.phone,
+          "Desired Country": formData.country,
+          "Program Type": formData.program,
+          "Preferred Intake": formData.intake,
+          Timestamp: new Date().toISOString(),
+          Source: 'Website Consultation Form'
         }),
       });
 
-      // Since we're using no-cors, we can't check the actual response
-      // But we'll assume success if no error is thrown
-      toast.success('Registration Successful!', {
-        description: 'Thank you for your interest. Our team will contact you within 24 hours.',
-      });
+      if (response.ok) {
+        toast.success('Registration Successful!', {
+          description: 'Thank you for your interest. Our team will contact you within 24 hours.',
+        });
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        country: '',
-        program: '',
-        intake: ''
-      });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          country: '',
+          program: '',
+          intake: ''
+        });
+      } else {
+        throw new Error('Failed to submit');
+      }
 
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -118,7 +124,10 @@ const ConsultationForm = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-white">Name *</Label>
+                <Label htmlFor="name" className="text-white flex items-center">
+                  <User className="w-4 h-4 mr-2 text-orange-500" />
+                  Name *
+                </Label>
                 <Input
                   id="name"
                   name="name"
@@ -132,7 +141,10 @@ const ConsultationForm = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-white">Email *</Label>
+                <Label htmlFor="email" className="text-white flex items-center">
+                  <Mail className="w-4 h-4 mr-2 text-orange-500" />
+                  Email *
+                </Label>
                 <Input
                   id="email"
                   name="email"
@@ -147,7 +159,10 @@ const ConsultationForm = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="phone" className="text-white">Phone Number *</Label>
+              <Label htmlFor="phone" className="text-white flex items-center">
+                <Phone className="w-4 h-4 mr-2 text-orange-500" />
+                Phone Number *
+              </Label>
               <Input
                 id="phone"
                 name="phone"
@@ -162,7 +177,10 @@ const ConsultationForm = () => {
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="country" className="text-white">Desired Country *</Label>
+                <Label htmlFor="country" className="text-white flex items-center">
+                  <Globe className="w-4 h-4 mr-2 text-orange-500" />
+                  Desired Country *
+                </Label>
                 <select
                   id="country"
                   name="country"
@@ -181,7 +199,10 @@ const ConsultationForm = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="program" className="text-white">Program Type *</Label>
+                <Label htmlFor="program" className="text-white flex items-center">
+                  <BookOpen className="w-4 h-4 mr-2 text-orange-500" />
+                  Program Type *
+                </Label>
                 <select
                   id="program"
                   name="program"
@@ -201,7 +222,10 @@ const ConsultationForm = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="intake" className="text-white">Preferred Intake</Label>
+              <Label htmlFor="intake" className="text-white flex items-center">
+                <Calendar className="w-4 h-4 mr-2 text-orange-500" />
+                Preferred Intake
+              </Label>
               <select
                 id="intake"
                 name="intake"
@@ -229,16 +253,16 @@ const ConsultationForm = () => {
             </div>
           </form>
 
-          {/* Instructions for Google Sheets setup */}
+          {/* Instructions for Sheets.best setup */}
           <div className="mt-8 p-4 bg-gray-900 rounded-lg border border-orange-500">
-            <h3 className="text-orange-500 font-semibold mb-2">Setup Instructions:</h3>
+            <h3 className="text-orange-500 font-semibold mb-2">Setup Instructions for Sheets.best:</h3>
             <p className="text-gray-300 text-sm">
-              To connect this form to Google Sheets:
-              <br />1. Create a Google Sheet with columns: Name, Email, Phone, Country, Program, Intake, Timestamp, Source
-              <br />2. Go to Extensions → Apps Script
-              <br />3. Create a script to handle POST requests and save data to your sheet
-              <br />4. Deploy as web app and replace 'YOUR_SCRIPT_ID' in the code with your actual script ID
-              <br />5. Make sure to set proper permissions for the script
+              To connect this form to Google Sheets using Sheets.best:
+              <br />1. Go to <a href="https://sheet.best" className="text-orange-500 underline">sheet.best</a> and create an account
+              <br />2. Create a Google Sheet with columns: Name, Email, Phone, Desired Country, Program Type, Preferred Intake, Timestamp, Source
+              <br />3. Connect your Google Sheet to Sheets.best and get your API URL
+              <br />4. Replace 'YOUR_SHEETS_BEST_ID' in the code with your actual Sheets.best ID
+              <br />5. The form will automatically submit data to your Google Sheet
             </p>
           </div>
         </div>
