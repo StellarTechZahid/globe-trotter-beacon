@@ -10,12 +10,14 @@ import Services from "./pages/Services";
 import Countries from "./pages/Countries";
 import Partnership from "./pages/Partnership";
 import Events from "./pages/Events";
-import FAQs from "./pages/FAQs";
 import SuccessStories from "./pages/SuccessStories";
 import BlogsNews from "./pages/BlogsNews";
 import Contact from "./pages/Contact";
 import UKPage from "./pages/countries/UKPage";
 import USAPage from "./pages/countries/USAPage";
+import VirtualConsulting from "./pages/VirtualConsulting";
+import Scholarship from "./pages/Scholarship";
+import UniversitySelection from "./pages/services/UniversitySelection";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,17 +32,17 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/university-selection" element={<UniversitySelection />} />
           <Route path="/countries" element={<Countries />} />
           <Route path="/countries/uk" element={<UKPage />} />
           <Route path="/countries/usa" element={<USAPage />} />
-          {/* TODO: Add more country pages */}
           <Route path="/partnership" element={<Partnership />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/virtual-consulting" element={<VirtualConsulting />} />
+          <Route path="/scholarship" element={<Scholarship />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/blogs-news" element={<BlogsNews />} />
           <Route path="/contact" element={<Contact />} />
-          {/* TODO: Add all service pages, event pages, blog pages, etc. */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

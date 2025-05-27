@@ -6,10 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToConsultation = () => {
-    const consultationSection = document.getElementById('consultation-form');
-    if (consultationSection) {
-      consultationSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = '/#consultation-form';
   };
 
   return (
@@ -41,9 +38,9 @@ const Footer = () => {
             <div>
               <Link to="/" className="flex items-center space-x-2 mb-6">
                 <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-2 rounded-lg">
-                  <span className="text-black font-bold text-xl">SG</span>
+                  <span className="text-black font-bold text-xl">AA</span>
                 </div>
-                <span className="text-2xl font-bold">StudyGlobal</span>
+                <span className="text-2xl font-bold">Abroad Academics</span>
               </Link>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Your trusted partner for international education. We've been helping students achieve their dreams of studying abroad for over a decade.
@@ -107,7 +104,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-orange-500" />
-                  <p className="text-gray-300">info@studyglobal.com</p>
+                  <p className="text-gray-300">info@abroadacademics.com</p>
                 </div>
               </div>
               <div className="mt-6">
@@ -125,7 +122,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 StudyGlobal. All rights reserved.
+              © 2024 Abroad Academics. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">Privacy Policy</a>

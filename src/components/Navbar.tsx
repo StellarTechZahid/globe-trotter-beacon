@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -13,15 +14,15 @@ const Navbar = () => {
     const consultationSection = document.getElementById('consultation-form');
     if (consultationSection) {
       consultationSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If not on home page, navigate to home page with consultation anchor
+      window.location.href = '/#consultation-form';
     }
   };
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { 
-      name: 'About', 
-      href: '/about'
-    },
+    { name: 'About', href: '/about' },
     { 
       name: 'Services', 
       href: '/services',
@@ -110,7 +111,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4 text-orange-500" />
-              <span>info@studyglobal.com</span>
+              <span>info@abroadacademics.com</span>
             </div>
           </div>
           <div className="hidden md:block">
@@ -126,18 +127,18 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-2 rounded-lg">
-                <span className="text-black font-bold text-xl">SG</span>
+                <span className="text-black font-bold text-xl">AA</span>
               </div>
-              <span className="text-2xl font-bold text-white">Study Global</span>
+              <span className="text-2xl font-bold text-white">Abroad Academics</span>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-6">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
                     to={item.href}
-                    className="text-white hover:text-orange-500 transition-colors duration-200 font-medium flex items-center"
+                    className="text-white hover:text-orange-500 transition-colors duration-200 font-medium flex items-center px-3 py-2"
                   >
                     {item.name}
                     {item.dropdown && <ChevronDown className="ml-1 h-4 w-4" />}
@@ -181,23 +182,47 @@ const Navbar = () => {
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="lg:hidden bg-black border-t border-orange-500">
-              <div className="py-4 space-y-4">
+              <div className="py-4 space-y-2">
                 {navItems.map((item) => (
                   <div key={item.name}>
-                    <Link
-                      to={item.href}
-                      className="block px-4 py-2 text-white hover:text-orange-500 hover:bg-gray-900 transition-colors duration-200"
-                      onClick={() => setIsMenuOpen(false)}
+                    <div 
+                      className="flex items-center justify-between px-4 py-2 text-white hover:text-orange-500 hover:bg-gray-900 transition-colors duration-200 cursor-pointer"
+                      onClick={() => {
+                        if (item.dropdown) {
+                          setActiveDropdown(activeDropdown === item.name ? null : item.name);
+                        } else {
+                          setIsMenuOpen(false);
+                        }
+                      }}
                     >
-                      {item.name}
-                    </Link>
-                    {item.dropdown && (
-                      <div className="ml-4 space-y-1">
+                      <Link
+                        to={item.href}
+                        className="flex-1"
+                        onClick={(e) => {
+                          if (item.dropdown) {
+                            e.preventDefault();
+                          } else {
+                            setIsMenuOpen(false);
+                          }
+                        }}
+                      >
+                        {item.name}
+                      </Link>
+                      {item.dropdown && (
+                        <ChevronDown 
+                          className={`h-4 w-4 transition-transform ${
+                            activeDropdown === item.name ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      )}
+                    </div>
+                    {item.dropdown && activeDropdown === item.name && (
+                      <div className="ml-4 space-y-1 bg-gray-900">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.href}
-                            className="block px-4 py-1 text-gray-300 hover:text-orange-500 transition-colors text-sm"
+                            className="block px-4 py-2 text-gray-300 hover:text-orange-500 transition-colors text-sm"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {dropdownItem.name}
@@ -207,7 +232,7 @@ const Navbar = () => {
                     )}
                   </div>
                 ))}
-                <div className="px-4">
+                <div className="px-4 pt-4">
                   <Button 
                     onClick={() => {
                       setIsMenuOpen(false);

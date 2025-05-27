@@ -116,10 +116,9 @@ const PartnerUniversitiesSection = () => {
         <div className="relative overflow-hidden mb-16">
           <div 
             ref={scrollRef}
-            className="flex space-x-8 overflow-x-hidden"
+            className="flex space-x-8 overflow-x-hidden animate-scroll"
             style={{ 
-              width: `${universities.length * 400}px`,
-              animation: 'scroll 30s linear infinite'
+              width: `${universities.length * 400}px`
             }}
           >
             {[...universities, ...universities].map((university, index) => (
@@ -160,12 +159,17 @@ const PartnerUniversitiesSection = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
+      <style>
+        {`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+        `}
+      </style>
     </section>
   );
 };
