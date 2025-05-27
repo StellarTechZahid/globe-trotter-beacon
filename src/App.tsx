@@ -20,6 +20,11 @@ import Scholarship from "./pages/Scholarship";
 import UniversitySelection from "./pages/services/UniversitySelection";
 import CareerCounseling from "./pages/services/CareerCounseling";
 import ProfileEvaluation from "./pages/services/ProfileEvaluation";
+import TestPreparation from "./pages/services/TestPreparation";
+import ApplicationSupport from "./pages/services/ApplicationSupport";
+import ScholarshipConsulting from "./pages/services/ScholarshipConsulting";
+import VisaAssistance from "./pages/services/VisaAssistance";
+import AccommodationSupport from "./pages/services/AccommodationSupport";
 import FullyFunded from "./pages/scholarship/FullyFunded";
 import NotFound from "./pages/NotFound";
 
@@ -38,6 +43,11 @@ const App = () => (
           <Route path="/services/university-selection" element={<UniversitySelection />} />
           <Route path="/services/career-counseling" element={<CareerCounseling />} />
           <Route path="/services/profile-evaluation" element={<ProfileEvaluation />} />
+          <Route path="/services/test-preparation" element={<TestPreparation />} />
+          <Route path="/services/application-support" element={<ApplicationSupport />} />
+          <Route path="/services/scholarship-consulting" element={<ScholarshipConsulting />} />
+          <Route path="/services/visa-assistance" element={<VisaAssistance />} />
+          <Route path="/services/accommodation-support" element={<AccommodationSupport />} />
           <Route path="/countries" element={<Countries />} />
           <Route path="/countries/uk" element={<UKPage />} />
           <Route path="/countries/usa" element={<USAPage />} />
