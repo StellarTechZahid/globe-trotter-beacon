@@ -18,6 +18,8 @@ import USAPage from "./pages/countries/USAPage";
 import VirtualConsulting from "./pages/VirtualConsulting";
 import Scholarship from "./pages/Scholarship";
 import UniversitySelection from "./pages/services/UniversitySelection";
+import CareerCounseling from "./pages/services/CareerCounseling";
+import ProfileEvaluation from "./pages/services/ProfileEvaluation";
 import FullyFunded from "./pages/scholarship/FullyFunded";
 import NotFound from "./pages/NotFound";
 
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/university-selection" element={<UniversitySelection />} />
+          <Route path="/services/career-counseling" element={<CareerCounseling />} />
+          <Route path="/services/profile-evaluation" element={<ProfileEvaluation />} />
           <Route path="/countries" element={<Countries />} />
           <Route path="/countries/uk" element={<UKPage />} />
           <Route path="/countries/usa" element={<USAPage />} />
