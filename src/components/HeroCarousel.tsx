@@ -2,9 +2,17 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const scrollToConsultation = () => {
+    const consultationSection = document.getElementById('consultation-form');
+    if (consultationSection) {
+      consultationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const slides = [
     {
@@ -13,7 +21,8 @@ const HeroCarousel = () => {
       title: "Study in the UK",
       subtitle: "Transform Your Future with World-Class Education",
       description: "Join thousands of students achieving their dreams at top British universities",
-      cta: "Explore UK Programs"
+      cta: "Explore UK Programs",
+      countryLink: "/countries/uk"
     },
     {
       id: 2,
@@ -21,7 +30,8 @@ const HeroCarousel = () => {
       title: "Study in Canada",
       subtitle: "Experience Excellence in Canadian Education",
       description: "Discover prestigious universities and excellent post-study opportunities",
-      cta: "Explore Canada Programs"
+      cta: "Explore Canada Programs",
+      countryLink: "/countries/canada"
     },
     {
       id: 3,
@@ -29,7 +39,8 @@ const HeroCarousel = () => {
       title: "Study in the USA",
       subtitle: "Quality Education in Land of Opportunities",
       description: "Experience world-class education with unlimited career possibilities",
-      cta: "Explore USA Programs"
+      cta: "Explore USA Programs",
+      countryLink: "/countries/usa"
     },
     {
       id: 4,
@@ -37,7 +48,53 @@ const HeroCarousel = () => {
       title: "Study in Australia",
       subtitle: "World-Class Education Down Under",
       description: "Discover innovative programs in a multicultural environment",
-      cta: "Explore Australia Programs"
+      cta: "Explore Australia Programs",
+      countryLink: "/countries/australia"
+    },
+    {
+      id: 5,
+      image: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=1920&h=1080&fit=crop",
+      title: "Study in Malaysia",
+      subtitle: "Gateway to Quality Asian Education",
+      description: "Affordable excellence in the heart of Southeast Asia",
+      cta: "Explore Malaysia Programs",
+      countryLink: "/countries/malaysia"
+    },
+    {
+      id: 6,
+      image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&h=1080&fit=crop",
+      title: "Study in UAE",
+      subtitle: "Modern Education Hub of the Middle East",
+      description: "Experience cutting-edge education in a global city",
+      cta: "Explore UAE Programs",
+      countryLink: "/countries/uae"
+    },
+    {
+      id: 7,
+      image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1920&h=1080&fit=crop",
+      title: "Study in Germany",
+      subtitle: "Excellence in Engineering and Innovation",
+      description: "World-renowned education with minimal tuition fees",
+      cta: "Explore Germany Programs",
+      countryLink: "/countries/germany"
+    },
+    {
+      id: 8,
+      image: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=1920&h=1080&fit=crop",
+      title: "Study in Italy",
+      subtitle: "Rich Heritage Meets Academic Excellence",
+      description: "Immerse yourself in culture while pursuing world-class education",
+      cta: "Explore Italy Programs",
+      countryLink: "/countries/italy"
+    },
+    {
+      id: 9,
+      image: "https://images.unsplash.com/photo-1507865797090-4bb76b6c3b10?w=1920&h=1080&fit=crop",
+      title: "Study in New Zealand",
+      subtitle: "Innovation Meets Natural Beauty",
+      description: "Experience progressive education in stunning landscapes",
+      cta: "Explore New Zealand Programs",
+      countryLink: "/countries/new-zealand"
     }
   ];
 
@@ -77,11 +134,17 @@ const HeroCarousel = () => {
                   {slide.description}
                 </p>
                 <div className="space-x-4 animate-fade-in delay-600">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-4 text-lg">
-                    {slide.cta}
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg">
+                  <Link to={slide.countryLink}>
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-4 text-lg">
+                      {slide.cta}
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                  <Button 
+                    onClick={scrollToConsultation}
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg"
+                  >
                     Free Consultation
                   </Button>
                 </div>

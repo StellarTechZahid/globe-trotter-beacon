@@ -1,37 +1,99 @@
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Users, GraduationCap, Award, Globe } from 'lucide-react';
 
 const OurImpactSection = () => {
+  const [counters, setCounters] = useState({
+    students: 0,
+    universities: 0,
+    scholarships: 0,
+    countries: 0
+  });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const targets = {
+    students: 9960,
+    universities: 180,
+    scholarships: 960,
+    countries: 25
+  };
+
   const stats = [
     {
       icon: Users,
-      number: "9960+",
+      key: 'students' as keyof typeof counters,
+      number: counters.students + "+",
       label: "Students Enrolled",
       description: "Successfully guided students to their dream universities"
     },
     {
       icon: GraduationCap,
-      number: "180+", 
+      key: 'universities' as keyof typeof counters,
+      number: counters.universities + "+", 
       label: "Partner Universities",
       description: "Prestigious institutions across the globe"
     },
     {
       icon: Award,
-      number: "960+",
+      key: 'scholarships' as keyof typeof counters,
+      number: counters.scholarships + "+",
       label: "Scholarships Awarded",
       description: "Millions in funding secured for our students"
     },
     {
       icon: Globe,
-      number: "25+",
+      key: 'countries' as keyof typeof counters,
+      number: counters.countries + "+",
       label: "Countries",
       description: "Study destinations available worldwide"
     }
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          animateCounters();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
+  const animateCounters = () => {
+    const duration = 2000;
+    const steps = 60;
+    const stepDuration = duration / steps;
+
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      const progress = step / steps;
+      
+      setCounters({
+        students: Math.floor(targets.students * progress),
+        universities: Math.floor(targets.universities * progress),
+        scholarships: Math.floor(targets.scholarships * progress),
+        countries: Math.floor(targets.countries * progress)
+      });
+
+      if (step >= steps) {
+        clearInterval(timer);
+        setCounters(targets);
+      }
+    }, stepDuration);
+  };
+
   return (
-    <section className="py-20 bg-black">
+    <section ref={sectionRef} className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Impact</h2>

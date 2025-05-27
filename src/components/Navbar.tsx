@@ -9,6 +9,13 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const scrollToConsultation = () => {
+    const consultationSection = document.getElementById('consultation-form');
+    if (consultationSection) {
+      consultationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
     { name: 'Home', href: '/' },
     { 
@@ -65,13 +72,26 @@ const Navbar = () => {
         { name: 'Campus Visits', href: '/events/campus-visits' }
       ]
     },
-    { name: 'FAQs', href: '/faqs' },
+    { 
+      name: 'Scholarship', 
+      href: '/scholarship',
+      dropdown: [
+        { name: 'Fully Funded', href: '/scholarship/fully-funded' },
+        { name: 'Partially Funded', href: '/scholarship/partially-funded' },
+        { name: 'European Countries', href: '/scholarship/european-countries' },
+        { name: 'Central Asian Countries', href: '/scholarship/central-asian-countries' },
+        { name: 'North America', href: '/scholarship/north-america' }
+      ]
+    },
+    { name: 'Virtual Consulting', href: '/virtual-consulting' },
     { name: 'Success Stories', href: '/success-stories' },
     { 
       name: 'Blogs & News', 
       href: '/blogs-news',
       dropdown: [
         { name: 'Blogs', href: '/blogs' },
+        { name: 'Articles', href: '/articles' },
+        { name: 'Tips', href: '/tips' },
         { name: 'News', href: '/news' }
       ]
     },
@@ -104,11 +124,11 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-3">
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-2 rounded-lg">
                 <span className="text-black font-bold text-xl">SG</span>
               </div>
-              <span className="text-2xl font-bold text-white">StudyGlobal</span>
+              <span className="text-2xl font-bold text-white">Study Global</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -139,7 +159,10 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-              <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-2">
+              <Button 
+                onClick={scrollToConsultation}
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-2"
+              >
                 Free Consultation
               </Button>
             </div>
@@ -185,7 +208,13 @@ const Navbar = () => {
                   </div>
                 ))}
                 <div className="px-4">
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                  <Button 
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToConsultation();
+                    }}
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
+                  >
                     Free Consultation
                   </Button>
                 </div>
