@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
-import { Phone, Mail, User, Globe, BookOpen, Calendar } from 'lucide-react';
+import { Phone, Mail, User, Globe, BookOpen, Calendar, GraduationCap, DollarSign } from 'lucide-react';
 
 const ConsultationForm = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +13,11 @@ const ConsultationForm = () => {
     phone: '',
     country: '',
     program: '',
-    intake: ''
+    intake: '',
+    education: '',
+    cgpa: '',
+    field: '',
+    budget: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -69,12 +73,16 @@ const ConsultationForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          Name: formData.name,
-          Email: formData.email,
-          Phone: formData.phone,
+          "Full Name": formData.name,
+          "Email Address": formData.email,
+          "Phone Number": formData.phone,
           "Desired Country": formData.country,
           "Program Type": formData.program,
           "Preferred Intake": formData.intake,
+          "Previous Education": formData.education,
+          "CGPA / Academic Score": formData.cgpa,
+          "Field of Study": formData.field,
+          "Budget (in USD)": formData.budget,
           Timestamp: new Date().toISOString(),
           Source: 'Website Consultation Form'
         }),
@@ -92,7 +100,11 @@ const ConsultationForm = () => {
           phone: '',
           country: '',
           program: '',
-          intake: ''
+          intake: '',
+          education: '',
+          cgpa: '',
+          field: '',
+          budget: ''
         });
       } else {
         throw new Error('Failed to submit');
@@ -109,7 +121,7 @@ const ConsultationForm = () => {
   };
 
   return (
-    <section className="bg-black py-20">
+    <section id="consultation-form" className="bg-black py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-orange-500 mb-6">
@@ -120,19 +132,44 @@ const ConsultationForm = () => {
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        {/* Example Fields Display */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <div className="bg-gray-900 bg-opacity-50 border border-orange-500 border-opacity-30 rounded-lg p-6">
+            <h3 className="text-orange-500 font-semibold mb-4 text-center">Information We'll Collect:</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+              {[
+                "Full Name",
+                "Email Address", 
+                "Desired Country",
+                "Previous Education",
+                "CGPA / Academic Score",
+                "Program Type Applying For",
+                "Field of Study",
+                "Intake (Month & Year)",
+                "Budget (in USD)",
+                "Phone Number (with country code)"
+              ].map((field, index) => (
+                <div key={index} className="text-gray-300 text-sm p-2 bg-black bg-opacity-30 rounded border border-orange-500 border-opacity-20">
+                  {field}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-white flex items-center">
                   <User className="w-4 h-4 mr-2 text-orange-500" />
-                  Name *
+                  Full Name *
                 </Label>
                 <Input
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Enter your full name"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
@@ -143,13 +180,13 @@ const ConsultationForm = () => {
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-white flex items-center">
                   <Mail className="w-4 h-4 mr-2 text-orange-500" />
-                  Email *
+                  Email Address *
                 </Label>
                 <Input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Enter your email address"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -161,13 +198,13 @@ const ConsultationForm = () => {
             <div className="space-y-2">
               <Label htmlFor="phone" className="text-white flex items-center">
                 <Phone className="w-4 h-4 mr-2 text-orange-500" />
-                Phone Number *
+                Phone Number (with country code) *
               </Label>
               <Input
                 id="phone"
                 name="phone"
                 type="tel"
-                placeholder="Enter your phone number"
+                placeholder="+1 234 567 8900"
                 value={formData.phone}
                 onChange={handleInputChange}
                 required
@@ -221,6 +258,74 @@ const ConsultationForm = () => {
               </div>
             </div>
 
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="education" className="text-white flex items-center">
+                  <GraduationCap className="w-4 h-4 mr-2 text-orange-500" />
+                  Previous Education
+                </Label>
+                <Input
+                  id="education"
+                  name="education"
+                  type="text"
+                  placeholder="e.g., Bachelor's in Computer Science"
+                  value={formData.education}
+                  onChange={handleInputChange}
+                  className="bg-gray-900 border-gray-700 text-white placeholder-gray-400 focus:border-orange-500"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="cgpa" className="text-white flex items-center">
+                  <BookOpen className="w-4 h-4 mr-2 text-orange-500" />
+                  CGPA / Academic Score
+                </Label>
+                <Input
+                  id="cgpa"
+                  name="cgpa"
+                  type="text"
+                  placeholder="e.g., 3.8/4.0 or 85%"
+                  value={formData.cgpa}
+                  onChange={handleInputChange}
+                  className="bg-gray-900 border-gray-700 text-white placeholder-gray-400 focus:border-orange-500"
+                />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="field" className="text-white flex items-center">
+                  <BookOpen className="w-4 h-4 mr-2 text-orange-500" />
+                  Field of Study
+                </Label>
+                <Input
+                  id="field"
+                  name="field"
+                  type="text"
+                  placeholder="e.g., Computer Science, Business"
+                  value={formData.field}
+                  onChange={handleInputChange}
+                  className="bg-gray-900 border-gray-700 text-white placeholder-gray-400 focus:border-orange-500"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="budget" className="text-white flex items-center">
+                  <DollarSign className="w-4 h-4 mr-2 text-orange-500" />
+                  Budget (in USD)
+                </Label>
+                <Input
+                  id="budget"
+                  name="budget"
+                  type="text"
+                  placeholder="e.g., $50,000 - $100,000"
+                  value={formData.budget}
+                  onChange={handleInputChange}
+                  className="bg-gray-900 border-gray-700 text-white placeholder-gray-400 focus:border-orange-500"
+                />
+              </div>
+            </div>
+
             <div className="space-y-2">
               <Label htmlFor="intake" className="text-white flex items-center">
                 <Calendar className="w-4 h-4 mr-2 text-orange-500" />
@@ -259,7 +364,7 @@ const ConsultationForm = () => {
             <p className="text-gray-300 text-sm">
               To connect this form to Google Sheets using Sheets.best:
               <br />1. Go to <a href="https://sheet.best" className="text-orange-500 underline">sheet.best</a> and create an account
-              <br />2. Create a Google Sheet with columns: Name, Email, Phone, Desired Country, Program Type, Preferred Intake, Timestamp, Source
+              <br />2. Create a Google Sheet with the columns shown above
               <br />3. Connect your Google Sheet to Sheets.best and get your API URL
               <br />4. Replace 'YOUR_SHEETS_BEST_ID' in the code with your actual Sheets.best ID
               <br />5. The form will automatically submit data to your Google Sheet

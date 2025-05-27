@@ -18,6 +18,7 @@ import USAPage from "./pages/countries/USAPage";
 import VirtualConsulting from "./pages/VirtualConsulting";
 import Scholarship from "./pages/Scholarship";
 import UniversitySelection from "./pages/services/UniversitySelection";
+import FullyFunded from "./pages/scholarship/FullyFunded";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/virtual-consulting" element={<VirtualConsulting />} />
           <Route path="/scholarship" element={<Scholarship />} />
+          <Route path="/scholarship/fully-funded" element={<FullyFunded />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/blogs-news" element={<BlogsNews />} />
           <Route path="/contact" element={<Contact />} />
