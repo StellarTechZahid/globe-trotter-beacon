@@ -16,6 +16,8 @@ import Contact from "./pages/Contact";
 import UKPage from "./pages/countries/UKPage";
 import USAPage from "./pages/countries/USAPage";
 import CanadaPage from "./pages/countries/CanadaPage";
+import AustraliaPage from "./pages/countries/AustraliaPage";
+import GermanyPage from "./pages/countries/GermanyPage";
 import VirtualConsulting from "./pages/VirtualConsulting";
 import Scholarship from "./pages/Scholarship";
 import UniversitySelection from "./pages/services/UniversitySelection";
@@ -59,6 +61,8 @@ const App = () => (
           <Route path="/countries/uk" element={<UKPage />} />
           <Route path="/countries/usa" element={<USAPage />} />
           <Route path="/countries/canada" element={<CanadaPage />} />
+          <Route path="/countries/australia" element={<AustraliaPage />} />
+          <Route path="/countries/germany" element={<GermanyPage />} />
           <Route path="/partnership" element={<Partnership />} />
           <Route path="/events" element={<Events />} />
           <Route path="/virtual-consulting" element={<VirtualConsulting />} />
