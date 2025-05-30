@@ -223,6 +223,106 @@ const UKPage = () => {
         </div>
       </section>
 
+      {/* Why Study in the UK - Detailed Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-orange-500 mb-8 text-center">Why Study in the UK</h2>
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+              UK degrees give you more than an academic experience which helps you in your real-world experiences. 
+              Wherever you go in the world, a UK education opens the door of your career and practical life ahead.
+            </p>
+
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-orange-500 mb-3">• Ranked universities:</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  In you can find number of internationally ranked universities as compared to other destinations. It has the 
+                  highest number of ranked institutes such as University of Cambridge, University of Oxford, & Imperial College. 
+                  Almost 3 ranked universities are based in UK.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-orange-500 mb-3">• Education quality:</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  The standard of education in UK has always been center point attraction international students. Various 
+                  registered bodies independent learning UK universities take more practical approach rather than lecture-based 
+                  learning for international students. Students are expected to take a proactive role and applying the skills in the 
+                  real-world scenarios. This allows deep understanding of your course which eventually benefits you in long term.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-orange-500 mb-3">• Multicultural and secure:</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  For international students The diversity is reflected in every aspect of the UK culture has ranked as top 
+                  multicultural and secure country for international students. The diversity is reflected in every aspect of the UK 
+                  culture, food, literature, arts, and music.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-orange-500 mb-3">• No language barrier:</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  One of the biggest challenges for any international student is the local language of that country. In UK, English is 
+                  the official language and all the courses are being taught in English, making it easier for students from every 
+                  part of the globe to study in the UK.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Sections */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Tuition Fees */}
+            <div>
+              <h2 className="text-3xl font-bold text-orange-500 mb-6">Average Tuition Fees in UK for International Students</h2>
+              <p className="text-gray-300 leading-relaxed">
+                The locals pay a different fee as compared to international students planning to study in UK. tuition fees vary 
+                depending on the university and course. The average tuition fees of undergraduate program UK varies from 
+                £20,000 GBP - £35,000 GBP. The average tuition fees of postgraduate programs in UK varies from £15,000 GBP - £30,000 
+                GBP. There are various options of distance learning programs where online study programs are majorly 
+                available in UK.
+              </p>
+            </div>
+
+            {/* Working Hours */}
+            <div>
+              <h2 className="text-3xl font-bold text-orange-500 mb-6">Working Hours Allowed in UK (Student Visa)</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                As per UK visa, an international student, you are allowed work 20 hours/week. Working more than the allowed 
+                hours can strictly affect your visa status resulting in cancelling your study permit.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                Average wage rates in UK for international student is 10-15 GBP/hour.
+              </p>
+            </div>
+
+            {/* Living Cost */}
+            <div>
+              <h2 className="text-3xl font-bold text-orange-500 mb-6">Living Cost in UK for International Student</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                As per the UKVI, average living cost for an international student in UK depends on the city you are living in, the 
+                living cost in London is different as compared to outside London.
+              </p>
+              <ul className="text-gray-300 space-y-2 mb-4">
+                <li>• £1334 GBP per month for courses in London (9 month)</li>
+                <li>• £1023 GBP per month for courses outside London (9 month)</li>
+              </ul>
+              <p className="text-gray-300 leading-relaxed">
+                If you have a student loan or a government sponsorship, you will need to submit the evidence while submitting 
+                your visa application in UKVI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTASection />
       <Footer />
     </div>
