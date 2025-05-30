@@ -39,7 +39,7 @@ const Navbar = () => {
               <span className="text-lg font-bold text-white sm:hidden">AA</span>
             </Link>
 
-            {/* Desktop Navigation - Full Size */}
+            {/* Desktop Navigation - Full Size (shows all items) */}
             <div className="hidden xl:flex items-center space-x-1">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
@@ -75,13 +75,13 @@ const Navbar = () => {
               </Button>
             </div>
 
-            {/* Tablet Navigation (lg to xl) - Condensed */}
+            {/* Tablet Navigation (lg to xl) - Condensed but shows key items */}
             <div className="hidden lg:flex xl:hidden items-center space-x-1">
-              <Link to="/" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Home</Link>
-              <Link to="/about" className="text-white hover:text-orange-500 px-2 py-1 text-sm">About</Link>
+              <Link to="/" className="text-white hover:text-orange-500 px-2 py-1 text-sm font-medium">Home</Link>
+              <Link to="/about" className="text-white hover:text-orange-500 px-2 py-1 text-sm font-medium">About</Link>
               
               <div className="relative group">
-                <Link to="/services" className="text-white hover:text-orange-500 flex items-center px-2 py-1 text-sm">
+                <Link to="/services" className="text-white hover:text-orange-500 flex items-center px-2 py-1 text-sm font-medium">
                   Services <ChevronDown className="ml-1 h-3 w-3" />
                 </Link>
                 <div className="absolute top-full left-0 w-56 bg-black border border-orange-500 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -100,7 +100,7 @@ const Navbar = () => {
               </div>
 
               <div className="relative group">
-                <Link to="/countries" className="text-white hover:text-orange-500 flex items-center px-2 py-1 text-sm">
+                <Link to="/countries" className="text-white hover:text-orange-500 flex items-center px-2 py-1 text-sm font-medium">
                   Countries <ChevronDown className="ml-1 h-3 w-3" />
                 </Link>
                 <div className="absolute top-full left-0 w-48 bg-black border border-orange-500 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -118,8 +118,26 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <Link to="/scholarship" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Scholarship</Link>
-              <Link to="/contact" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Contact</Link>
+              <div className="relative group">
+                <Link to="/scholarship" className="text-white hover:text-orange-500 flex items-center px-2 py-1 text-sm font-medium">
+                  Scholarship <ChevronDown className="ml-1 h-3 w-3" />
+                </Link>
+                <div className="absolute top-full left-0 w-48 bg-black border border-orange-500 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    {navItems.find(item => item.name === 'Scholarship')?.dropdown?.map((dropdownItem) => (
+                      <Link
+                        key={dropdownItem.name}
+                        to={dropdownItem.href}
+                        className="block px-4 py-2 text-white hover:text-orange-500 hover:bg-gray-900 transition-colors text-xs"
+                      >
+                        {dropdownItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <Link to="/contact" className="text-white hover:text-orange-500 px-2 py-1 text-sm font-medium">Contact</Link>
               
               <Button 
                 onClick={scrollToConsultation}
@@ -129,8 +147,23 @@ const Navbar = () => {
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden flex items-center space-x-2">
+            {/* Mobile/Small Tablet Navigation (md to lg) - Shows essential items */}
+            <div className="hidden md:flex lg:hidden items-center space-x-1">
+              <Link to="/" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Home</Link>
+              <Link to="/services" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Services</Link>
+              <Link to="/countries" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Countries</Link>
+              <Link to="/scholarship" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Scholarship</Link>
+              <Link to="/contact" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Contact</Link>
+              <Button 
+                onClick={scrollToConsultation}
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-2 py-1 ml-1 text-xs"
+              >
+                Free Call
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button (small screens) */}
+            <div className="md:hidden flex items-center space-x-2">
               <Button 
                 onClick={scrollToConsultation}
                 className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-3 py-1 text-xs"
