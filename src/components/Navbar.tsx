@@ -75,7 +75,7 @@ const Navbar = () => {
               </Button>
             </div>
 
-            {/* Tablet Navigation (lg to xl) - Condensed but shows key items */}
+            {/* Large Tablet Navigation (lg to xl) - Shows key items with dropdowns */}
             <div className="hidden lg:flex xl:hidden items-center space-x-1">
               <Link to="/" className="text-white hover:text-orange-500 px-2 py-1 text-sm font-medium">Home</Link>
               <Link to="/about" className="text-white hover:text-orange-500 px-2 py-1 text-sm font-medium">About</Link>
@@ -147,7 +147,7 @@ const Navbar = () => {
               </Button>
             </div>
 
-            {/* Mobile/Small Tablet Navigation (md to lg) - Shows essential items */}
+            {/* Medium Tablet Navigation (md to lg) - Essential items only */}
             <div className="hidden md:flex lg:hidden items-center space-x-1">
               <Link to="/" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Home</Link>
               <Link to="/services" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Services</Link>

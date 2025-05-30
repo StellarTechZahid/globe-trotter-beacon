@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -8,7 +7,7 @@ import { GraduationCap, Globe, Briefcase, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const CanadaPage = () => {
-  const universities = [
+  const quickLinks = [
     { name: 'University of Toronto', id: 'university-toronto' },
     { name: 'University of British Columbia', id: 'university-ubc' },
     { name: 'McGill University', id: 'mcgill-university' },
@@ -75,10 +74,10 @@ const CanadaPage = () => {
               Study in Canada
             </h1>
             <p className="text-2xl mb-8 text-gray-200 animate-fade-in delay-200">
-              Experience world-class education in one of the world's most welcoming countries with excellent post-study opportunities.
+              Experience world-class education in one of the world's most welcoming countries with excellent post-study opportunities with Abroad Academics - Pakistan's most trusted study abroad consultants since 2023.
             </p>
             <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-4 text-lg animate-fade-in delay-400">
-              Explore Now →
+              Get Free Consultation →
             </Button>
           </div>
         </div>
@@ -88,12 +87,12 @@ const CanadaPage = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-8">Your Pathway to Canadian Education</h2>
+            <h2 className="text-4xl font-bold text-white mb-8">Your Pathway to Canadian Education Excellence</h2>
             <p className="text-lg text-gray-300 leading-relaxed">
               Canada is renowned for its high-quality education system, multicultural environment, and excellent 
-              post-graduation work opportunities. With a strong emphasis on research and innovation, Canadian 
-              universities offer world-class programs while maintaining affordable tuition fees compared to other 
-              English-speaking countries.
+              post-graduation work opportunities. With Abroad Academics - Pakistan's leading study abroad consultants 
+              established in 2023, we guide Pakistani and international students through every step of studying in Canada. 
+              Our expert team provides comprehensive overseas education consultancy services for Canadian universities.
             </p>
           </div>
         </div>
@@ -140,7 +139,7 @@ const CanadaPage = () => {
         </div>
       </section>
 
-      <QuickNavigation universities={universities} />
+      <QuickNavigation links={quickLinks} />
 
       {/* Universities Section */}
       <section className="py-20">
