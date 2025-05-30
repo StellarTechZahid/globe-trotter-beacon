@@ -15,6 +15,7 @@ import BlogsNews from "./pages/BlogsNews";
 import Contact from "./pages/Contact";
 import UKPage from "./pages/countries/UKPage";
 import USAPage from "./pages/countries/USAPage";
+import CanadaPage from "./pages/countries/CanadaPage";
 import VirtualConsulting from "./pages/VirtualConsulting";
 import Scholarship from "./pages/Scholarship";
 import UniversitySelection from "./pages/services/UniversitySelection";
@@ -25,6 +26,9 @@ import ApplicationSupport from "./pages/services/ApplicationSupport";
 import ScholarshipConsulting from "./pages/services/ScholarshipConsulting";
 import VisaAssistance from "./pages/services/VisaAssistance";
 import AccommodationSupport from "./pages/services/AccommodationSupport";
+import PreDepartureOrientation from "./pages/services/PreDepartureOrientation";
+import PostArrivalSupport from "./pages/services/PostArrivalSupport";
+import JobSearchGuidance from "./pages/services/JobSearchGuidance";
 import FullyFunded from "./pages/scholarship/FullyFunded";
 import NotFound from "./pages/NotFound";
 
@@ -48,9 +52,13 @@ const App = () => (
           <Route path="/services/scholarship-consulting" element={<ScholarshipConsulting />} />
           <Route path="/services/visa-assistance" element={<VisaAssistance />} />
           <Route path="/services/accommodation-support" element={<AccommodationSupport />} />
+          <Route path="/services/pre-departure-orientation" element={<PreDepartureOrientation />} />
+          <Route path="/services/post-arrival-support" element={<PostArrivalSupport />} />
+          <Route path="/services/job-search-guidance" element={<JobSearchGuidance />} />
           <Route path="/countries" element={<Countries />} />
           <Route path="/countries/uk" element={<UKPage />} />
           <Route path="/countries/usa" element={<USAPage />} />
+          <Route path="/countries/canada" element={<CanadaPage />} />
           <Route path="/partnership" element={<Partnership />} />
           <Route path="/events" element={<Events />} />
           <Route path="/virtual-consulting" element={<VirtualConsulting />} />

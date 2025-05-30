@@ -31,23 +31,24 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-2 rounded-lg">
                 <span className="text-black font-bold text-xl">AA</span>
               </div>
-              <span className="text-2xl font-bold text-white">Abroad Academics</span>
+              <span className="text-xl lg:text-2xl font-bold text-white hidden sm:block">Abroad Academics</span>
+              <span className="text-lg font-bold text-white sm:hidden">AA</span>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden xl:flex items-center space-x-2">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
                     to={item.href}
-                    className="text-white hover:text-orange-500 transition-colors duration-200 font-medium flex items-center px-3 py-2 whitespace-nowrap"
+                    className="text-white hover:text-orange-500 transition-colors duration-200 font-medium flex items-center px-2 py-2 whitespace-nowrap text-sm"
                   >
                     {item.name}
-                    {item.dropdown && <ChevronDown className="ml-1 h-4 w-4" />}
+                    {item.dropdown && <ChevronDown className="ml-1 h-3 w-3" />}
                   </Link>
                   {item.dropdown && (
                     <div className="absolute top-full left-0 w-64 bg-black border border-orange-500 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -56,7 +57,7 @@ const Navbar = () => {
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.href}
-                            className="block px-4 py-2 text-white hover:text-orange-500 hover:bg-gray-900 transition-colors"
+                            className="block px-4 py-2 text-white hover:text-orange-500 hover:bg-gray-900 transition-colors text-sm"
                           >
                             {dropdownItem.name}
                           </Link>
@@ -68,14 +69,35 @@ const Navbar = () => {
               ))}
               <Button 
                 onClick={scrollToConsultation}
-                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-2 ml-4"
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-4 py-2 ml-2 text-sm whitespace-nowrap"
+              >
+                Free Consultation
+              </Button>
+            </div>
+
+            {/* Tablet Navigation (lg to xl) */}
+            <div className="hidden lg:flex xl:hidden items-center space-x-1">
+              <Link to="/" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Home</Link>
+              <Link to="/about" className="text-white hover:text-orange-500 px-2 py-1 text-sm">About</Link>
+              <Link to="/services" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Services</Link>
+              <Link to="/countries" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Countries</Link>
+              <Link to="/contact" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Contact</Link>
+              <Button 
+                onClick={scrollToConsultation}
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-3 py-1 ml-1 text-xs"
               >
                 Free Consultation
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden">
+            <div className="lg:hidden flex items-center space-x-2">
+              <Button 
+                onClick={scrollToConsultation}
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-3 py-1 text-xs"
+              >
+                Free Call
+              </Button>
               <button
                 onClick={toggleMenu}
                 className="text-white hover:text-orange-500 transition-colors"
