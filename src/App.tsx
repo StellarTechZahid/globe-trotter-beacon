@@ -12,6 +12,10 @@ import Partnership from "./pages/Partnership";
 import Events from "./pages/Events";
 import SuccessStories from "./pages/SuccessStories";
 import BlogsNews from "./pages/BlogsNews";
+import Blogs from "./pages/Blogs";
+import News from "./pages/News";
+import Tips from "./pages/Tips";
+import Articles from "./pages/Articles";
 import Contact from "./pages/Contact";
 import UKPage from "./pages/countries/UKPage";
 import USAPage from "./pages/countries/USAPage";
@@ -74,6 +78,10 @@ const App = () => (
           <Route path="/scholarship/fully-funded" element={<FullyFunded />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/blogs-news" element={<BlogsNews />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/tips" element={<Tips />} />
+          <Route path="/articles" element={<Articles />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
