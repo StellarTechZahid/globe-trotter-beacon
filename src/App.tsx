@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -32,7 +33,6 @@ import TestPreparation from "./pages/services/TestPreparation";
 import ApplicationSupport from "./pages/services/ApplicationSupport";
 import ScholarshipConsulting from "./pages/services/ScholarshipConsulting";
 import VisaAssistance from "./pages/services/VisaAssistance";
-import AccommodationSupport from "./pages/AccommodationSupport";
 import PreDepartureOrientation from "./pages/services/PreDepartureOrientation";
 import PostArrivalSupport from "./pages/services/PostArrivalSupport";
 import JobSearchGuidance from "./pages/services/JobSearchGuidance";
@@ -43,6 +43,10 @@ import PartiallyFunded from "./pages/scholarship/PartiallyFunded";
 import EuropeanCountries from "./pages/scholarship/EuropeanCountries";
 import CentralAsianCountries from "./pages/scholarship/CentralAsianCountries";
 import NorthAmerica from "./pages/scholarship/NorthAmerica";
+import EducationExpo from "./pages/events/EducationExpo";
+import EducationEvents from "./pages/events/EducationEvents";
+import Seminars from "./pages/events/Seminars";
+import CampusVisits from "./pages/events/CampusVisits";
 
 const queryClient = new QueryClient();
 
@@ -63,7 +67,6 @@ const App = () => (
           <Route path="/services/application-support" element={<ApplicationSupport />} />
           <Route path="/services/scholarship-consulting" element={<ScholarshipConsulting />} />
           <Route path="/services/visa-assistance" element={<VisaAssistance />} />
-          <Route path="/services/accommodation-support" element={<AccommodationSupport />} />
           <Route path="/services/pre-departure-orientation" element={<PreDepartureOrientation />} />
           <Route path="/services/post-arrival-support" element={<PostArrivalSupport />} />
           <Route path="/services/job-search-guidance" element={<JobSearchGuidance />} />
@@ -75,11 +78,20 @@ const App = () => (
           <Route path="/countries/germany" element={<GermanyPage />} />
           <Route path="/countries/italy" element={<ItalyPage />} />
           <Route path="/countries/malaysia" element={<MalaysiaPage />} />
+          <Route path="/countries/new-zealand" element={<NewZealandPage />} />
           <Route path="/partnership" element={<Partnership />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/education-expo" element={<EducationExpo />} />
+          <Route path="/events/education-events" element={<EducationEvents />} />
+          <Route path="/events/seminars" element={<Seminars />} />
+          <Route path="/events/campus-visits" element={<CampusVisits />} />
           <Route path="/virtual-consulting" element={<VirtualConsulting />} />
           <Route path="/scholarship" element={<Scholarship />} />
           <Route path="/scholarship/fully-funded" element={<FullyFunded />} />
+          <Route path="/scholarship/partially-funded" element={<PartiallyFunded />} />
+          <Route path="/scholarship/european-countries" element={<EuropeanCountries />} />
+          <Route path="/scholarship/central-asian-countries" element={<CentralAsianCountries />} />
+          <Route path="/scholarship/north-america" element={<NorthAmerica />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/blogs-news" element={<BlogsNews />} />
           <Route path="/blogs" element={<Blogs />} />
@@ -87,11 +99,6 @@ const App = () => (
           <Route path="/tips" element={<Tips />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/countries/new-zealand" element={<NewZealandPage />} />
-          <Route path="/scholarship/partially-funded" element={<PartiallyFunded />} />
-          <Route path="/scholarship/european-countries" element={<EuropeanCountries />} />
-          <Route path="/scholarship/central-asian-countries" element={<CentralAsianCountries />} />
-          <Route path="/scholarship/north-america" element={<NorthAmerica />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
