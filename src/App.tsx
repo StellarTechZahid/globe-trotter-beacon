@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -33,12 +32,17 @@ import TestPreparation from "./pages/services/TestPreparation";
 import ApplicationSupport from "./pages/services/ApplicationSupport";
 import ScholarshipConsulting from "./pages/services/ScholarshipConsulting";
 import VisaAssistance from "./pages/services/VisaAssistance";
-import AccommodationSupport from "./pages/services/AccommodationSupport";
+import AccommodationSupport from "./pages/AccommodationSupport";
 import PreDepartureOrientation from "./pages/services/PreDepartureOrientation";
 import PostArrivalSupport from "./pages/services/PostArrivalSupport";
 import JobSearchGuidance from "./pages/services/JobSearchGuidance";
 import FullyFunded from "./pages/scholarship/FullyFunded";
 import NotFound from "./pages/NotFound";
+import NewZealandPage from "./pages/countries/NewZealandPage";
+import PartiallyFunded from "./pages/scholarship/PartiallyFunded";
+import EuropeanCountries from "./pages/scholarship/EuropeanCountries";
+import CentralAsianCountries from "./pages/scholarship/CentralAsianCountries";
+import NorthAmerica from "./pages/scholarship/NorthAmerica";
 
 const queryClient = new QueryClient();
 
@@ -83,6 +87,11 @@ const App = () => (
           <Route path="/tips" element={<Tips />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/countries/new-zealand" element={<NewZealandPage />} />
+          <Route path="/scholarship/partially-funded" element={<PartiallyFunded />} />
+          <Route path="/scholarship/european-countries" element={<EuropeanCountries />} />
+          <Route path="/scholarship/central-asian-countries" element={<CentralAsianCountries />} />
+          <Route path="/scholarship/north-america" element={<NorthAmerica />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

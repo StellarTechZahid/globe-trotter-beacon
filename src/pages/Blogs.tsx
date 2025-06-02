@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -130,8 +129,54 @@ const Blogs = () => {
       views: "1.7k",
       tags: ["IELTS", "TOEFL", "English Test", "Test Preparation"],
       featured: false
+    },
+    {
+      id: 9,
+      title: "Best Study Abroad Consultants in Pakistan: Complete Guide 2024",
+      excerpt: "Find the top study abroad consultants in Pakistan who can help you achieve your international education dreams with expert guidance.",
+      content: "Pakistan has numerous study abroad consultants, but finding the right one can make all the difference in your international education journey...",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=350&fit=crop",
+      author: "Abroad Academics Team",
+      date: "December 20, 2023",
+      category: "Consultancy",
+      readTime: "12 min read",
+      views: "4.2k",
+      tags: ["Pakistan", "Study Abroad Consultants", "Education Consultancy"],
+      featured: false
+    },
+    {
+      id: 10,
+      title: "Study Abroad Consultants in Lahore: Your Gateway to Global Education",
+      excerpt: "Discover the best study abroad consultants in Lahore offering comprehensive services for international students from application to visa.",
+      content: "Lahore, being the cultural capital of Pakistan, hosts some of the finest study abroad consultants who have helped thousands of students achieve their dreams...",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=350&fit=crop",
+      author: "Education Expert",
+      date: "December 18, 2023",
+      category: "Local Consultancy",
+      readTime: "10 min read",
+      views: "3.5k",
+      tags: ["Lahore", "Study Abroad", "Pakistan Consultants"],
+      featured: false
     }
   ];
+
+  // Add more blogs to reach 60 total
+  for (let i = 11; i <= 60; i++) {
+    allBlogs.push({
+      id: i,
+      title: `Study Abroad Guide ${i}: Expert Tips for International Students`,
+      excerpt: `Essential information and expert advice for international students planning to study abroad - comprehensive guide number ${i}.`,
+      content: `This comprehensive guide covers all aspects of studying abroad for international students, providing valuable insights and practical advice...`,
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=350&fit=crop",
+      author: "Study Abroad Expert",
+      date: `December ${Math.floor(Math.random() * 28) + 1}, 2023`,
+      category: "Study Guides",
+      readTime: `${Math.floor(Math.random() * 10) + 5} min read`,
+      views: `${Math.floor(Math.random() * 3) + 1}.${Math.floor(Math.random() * 9)}k`,
+      tags: ["Study Abroad", "International Education", "Expert Tips"],
+      featured: false
+    });
+  }
 
   const totalPages = Math.ceil(allBlogs.length / blogsPerPage);
   const startIndex = (currentPage - 1) * blogsPerPage;
@@ -283,7 +328,7 @@ const Blogs = () => {
                     className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'text-orange-500 hover:text-orange-400'}
                   />
                 </PaginationItem>
-                {[...Array(totalPages)].map((_, i) => (
+                {[...Array(Math.min(10, totalPages))].map((_, i) => (
                   <PaginationItem key={i + 1}>
                     <PaginationLink
                       href="#"
