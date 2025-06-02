@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, User, ArrowRight, DollarSign, GraduationCap, Globe, Award } from 'lucide-react';
+import { Calendar, User, ArrowRight, DollarSign, GraduationCap, Globe, Award, Filter, MapPin } from 'lucide-react';
 import {
   Pagination,
   PaginationContent,
@@ -13,65 +13,64 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const PartiallyFunded = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCountry, setSelectedCountry] = useState('all');
   const scholarshipsPerPage = 6;
 
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
   };
 
-  const allScholarships = [
-    {
-      id: 1,
-      title: "Merit-Based Excellence Scholarship - University of Toronto",
-      amount: "CAD $15,000",
-      coverage: "50% Tuition Coverage",
-      country: "Canada",
-      deadline: "March 15, 2024",
-      eligibility: "GPA 3.7+, International Students",
-      description: "Partial funding for outstanding international students pursuing undergraduate and graduate programs at University of Toronto.",
-      university: "University of Toronto",
-      level: "Undergraduate & Graduate",
-      duration: "Up to 4 years"
-    },
-    {
-      id: 2,
-      title: "International Student Scholarship - University of Melbourne",
-      amount: "AUD $20,000",
-      coverage: "40% Tuition Coverage",
-      country: "Australia",
-      deadline: "April 30, 2024",
-      eligibility: "Academic Excellence, Leadership",
-      description: "Partial scholarship for international students demonstrating academic excellence and leadership potential.",
-      university: "University of Melbourne",
-      level: "All Levels",
-      duration: "Program Duration"
-    }
-    // Add more scholarships...
+  const partiallyFundedCountries = [
+    { name: "United States", flag: "🇺🇸", programs: ["Merit Scholarships", "University Scholarships", "Private Foundations"] },
+    { name: "United Kingdom", flag: "🇬🇧", programs: ["University Scholarships", "Merit Awards", "Partial Funding"] },
+    { name: "Canada", flag: "🇨🇦", programs: ["University Scholarships", "Provincial Awards", "Merit Scholarships"] },
+    { name: "Australia", flag: "🇦🇺", programs: ["International Student Scholarships", "University Awards", "Merit Scholarships"] },
+    { name: "Germany", flag: "🇩🇪", programs: ["DAAD Partial", "University Scholarships", "Merit Awards"] },
+    { name: "France", flag: "🇫🇷", programs: ["Eiffel Excellence", "University Scholarships", "Merit Awards"] },
+    { name: "Netherlands", flag: "🇳🇱", programs: ["Holland Scholarship", "University Awards", "Merit Scholarships"] },
+    { name: "Japan", flag: "🇯🇵", programs: ["MEXT Partial", "University Scholarships", "Merit Awards"] }
   ];
 
-  // Generate more scholarships to reach 60 total
-  for (let i = 3; i <= 60; i++) {
+  const allScholarships = [];
+
+  // Generate scholarships for partially funded countries
+  for (let i = 1; i <= 60; i++) {
+    const country = partiallyFundedCountries[i % partiallyFundedCountries.length];
+    const program = country.programs[i % country.programs.length];
+    
     allScholarships.push({
       id: i,
-      title: `International Merit Scholarship ${i}`,
+      title: `${program} - ${country.name}`,
       amount: `$${10000 + (i * 500)}`,
       coverage: `${30 + (i % 50)}% Tuition Coverage`,
-      country: ["USA", "UK", "Canada", "Australia", "Germany"][i % 5],
+      country: country.name,
       deadline: `${Math.floor(Math.random() * 12) + 1}/${Math.floor(Math.random() * 28) + 1}/2024`,
       eligibility: "Academic Excellence, International Students",
       description: `Partial funding opportunity for international students pursuing higher education with demonstrated academic merit.`,
-      university: `University ${i}`,
+      university: `${country.name} Universities`,
       level: ["Undergraduate", "Graduate", "PhD"][i % 3],
-      duration: `${1 + (i % 4)} years`
+      duration: `${1 + (i % 4)} years`,
+      flag: country.flag
     });
   }
 
-  const totalPages = Math.ceil(allScholarships.length / scholarshipsPerPage);
+  // Filter scholarships by country
+  const filteredScholarships = selectedCountry === 'all' 
+    ? allScholarships 
+    : allScholarships.filter(scholarship => scholarship.country === selectedCountry);
+
+  const totalPages = Math.ceil(filteredScholarships.length / scholarshipsPerPage);
   const startIndex = (currentPage - 1) * scholarshipsPerPage;
-  const currentScholarships = allScholarships.slice(startIndex, startIndex + scholarshipsPerPage);
+  const currentScholarships = filteredScholarships.slice(startIndex, startIndex + scholarshipsPerPage);
+
+  // Reset to page 1 when filter changes
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCountry]);
 
   return (
     <div className="min-h-screen bg-black">
@@ -89,22 +88,62 @@ const PartiallyFunded = () => {
         </div>
       </section>
 
+      {/* Country Highlights */}
+      <section className="py-16 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-500 mb-8 text-center">Countries Offering Partially Funded Scholarships</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {partiallyFundedCountries.slice(0, 8).map((country, index) => (
+              <Card key={index} className="bg-black border-blue-500 hover:border-blue-400 transition-colors">
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-4">{country.flag}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{country.name}</h3>
+                  <p className="text-blue-400 text-sm">{country.programs.length} Programs Available</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Scholarships Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl font-bold text-blue-500">Available Scholarships</h2>
-            <p className="text-gray-300">Showing {startIndex + 1}-{Math.min(startIndex + scholarshipsPerPage, allScholarships.length)} of {allScholarships.length} scholarships</p>
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-4">
+            <h2 className="text-3xl font-bold text-blue-500">Partially Funded Scholarship Opportunities</h2>
+            
+            {/* Country Filter */}
+            <div className="flex items-center gap-4">
+              <Filter className="h-5 w-5 text-blue-500" />
+              <Select value={selectedCountry} onValueChange={setSelectedCountry}>
+                <SelectTrigger className="w-48 bg-gray-900 border-blue-500 text-white">
+                  <SelectValue placeholder="Filter by Country" />
+                </SelectTrigger>
+                <SelectContent className="bg-gray-900 border-blue-500">
+                  <SelectItem value="all" className="text-white hover:bg-gray-800">All Countries</SelectItem>
+                  {partiallyFundedCountries.map((country) => (
+                    <SelectItem key={country.name} value={country.name} className="text-white hover:bg-gray-800">
+                      {country.flag} {country.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
           </div>
+
+          <p className="text-gray-300 mb-8">Showing {startIndex + 1}-{Math.min(startIndex + scholarshipsPerPage, filteredScholarships.length)} of {filteredScholarships.length} scholarships</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {currentScholarships.map((scholarship) => (
               <Card key={scholarship.id} className="bg-gray-900 border-blue-500 hover:border-blue-400 transition-all duration-300 group">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="bg-blue-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                      {scholarship.country}
-                    </span>
+                    <div className="flex items-center">
+                      <span className="text-2xl mr-2">{scholarship.flag}</span>
+                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        {scholarship.country}
+                      </span>
+                    </div>
                     <span className="text-blue-400 font-bold text-lg">{scholarship.amount}</span>
                   </div>
                   
@@ -127,6 +166,10 @@ const PartiallyFunded = () => {
                       <Calendar className="h-4 w-4 mr-2" />
                       <span>Deadline: {scholarship.deadline}</span>
                     </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <MapPin className="h-4 w-4 mr-2" />
+                      <span>{scholarship.level} • {scholarship.duration}</span>
+                    </div>
                   </div>
                   
                   <Button 
@@ -142,47 +185,49 @@ const PartiallyFunded = () => {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center">
-            <Pagination>
-              <PaginationContent>
-                <PaginationItem>
-                  <PaginationPrevious 
-                    href="#" 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (currentPage > 1) setCurrentPage(currentPage - 1);
-                    }}
-                    className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
-                  />
-                </PaginationItem>
-                {[...Array(Math.min(10, totalPages))].map((_, i) => (
-                  <PaginationItem key={i + 1}>
-                    <PaginationLink
+          {totalPages > 1 && (
+            <div className="flex justify-center">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious 
+                      href="#" 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (currentPage > 1) setCurrentPage(currentPage - 1);
+                      }}
+                      className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
+                    />
+                  </PaginationItem>
+                  {[...Array(Math.min(10, totalPages))].map((_, i) => (
+                    <PaginationItem key={i + 1}>
+                      <PaginationLink
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setCurrentPage(i + 1);
+                        }}
+                        isActive={currentPage === i + 1}
+                        className={currentPage === i + 1 ? 'bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-400'}
+                      >
+                        {i + 1}
+                      </PaginationLink>
+                    </PaginationItem>
+                  ))}
+                  <PaginationItem>
+                    <PaginationNext 
                       href="#"
                       onClick={(e) => {
                         e.preventDefault();
-                        setCurrentPage(i + 1);
+                        if (currentPage < totalPages) setCurrentPage(currentPage + 1);
                       }}
-                      isActive={currentPage === i + 1}
-                      className={currentPage === i + 1 ? 'bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-400'}
-                    >
-                      {i + 1}
-                    </PaginationLink>
+                      className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
+                    />
                   </PaginationItem>
-                ))}
-                <PaginationItem>
-                  <PaginationNext 
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-                    }}
-                    className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
-                  />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div>
+                </PaginationContent>
+              </Pagination>
+            </div>
+          )}
         </div>
       </section>
 

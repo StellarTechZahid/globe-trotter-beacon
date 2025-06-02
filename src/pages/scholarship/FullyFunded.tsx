@@ -1,90 +1,76 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Award, CheckCircle, Star, MessageCircle, ArrowRight, Globe, DollarSign } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Calendar, User, ArrowRight, DollarSign, GraduationCap, Globe, Award, Filter, MapPin } from 'lucide-react';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const FullyFunded = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCountry, setSelectedCountry] = useState('all');
+  const scholarshipsPerPage = 6;
+
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
   };
 
-  const scholarships = [
-    {
-      name: "Gates Cambridge Scholarship",
-      country: "United Kingdom",
-      amount: "$200,000+",
-      duration: "2-4 years",
-      coverage: ["Full tuition fees", "Monthly stipend", "Travel costs", "Health insurance", "Research funding"],
-      eligibility: ["Outstanding academic merit", "Leadership potential", "Commitment to improving lives"],
-      deadline: "December 2024"
-    },
-    {
-      name: "Fulbright Foreign Student Program",
-      country: "United States",
-      amount: "$150,000+",
-      duration: "1-2 years",
-      coverage: ["Full tuition", "Living allowance", "Health insurance", "Travel expenses", "Research support"],
-      eligibility: ["Academic excellence", "Leadership qualities", "Cultural ambassador potential"],
-      deadline: "October 2024"
-    },
-    {
-      name: "Chevening Scholarships",
-      country: "United Kingdom",
-      amount: "$120,000+",
-      duration: "1 year",
-      coverage: ["University tuition", "Monthly stipend", "Travel costs", "Visa application"],
-      eligibility: ["Leadership potential", "Academic excellence", "Work experience"],
-      deadline: "November 2024"
-    },
-    {
-      name: "DAAD Scholarships",
-      country: "Germany",
-      amount: "$100,000+",
-      duration: "1-3 years",
-      coverage: ["Monthly allowance", "Travel allowance", "Health insurance", "Study allowance"],
-      eligibility: ["Academic merit", "Motivation", "German language skills (optional)"],
-      deadline: "Various deadlines"
-    },
-    {
-      name: "Australia Awards Scholarships",
-      country: "Australia",
-      amount: "$180,000+",
-      duration: "2-4 years",
-      coverage: ["Full tuition", "Living allowance", "Health cover", "Return travel"],
-      eligibility: ["Academic merit", "Leadership qualities", "Development impact"],
-      deadline: "May 2024"
-    },
-    {
-      name: "Vanier Canada Graduate Scholarships",
-      country: "Canada",
-      amount: "$150,000",
-      duration: "3 years",
-      coverage: ["Annual stipend", "Research support", "Travel allowance"],
-      eligibility: ["Doctoral studies", "Academic excellence", "Research potential"],
-      deadline: "November 2024"
-    }
+  const fullyFundedCountries = [
+    { name: "United States", flag: "🇺🇸", programs: ["Fulbright", "Gates Cambridge", "Knight-Hennessy", "Stanford"] },
+    { name: "United Kingdom", flag: "🇬🇧", programs: ["Chevening", "Commonwealth", "Gates Cambridge", "Rhodes"] },
+    { name: "Canada", flag: "🇨🇦", programs: ["Vanier CGS", "Banting Fellowship", "Trudeau Foundation"] },
+    { name: "Australia", flag: "🇦🇺", programs: ["Australia Awards", "Endeavour Leadership", "Government Scholarships"] },
+    { name: "Germany", flag: "🇩🇪", programs: ["DAAD", "Deutschlandstipendium", "Humboldt Research"] },
+    { name: "Netherlands", flag: "🇳🇱", programs: ["Orange Tulip", "Holland Scholarship", "University Scholarships"] },
+    { name: "Sweden", flag: "🇸🇪", programs: ["Swedish Institute", "University Scholarships", "Visby Programme"] },
+    { name: "Norway", flag: "🇳🇴", programs: ["Quota Scheme", "Norwegian Government", "Research Council"] }
   ];
 
-  const applicationTips = [
-    {
-      title: "Start Early",
-      description: "Begin your application process 12-18 months in advance to ensure thorough preparation."
-    },
-    {
-      title: "Craft Compelling Essays",
-      description: "Write personal statements that showcase your unique story, achievements, and future goals."
-    },
-    {
-      title: "Secure Strong References",
-      description: "Obtain recommendation letters from professors or employers who know your work well."
-    },
-    {
-      title: "Demonstrate Impact",
-      description: "Show how you've made a difference in your community and how the scholarship will help you do more."
-    }
-  ];
+  const allScholarships = [];
+
+  // Generate scholarships for fully funded countries
+  for (let i = 1; i <= 60; i++) {
+    const country = fullyFundedCountries[i % fullyFundedCountries.length];
+    const program = country.programs[i % country.programs.length];
+    
+    allScholarships.push({
+      id: i,
+      title: `${program} Scholarship - ${country.name}`,
+      amount: "Full Coverage",
+      coverage: "100% Tuition + Living Expenses",
+      country: country.name,
+      deadline: `${Math.floor(Math.random() * 12) + 1}/${Math.floor(Math.random() * 28) + 1}/2024`,
+      eligibility: "Outstanding Academic Merit, International Students",
+      description: `Fully funded scholarship opportunity for international students with complete financial support including tuition, living expenses, and additional benefits.`,
+      university: `${country.name} Universities`,
+      level: ["Undergraduate", "Graduate", "PhD", "All Levels"][i % 4],
+      duration: `${1 + (i % 4)} years`,
+      flag: country.flag
+    });
+  }
+
+  // Filter scholarships by country
+  const filteredScholarships = selectedCountry === 'all' 
+    ? allScholarships 
+    : allScholarships.filter(scholarship => scholarship.country === selectedCountry);
+
+  const totalPages = Math.ceil(filteredScholarships.length / scholarshipsPerPage);
+  const startIndex = (currentPage - 1) * scholarshipsPerPage;
+  const currentScholarships = filteredScholarships.slice(startIndex, startIndex + scholarshipsPerPage);
+
+  // Reset to page 1 when filter changes
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCountry]);
 
   return (
     <div className="min-h-screen bg-black">
@@ -96,145 +82,152 @@ const FullyFunded = () => {
         <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">Fully Funded Scholarships</h1>
-            <p className="text-xl mb-8">Complete financial support for your international education journey</p>
-            <Button 
-              onClick={scrollToConsultation}
-              className="bg-black hover:bg-gray-800 text-white px-8 py-3 text-lg"
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Book Free Consultation Call
-            </Button>
+            <p className="text-xl mb-6">Complete financial support for your international education journey</p>
+            <p className="text-lg opacity-90">100% tuition coverage plus living expenses and additional benefits</p>
           </div>
         </div>
       </section>
 
-      {/* What's Included Section */}
+      {/* Country Highlights */}
+      <section className="py-16 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-orange-500 mb-8 text-center">Countries Offering Fully Funded Scholarships</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            {fullyFundedCountries.slice(0, 8).map((country, index) => (
+              <Card key={index} className="bg-black border-orange-500 hover:border-orange-400 transition-colors">
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-4">{country.flag}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{country.name}</h3>
+                  <p className="text-orange-400 text-sm">{country.programs.length} Programs Available</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Scholarships Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-orange-500 mb-6">What's Included in Fully Funded Scholarships</h2>
-            <p className="text-xl text-gray-300">Comprehensive financial support covering all aspects of your education</p>
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-4">
+            <h2 className="text-3xl font-bold text-orange-500">Fully Funded Scholarship Opportunities</h2>
+            
+            {/* Country Filter */}
+            <div className="flex items-center gap-4">
+              <Filter className="h-5 w-5 text-orange-500" />
+              <Select value={selectedCountry} onValueChange={setSelectedCountry}>
+                <SelectTrigger className="w-48 bg-gray-900 border-orange-500 text-white">
+                  <SelectValue placeholder="Filter by Country" />
+                </SelectTrigger>
+                <SelectContent className="bg-gray-900 border-orange-500">
+                  <SelectItem value="all" className="text-white hover:bg-gray-800">All Countries</SelectItem>
+                  {fullyFundedCountries.map((country) => (
+                    <SelectItem key={country.name} value={country.name} className="text-white hover:bg-gray-800">
+                      {country.flag} {country.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: DollarSign, title: "100% Tuition Coverage", desc: "Complete coverage of university tuition fees" },
-              { icon: Globe, title: "Living Allowance", desc: "Monthly stipend for accommodation and daily expenses" },
-              { icon: Award, title: "Additional Benefits", desc: "Health insurance, travel costs, and research funding" },
-              { icon: Star, title: "Career Support", desc: "Networking opportunities and career development programs" }
-            ].map((item, index) => {
-              const IconComponent = item.icon;
-              return (
-                <div key={index} className="bg-gray-900 rounded-lg p-6 border border-orange-500 text-center">
-                  <div className="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="h-8 w-8 text-black" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-gray-300">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+          <p className="text-gray-300 mb-8">Showing {startIndex + 1}-{Math.min(startIndex + scholarshipsPerPage, filteredScholarships.length)} of {filteredScholarships.length} scholarships</p>
 
-      {/* Available Scholarships */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-orange-500 mb-6">Available Fully Funded Scholarships</h2>
-            <p className="text-xl text-gray-300">Prestigious opportunities from leading institutions worldwide</p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {scholarships.map((scholarship, index) => (
-              <div key={index} className="bg-black rounded-lg p-8 border border-orange-500">
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{scholarship.name}</h3>
-                    <p className="text-orange-500 font-semibold">{scholarship.country}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {currentScholarships.map((scholarship) => (
+              <Card key={scholarship.id} className="bg-gray-900 border-orange-500 hover:border-orange-400 transition-all duration-300 group">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                      <span className="text-2xl mr-2">{scholarship.flag}</span>
+                      <span className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                        {scholarship.country}
+                      </span>
+                    </div>
+                    <span className="text-orange-400 font-bold text-lg">{scholarship.amount}</span>
                   </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-orange-500">{scholarship.amount}</div>
-                    <div className="text-gray-400 text-sm">{scholarship.duration}</div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-500 transition-colors line-clamp-2">
+                    {scholarship.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-4 line-clamp-3">{scholarship.description}</p>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center text-sm text-gray-400">
+                      <GraduationCap className="h-4 w-4 mr-2" />
+                      <span>{scholarship.level} • {scholarship.duration}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Award className="h-4 w-4 mr-2" />
+                      <span>{scholarship.coverage}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span>Deadline: {scholarship.deadline}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <MapPin className="h-4 w-4 mr-2" />
+                      <span>{scholarship.university}</span>
+                    </div>
                   </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h4 className="text-white font-semibold mb-3">Coverage Includes:</h4>
-                    <ul className="space-y-2">
-                      {scholarship.coverage.map((item, idx) => (
-                        <li key={idx} className="text-gray-300 text-sm flex items-center">
-                          <CheckCircle className="h-4 w-4 text-orange-500 mr-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="text-white font-semibold mb-3">Key Requirements:</h4>
-                    <ul className="space-y-2">
-                      {scholarship.eligibility.map((item, idx) => (
-                        <li key={idx} className="text-gray-300 text-sm flex items-center">
-                          <CheckCircle className="h-4 w-4 text-orange-500 mr-2 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400 text-sm">Deadline: {scholarship.deadline}</span>
+                  
                   <Button 
                     onClick={scrollToConsultation}
-                    className="bg-orange-500 hover:bg-orange-600 text-black"
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
                   >
                     Apply Now
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Application Tips */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-orange-500 mb-6">Application Success Tips</h2>
-            <p className="text-xl text-gray-300">Expert advice to maximize your chances of success</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {applicationTips.map((tip, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg p-6 border border-orange-500">
-                <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
-                <p className="text-gray-300">{tip.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-black mb-6">Ready to Start Your Journey?</h2>
-          <p className="text-xl text-black mb-8 opacity-90">
-            Get expert guidance to secure fully funded scholarships for your dream education
-          </p>
-          <Button 
-            onClick={scrollToConsultation}
-            className="bg-black hover:bg-gray-800 text-white px-8 py-3 text-lg"
-          >
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Book Free Consultation Call
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex justify-center">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious 
+                      href="#" 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (currentPage > 1) setCurrentPage(currentPage - 1);
+                      }}
+                      className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'text-orange-500 hover:text-orange-400'}
+                    />
+                  </PaginationItem>
+                  {[...Array(Math.min(10, totalPages))].map((_, i) => (
+                    <PaginationItem key={i + 1}>
+                      <PaginationLink
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setCurrentPage(i + 1);
+                        }}
+                        isActive={currentPage === i + 1}
+                        className={currentPage === i + 1 ? 'bg-orange-500 text-black' : 'text-orange-500 hover:text-orange-400'}
+                      >
+                        {i + 1}
+                      </PaginationLink>
+                    </PaginationItem>
+                  ))}
+                  <PaginationItem>
+                    <PaginationNext 
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+                      }}
+                      className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'text-orange-500 hover:text-orange-400'}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
+            </div>
+          )}
         </div>
       </section>
 

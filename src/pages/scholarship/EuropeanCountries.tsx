@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, ArrowRight, GraduationCap, Globe, Award, MapPin } from 'lucide-react';
+import { Calendar, ArrowRight, GraduationCap, Globe, Award, MapPin, Filter } from 'lucide-react';
 import {
   Pagination,
   PaginationContent,
@@ -13,48 +13,17 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const EuropeanCountries = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCountry, setSelectedCountry] = useState('all');
   const scholarshipsPerPage = 6;
 
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
   };
 
-  const allScholarships = [
-    {
-      id: 1,
-      title: "Erasmus+ Scholarship Program",
-      amount: "€24,000-36,000",
-      coverage: "Full Coverage + Living Allowance",
-      country: "European Union",
-      deadline: "February 1, 2024",
-      eligibility: "All International Students",
-      description: "Comprehensive funding for studying in European universities with exchange opportunities across 33 countries.",
-      university: "Multiple EU Universities",
-      level: "All Levels",
-      duration: "1-2 years",
-      flag: "🇪🇺"
-    },
-    {
-      id: 2,
-      title: "DAAD Scholarship - Germany",
-      amount: "€850-1,200/month",
-      coverage: "Living Expenses + Tuition",
-      country: "Germany",
-      deadline: "October 31, 2024",
-      eligibility: "Graduate Students, Research",
-      description: "German Academic Exchange Service scholarship for international students pursuing graduate studies and research.",
-      university: "German Universities",
-      level: "Graduate & PhD",
-      duration: "1-4 years",
-      flag: "🇩🇪"
-    }
-    // Add more European scholarships...
-  ];
-
-  // Generate more scholarships for European countries
   const europeanCountries = [
     { name: "Germany", flag: "🇩🇪", programs: ["DAAD", "Deutschlandstipendium", "Heinrich Böll"] },
     { name: "France", flag: "🇫🇷", programs: ["Eiffel Excellence", "Campus France", "Charpak"] },
@@ -66,7 +35,10 @@ const EuropeanCountries = () => {
     { name: "Italy", flag: "🇮🇹", programs: ["Government Scholarships", "University Scholarships", "Invest Your Talent"] }
   ];
 
-  for (let i = 3; i <= 60; i++) {
+  const allScholarships = [];
+
+  // Generate scholarships for European countries
+  for (let i = 1; i <= 60; i++) {
     const country = europeanCountries[i % europeanCountries.length];
     const program = country.programs[i % country.programs.length];
     
@@ -86,9 +58,19 @@ const EuropeanCountries = () => {
     });
   }
 
-  const totalPages = Math.ceil(allScholarships.length / scholarshipsPerPage);
+  // Filter scholarships by country
+  const filteredScholarships = selectedCountry === 'all' 
+    ? allScholarships 
+    : allScholarships.filter(scholarship => scholarship.country === selectedCountry);
+
+  const totalPages = Math.ceil(filteredScholarships.length / scholarshipsPerPage);
   const startIndex = (currentPage - 1) * scholarshipsPerPage;
-  const currentScholarships = allScholarships.slice(startIndex, startIndex + scholarshipsPerPage);
+  const currentScholarships = filteredScholarships.slice(startIndex, startIndex + scholarshipsPerPage);
+
+  // Reset to page 1 when filter changes
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCountry]);
 
   return (
     <div className="min-h-screen bg-black">
@@ -127,10 +109,29 @@ const EuropeanCountries = () => {
       {/* Scholarships Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-12">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-4">
             <h2 className="text-3xl font-bold text-blue-500">European Scholarship Opportunities</h2>
-            <p className="text-gray-300">Showing {startIndex + 1}-{Math.min(startIndex + scholarshipsPerPage, allScholarships.length)} of {allScholarships.length} scholarships</p>
+            
+            {/* Country Filter */}
+            <div className="flex items-center gap-4">
+              <Filter className="h-5 w-5 text-blue-500" />
+              <Select value={selectedCountry} onValueChange={setSelectedCountry}>
+                <SelectTrigger className="w-48 bg-gray-900 border-blue-500 text-white">
+                  <SelectValue placeholder="Filter by Country" />
+                </SelectTrigger>
+                <SelectContent className="bg-gray-900 border-blue-500">
+                  <SelectItem value="all" className="text-white hover:bg-gray-800">All Countries</SelectItem>
+                  {europeanCountries.map((country) => (
+                    <SelectItem key={country.name} value={country.name} className="text-white hover:bg-gray-800">
+                      {country.flag} {country.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
           </div>
+
+          <p className="text-gray-300 mb-8">Showing {startIndex + 1}-{Math.min(startIndex + scholarshipsPerPage, filteredScholarships.length)} of {filteredScholarships.length} scholarships</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {currentScholarships.map((scholarship) => (
@@ -184,47 +185,49 @@ const EuropeanCountries = () => {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center">
-            <Pagination>
-              <PaginationContent>
-                <PaginationItem>
-                  <PaginationPrevious 
-                    href="#" 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (currentPage > 1) setCurrentPage(currentPage - 1);
-                    }}
-                    className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
-                  />
-                </PaginationItem>
-                {[...Array(Math.min(10, totalPages))].map((_, i) => (
-                  <PaginationItem key={i + 1}>
-                    <PaginationLink
+          {totalPages > 1 && (
+            <div className="flex justify-center">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious 
+                      href="#" 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (currentPage > 1) setCurrentPage(currentPage - 1);
+                      }}
+                      className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
+                    />
+                  </PaginationItem>
+                  {[...Array(Math.min(10, totalPages))].map((_, i) => (
+                    <PaginationItem key={i + 1}>
+                      <PaginationLink
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setCurrentPage(i + 1);
+                        }}
+                        isActive={currentPage === i + 1}
+                        className={currentPage === i + 1 ? 'bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-400'}
+                      >
+                        {i + 1}
+                      </PaginationLink>
+                    </PaginationItem>
+                  ))}
+                  <PaginationItem>
+                    <PaginationNext 
                       href="#"
                       onClick={(e) => {
                         e.preventDefault();
-                        setCurrentPage(i + 1);
+                        if (currentPage < totalPages) setCurrentPage(currentPage + 1);
                       }}
-                      isActive={currentPage === i + 1}
-                      className={currentPage === i + 1 ? 'bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-400'}
-                    >
-                      {i + 1}
-                    </PaginationLink>
+                      className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
+                    />
                   </PaginationItem>
-                ))}
-                <PaginationItem>
-                  <PaginationNext 
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-                    }}
-                    className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
-                  />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div>
+                </PaginationContent>
+              </Pagination>
+            </div>
+          )}
         </div>
       </section>
 
