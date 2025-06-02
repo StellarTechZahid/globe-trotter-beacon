@@ -83,7 +83,7 @@ const Events = () => {
         </div>
       </section>
 
-      {/* SEO Content Section */}
+      {/* Enhanced SEO Content Section */}
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -95,13 +95,13 @@ const Events = () => {
               education events. As the best study abroad consultants in Pakistan and leading study abroad consultants 
               in Lahore, we bring together top universities, scholarship opportunities, and expert guidance under one roof. 
               Our education expos, seminars, and workshops have helped thousands of Pakistani students connect with 
-              international universities and secure their study abroad dreams.
+              international universities and secure their study abroad dreams with our proven expertise.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Event Types Grid */}
+      {/* Event Types Grid with Orange Branding */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-orange-500 mb-12 text-center">Explore Our Events</h2>
@@ -110,10 +110,10 @@ const Events = () => {
             {eventTypes.map((event, index) => {
               const IconComponent = event.icon;
               return (
-                <Card key={index} className={`bg-gray-900 border-${event.color}-500 hover:border-${event.color}-400 transition-all duration-300 group`}>
+                <Card key={index} className="bg-gray-900 border-orange-500 hover:border-orange-400 transition-all duration-300 group">
                   <CardContent className="p-8">
                     <div className="flex items-center mb-4">
-                      <IconComponent className={`h-8 w-8 text-${event.color}-500 mr-4`} />
+                      <IconComponent className="h-8 w-8 text-orange-500 mr-4" />
                       <h3 className="text-2xl font-bold text-white group-hover:text-orange-500 transition-colors">
                         {event.name}
                       </h3>
@@ -121,12 +121,12 @@ const Events = () => {
                     
                     <p className="text-gray-300 mb-4">{event.description}</p>
                     
-                    <div className={`text-${event.color}-500 font-semibold mb-6`}>
+                    <div className="text-orange-500 font-semibold mb-6">
                       {event.stats}
                     </div>
                     
                     <Link to={`/events/${event.slug}`}>
-                      <Button className={`w-full bg-${event.color}-500 hover:bg-${event.color}-600 text-white font-semibold`}>
+                      <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
                         Explore {event.name}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>

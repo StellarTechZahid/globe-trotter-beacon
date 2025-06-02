@@ -48,8 +48,8 @@ const Seminars = () => {
     <div className="min-h-screen bg-black">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-green-600 to-teal-600">
+      {/* Hero Section with Orange Branding */}
+      <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800">
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center">
           <div className="text-center text-white">
@@ -60,14 +60,14 @@ const Seminars = () => {
         </div>
       </section>
 
-      {/* Seminars Grid */}
+      {/* Seminars Grid with Orange Branding */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-orange-500 mb-12 text-center">Upcoming Seminars</h2>
           
           <div className="grid md:grid-cols-1 gap-8">
             {seminars.map((seminar) => (
-              <Card key={seminar.id} className="bg-gray-900 border-green-500 hover:border-green-400 transition-all duration-300">
+              <Card key={seminar.id} className="bg-gray-900 border-orange-500 hover:border-orange-400 transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
@@ -75,11 +75,11 @@ const Seminars = () => {
                       <p className="text-gray-300 mb-6">{seminar.description}</p>
                       
                       <div className="flex items-center text-gray-300 mb-4">
-                        <Mic className="h-5 w-5 mr-3 text-green-500" />
+                        <Mic className="h-5 w-5 mr-3 text-orange-500" />
                         <span>Speaker: {seminar.speaker}</span>
                       </div>
                       <div className="flex items-center text-gray-300">
-                        <Users className="h-5 w-5 mr-3 text-green-500" />
+                        <Users className="h-5 w-5 mr-3 text-orange-500" />
                         <span>{seminar.attendees}</span>
                       </div>
                     </div>
@@ -87,22 +87,22 @@ const Seminars = () => {
                     <div>
                       <div className="space-y-4 mb-6">
                         <div className="flex items-center text-gray-300">
-                          <Calendar className="h-5 w-5 mr-3 text-green-500" />
+                          <Calendar className="h-5 w-5 mr-3 text-orange-500" />
                           <span>{seminar.date}</span>
                         </div>
                         <div className="flex items-center text-gray-300">
-                          <MapPin className="h-5 w-5 mr-3 text-green-500" />
+                          <MapPin className="h-5 w-5 mr-3 text-orange-500" />
                           <span>{seminar.location}</span>
                         </div>
                         <div className="flex items-center text-gray-300">
-                          <Clock className="h-5 w-5 mr-3 text-green-500" />
+                          <Clock className="h-5 w-5 mr-3 text-orange-500" />
                           <span>{seminar.time}</span>
                         </div>
                       </div>
                       
                       <Button 
                         onClick={scrollToConsultation}
-                        className="w-full bg-green-500 hover:bg-green-600 text-black font-semibold"
+                        className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
                       >
                         Reserve Your Seat
                         <ArrowRight className="ml-2 h-5 w-5" />

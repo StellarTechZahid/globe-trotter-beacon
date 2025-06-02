@@ -45,8 +45,8 @@ const EducationEvents = () => {
     <div className="min-h-screen bg-black">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-blue-600 to-cyan-600">
+      {/* Hero Section with Orange Branding */}
+      <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800">
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center">
           <div className="text-center text-white">
@@ -57,18 +57,18 @@ const EducationEvents = () => {
         </div>
       </section>
 
-      {/* Events Grid */}
+      {/* Events Grid with Orange Branding */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-orange-500 mb-12 text-center">Upcoming Education Events</h2>
           
           <div className="grid md:grid-cols-1 gap-8">
             {educationEvents.map((event) => (
-              <Card key={event.id} className="bg-gray-900 border-blue-500 hover:border-blue-400 transition-all duration-300">
+              <Card key={event.id} className="bg-gray-900 border-orange-500 hover:border-orange-400 transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
+                      <span className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
                         {event.type}
                       </span>
                       <h3 className="text-2xl font-bold text-white mb-4">{event.title}</h3>
@@ -78,22 +78,22 @@ const EducationEvents = () => {
                     <div>
                       <div className="space-y-4 mb-6">
                         <div className="flex items-center text-gray-300">
-                          <Calendar className="h-5 w-5 mr-3 text-blue-500" />
+                          <Calendar className="h-5 w-5 mr-3 text-orange-500" />
                           <span>{event.date}</span>
                         </div>
                         <div className="flex items-center text-gray-300">
-                          <MapPin className="h-5 w-5 mr-3 text-blue-500" />
+                          <MapPin className="h-5 w-5 mr-3 text-orange-500" />
                           <span>{event.location}</span>
                         </div>
                         <div className="flex items-center text-gray-300">
-                          <Clock className="h-5 w-5 mr-3 text-blue-500" />
+                          <Clock className="h-5 w-5 mr-3 text-orange-500" />
                           <span>{event.time}</span>
                         </div>
                       </div>
                       
                       <Button 
                         onClick={scrollToConsultation}
-                        className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold"
+                        className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
                       >
                         Register Now
                         <ArrowRight className="ml-2 h-5 w-5" />

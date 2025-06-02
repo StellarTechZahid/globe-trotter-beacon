@@ -51,8 +51,8 @@ const EducationExpo = () => {
     <div className="min-h-screen bg-black">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-purple-600 to-pink-600">
+      {/* Hero Section with Orange Branding */}
+      <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800">
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center">
           <div className="text-center text-white">
@@ -63,30 +63,30 @@ const EducationExpo = () => {
         </div>
       </section>
 
-      {/* SEO Content Section */}
+      {/* Enhanced SEO Content Section */}
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-purple-500 mb-6">
+            <h2 className="text-4xl font-bold text-orange-500 mb-6">
               Pakistan's Premier Education Expo - Abroad Academics
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Abroad Academics, established in 2023 as Pakistan's leading study abroad consultants, organizes the most comprehensive 
               education expos in Pakistan. Our education expos feature representatives from top universities worldwide, offering direct 
-              access to admissions officers, scholarship opportunities, and expert guidance for Pakistani students.
+              access to admissions officers, scholarship opportunities, and expert guidance for Pakistani students seeking international education.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Upcoming Expos */}
+      {/* Upcoming Expos with Orange Branding */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-orange-500 mb-12 text-center">Upcoming Education Expos</h2>
           
           <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 mb-12">
             {upcomingExpos.map((expo) => (
-              <Card key={expo.id} className="bg-gray-900 border-purple-500 hover:border-purple-400 transition-all duration-300">
+              <Card key={expo.id} className="bg-gray-900 border-orange-500 hover:border-orange-400 transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
@@ -95,15 +95,15 @@ const EducationExpo = () => {
                       
                       <div className="space-y-3">
                         <div className="flex items-center text-gray-300">
-                          <Calendar className="h-5 w-5 mr-3 text-purple-500" />
+                          <Calendar className="h-5 w-5 mr-3 text-orange-500" />
                           <span>{expo.date}</span>
                         </div>
                         <div className="flex items-center text-gray-300">
-                          <MapPin className="h-5 w-5 mr-3 text-purple-500" />
+                          <MapPin className="h-5 w-5 mr-3 text-orange-500" />
                           <span>{expo.location}</span>
                         </div>
                         <div className="flex items-center text-gray-300">
-                          <Clock className="h-5 w-5 mr-3 text-purple-500" />
+                          <Clock className="h-5 w-5 mr-3 text-orange-500" />
                           <span>{expo.time}</span>
                         </div>
                       </div>
@@ -111,21 +111,21 @@ const EducationExpo = () => {
                     
                     <div>
                       <div className="grid grid-cols-1 gap-4 mb-6">
-                        <div className="bg-black p-4 rounded-lg border border-purple-500">
+                        <div className="bg-black p-4 rounded-lg border border-orange-500">
                           <div className="flex items-center justify-between">
-                            <Users className="h-6 w-6 text-purple-500" />
+                            <Users className="h-6 w-6 text-orange-500" />
                             <span className="text-white font-semibold">{expo.attendees}</span>
                           </div>
                         </div>
-                        <div className="bg-black p-4 rounded-lg border border-purple-500">
+                        <div className="bg-black p-4 rounded-lg border border-orange-500">
                           <div className="flex items-center justify-between">
-                            <Globe className="h-6 w-6 text-purple-500" />
+                            <Globe className="h-6 w-6 text-orange-500" />
                             <span className="text-white font-semibold">{expo.countries}</span>
                           </div>
                         </div>
-                        <div className="bg-black p-4 rounded-lg border border-purple-500">
+                        <div className="bg-black p-4 rounded-lg border border-orange-500">
                           <div className="flex items-center justify-between">
-                            <span className="text-purple-500 font-semibold">Universities</span>
+                            <span className="text-orange-500 font-semibold">Universities</span>
                             <span className="text-white font-semibold">{expo.universities}</span>
                           </div>
                         </div>
@@ -133,7 +133,7 @@ const EducationExpo = () => {
                       
                       <Button 
                         onClick={scrollToConsultation}
-                        className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3"
+                        className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold py-3"
                       >
                         Register for Free
                         <ArrowRight className="ml-2 h-5 w-5" />
