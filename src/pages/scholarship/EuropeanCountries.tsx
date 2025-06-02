@@ -37,8 +37,8 @@ const EuropeanCountries = () => {
 
   const allScholarships = [];
 
-  // Generate scholarships for European countries
-  for (let i = 1; i <= 60; i++) {
+  // Generate scholarships for European countries - increased to 96 for 8 pages
+  for (let i = 1; i <= 96; i++) {
     const country = europeanCountries[i % europeanCountries.length];
     const program = country.programs[i % country.programs.length];
     
@@ -77,7 +77,7 @@ const EuropeanCountries = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800">
         <div className="absolute inset-0 bg-black bg-opacity-40" />
         <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center">
           <div className="text-center text-white">
@@ -91,14 +91,14 @@ const EuropeanCountries = () => {
       {/* Country Highlights */}
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-blue-500 mb-8 text-center">Featured European Countries</h2>
+          <h2 className="text-3xl font-bold text-orange-500 mb-8 text-center">Featured European Countries</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {europeanCountries.slice(0, 8).map((country, index) => (
-              <Card key={index} className="bg-black border-blue-500 hover:border-blue-400 transition-colors">
+              <Card key={index} className="bg-black border-orange-500 hover:border-orange-400 transition-colors">
                 <CardContent className="p-6 text-center">
                   <div className="text-4xl mb-4">{country.flag}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{country.name}</h3>
-                  <p className="text-gray-400 text-sm">{country.programs.length} Programs Available</p>
+                  <p className="text-orange-400 text-sm">{country.programs.length} Programs Available</p>
                 </CardContent>
               </Card>
             ))}
@@ -110,16 +110,16 @@ const EuropeanCountries = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-4">
-            <h2 className="text-3xl font-bold text-blue-500">European Scholarship Opportunities</h2>
+            <h2 className="text-3xl font-bold text-orange-500">European Scholarship Opportunities</h2>
             
             {/* Country Filter */}
             <div className="flex items-center gap-4">
-              <Filter className="h-5 w-5 text-blue-500" />
+              <Filter className="h-5 w-5 text-orange-500" />
               <Select value={selectedCountry} onValueChange={setSelectedCountry}>
-                <SelectTrigger className="w-48 bg-gray-900 border-blue-500 text-white">
+                <SelectTrigger className="w-48 bg-gray-900 border-orange-500 text-white">
                   <SelectValue placeholder="Filter by Country" />
                 </SelectTrigger>
-                <SelectContent className="bg-gray-900 border-blue-500">
+                <SelectContent className="bg-gray-900 border-orange-500">
                   <SelectItem value="all" className="text-white hover:bg-gray-800">All Countries</SelectItem>
                   {europeanCountries.map((country) => (
                     <SelectItem key={country.name} value={country.name} className="text-white hover:bg-gray-800">
@@ -135,19 +135,19 @@ const EuropeanCountries = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {currentScholarships.map((scholarship) => (
-              <Card key={scholarship.id} className="bg-gray-900 border-blue-500 hover:border-blue-400 transition-all duration-300 group">
+              <Card key={scholarship.id} className="bg-gray-900 border-orange-500 hover:border-orange-400 transition-all duration-300 group">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
                       <span className="text-2xl mr-2">{scholarship.flag}</span>
-                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
                         {scholarship.country}
                       </span>
                     </div>
-                    <span className="text-blue-400 font-bold text-lg">{scholarship.amount}</span>
+                    <span className="text-orange-400 font-bold text-lg">{scholarship.amount}</span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-500 transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-500 transition-colors line-clamp-2">
                     {scholarship.title}
                   </h3>
                   
@@ -174,7 +174,7 @@ const EuropeanCountries = () => {
                   
                   <Button 
                     onClick={scrollToConsultation}
-                    className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold"
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
                   >
                     Apply Now
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -196,10 +196,10 @@ const EuropeanCountries = () => {
                         e.preventDefault();
                         if (currentPage > 1) setCurrentPage(currentPage - 1);
                       }}
-                      className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
+                      className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'text-orange-500 hover:text-orange-400'}
                     />
                   </PaginationItem>
-                  {[...Array(Math.min(10, totalPages))].map((_, i) => (
+                  {[...Array(Math.min(8, totalPages))].map((_, i) => (
                     <PaginationItem key={i + 1}>
                       <PaginationLink
                         href="#"
@@ -208,7 +208,7 @@ const EuropeanCountries = () => {
                           setCurrentPage(i + 1);
                         }}
                         isActive={currentPage === i + 1}
-                        className={currentPage === i + 1 ? 'bg-blue-500 text-white' : 'text-blue-500 hover:text-blue-400'}
+                        className={currentPage === i + 1 ? 'bg-orange-500 text-black' : 'text-orange-500 hover:text-orange-400'}
                       >
                         {i + 1}
                       </PaginationLink>
@@ -221,7 +221,7 @@ const EuropeanCountries = () => {
                         e.preventDefault();
                         if (currentPage < totalPages) setCurrentPage(currentPage + 1);
                       }}
-                      className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'text-blue-500 hover:text-blue-400'}
+                      className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'text-orange-500 hover:text-orange-400'}
                     />
                   </PaginationItem>
                 </PaginationContent>

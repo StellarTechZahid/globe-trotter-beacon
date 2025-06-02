@@ -37,8 +37,8 @@ const FullyFunded = () => {
 
   const allScholarships = [];
 
-  // Generate scholarships for fully funded countries
-  for (let i = 1; i <= 60; i++) {
+  // Generate scholarships for fully funded countries - increased to 96 for 8 pages
+  for (let i = 1; i <= 96; i++) {
     const country = fullyFundedCountries[i % fullyFundedCountries.length];
     const program = country.programs[i % country.programs.length];
     
@@ -199,7 +199,7 @@ const FullyFunded = () => {
                       className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'text-orange-500 hover:text-orange-400'}
                     />
                   </PaginationItem>
-                  {[...Array(Math.min(10, totalPages))].map((_, i) => (
+                  {[...Array(Math.min(8, totalPages))].map((_, i) => (
                     <PaginationItem key={i + 1}>
                       <PaginationLink
                         href="#"
