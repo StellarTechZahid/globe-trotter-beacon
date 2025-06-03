@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -51,6 +52,12 @@ import PartiallyFunded from './pages/scholarship/PartiallyFunded';
 import EuropeanCountries from './pages/scholarship/EuropeanCountries';
 import NorthAmerica from './pages/scholarship/NorthAmerica';
 import CentralAsianCountries from './pages/scholarship/CentralAsianCountries';
+
+// Individual Scholarship Detail Pages
+import FullbrightScholarship from './pages/scholarships/FullbrightScholarship';
+import ChevelingScholarship from './pages/scholarships/ChevelingScholarship';
+import VanierCGS from './pages/scholarships/VanierCGS';
+import BolashakScholarship from './pages/scholarships/BolashakScholarship';
 
 // Blog/News/Tips/Articles Pages
 import Blogs from './pages/Blogs';
@@ -120,12 +127,18 @@ function App() {
         <Route path="/events/seminars" element={<Seminars />} />
         <Route path="/events/campus-visits" element={<CampusVisits />} />
 
-        {/* Scholarship Routes */}
+        {/* Scholarship Category Routes */}
         <Route path="/scholarship/fully-funded" element={<FullyFunded />} />
         <Route path="/scholarship/partially-funded" element={<PartiallyFunded />} />
         <Route path="/scholarship/european-countries" element={<EuropeanCountries />} />
         <Route path="/scholarship/north-america" element={<NorthAmerica />} />
         <Route path="/scholarship/central-asian-countries" element={<CentralAsianCountries />} />
+
+        {/* Individual Scholarship Detail Routes */}
+        <Route path="/scholarships/fulbright-scholarship" element={<FullbrightScholarship />} />
+        <Route path="/scholarships/chevening-scholarship" element={<ChevelingScholarship />} />
+        <Route path="/scholarships/vanier-cgs" element={<VanierCGS />} />
+        <Route path="/scholarships/bolashak-scholarship" element={<BolashakScholarship />} />
 
         {/* Blog/News/Tips/Articles Routes */}
         <Route path="/blogs" element={<Blogs />} />
