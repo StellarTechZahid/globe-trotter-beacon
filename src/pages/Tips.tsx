@@ -13,7 +13,7 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const Tips = () => {
   const [currentPage, setCurrentPage] = useState(1);

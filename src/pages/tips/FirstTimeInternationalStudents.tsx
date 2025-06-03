@@ -6,10 +6,23 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, User, BookOpen, Eye, Share2, ArrowLeft, Lightbulb, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const FirstTimeInternationalStudents = () => {
   return (
     <div className="min-h-screen bg-black">
+      <Helmet>
+        <title>10 Essential Tips for First-Time International Students | Study Abroad Guide</title>
+        <meta name="description" content="Complete guide with essential tips for first-time international students including pre-departure preparation, cultural adaptation, academic success strategies, and more." />
+        <meta name="keywords" content="first-time international students, study abroad tips, cultural adaptation, academic success, international education guide" />
+        <link rel="canonical" href="https://yourdomain.com/tips/first-time-international-students" />
+        <meta property="og:title" content="10 Essential Tips for First-Time International Students" />
+        <meta property="og:description" content="Complete guide with essential tips for first-time international students including pre-departure preparation, cultural adaptation, academic success strategies, and more." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://yourdomain.com/tips/first-time-international-students" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=630&fit=crop" />
+      </Helmet>
+      
       <Navbar />
       
       {/* Hero Section */}

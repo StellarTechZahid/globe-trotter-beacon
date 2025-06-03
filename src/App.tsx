@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -133,7 +132,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/tips" element={<Tips />} />
         <Route path="/articles" element={<Articles />} />
-
+        
         {/* Blog Detail Routes */}
         <Route path="/blogs/studying-in-canada" element={<StudyingInCanada />} />
         
