@@ -64,6 +64,7 @@ import StudyingInCanada from './pages/blogs/StudyingInCanada';
 
 // Article Detail Pages
 import UniversityRankingsDecoded from './pages/articles/UniversityRankingsDecoded';
+import ChoosingStudyDestination from './pages/articles/ChoosingStudyDestination';
 
 // Tips Detail Pages
 import FirstTimeInternationalStudents from './pages/tips/FirstTimeInternationalStudents';
@@ -138,6 +139,7 @@ function App() {
         
         {/* Article Detail Routes */}
         <Route path="/articles/university-rankings-decoded" element={<UniversityRankingsDecoded />} />
+        <Route path="/articles/choosing-study-destination" element={<ChoosingStudyDestination />} />
         
         {/* Tips Detail Routes */}
         <Route path="/tips/first-time-international-students" element={<FirstTimeInternationalStudents />} />
