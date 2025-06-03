@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -13,6 +12,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const News = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,7 +30,8 @@ const News = () => {
       date: "January 16, 2024",
       category: "Immigration",
       urgent: true,
-      source: "Government of Canada"
+      source: "Government of Canada",
+      slug: "/news/canada-immigration-targets"
     },
     {
       id: 2,
@@ -41,7 +43,8 @@ const News = () => {
       date: "January 14, 2024",
       category: "Policy Update",
       urgent: true,
-      source: "UK Home Office"
+      source: "UK Home Office",
+      slug: "/news/uk-post-study-visa"
     },
     {
       id: 3,
@@ -53,7 +56,8 @@ const News = () => {
       date: "January 12, 2024",
       category: "Scholarships",
       urgent: false,
-      source: "Department of Education Australia"
+      source: "Department of Education Australia",
+      slug: "/news/australia-scholarship-program"
     },
     {
       id: 4,
@@ -65,7 +69,8 @@ const News = () => {
       date: "January 10, 2024",
       category: "Visa Updates",
       urgent: false,
-      source: "DAAD Germany"
+      source: "DAAD Germany",
+      slug: "/news/germany-visa-simplification"
     },
     {
       id: 5,
@@ -77,7 +82,8 @@ const News = () => {
       date: "January 8, 2024",
       category: "Education Statistics",
       urgent: false,
-      source: "IIE Reports"
+      source: "IIE Reports",
+      slug: "/news/us-student-enrollment"
     },
     {
       id: 6,
@@ -89,7 +95,8 @@ const News = () => {
       date: "January 5, 2024",
       category: "Border Updates",
       urgent: false,
-      source: "New Zealand Immigration"
+      source: "New Zealand Immigration",
+      slug: "/news/new-zealand-borders-open"
     },
     {
       id: 7,
@@ -101,7 +108,8 @@ const News = () => {
       date: "January 3, 2024",
       category: "EU Programs",
       urgent: false,
-      source: "European Commission"
+      source: "European Commission",
+      slug: "/news/erasmus-expansion"
     },
     {
       id: 8,
@@ -113,7 +121,8 @@ const News = () => {
       date: "December 30, 2023",
       category: "Technology",
       urgent: false,
-      source: "EdTech Global"
+      source: "EdTech Global",
+      slug: "/news/digital-transformation"
     }
   ];
 
@@ -124,6 +133,18 @@ const News = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      <Helmet>
+        <title>Latest Education News | International Study Updates & Policies</title>
+        <meta name="description" content="Stay updated with the latest international education news, immigration policy changes, visa updates, and scholarship announcements for international students." />
+        <meta name="keywords" content="education news, international student news, visa updates, immigration policy, study abroad news, scholarship announcements" />
+        <link rel="canonical" href="https://yourdomain.com/news" />
+        <meta property="og:title" content="Latest Education News | International Study Updates & Policies" />
+        <meta property="og:description" content="Stay updated with the latest international education news, immigration policy changes, visa updates, and scholarship announcements for international students." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/news" />
+        <meta property="og:image" content="https://yourdomain.com/images/news-og-image.jpg" />
+      </Helmet>
+      
       <Navbar />
       
       {/* Hero Section */}
@@ -179,10 +200,12 @@ const News = () => {
                     </div>
                   </div>
                   <div className="text-xs text-gray-500 mb-4">Source: {news.source}</div>
-                  <Button className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold">
-                    Read Full Update
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link to={news.slug}>
+                    <Button className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold">
+                      Read Full Update
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -234,10 +257,12 @@ const News = () => {
                     </div>
                   </div>
                   <div className="text-xs text-gray-500 mb-4">Source: {news.source}</div>
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Read More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link to={news.slug}>
+                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

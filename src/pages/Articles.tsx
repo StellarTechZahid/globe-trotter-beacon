@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, User, ArrowRight, FileText, Clock, Eye } from 'lucide-react';
+import { Calendar, User, ArrowRight, Clock, Eye, FileText } from 'lucide-react';
 import {
   Pagination,
   PaginationContent,
@@ -13,6 +12,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Articles = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,7 +32,8 @@ const Articles = () => {
       readTime: "15 min read",
       views: "5.2k",
       featured: true,
-      keywords: ["study abroad", "university selection", "international education"]
+      keywords: ["study abroad", "university selection", "international education"],
+      slug: "/articles/choosing-study-destination"
     },
     {
       id: 2,
@@ -45,7 +47,8 @@ const Articles = () => {
       readTime: "12 min read",
       views: "4.1k",
       featured: true,
-      keywords: ["student visa", "immigration", "visa requirements"]
+      keywords: ["student visa", "immigration", "visa requirements"],
+      slug: "/articles/visa-requirements-analysis"
     },
     {
       id: 3,
@@ -59,7 +62,8 @@ const Articles = () => {
       readTime: "18 min read",
       views: "3.8k",
       featured: false,
-      keywords: ["education costs", "financial planning", "ROI"]
+      keywords: ["education costs", "financial planning", "ROI"],
+      slug: "/articles/economics-of-education"
     },
     {
       id: 4,
@@ -73,7 +77,8 @@ const Articles = () => {
       readTime: "14 min read",
       views: "2.9k",
       featured: false,
-      keywords: ["university rankings", "QS rankings", "academic reputation"]
+      keywords: ["university rankings", "QS rankings", "academic reputation"],
+      slug: "/articles/university-rankings-decoded"
     },
     {
       id: 5,
@@ -87,7 +92,8 @@ const Articles = () => {
       readTime: "11 min read",
       views: "2.3k",
       featured: false,
-      keywords: ["cultural intelligence", "international students", "multicultural"]
+      keywords: ["cultural intelligence", "international students", "multicultural"],
+      slug: "/articles/cultural-intelligence"
     },
     {
       id: 6,
@@ -101,7 +107,8 @@ const Articles = () => {
       readTime: "13 min read",
       views: "3.5k",
       featured: false,
-      keywords: ["career development", "international graduates", "job market"]
+      keywords: ["career development", "international graduates", "job market"],
+      slug: "/articles/career-pathways-graduates"
     },
     {
       id: 7,
@@ -115,7 +122,8 @@ const Articles = () => {
       readTime: "16 min read",
       views: "2.1k",
       featured: false,
-      keywords: ["research opportunities", "academic research", "funding"]
+      keywords: ["research opportunities", "academic research", "funding"],
+      slug: "/articles/research-opportunities"
     },
     {
       id: 8,
@@ -129,7 +137,8 @@ const Articles = () => {
       readTime: "10 min read",
       views: "1.8k",
       featured: false,
-      keywords: ["educational technology", "digital learning", "online education"]
+      keywords: ["educational technology", "digital learning", "online education"],
+       slug: "/articles/technology-in-education"
     }
   ];
 
@@ -140,6 +149,18 @@ const Articles = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      <Helmet>
+        <title>In-Depth Articles | Comprehensive International Education Analysis</title>
+        <meta name="description" content="Access in-depth articles with expert analysis on international education topics, including university rankings, visa requirements, ROI, and strategic academic planning." />
+        <meta name="keywords" content="international education articles, university rankings analysis, student visa guide, education costs analysis, academic planning, study abroad research" />
+        <link rel="canonical" href="https://yourdomain.com/articles" />
+        <meta property="og:title" content="In-Depth Articles | Comprehensive International Education Analysis" />
+        <meta property="og:description" content="Access in-depth articles with expert analysis on international education topics, including university rankings, visa requirements, ROI, and strategic academic planning." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/articles" />
+        <meta property="og:image" content="https://yourdomain.com/images/articles-og-image.jpg" />
+      </Helmet>
+      
       <Navbar />
       
       {/* Hero Section */}
@@ -201,7 +222,7 @@ const Articles = () => {
                     </div>
                     <div className="flex items-center">
                       <Eye className="h-4 w-4 mr-1" />
-                      {article.views} views
+                      {article.views}
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -211,10 +232,12 @@ const Articles = () => {
                       </span>
                     ))}
                   </div>
-                  <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold">
-                    Read Full Article
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link to={article.slug}>
+                    <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold">
+                      Read Full Article
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -282,10 +305,12 @@ const Articles = () => {
                       </span>
                     ))}
                   </div>
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Read More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link to={article.slug}>
+                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

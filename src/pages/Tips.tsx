@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -13,6 +12,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Tips = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,7 +32,8 @@ const Tips = () => {
       difficulty: "Beginner",
       readTime: "5 min read",
       rating: 4.9,
-      helpful: "2.1k people found this helpful"
+      helpful: "2.1k people found this helpful",
+      slug: "/tips/first-time-international-students"
     },
     {
       id: 2,
@@ -45,7 +47,8 @@ const Tips = () => {
       difficulty: "Intermediate",
       readTime: "8 min read",
       rating: 4.8,
-      helpful: "1.8k people found this helpful"
+      helpful: "1.8k people found this helpful",
+      slug: "/tips/scholarship-application-secrets"
     },
     {
       id: 3,
@@ -59,7 +62,8 @@ const Tips = () => {
       difficulty: "Beginner",
       readTime: "6 min read",
       rating: 4.7,
-      helpful: "1.5k people found this helpful"
+      helpful: "1.5k people found this helpful",
+      slug: "/tips/budget-friendly-study-abroad"
     },
     {
       id: 4,
@@ -73,7 +77,8 @@ const Tips = () => {
       difficulty: "Intermediate",
       readTime: "7 min read",
       rating: 4.9,
-      helpful: "2.3k people found this helpful"
+      helpful: "2.3k people found this helpful",
+      slug: "/tips/ielts-speaking-strategies"
     },
     {
       id: 5,
@@ -87,7 +92,8 @@ const Tips = () => {
       difficulty: "Advanced",
       readTime: "9 min read",
       rating: 4.8,
-      helpful: "1.9k people found this helpful"
+      helpful: "1.9k people found this helpful",
+      slug: "/tips/university-application-essays"
     },
     {
       id: 6,
@@ -101,7 +107,8 @@ const Tips = () => {
       difficulty: "Beginner",
       readTime: "6 min read",
       rating: 4.6,
-      helpful: "1.4k people found this helpful"
+      helpful: "1.4k people found this helpful",
+      slug: "/tips/cultural-adaptation"
     },
     {
       id: 7,
@@ -115,7 +122,8 @@ const Tips = () => {
       difficulty: "Intermediate",
       readTime: "8 min read",
       rating: 4.7,
-      helpful: "1.6k people found this helpful"
+      helpful: "1.6k people found this helpful",
+      slug: "/tips/part-time-work-legal"
     },
     {
       id: 8,
@@ -129,7 +137,8 @@ const Tips = () => {
       difficulty: "Beginner",
       readTime: "5 min read",
       rating: 4.5,
-      helpful: "1.2k people found this helpful"
+      helpful: "1.2k people found this helpful",
+      slug: "/tips/time-management-tips"
     }
   ];
 
@@ -140,6 +149,18 @@ const Tips = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      <Helmet>
+        <title>Study Abroad Tips | Expert Advice for International Students</title>
+        <meta name="description" content="Get practical study abroad tips from experts, including scholarship application strategies, cultural adaptation advice, and academic success techniques for international students." />
+        <meta name="keywords" content="study abroad tips, international student advice, scholarship application tips, cultural adaptation, student life advice, IELTS preparation" />
+        <link rel="canonical" href="https://yourdomain.com/tips" />
+        <meta property="og:title" content="Study Abroad Tips | Expert Advice for International Students" />
+        <meta property="og:description" content="Get practical study abroad tips from experts, including scholarship application strategies, cultural adaptation advice, and academic success techniques for international students." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/tips" />
+        <meta property="og:image" content="https://yourdomain.com/images/tips-og-image.jpg" />
+      </Helmet>
+      
       <Navbar />
       
       {/* Hero Section */}
@@ -206,10 +227,12 @@ const Tips = () => {
                     </div>
                   </div>
                   <div className="text-xs text-gray-500 mb-4">{tip.helpful}</div>
-                  <Button className="w-full bg-green-500 hover:bg-green-600 text-black font-semibold">
-                    Read Full Tip
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link to={tip.slug}>
+                    <Button className="w-full bg-green-500 hover:bg-green-600 text-black font-semibold">
+                      Read Full Tip
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -276,10 +299,12 @@ const Tips = () => {
                     </div>
                   </div>
                   <div className="text-xs text-gray-500 mb-4">{tip.helpful}</div>
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Read More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link to={tip.slug}>
+                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

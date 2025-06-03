@@ -12,6 +12,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Blogs = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,7 +32,8 @@ const Blogs = () => {
       readTime: "8 min read",
       views: "2.3k",
       tags: ["Canada", "Universities", "Scholarships", "International Students"],
-      featured: true
+      featured: true,
+      slug: "/blogs/studying-in-canada"
     },
     {
       id: 2,
@@ -44,7 +47,8 @@ const Blogs = () => {
       readTime: "6 min read",
       views: "1.8k",
       tags: ["Australia", "Universities", "Student Life", "Education"],
-      featured: true
+      featured: true,
+      slug: "/blogs/studying-in-australia"
     },
     {
       id: 3,
@@ -58,7 +62,8 @@ const Blogs = () => {
       readTime: "10 min read",
       views: "3.1k",
       tags: ["Scholarships", "Funding", "Financial Aid", "Education"],
-      featured: false
+      featured: false,
+      slug: "/blogs/top-scholarships"
     },
     {
       id: 4,
@@ -72,7 +77,8 @@ const Blogs = () => {
       readTime: "7 min read",
       views: "1.5k",
       tags: ["UK", "Universities", "Russell Group", "Higher Education"],
-      featured: false
+      featured: false,
+      slug: "/blogs/uk-universities-guide"
     },
     {
       id: 5,
@@ -86,7 +92,8 @@ const Blogs = () => {
       readTime: "9 min read",
       views: "2.7k",
       tags: ["USA", "Student Visa", "F-1 Visa", "Immigration"],
-      featured: false
+      featured: false,
+      slug: "/blogs/usa-student-visa-guide"
     },
     {
       id: 6,
@@ -100,7 +107,8 @@ const Blogs = () => {
       readTime: "6 min read",
       views: "1.9k",
       tags: ["Germany", "Free Education", "Europe", "STEM"],
-      featured: false
+      featured: false,
+      slug: "/blogs/german-universities"
     },
     {
       id: 7,
@@ -114,7 +122,8 @@ const Blogs = () => {
       readTime: "8 min read",
       views: "2.2k",
       tags: ["Study Abroad", "Preparation", "Checklist", "International Students"],
-      featured: false
+      featured: false,
+      slug: "/blogs/study-abroad-preparation"
     },
     {
       id: 8,
@@ -128,7 +137,8 @@ const Blogs = () => {
       readTime: "7 min read",
       views: "1.7k",
       tags: ["IELTS", "TOEFL", "English Test", "Test Preparation"],
-      featured: false
+      featured: false,
+      slug: "/blogs/ielts-vs-toefl"
     },
     {
       id: 9,
@@ -142,7 +152,8 @@ const Blogs = () => {
       readTime: "12 min read",
       views: "4.2k",
       tags: ["Pakistan", "Study Abroad Consultants", "Education Consultancy"],
-      featured: false
+      featured: false,
+      slug: "/blogs/study-abroad-consultants-pakistan"
     },
     {
       id: 10,
@@ -156,7 +167,8 @@ const Blogs = () => {
       readTime: "10 min read",
       views: "3.5k",
       tags: ["Lahore", "Study Abroad", "Pakistan Consultants"],
-      featured: false
+      featured: false,
+      slug: "/blogs/study-abroad-consultants-lahore"
     }
   ];
 
@@ -174,7 +186,8 @@ const Blogs = () => {
       readTime: `${Math.floor(Math.random() * 10) + 5} min read`,
       views: `${Math.floor(Math.random() * 3) + 1}.${Math.floor(Math.random() * 9)}k`,
       tags: ["Study Abroad", "International Education", "Expert Tips"],
-      featured: false
+      featured: false,
+      slug: `/blogs/study-abroad-guide-${i}`
     });
   }
 
@@ -185,6 +198,18 @@ const Blogs = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      <Helmet>
+        <title>Educational Blogs | Expert Study Abroad Guides & Resources</title>
+        <meta name="description" content="Access expert educational blogs with comprehensive guides for international students, scholarship information, and university selection advice from leading study abroad consultants." />
+        <meta name="keywords" content="study abroad blogs, international student guides, scholarship blogs, university selection, education consultants, study abroad tips" />
+        <link rel="canonical" href="https://yourdomain.com/blogs" />
+        <meta property="og:title" content="Educational Blogs | Expert Study Abroad Guides & Resources" />
+        <meta property="og:description" content="Access expert educational blogs with comprehensive guides for international students, scholarship information, and university selection advice from leading study abroad consultants." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourdomain.com/blogs" />
+        <meta property="og:image" content="https://yourdomain.com/images/blogs-og-image.jpg" />
+      </Helmet>
+      
       <Navbar />
       
       {/* Hero Section */}
@@ -246,10 +271,12 @@ const Blogs = () => {
                       </div>
                     </div>
                   </div>
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Read Full Article
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link to={blog.slug}>
+                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                      Read Full Article
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -305,10 +332,12 @@ const Blogs = () => {
                       {blog.views}
                     </div>
                   </div>
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Read More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <Link to={blog.slug}>
+                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
