@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, User, ArrowRight, DollarSign, GraduationCap, Globe, Award, Filter, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import {
   Pagination,
   PaginationContent,
@@ -35,6 +36,17 @@ const FullyFunded = () => {
     { name: "Norway", flag: "🇳🇴", programs: ["Quota Scheme", "Norwegian Government", "Research Council"] }
   ];
 
+  // Define scholarship paths for redirection
+  const scholarshipPaths = {
+    "Fulbright": "/scholarships/fulbright-scholarship",
+    "Chevening": "/scholarships/chevening-scholarship",
+    "Vanier CGS": "/scholarships/vanier-cgs",
+    "Gates Cambridge": "/scholarships/gates-cambridge-scholarship",
+    "Bolashak": "/scholarships/bolashak-scholarship",
+    "DAAD": "/scholarships/daad-scholarship"
+    // More scholarships can be added here as they're created
+  };
+
   const allScholarships = [];
 
   // Generate scholarships for fully funded countries - increased to 96 for 8 pages
@@ -54,7 +66,8 @@ const FullyFunded = () => {
       university: `${country.name} Universities`,
       level: ["Undergraduate", "Graduate", "PhD", "All Levels"][i % 4],
       duration: `${1 + (i % 4)} years`,
-      flag: country.flag
+      flag: country.flag,
+      program: program // Add program name for path lookup
     });
   }
 
@@ -71,6 +84,11 @@ const FullyFunded = () => {
   React.useEffect(() => {
     setCurrentPage(1);
   }, [selectedCountry]);
+
+  // Function to get the scholarship path or default to consultation form
+  const getScholarshipPath = (program) => {
+    return scholarshipPaths[program] || "/#consultation-form";
+  };
 
   return (
     <div className="min-h-screen bg-black">
@@ -172,13 +190,17 @@ const FullyFunded = () => {
                     </div>
                   </div>
                   
-                  <Button 
-                    onClick={scrollToConsultation}
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
+                  <Link 
+                    to={getScholarshipPath(scholarship.program)} 
+                    className="w-full block"
                   >
-                    Apply Now
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                    <Button 
+                      className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
+                    >
+                      Apply Now
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

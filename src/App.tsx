@@ -58,6 +58,8 @@ import FullbrightScholarship from './pages/scholarships/FullbrightScholarship';
 import ChevelingScholarship from './pages/scholarships/ChevelingScholarship';
 import VanierCGS from './pages/scholarships/VanierCGS';
 import BolashakScholarship from './pages/scholarships/BolashakScholarship';
+import GatesCambridgeScholarship from './pages/scholarships/GatesCambridgeScholarship';
+import DAADScholarship from './pages/scholarships/DAADScholarship';
 
 // Blog/News/Tips/Articles Pages
 import Blogs from './pages/Blogs';
@@ -139,6 +141,8 @@ function App() {
         <Route path="/scholarships/chevening-scholarship" element={<ChevelingScholarship />} />
         <Route path="/scholarships/vanier-cgs" element={<VanierCGS />} />
         <Route path="/scholarships/bolashak-scholarship" element={<BolashakScholarship />} />
+        <Route path="/scholarships/gates-cambridge-scholarship" element={<GatesCambridgeScholarship />} />
+        <Route path="/scholarships/daad-scholarship" element={<DAADScholarship />} />
 
         {/* Blog/News/Tips/Articles Routes */}
         <Route path="/blogs" element={<Blogs />} />

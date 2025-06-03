@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight, GraduationCap, Award, MapPin, Star, Filter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import {
   Pagination,
   PaginationContent,
@@ -29,6 +30,13 @@ const NorthAmerica = () => {
     { name: "Canada", flag: "🇨🇦", programs: ["Vanier CGS", "Banting Fellowships", "Trudeau Foundation", "University of Toronto", "McGill", "UBC"] }
   ];
 
+  // Define scholarship paths for redirection
+  const scholarshipPaths = {
+    "Fulbright": "/scholarships/fulbright-scholarship",
+    "Vanier CGS": "/scholarships/vanier-cgs"
+    // More scholarships can be added here as they're created
+  };
+
   const allScholarships = [];
 
   // Generate scholarships for North American countries - increased to 96 for 8 pages
@@ -49,7 +57,8 @@ const NorthAmerica = () => {
       level: ["Undergraduate", "Graduate", "PhD", "All Levels"][i % 4],
       duration: `${1 + (i % 4)} years`,
       flag: countryData.flag,
-      prestige: i % 5 === 0 ? "Most Prestigious" : i % 3 === 0 ? "Highly Prestigious" : "Prestigious"
+      prestige: i % 5 === 0 ? "Most Prestigious" : i % 3 === 0 ? "Highly Prestigious" : "Prestigious",
+      program: program // Add program name for path lookup
     });
   }
 
@@ -73,6 +82,11 @@ const NorthAmerica = () => {
       case "Highly Prestigious": return "bg-orange-500 text-black";
       default: return "bg-orange-500 text-black";
     }
+  };
+
+  // Function to get the scholarship path or default to consultation form
+  const getScholarshipPath = (program) => {
+    return scholarshipPaths[program] || "/#consultation-form";
   };
 
   return (
@@ -191,13 +205,17 @@ const NorthAmerica = () => {
                     </div>
                   </div>
                   
-                  <Button 
-                    onClick={scrollToConsultation}
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
+                  <Link 
+                    to={getScholarshipPath(scholarship.program)} 
+                    className="w-full block"
                   >
-                    Apply Now
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                    <Button 
+                      className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
+                    >
+                      Apply Now
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
