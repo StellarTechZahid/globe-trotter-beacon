@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -89,6 +88,14 @@ import CanadaImmigrationTargets from './pages/news/CanadaImmigrationTargets';
 // Styles
 import './App.css';
 
+import CaliforniaScholarship from './pages/scholarships/CaliforniaScholarship';
+import TexasScholarship from './pages/scholarships/TexasScholarship';
+import NewYorkScholarship from './pages/scholarships/NewYorkScholarship';
+import FloridaScholarship from './pages/scholarships/FloridaScholarship';
+import ErasmusMundusScholarship from './pages/scholarships/ErasmusMundusScholarship';
+import AustralianGovernmentScholarship from './pages/scholarships/AustralianGovernmentScholarship';
+import StanfordScholarship from './pages/scholarships/StanfordScholarship';
+
 function App() {
   return (
     <Router>
@@ -174,6 +181,14 @@ function App() {
         
         {/* News Detail Routes */}
         <Route path="/news/canada-immigration-targets" element={<CanadaImmigrationTargets />} />
+        
+        <Route path="/scholarships/california-scholarship" element={<CaliforniaScholarship />} />
+        <Route path="/scholarships/texas-scholarship" element={<TexasScholarship />} />
+        <Route path="/scholarships/new-york-scholarship" element={<NewYorkScholarship />} />
+        <Route path="/scholarships/florida-scholarship" element={<FloridaScholarship />} />
+        <Route path="/scholarships/erasmus-mundus-scholarship" element={<ErasmusMundusScholarship />} />
+        <Route path="/scholarships/australian-government-scholarship" element={<AustralianGovernmentScholarship />} />
+        <Route path="/scholarships/stanford-scholarship" element={<StanfordScholarship />} />
         
         <Route path="*" element={<NotFound />} />
       </Routes>
