@@ -30,7 +30,7 @@ const HarvardScholarship = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800">
+      <section className="relative h-64 sm:h-80 md:h-96 bg-gradient-to-r from-orange-600 to-orange-800">
         <div className="absolute inset-0 bg-black bg-opacity-50" />
         <img 
           src="https://images.unsplash.com/photo-1562774053-701939374585?w=1200&h=600&fit=crop"
@@ -49,10 +49,10 @@ const HarvardScholarship = () => {
                 Harvard University
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
               Harvard University Scholarship
             </h1>
-            <p className="text-xl mb-6 opacity-90">
+            <p className="text-lg sm:text-xl mb-6 opacity-90">
               World-class education with comprehensive financial aid
             </p>
             <div className="flex items-center space-x-6">
@@ -70,71 +70,69 @@ const HarvardScholarship = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-16">
+      <section className="py-8 sm:py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <Card className="bg-gray-900 border-orange-500">
             <CardContent className="p-8">
-              <div className="prose prose-lg prose-invert max-w-none">
-                <div className="text-gray-300 space-y-8">
+              <div className="text-gray-300 space-y-8">
+                
+                <div className="bg-orange-500 bg-opacity-10 border-l-4 border-orange-500 p-6 rounded-r-lg">
+                  <h3 className="text-orange-500 font-bold text-lg mb-2">Program Highlights</h3>
+                  <ul className="list-disc list-inside space-y-1 text-gray-300">
+                    <li>No loans required - only grants and work-study</li>
+                    <li>Families earning less than $75,000 pay nothing</li>
+                    <li>Average aid package: $70,000+ annually</li>
+                    <li>Need-blind admissions for all students</li>
+                    <li>Covers undergraduate and graduate programs</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-white mb-6">About Harvard Financial Aid</h2>
+                  <p className="text-lg leading-relaxed mb-6">
+                    Harvard University is committed to making education affordable for students from all economic backgrounds. The Harvard Financial Aid Initiative ensures that cost is never a barrier to a Harvard education, with the most generous financial aid program in higher education.
+                  </p>
                   
-                  <div className="bg-orange-500 bg-opacity-10 border-l-4 border-orange-500 p-6 rounded-r-lg">
-                    <h3 className="text-orange-500 font-bold text-lg mb-2">Program Highlights</h3>
-                    <ul className="list-disc list-inside space-y-1 text-gray-300">
-                      <li>No loans required - only grants and work-study</li>
-                      <li>Families earning less than $75,000 pay nothing</li>
-                      <li>Average aid package: $70,000+ annually</li>
-                      <li>Need-blind admissions for all students</li>
-                      <li>Covers undergraduate and graduate programs</li>
-                    </ul>
-                  </div>
+                  <p className="text-lg leading-relaxed mb-6">
+                    Harvard's financial aid is entirely need-based, and the university meets 100% of demonstrated financial need for all admitted students. There are no merit-based scholarships, ensuring that aid goes to those who need it most.
+                  </p>
+                </div>
 
-                  <div>
-                    <h2 className="text-3xl font-bold text-white mb-6">About Harvard Financial Aid</h2>
-                    <p className="text-lg leading-relaxed mb-6">
-                      Harvard University is committed to making education affordable for students from all economic backgrounds. The Harvard Financial Aid Initiative ensures that cost is never a barrier to a Harvard education, with the most generous financial aid program in higher education.
-                    </p>
-                    
-                    <p className="text-lg leading-relaxed mb-6">
-                      Harvard's financial aid is entirely need-based, and the university meets 100% of demonstrated financial need for all admitted students. There are no merit-based scholarships, ensuring that aid goes to those who need it most.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h2 className="text-3xl font-bold text-white mb-6">Financial Benefits</h2>
-                    <div className="grid md:grid-cols-2 gap-6 mb-6">
-                      <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
-                        <h3 className="text-xl font-bold text-orange-500 mb-4">Income-Based Aid</h3>
-                        <ul className="space-y-2">
-                          <li className="text-gray-300">• $0 cost for families earning <$75,000</li>
-                          <li className="text-gray-300">• 0-10% income for families earning $75k-$150k</li>
-                          <li className="text-gray-300">• Sliding scale for higher incomes</li>
-                          <li className="text-gray-300">• No consideration of home equity</li>
-                        </ul>
-                      </div>
-                      <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
-                        <h3 className="text-xl font-bold text-orange-500 mb-4">Coverage Includes</h3>
-                        <ul className="space-y-2">
-                          <li className="text-gray-300">• Full tuition and fees</li>
-                          <li className="text-gray-300">• Room and board</li>
-                          <li className="text-gray-300">• Personal and travel expenses</li>
-                          <li className="text-gray-300">• Health insurance premium</li>
-                        </ul>
-                      </div>
+                <div>
+                  <h2 className="text-3xl font-bold text-white mb-6">Financial Benefits</h2>
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
+                      <h3 className="text-xl font-bold text-orange-500 mb-4">Income-Based Aid</h3>
+                      <ul className="space-y-2">
+                        <li className="text-gray-300">• $0 cost for families earning under $75,000</li>
+                        <li className="text-gray-300">• 0-10% income for families earning $75k-$150k</li>
+                        <li className="text-gray-300">• Sliding scale for higher incomes</li>
+                        <li className="text-gray-300">• No consideration of home equity</li>
+                      </ul>
+                    </div>
+                    <div className="bg-gray-800 border border-gray-700 p-6 rounded-lg">
+                      <h3 className="text-xl font-bold text-orange-500 mb-4">Coverage Includes</h3>
+                      <ul className="space-y-2">
+                        <li className="text-gray-300">• Full tuition and fees</li>
+                        <li className="text-gray-300">• Room and board</li>
+                        <li className="text-gray-300">• Personal and travel expenses</li>
+                        <li className="text-gray-300">• Health insurance premium</li>
+                      </ul>
                     </div>
                   </div>
+                </div>
 
-                  <div className="border-t border-gray-700 pt-8">
-                    <h3 className="text-2xl font-bold text-white mb-4">Ready to Apply?</h3>
-                    <p className="text-lg leading-relaxed mb-6">
-                      Harvard's generous financial aid makes world-class education accessible. Our consultants can help you navigate the application and financial aid process to maximize your chances of admission and aid.
-                    </p>
-                    <Button 
-                      onClick={scrollToConsultation}
-                      className="bg-orange-500 hover:bg-orange-600 text-black text-lg px-8 py-3 w-full md:w-auto"
-                    >
-                      Get Expert Application Guidance
-                    </Button>
-                  </div>
+                <div className="border-t border-gray-700 pt-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Ready to Apply?</h3>
+                  <p className="text-lg leading-relaxed mb-6">
+                    Harvard's generous financial aid makes world-class education accessible. Our consultants can help you navigate the application and financial aid process to maximize your chances of admission and aid.
+                  </p>
+                  <Button 
+                    onClick={scrollToConsultation}
+                    className="bg-orange-500 hover:bg-orange-600 text-black text-lg px-8 py-3 w-full md:w-auto"
+                  >
+                    Get Expert Application Guidance
+                  </Button>
                 </div>
               </div>
             </CardContent>

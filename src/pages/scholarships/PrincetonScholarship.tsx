@@ -4,11 +4,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, ArrowLeft, DollarSign, CheckCircle } from 'lucide-react';
+import { Calendar, ArrowLeft, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const StanfordScholarship = () => {
+const PrincetonScholarship = () => {
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
   };
@@ -16,10 +16,10 @@ const StanfordScholarship = () => {
   return (
     <div className="min-h-screen bg-black">
       <Helmet>
-        <title>Stanford University Scholarship | Complete Guide & Application</title>
-        <meta name="description" content="Comprehensive guide to Stanford University scholarships including Knight-Hennessy and need-based aid. Learn about eligibility and application." />
-        <meta name="keywords" content="Stanford scholarship, Knight-Hennessy scholarship, Stanford University, USA education" />
-        <link rel="canonical" href="https://yourdomain.com/scholarships/stanford-scholarship" />
+        <title>Princeton University Scholarship | Complete Guide & Application</title>
+        <meta name="description" content="Comprehensive guide to Princeton University scholarships and financial aid. Learn about eligibility, benefits, and application process." />
+        <meta name="keywords" content="Princeton scholarship, Princeton University, USA education, Ivy League scholarship" />
+        <link rel="canonical" href="https://yourdomain.com/scholarships/princeton-scholarship" />
       </Helmet>
       
       <Navbar />
@@ -28,7 +28,7 @@ const StanfordScholarship = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50" />
         <img 
           src="https://images.unsplash.com/photo-1562774053-701939374585?w=1200&h=600&fit=crop"
-          alt="Stanford Scholarship"
+          alt="Princeton University Scholarship"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
@@ -40,23 +40,23 @@ const StanfordScholarship = () => {
             <div className="flex items-center mb-4">
               <span className="text-4xl mr-3">🇺🇸</span>
               <span className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                Stanford University
+                Princeton University
               </span>
             </div>
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-              Stanford University Scholarship
+              Princeton University Scholarship
             </h1>
             <p className="text-lg sm:text-xl mb-6 opacity-90">
-              Comprehensive financial aid and prestigious scholarship programs
+              No-loan financial aid policy for undergraduate students
             </p>
             <div className="flex items-center space-x-6">
               <div className="flex items-center">
                 <DollarSign className="h-5 w-5 mr-2" />
-                <span className="font-semibold">100% Need Met</span>
+                <span className="font-semibold">No-Loan Policy</span>
               </div>
               <div className="flex items-center">
                 <Calendar className="h-5 w-5 mr-2" />
-                <span>October Deadline</span>
+                <span>January Deadline</span>
               </div>
             </div>
           </div>
@@ -71,25 +71,25 @@ const StanfordScholarship = () => {
                 <div className="bg-orange-500 bg-opacity-10 border-l-4 border-orange-500 p-6 rounded-r-lg">
                   <h3 className="text-orange-500 font-bold text-lg mb-2">Program Highlights</h3>
                   <ul className="list-disc list-inside space-y-1 text-gray-300">
-                    <li>Families earning under $125,000 pay no tuition</li>
-                    <li>Knight-Hennessy Scholars program for graduate students</li>
+                    <li>No-loan policy for all undergraduate students</li>
+                    <li>Families earning under $65,000 pay nothing</li>
                     <li>100% of demonstrated financial need met</li>
-                    <li>Average need-based scholarship: over $55,000</li>
-                    <li>No-loan policy for undergraduate students</li>
+                    <li>Average aid covers 100% of tuition for 83% of families</li>
+                    <li>Need-blind admissions for all applicants</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h2 className="text-3xl font-bold text-white mb-6">About Stanford Financial Aid</h2>
+                  <h2 className="text-3xl font-bold text-white mb-6">About Princeton Financial Aid</h2>
                   <p className="text-lg leading-relaxed mb-6">
-                    Stanford University offers one of the most generous financial aid programs in higher education. The university is committed to making a Stanford education accessible to all admitted students, regardless of their financial circumstances.
+                    Princeton University pioneered the no-loan financial aid policy, ensuring that students graduate debt-free. The university meets 100% of demonstrated financial need through grants and work-study opportunities only.
                   </p>
                 </div>
 
                 <div className="border-t border-gray-700 pt-8">
                   <h3 className="text-2xl font-bold text-white mb-4">Ready to Apply?</h3>
                   <p className="text-lg leading-relaxed mb-6">
-                    Stanford's exceptional financial aid programs make world-class education accessible. Our consultants can help you understand the various scholarship opportunities and application requirements.
+                    Princeton's pioneering no-loan policy makes Ivy League education debt-free. Our experts can help you understand the financial aid process and application requirements.
                   </p>
                   <Button 
                     onClick={scrollToConsultation}
@@ -109,4 +109,4 @@ const StanfordScholarship = () => {
   );
 };
 
-export default StanfordScholarship;
+export default PrincetonScholarship;

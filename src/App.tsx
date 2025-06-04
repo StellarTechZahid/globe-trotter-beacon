@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -95,6 +96,10 @@ import FloridaScholarship from './pages/scholarships/FloridaScholarship';
 import ErasmusMundusScholarship from './pages/scholarships/ErasmusMundusScholarship';
 import AustralianGovernmentScholarship from './pages/scholarships/AustralianGovernmentScholarship';
 import StanfordScholarship from './pages/scholarships/StanfordScholarship';
+import ColumbiaScholarship from './pages/scholarships/ColumbiaScholarship';
+import PrincetonScholarship from './pages/scholarships/PrincetonScholarship';
+import PennsylvaniaScholarship from './pages/scholarships/PennsylvaniaScholarship';
+import IllinoisScholarship from './pages/scholarships/IllinoisScholarship';
 
 function App() {
   return (
@@ -189,6 +194,10 @@ function App() {
         <Route path="/scholarships/erasmus-mundus-scholarship" element={<ErasmusMundusScholarship />} />
         <Route path="/scholarships/australian-government-scholarship" element={<AustralianGovernmentScholarship />} />
         <Route path="/scholarships/stanford-scholarship" element={<StanfordScholarship />} />
+        <Route path="/scholarships/columbia-scholarship" element={<ColumbiaScholarship />} />
+        <Route path="/scholarships/princeton-scholarship" element={<PrincetonScholarship />} />
+        <Route path="/scholarships/pennsylvania-scholarship" element={<PennsylvaniaScholarship />} />
+        <Route path="/scholarships/illinois-scholarship" element={<IllinoisScholarship />} />
         
         <Route path="*" element={<NotFound />} />
       </Routes>
