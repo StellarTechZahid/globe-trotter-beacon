@@ -60,6 +60,12 @@ import VanierCGS from './pages/scholarships/VanierCGS';
 import BolashakScholarship from './pages/scholarships/BolashakScholarship';
 import GatesCambridgeScholarship from './pages/scholarships/GatesCambridgeScholarship';
 import DAADScholarship from './pages/scholarships/DAADScholarship';
+import RhodesScholarship from './pages/scholarships/RhodesScholarship';
+import MarshallScholarship from './pages/scholarships/MarshallScholarship';
+import KnightHennesyScholarship from './pages/scholarships/KnightHennesyScholarship';
+import HarvardScholarship from './pages/scholarships/HarvardScholarship';
+import YaleScholarship from './pages/scholarships/YaleScholarship';
+import MITScholarship from './pages/scholarships/MITScholarship';
 
 // Blog/News/Tips/Articles Pages
 import Blogs from './pages/Blogs';
@@ -143,6 +149,12 @@ function App() {
         <Route path="/scholarships/bolashak-scholarship" element={<BolashakScholarship />} />
         <Route path="/scholarships/gates-cambridge-scholarship" element={<GatesCambridgeScholarship />} />
         <Route path="/scholarships/daad-scholarship" element={<DAADScholarship />} />
+        <Route path="/scholarships/rhodes-scholarship" element={<RhodesScholarship />} />
+        <Route path="/scholarships/marshall-scholarship" element={<MarshallScholarship />} />
+        <Route path="/scholarships/knight-hennessy-scholarship" element={<KnightHennesyScholarship />} />
+        <Route path="/scholarships/harvard-scholarship" element={<HarvardScholarship />} />
+        <Route path="/scholarships/yale-scholarship" element={<YaleScholarship />} />
+        <Route path="/scholarships/mit-scholarship" element={<MITScholarship />} />
 
         {/* Blog/News/Tips/Articles Routes */}
         <Route path="/blogs" element={<Blogs />} />

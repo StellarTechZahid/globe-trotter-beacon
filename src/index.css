@@ -73,6 +73,13 @@
     animation-delay: 0.6s;
   }
 
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -120,4 +127,14 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #ea580c;
+}
+
+/* Responsive utilities */
+@media (max-width: 375px) {
+  .xs\:block {
+    display: block;
+  }
+  .xs\:hidden {
+    display: none;
+  }
 }

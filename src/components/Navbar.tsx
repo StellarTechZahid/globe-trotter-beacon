@@ -31,16 +31,15 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
               <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-2 rounded-lg">
-                <span className="text-black font-bold text-xl">AA</span>
+                <span className="text-black font-bold text-lg sm:text-xl">AA</span>
               </div>
-              <span className="text-xl lg:text-2xl font-bold text-white hidden sm:block">Abroad Academics</span>
-              <span className="text-lg font-bold text-white sm:hidden">AA</span>
+              <span className="text-lg sm:text-xl lg:text-2xl font-bold text-white hidden xs:block">Abroad Academics</span>
             </Link>
 
             {/* Desktop Navigation - Full Size (shows all items) */}
-            <div className="hidden xl:flex items-center space-x-1">
+            <div className="hidden 2xl:flex items-center space-x-1">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
@@ -52,7 +51,7 @@ const Navbar = () => {
                   </Link>
                   {item.dropdown && (
                     <div className="absolute top-full left-0 w-64 bg-black border border-orange-500 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                      <div className="py-2">
+                      <div className="py-2 max-h-80 overflow-y-auto">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
@@ -75,8 +74,8 @@ const Navbar = () => {
               </Button>
             </div>
 
-            {/* Large Tablet Navigation (lg to xl) - Shows key items with dropdowns */}
-            <div className="hidden lg:flex xl:hidden items-center space-x-1">
+            {/* Large Desktop Navigation (xl to 2xl) */}
+            <div className="hidden xl:flex 2xl:hidden items-center space-x-1">
               <Link to="/" className="text-white hover:text-orange-500 px-2 py-1 text-sm font-medium">Home</Link>
               <Link to="/about" className="text-white hover:text-orange-500 px-2 py-1 text-sm font-medium">About</Link>
               
@@ -147,8 +146,8 @@ const Navbar = () => {
               </Button>
             </div>
 
-            {/* Medium Tablet Navigation (md to lg) - Essential items only */}
-            <div className="hidden md:flex lg:hidden items-center space-x-1">
+            {/* Large Tablet Navigation (lg to xl) */}
+            <div className="hidden lg:flex xl:hidden items-center space-x-1">
               <Link to="/" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Home</Link>
               <Link to="/services" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Services</Link>
               <Link to="/countries" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Countries</Link>
@@ -162,11 +161,25 @@ const Navbar = () => {
               </Button>
             </div>
 
+            {/* Medium Tablet Navigation (md to lg) */}
+            <div className="hidden md:flex lg:hidden items-center space-x-1">
+              <Link to="/" className="text-white hover:text-orange-500 px-1 py-1 text-xs">Home</Link>
+              <Link to="/services" className="text-white hover:text-orange-500 px-1 py-1 text-xs">Services</Link>
+              <Link to="/countries" className="text-white hover:text-orange-500 px-1 py-1 text-xs">Countries</Link>
+              <Link to="/scholarship" className="text-white hover:text-orange-500 px-1 py-1 text-xs">Scholarships</Link>
+              <Button 
+                onClick={scrollToConsultation}
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-2 py-1 ml-1 text-xs"
+              >
+                Free Call
+              </Button>
+            </div>
+
             {/* Mobile Menu Button (small screens) */}
             <div className="md:hidden flex items-center space-x-2">
               <Button 
                 onClick={scrollToConsultation}
-                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-3 py-1 text-xs"
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-2 py-1 text-xs"
               >
                 Free Call
               </Button>
