@@ -51,9 +51,24 @@
     @apply border-border;
   }
 
-  body {
+  html, body {
     @apply bg-black text-white font-poppins;
-    min-width: 320px; /* Minimum width for mobile devices */
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  #root {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -74,42 +89,38 @@
     animation-delay: 0.6s;
   }
 
-  .line-clamp-1 {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .full-width-container {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
   }
 
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .container-full {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  @media (min-width: 640px) {
+    .container-full {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
-  /* Mobile-first responsive utilities */
-  .mobile-safe-area {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
+  @media (min-width: 1024px) {
+    .container-full {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 
-  .container-responsive {
-    @apply px-2 sm:px-4 md:px-6 lg:px-8;
-  }
-
-  /* Ensure text doesn't break layout on small screens */
-  .text-responsive {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
+  @media (min-width: 1280px) {
+    .container-full {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
 }
 
@@ -124,12 +135,10 @@
   }
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -147,42 +156,21 @@ html {
   background: #ea580c;
 }
 
-/* Mobile viewport optimization */
-@media screen and (max-width: 767px) {
-  html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-  }
-  
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-}
-
-/* Responsive utilities for very small screens */
-@media (max-width: 375px) {
-  .xs\:block {
-    display: block;
-  }
-  .xs\:hidden {
-    display: none;
-  }
-  .xs\:text-xs {
-    font-size: 0.75rem;
-  }
-  .xs\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-}
-
-/* Ensure navbar is always visible */
+/* Ensure navbar is always visible and properly sized */
 .navbar-container {
-  min-height: 64px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100vw;
+  background: black;
+  border-bottom: 1px solid #f97316;
+}
+
+/* Full viewport utilization */
+.main-content {
+  width: 100vw;
+  min-height: calc(100vh - 64px);
+  flex: 1;
 }
 
 /* Responsive grid improvements */
@@ -201,5 +189,24 @@ html {
 @media (min-width: 1024px) {
   .grid-responsive-lg {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+/* Ensure proper scaling on all devices */
+@media screen and (max-width: 1919px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 20px;
   }
 }

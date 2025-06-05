@@ -4,11 +4,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, ArrowLeft, DollarSign, Award, Globe } from 'lucide-react';
+import { Calendar, ArrowLeft, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const ChevelingScholarship = () => {
+const GatesScholarship = () => {
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
   };
@@ -16,10 +16,10 @@ const ChevelingScholarship = () => {
   return (
     <div className="min-h-screen bg-black w-full">
       <Helmet>
-        <title>Chevening Scholarship UK | Complete Guide & Application</title>
-        <meta name="description" content="Comprehensive guide to Chevening Scholarship for studying in the UK. Learn about eligibility, benefits, and application process." />
-        <meta name="keywords" content="Chevening scholarship, UK education, British government scholarship, study in UK" />
-        <link rel="canonical" href="https://yourdomain.com/scholarships/chevening-scholarship" />
+        <title>Gates Cambridge Scholarship | Complete Guide & Application</title>
+        <meta name="description" content="Comprehensive guide to Gates Cambridge Scholarships for international students. Learn about eligibility, benefits, and application process." />
+        <meta name="keywords" content="Gates Cambridge scholarship, Cambridge University, international scholarship, postgraduate study" />
+        <link rel="canonical" href="https://yourdomain.com/scholarships/gates-scholarship" />
       </Helmet>
       
       <Navbar />
@@ -29,7 +29,7 @@ const ChevelingScholarship = () => {
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           <img 
             src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&h=600&fit=crop"
-            alt="Chevening Scholarship UK"
+            alt="Gates Cambridge Scholarship"
             className="absolute inset-0 w-full h-full object-cover opacity-30"
           />
           <div className="relative z-10 container-full h-full flex items-center">
@@ -41,14 +41,14 @@ const ChevelingScholarship = () => {
               <div className="flex items-center mb-4">
                 <span className="text-4xl mr-3">🇬🇧</span>
                 <span className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                  United Kingdom
+                  Cambridge University
                 </span>
               </div>
               <h1 className="text-5xl font-bold mb-4 leading-tight">
-                Chevening Scholarship
+                Gates Cambridge Scholarship
               </h1>
               <p className="text-xl mb-6 opacity-90">
-                UK government's global scholarship programme for future leaders
+                Prestigious scholarship for outstanding international students
               </p>
               <div className="flex items-center space-x-6">
                 <div className="flex items-center">
@@ -57,7 +57,7 @@ const ChevelingScholarship = () => {
                 </div>
                 <div className="flex items-center">
                   <Calendar className="h-5 w-5 mr-2" />
-                  <span>November Deadline</span>
+                  <span>December Deadline</span>
                 </div>
               </div>
             </div>
@@ -72,51 +72,25 @@ const ChevelingScholarship = () => {
                   <div className="bg-orange-500 bg-opacity-10 border-l-4 border-orange-500 p-6 rounded-r-lg">
                     <h3 className="text-orange-500 font-bold text-lg mb-2">Program Highlights</h3>
                     <ul className="list-disc list-inside space-y-1 text-gray-300">
-                      <li>Fully funded one-year Master's degree in the UK</li>
-                      <li>Monthly stipend for living expenses</li>
-                      <li>Return flights to the UK</li>
-                      <li>Visa application guidance</li>
-                      <li>Access to exclusive Chevening events and networking</li>
+                      <li>Full funding for Cambridge University study</li>
+                      <li>University composition fee and college fee</li>
+                      <li>Annual stipend for living costs</li>
+                      <li>Airfare allowance and academic development funding</li>
+                      <li>Family allowance for mature students</li>
                     </ul>
                   </div>
 
                   <div>
-                    <h2 className="text-3xl font-bold text-white mb-6">About Chevening Scholarships</h2>
+                    <h2 className="text-3xl font-bold text-white mb-6">About Gates Cambridge Scholarships</h2>
                     <p className="text-lg leading-relaxed mb-6">
-                      Chevening Scholarships are the UK government's global scholarship programme, funded by the Foreign, Commonwealth and Development Office (FCDO) and partner organisations. They are awarded to outstanding emerging leaders to pursue a one-year master's degree in the UK.
+                      Established in 2000 with a $210m donation from the Bill and Melinda Gates Foundation, Gates Cambridge Scholarships are one of the most prestigious international scholarships in the world.
                     </p>
-                    <p className="text-lg leading-relaxed mb-6">
-                      There are approximately 1,500 scholarships on offer globally for the 2024/2025 academic year, demonstrating the UK's ongoing commitment to developing the next generation of leaders.
-                    </p>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Financial Benefits</h3>
-                      <ul className="space-y-2 text-gray-300">
-                        <li>• University tuition fees</li>
-                        <li>• Monthly stipend (around £1,347)</li>
-                        <li>• Economy return airfare</li>
-                        <li>• Additional grants for essential expenditure</li>
-                        <li>• Visa application guidance and fees</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-4">Eligibility Requirements</h3>
-                      <ul className="space-y-2 text-gray-300">
-                        <li>• Citizen of Chevening-eligible country</li>
-                        <li>• Undergraduate degree (2:1 Honours minimum)</li>
-                        <li>• At least 2 years work experience</li>
-                        <li>• English language proficiency</li>
-                        <li>• Return to home country for minimum 2 years</li>
-                      </ul>
-                    </div>
                   </div>
 
                   <div className="border-t border-gray-700 pt-8">
                     <h3 className="text-2xl font-bold text-white mb-4">Ready to Apply?</h3>
                     <p className="text-lg leading-relaxed mb-6">
-                      Chevening Scholarships are highly competitive with a rigorous selection process. Our experts can help you craft a compelling application that stands out.
+                      Gates Cambridge Scholarships are highly competitive. Our experts can help you develop a compelling application that demonstrates your leadership potential.
                     </p>
                     <Button 
                       onClick={scrollToConsultation}
@@ -137,4 +111,4 @@ const ChevelingScholarship = () => {
   );
 };
 
-export default ChevelingScholarship;
+export default GatesScholarship;
