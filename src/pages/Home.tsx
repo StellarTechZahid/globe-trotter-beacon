@@ -8,6 +8,10 @@ import StudyDestinationsSection from '@/components/StudyDestinationsSection';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import AboutUsSection from '@/components/AboutUsSection';
 import ConsultationForm from '@/components/ConsultationForm';
+import OurImpactSection from '@/components/OurImpactSection';
+import PartnerUniversitiesSection from '@/components/PartnerUniversitiesSection';
+import LatestInsightsSection from '@/components/LatestInsightsSection';
+import CTASection from '@/components/CTASection';
 import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
@@ -25,10 +29,14 @@ const Home = () => {
         <OurServicesSection />
         <StudyDestinationsSection />
         <AboutUsSection />
+        <PartnerUniversitiesSection />
+        <OurImpactSection />
         <TestimonialsCarousel />
+        <LatestInsightsSection />
         <div id="consultation-form">
           <ConsultationForm />
         </div>
+        <CTASection />
       </div>
 
       <Footer />

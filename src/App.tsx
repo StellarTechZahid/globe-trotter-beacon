@@ -13,10 +13,67 @@ import Consultation from './pages/Consultation';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Disclaimer from './pages/Disclaimer';
+
+// Country Pages
+import UKPage from './pages/countries/UKPage';
+import USAPage from './pages/countries/USAPage';
+import CanadaPage from './pages/countries/CanadaPage';
+import AustraliaPage from './pages/countries/AustraliaPage';
+import MalaysiaPage from './pages/countries/MalaysiaPage';
+import GermanyPage from './pages/countries/GermanyPage';
+import ItalyPage from './pages/countries/ItalyPage';
+import NewZealandPage from './pages/countries/NewZealandPage';
+
+// Service Pages
+import CareerCounseling from './pages/services/CareerCounseling';
+import UniversitySelection from './pages/services/UniversitySelection';
+import ProfileEvaluation from './pages/services/ProfileEvaluation';
+import TestPreparation from './pages/services/TestPreparation';
+import ApplicationSupport from './pages/services/ApplicationSupport';
+import ScholarshipConsulting from './pages/services/ScholarshipConsulting';
+import VisaAssistance from './pages/services/VisaAssistance';
+import AccommodationSupport from './pages/services/AccommodationSupport';
+import PreDepartureOrientation from './pages/services/PreDepartureOrientation';
+import PostArrivalSupport from './pages/services/PostArrivalSupport';
+import JobSearchGuidance from './pages/services/JobSearchGuidance';
+
+// Event Pages
+import EducationExpo from './pages/events/EducationExpo';
+import EducationEvents from './pages/events/EducationEvents';
+import Seminars from './pages/events/Seminars';
+import CampusVisits from './pages/events/CampusVisits';
+
+// Partnership Pages
+import Partnership from './pages/Partnership';
+
+// Additional Pages
+import Events from './pages/Events';
+import VirtualConsulting from './pages/VirtualConsulting';
+import SuccessStories from './pages/SuccessStories';
+import BlogsNews from './pages/BlogsNews';
+import Blogs from './pages/Blogs';
+import Articles from './pages/Articles';
+import Tips from './pages/Tips';
+import News from './pages/News';
+
+// Blog/Article/Tip/News Detail Pages
+import StudyingInCanada from './pages/blogs/StudyingInCanada';
+import ChoosingStudyDestination from './pages/articles/ChoosingStudyDestination';
+import UniversityRankingsDecoded from './pages/articles/UniversityRankingsDecoded';
+import FirstTimeInternationalStudents from './pages/tips/FirstTimeInternationalStudents';
+import CanadaImmigrationTargets from './pages/news/CanadaImmigrationTargets';
+
+// Scholarship Category Pages
 import NorthAmericaScholarship from './pages/scholarships/NorthAmericaScholarship';
 import EuropeanCountriesScholarship from './pages/scholarships/EuropeanCountriesScholarship';
 import AsianCountriesScholarship from './pages/scholarships/AsianCountriesScholarship';
-import FullyFundedScholarship from './pages/scholarships/FullbrightScholarship';
+import FullyFunded from './pages/scholarship/FullyFunded';
+import PartiallyFunded from './pages/scholarship/PartiallyFunded';
+import CentralAsianCountries from './pages/scholarship/CentralAsianCountries';
+import NorthAmerica from './pages/scholarship/NorthAmerica';
+import EuropeanCountries from './pages/scholarship/EuropeanCountries';
+
+// Individual Scholarship Pages
 import CaliforniaScholarship from './pages/scholarships/CaliforniaScholarship';
 import FloridaScholarship from './pages/scholarships/FloridaScholarship';
 import NewYorkScholarship from './pages/scholarships/NewYorkScholarship';
@@ -56,13 +113,9 @@ import NorwayScholarship from './pages/scholarships/NorwayScholarship';
 import FinlandScholarship from './pages/scholarships/FinlandScholarship';
 import JapanMEXTScholarship from './pages/scholarships/JapanMEXTScholarship';
 import DAADScholarship from './pages/scholarships/DAADScholarship';
-
-// New comprehensive scholarship pages with complete titles
 import ChevelingScholarshipUK from './pages/scholarships/ChevelingScholarshipUK';
 import MarshallScholarshipUK from './pages/scholarships/MarshallScholarshipUK';
 import GatesCambridgeScholarship from './pages/scholarships/GatesCambridgeScholarship';
-
-// Additional scholarship pages with complete titles
 import KnightHennesyStanfordScholarship from './pages/scholarships/KnightHennesyStanfordScholarship';
 import VanierCanadaGraduateScholarship from './pages/scholarships/VanierCanadaGraduateScholarship';
 import BolashakInternationalScholarship from './pages/scholarships/BolashakInternationalScholarship';
@@ -86,14 +139,64 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/partnership" element={<Partnership />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/virtual-consulting" element={<VirtualConsulting />} />
+            <Route path="/success-stories" element={<SuccessStories />} />
+            <Route path="/blogs-news" element={<BlogsNews />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/tips" element={<Tips />} />
+            <Route path="/news" element={<News />} />
 
-            {/* Scholarship Category Pages */}
-            <Route path="/scholarship/north-america" element={<NorthAmericaScholarship />} />
-            <Route path="/scholarship/european-countries" element={<EuropeanCountriesScholarship />} />
-            <Route path="/scholarship/asian-countries" element={<AsianCountriesScholarship />} />
-            <Route path="/scholarship/fully-funded" element={<FullyFundedScholarship />} />
+            {/* Country Routes */}
+            <Route path="/countries/uk" element={<UKPage />} />
+            <Route path="/countries/usa" element={<USAPage />} />
+            <Route path="/countries/canada" element={<CanadaPage />} />
+            <Route path="/countries/australia" element={<AustraliaPage />} />
+            <Route path="/countries/malaysia" element={<MalaysiaPage />} />
+            <Route path="/countries/germany" element={<GermanyPage />} />
+            <Route path="/countries/italy" element={<ItalyPage />} />
+            <Route path="/countries/new-zealand" element={<NewZealandPage />} />
 
-            {/* Scholarship Detail Pages */}
+            {/* Service Routes */}
+            <Route path="/services/career-counseling" element={<CareerCounseling />} />
+            <Route path="/services/university-selection" element={<UniversitySelection />} />
+            <Route path="/services/profile-evaluation" element={<ProfileEvaluation />} />
+            <Route path="/services/test-preparation" element={<TestPreparation />} />
+            <Route path="/services/application-support" element={<ApplicationSupport />} />
+            <Route path="/services/scholarship-consulting" element={<ScholarshipConsulting />} />
+            <Route path="/services/visa-assistance" element={<VisaAssistance />} />
+            <Route path="/services/accommodation-support" element={<AccommodationSupport />} />
+            <Route path="/services/pre-departure-orientation" element={<PreDepartureOrientation />} />
+            <Route path="/services/post-arrival-support" element={<PostArrivalSupport />} />
+            <Route path="/services/job-search-guidance" element={<JobSearchGuidance />} />
+
+            {/* Partnership Routes */}
+            <Route path="/partnership/universities" element={<Partnership />} />
+            <Route path="/partnership/accreditation" element={<Partnership />} />
+
+            {/* Event Routes */}
+            <Route path="/events/education-expo" element={<EducationExpo />} />
+            <Route path="/events/education-events" element={<EducationEvents />} />
+            <Route path="/events/seminars" element={<Seminars />} />
+            <Route path="/events/campus-visits" element={<CampusVisits />} />
+
+            {/* Blog/Article/Tip/News Detail Routes */}
+            <Route path="/blogs/studying-in-canada" element={<StudyingInCanada />} />
+            <Route path="/articles/choosing-study-destination" element={<ChoosingStudyDestination />} />
+            <Route path="/articles/university-rankings-decoded" element={<UniversityRankingsDecoded />} />
+            <Route path="/tips/first-time-international-students" element={<FirstTimeInternationalStudents />} />
+            <Route path="/news/canada-immigration-targets" element={<CanadaImmigrationTargets />} />
+
+            {/* Scholarship Category Routes */}
+            <Route path="/scholarship/north-america" element={<NorthAmerica />} />
+            <Route path="/scholarship/european-countries" element={<EuropeanCountries />} />
+            <Route path="/scholarship/central-asian-countries" element={<CentralAsianCountries />} />
+            <Route path="/scholarship/fully-funded" element={<FullyFunded />} />
+            <Route path="/scholarship/partially-funded" element={<PartiallyFunded />} />
+
+            {/* Individual Scholarship Routes */}
             <Route path="/scholarships/california-scholarship" element={<CaliforniaScholarship />} />
             <Route path="/scholarships/florida-scholarship" element={<FloridaScholarship />} />
             <Route path="/scholarships/new-york-scholarship" element={<NewYorkScholarship />} />
@@ -106,9 +209,9 @@ function App() {
             <Route path="/scholarships/princeton-scholarship" element={<PrincetonScholarship />} />
             <Route path="/scholarships/mit-scholarship" element={<MITScholarship />} />
             <Route path="/scholarships/stanford-scholarship" element={<StanfordScholarship />} />
-            <Route path="/scholarships/caltech-scholarship" element={<CaltechScholarship />} />
-            <Route path="/scholarships/chicago-scholarship" element={<ChicagoScholarship />} />
-            <Route path="/scholarships/johns-hopkins-scholarship" element={<JohnsHopkinsScholarship />} />
+            <Route path="/scholarships/california-institute-of-technology-scholarship" element={<CaltechScholarship />} />
+            <Route path="/scholarships/university-of-chicago-scholarship" element={<ChicagoScholarship />} />
+            <Route path="/scholarships/johns-hopkins-university-scholarship" element={<JohnsHopkinsScholarship />} />
             <Route path="/scholarships/pennsylvania-scholarship" element={<PennsylvaniaScholarship />} />
             <Route path="/scholarships/columbia-scholarship" element={<ColumbiaScholarship />} />
             <Route path="/scholarships/cornell-scholarship" element={<CornellScholarship />} />
@@ -118,9 +221,6 @@ function App() {
             <Route path="/scholarships/emory-scholarship" element={<EmoryScholarship />} />
             <Route path="/scholarships/erasmus-mundus-scholarship" element={<ErasmusMundusScholarship />} />
             <Route path="/scholarships/fulbright-scholarship" element={<FullbrightScholarship />} />
-            <Route path="/scholarships/daad-scholarship" element={<DAADScholarship />} />
-            
-            {/* Scholarship Detail Pages */}
             <Route path="/scholarships/chevening-scholarship" element={<ChevelingScholarship />} />
             <Route path="/scholarships/commonwealth-scholarship" element={<CommonwealthScholarship />} />
             <Route path="/scholarships/rhodes-scholarship" element={<RhodeScholarship />} />
@@ -135,16 +235,10 @@ function App() {
             <Route path="/scholarships/norway-scholarship" element={<NorwayScholarship />} />
             <Route path="/scholarships/finland-scholarship" element={<FinlandScholarship />} />
             <Route path="/scholarships/japan-mext-scholarship" element={<JapanMEXTScholarship />} />
-
-            {/* New Scholarship Detail Pages with Complete Titles */}
+            <Route path="/scholarships/daad-scholarship" element={<DAADScholarship />} />
             <Route path="/scholarships/chevening-scholarship-uk" element={<ChevelingScholarshipUK />} />
             <Route path="/scholarships/marshall-scholarship-uk" element={<MarshallScholarshipUK />} />
             <Route path="/scholarships/gates-cambridge-scholarship" element={<GatesCambridgeScholarship />} />
-            <Route path="/scholarships/california-institute-of-technology-scholarship" element={<CaltechScholarship />} />
-            <Route path="/scholarships/university-of-chicago-scholarship" element={<ChicagoScholarship />} />
-            <Route path="/scholarships/johns-hopkins-university-scholarship" element={<JohnsHopkinsScholarship />} />
-
-            {/* Additional Scholarship Detail Pages with Complete Titles */}
             <Route path="/scholarships/knight-hennessy-stanford-scholarship" element={<KnightHennesyStanfordScholarship />} />
             <Route path="/scholarships/vanier-canada-graduate-scholarship" element={<VanierCanadaGraduateScholarship />} />
             <Route path="/scholarships/bolashak-international-scholarship" element={<BolashakInternationalScholarship />} />
