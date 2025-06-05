@@ -42,8 +42,6 @@ import DukeScholarship from './pages/scholarships/DukeScholarship';
 import EmoryScholarship from './pages/scholarships/EmoryScholarship';
 import ErasmusMundusScholarship from './pages/scholarships/ErasmusMundusScholarship';
 import FullbrightScholarship from './pages/scholarships/FullbrightScholarship';
-
-// Import new scholarship pages
 import ChevelingScholarship from './pages/scholarships/ChevelingScholarship';
 import CommonwealthScholarship from './pages/scholarships/CommonwealthScholarship';
 import RhodeScholarship from './pages/scholarships/RhodeScholarship';
@@ -59,6 +57,21 @@ import NorwayScholarship from './pages/scholarships/NorwayScholarship';
 import FinlandScholarship from './pages/scholarships/FinlandScholarship';
 import JapanMEXTScholarship from './pages/scholarships/JapanMEXTScholarship';
 import DAADScholarship from './pages/scholarships/DAADScholarship';
+
+// New comprehensive scholarship pages with complete titles
+import ChevelingScholarshipUK from './pages/scholarships/ChevelingScholarshipUK';
+import MarshallScholarshipUK from './pages/scholarships/MarshallScholarshipUK';
+import GatesCambridgeScholarship from './pages/scholarships/GatesCambridgeScholarship';
+import CaltechScholarship from './pages/scholarships/CaltechScholarship';
+import ChicagoScholarship from './pages/scholarships/ChicagoScholarship';
+import JohnsHopkinsScholarship from './pages/scholarships/JohnsHopkinsScholarship';
+
+// Additional scholarship pages with complete titles
+import KnightHennesyStanfordScholarship from './pages/scholarships/KnightHennesyStanfordScholarship';
+import VanierCanadaGraduateScholarship from './pages/scholarships/VanierCanadaGraduateScholarship';
+import BolashakInternationalScholarship from './pages/scholarships/BolashakInternationalScholarship';
+import ChineseGovernmentScholarship from './pages/scholarships/ChineseGovernmentScholarship';
+import SingaporeGovernmentScholarship from './pages/scholarships/SingaporeGovernmentScholarship';
 
 function App() {
   return (
@@ -126,6 +139,21 @@ function App() {
             <Route path="/scholarships/norway-scholarship" element={<NorwayScholarship />} />
             <Route path="/scholarships/finland-scholarship" element={<FinlandScholarship />} />
             <Route path="/scholarships/japan-mext-scholarship" element={<JapanMEXTScholarship />} />
+
+            {/* New Scholarship Detail Pages with Complete Titles */}
+            <Route path="/scholarships/chevening-scholarship-uk" element={<ChevelingScholarshipUK />} />
+            <Route path="/scholarships/marshall-scholarship-uk" element={<MarshallScholarshipUK />} />
+            <Route path="/scholarships/gates-cambridge-scholarship" element={<GatesCambridgeScholarship />} />
+            <Route path="/scholarships/california-institute-of-technology-scholarship" element={<CaltechScholarship />} />
+            <Route path="/scholarships/university-of-chicago-scholarship" element={<ChicagoScholarship />} />
+            <Route path="/scholarships/johns-hopkins-university-scholarship" element={<JohnsHopkinsScholarship />} />
+
+            {/* Additional Scholarship Detail Pages with Complete Titles */}
+            <Route path="/scholarships/knight-hennessy-stanford-scholarship" element={<KnightHennesyStanfordScholarship />} />
+            <Route path="/scholarships/vanier-canada-graduate-scholarship" element={<VanierCanadaGraduateScholarship />} />
+            <Route path="/scholarships/bolashak-international-scholarship" element={<BolashakInternationalScholarship />} />
+            <Route path="/scholarships/chinese-government-scholarship" element={<ChineseGovernmentScholarship />} />
+            <Route path="/scholarships/singapore-government-scholarship" element={<SingaporeGovernmentScholarship />} />
           </Routes>
         </Router>
       </div>

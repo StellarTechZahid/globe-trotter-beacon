@@ -52,7 +52,7 @@
   }
 
   html, body {
-    @apply bg-black text-white font-poppins;
+    @apply bg-black text-white font-sans;
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -122,6 +122,13 @@
       padding-right: 4rem;
     }
   }
+
+  @media (min-width: 1920px) {
+    .container-full {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  }
 }
 
 @keyframes fadeIn {
@@ -173,6 +180,53 @@ html {
   flex: 1;
 }
 
+/* Enhanced responsiveness for all devices */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  .container-full {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 20px;
+  }
+}
+
 /* Responsive grid improvements */
 @media (min-width: 640px) and (max-width: 767px) {
   .grid-responsive-sm {
@@ -192,21 +246,24 @@ html {
   }
 }
 
-/* Ensure proper scaling on all devices */
-@media screen and (max-width: 1919px) {
-  html {
-    font-size: 16px;
+/* Navbar responsiveness enhancements */
+@media screen and (max-width: 1024px) {
+  .navbar-container .container-full {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
-@media screen and (min-width: 1920px) {
-  html {
-    font-size: 18px;
+@media screen and (min-width: 1025px) {
+  .navbar-container .container-full {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
-@media screen and (min-width: 2560px) {
-  html {
-    font-size: 20px;
+@media screen and (min-width: 1440px) {
+  .navbar-container .container-full {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }

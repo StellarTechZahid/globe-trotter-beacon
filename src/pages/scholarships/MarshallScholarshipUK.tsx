@@ -8,7 +8,7 @@ import { Calendar, ArrowLeft, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const GatesCambridgeScholarship = () => {
+const MarshallScholarshipUK = () => {
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
   };
@@ -16,10 +16,10 @@ const GatesCambridgeScholarship = () => {
   return (
     <div className="min-h-screen bg-black w-full">
       <Helmet>
-        <title>Gates Cambridge Scholarship | Complete Guide & Application</title>
-        <meta name="description" content="Comprehensive guide to Gates Cambridge Scholarships for international students. Learn about eligibility and application process." />
-        <meta name="keywords" content="Gates Cambridge scholarship, Cambridge University scholarship, international scholarship UK" />
-        <link rel="canonical" href="https://yourdomain.com/scholarships/gates-cambridge-scholarship" />
+        <title>Marshall Scholarship UK | Complete Guide & Application</title>
+        <meta name="description" content="Comprehensive guide to Marshall Scholarships for US citizens studying in the UK. Learn about eligibility and application process." />
+        <meta name="keywords" content="Marshall scholarship, UK scholarship for Americans, British education, study in UK" />
+        <link rel="canonical" href="https://yourdomain.com/scholarships/marshall-scholarship-uk" />
       </Helmet>
       
       <Navbar />
@@ -28,8 +28,8 @@ const GatesCambridgeScholarship = () => {
         <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800 full-width-container">
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           <img 
-            src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&h=600&fit=crop"
-            alt="Gates Cambridge Scholarship"
+            src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&h=600&fit=crop"
+            alt="Marshall Scholarship UK"
             className="absolute inset-0 w-full h-full object-cover opacity-30"
           />
           <div className="relative z-10 container-full h-full flex items-center">
@@ -41,14 +41,14 @@ const GatesCambridgeScholarship = () => {
               <div className="flex items-center mb-4">
                 <span className="text-4xl mr-3">🇬🇧</span>
                 <span className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                  University of Cambridge
+                  United Kingdom
                 </span>
               </div>
               <h1 className="text-5xl font-bold mb-4 leading-tight">
-                Gates Cambridge Scholarship
+                Marshall Scholarship UK
               </h1>
               <p className="text-xl mb-6 opacity-90">
-                Full-cost scholarship to study at the University of Cambridge
+                Prestigious scholarship for US citizens to study in the UK
               </p>
               <div className="flex items-center space-x-6">
                 <div className="flex items-center">
@@ -57,7 +57,7 @@ const GatesCambridgeScholarship = () => {
                 </div>
                 <div className="flex items-center">
                   <Calendar className="h-5 w-5 mr-2" />
-                  <span>December Deadline</span>
+                  <span>October Deadline</span>
                 </div>
               </div>
             </div>
@@ -72,25 +72,25 @@ const GatesCambridgeScholarship = () => {
                   <div className="bg-orange-500 bg-opacity-10 border-l-4 border-orange-500 p-6 rounded-r-lg">
                     <h3 className="text-orange-500 font-bold text-lg mb-2">Program Highlights</h3>
                     <ul className="list-disc list-inside space-y-1 text-gray-300">
-                      <li>Full cost of studying at Cambridge</li>
-                      <li>Maintenance allowance for a single student</li>
-                      <li>One economy single airfare at beginning and end</li>
-                      <li>Inbound visa costs and health surcharge</li>
-                      <li>Family allowance and fieldwork funding available</li>
+                      <li>Full university fees and living allowance</li>
+                      <li>Annual book grant of £500</li>
+                      <li>Thesis grant of £750</li>
+                      <li>Research and daily travel grants</li>
+                      <li>Fares to and from the United States</li>
                     </ul>
                   </div>
 
                   <div>
-                    <h2 className="text-3xl font-bold text-white mb-6">About Gates Cambridge Scholarships</h2>
+                    <h2 className="text-3xl font-bold text-white mb-6">About Marshall Scholarships</h2>
                     <p className="text-lg leading-relaxed mb-6">
-                      The Gates Cambridge Scholarship programme was established through a donation of US$210m from the Bill and Melinda Gates Foundation to the University of Cambridge. The programme enables outstanding graduate students from outside the UK to pursue a full-time postgraduate degree.
+                      Marshall Scholarships finance young Americans of high ability to study for a degree in the United Kingdom. The scholarships commemorate the humane ideals of the Marshall Plan and express the continuing gratitude of the British people to their American counterparts.
                     </p>
                   </div>
 
                   <div className="border-t border-gray-700 pt-8">
                     <h3 className="text-2xl font-bold text-white mb-4">Ready to Apply?</h3>
                     <p className="text-lg leading-relaxed mb-6">
-                      Gates Cambridge Scholarships are awarded to exceptional candidates who demonstrate outstanding intellectual ability, leadership potential, and a commitment to improving the lives of others.
+                      Marshall Scholarships are extremely competitive with only about 40 awards made annually. Our experts can help you prepare a strong application.
                     </p>
                     <Button 
                       onClick={scrollToConsultation}
@@ -111,4 +111,4 @@ const GatesCambridgeScholarship = () => {
   );
 };
 
-export default GatesCambridgeScholarship;
+export default MarshallScholarshipUK;

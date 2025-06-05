@@ -8,7 +8,7 @@ import { Calendar, ArrowLeft, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const GatesCambridgeScholarship = () => {
+const ChineseGovernmentScholarship = () => {
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
   };
@@ -16,10 +16,10 @@ const GatesCambridgeScholarship = () => {
   return (
     <div className="min-h-screen bg-black w-full">
       <Helmet>
-        <title>Gates Cambridge Scholarship | Complete Guide & Application</title>
-        <meta name="description" content="Comprehensive guide to Gates Cambridge Scholarships for international students. Learn about eligibility and application process." />
-        <meta name="keywords" content="Gates Cambridge scholarship, Cambridge University scholarship, international scholarship UK" />
-        <link rel="canonical" href="https://yourdomain.com/scholarships/gates-cambridge-scholarship" />
+        <title>Chinese Government Scholarship | Complete Guide</title>
+        <meta name="description" content="Comprehensive guide to Chinese Government Scholarship (CSC) for international students. Learn about eligibility and application process." />
+        <meta name="keywords" content="Chinese Government scholarship, CSC scholarship, study in China, China scholarship council" />
+        <link rel="canonical" href="https://yourdomain.com/scholarships/chinese-government-scholarship" />
       </Helmet>
       
       <Navbar />
@@ -28,27 +28,27 @@ const GatesCambridgeScholarship = () => {
         <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800 full-width-container">
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           <img 
-            src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&h=600&fit=crop"
-            alt="Gates Cambridge Scholarship"
+            src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&h=600&fit=crop"
+            alt="Chinese Government Scholarship"
             className="absolute inset-0 w-full h-full object-cover opacity-30"
           />
           <div className="relative z-10 container-full h-full flex items-center">
             <div className="max-w-4xl text-white">
-              <Link to="/scholarship/fully-funded" className="inline-flex items-center text-orange-300 hover:text-orange-200 mb-4">
+              <Link to="/scholarship/asian-countries" className="inline-flex items-center text-orange-300 hover:text-orange-200 mb-4">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Fully Funded Scholarships
+                Back to Asian Scholarships
               </Link>
               <div className="flex items-center mb-4">
-                <span className="text-4xl mr-3">🇬🇧</span>
+                <span className="text-4xl mr-3">🇨🇳</span>
                 <span className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                  University of Cambridge
+                  China
                 </span>
               </div>
               <h1 className="text-5xl font-bold mb-4 leading-tight">
-                Gates Cambridge Scholarship
+                Chinese Government Scholarship
               </h1>
               <p className="text-xl mb-6 opacity-90">
-                Full-cost scholarship to study at the University of Cambridge
+                China's premier scholarship program for international students
               </p>
               <div className="flex items-center space-x-6">
                 <div className="flex items-center">
@@ -57,7 +57,7 @@ const GatesCambridgeScholarship = () => {
                 </div>
                 <div className="flex items-center">
                   <Calendar className="h-5 w-5 mr-2" />
-                  <span>December Deadline</span>
+                  <span>Various Deadlines</span>
                 </div>
               </div>
             </div>
@@ -72,25 +72,25 @@ const GatesCambridgeScholarship = () => {
                   <div className="bg-orange-500 bg-opacity-10 border-l-4 border-orange-500 p-6 rounded-r-lg">
                     <h3 className="text-orange-500 font-bold text-lg mb-2">Program Highlights</h3>
                     <ul className="list-disc list-inside space-y-1 text-gray-300">
-                      <li>Full cost of studying at Cambridge</li>
-                      <li>Maintenance allowance for a single student</li>
-                      <li>One economy single airfare at beginning and end</li>
-                      <li>Inbound visa costs and health surcharge</li>
-                      <li>Family allowance and fieldwork funding available</li>
+                      <li>Full tuition waiver for all programs</li>
+                      <li>Monthly living allowance (CNY 2,500-3,500)</li>
+                      <li>Free on-campus accommodation</li>
+                      <li>Comprehensive medical insurance</li>
+                      <li>Chinese language preparatory programs</li>
                     </ul>
                   </div>
 
                   <div>
-                    <h2 className="text-3xl font-bold text-white mb-6">About Gates Cambridge Scholarships</h2>
+                    <h2 className="text-3xl font-bold text-white mb-6">About Chinese Government Scholarships</h2>
                     <p className="text-lg leading-relaxed mb-6">
-                      The Gates Cambridge Scholarship programme was established through a donation of US$210m from the Bill and Melinda Gates Foundation to the University of Cambridge. The programme enables outstanding graduate students from outside the UK to pursue a full-time postgraduate degree.
+                      The Chinese Government Scholarship is established by the Ministry of Education (MOE) of the People's Republic of China to sponsor international students, teachers and scholars to study and conduct research in Chinese higher education institutions.
                     </p>
                   </div>
 
                   <div className="border-t border-gray-700 pt-8">
                     <h3 className="text-2xl font-bold text-white mb-4">Ready to Apply?</h3>
                     <p className="text-lg leading-relaxed mb-6">
-                      Gates Cambridge Scholarships are awarded to exceptional candidates who demonstrate outstanding intellectual ability, leadership potential, and a commitment to improving the lives of others.
+                      Chinese Government Scholarships offer excellent opportunities to study in one of the world's fastest-growing economies. Our experts can help you navigate the application process.
                     </p>
                     <Button 
                       onClick={scrollToConsultation}
@@ -111,4 +111,4 @@ const GatesCambridgeScholarship = () => {
   );
 };
 
-export default GatesCambridgeScholarship;
+export default ChineseGovernmentScholarship;

@@ -8,7 +8,7 @@ import { Calendar, ArrowLeft, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const GatesCambridgeScholarship = () => {
+const JohnsHopkinsScholarship = () => {
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
   };
@@ -16,10 +16,10 @@ const GatesCambridgeScholarship = () => {
   return (
     <div className="min-h-screen bg-black w-full">
       <Helmet>
-        <title>Gates Cambridge Scholarship | Complete Guide & Application</title>
-        <meta name="description" content="Comprehensive guide to Gates Cambridge Scholarships for international students. Learn about eligibility and application process." />
-        <meta name="keywords" content="Gates Cambridge scholarship, Cambridge University scholarship, international scholarship UK" />
-        <link rel="canonical" href="https://yourdomain.com/scholarships/gates-cambridge-scholarship" />
+        <title>Johns Hopkins University Scholarship | Complete Guide</title>
+        <meta name="description" content="Comprehensive guide to Johns Hopkins University scholarships and financial aid. Learn about need-based aid and merit scholarships." />
+        <meta name="keywords" content="Johns Hopkins scholarship, JHU financial aid, medical school scholarship" />
+        <link rel="canonical" href="https://yourdomain.com/scholarships/johns-hopkins-university-scholarship" />
       </Helmet>
       
       <Navbar />
@@ -28,36 +28,36 @@ const GatesCambridgeScholarship = () => {
         <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800 full-width-container">
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           <img 
-            src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&h=600&fit=crop"
-            alt="Gates Cambridge Scholarship"
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&h=600&fit=crop"
+            alt="Johns Hopkins University Scholarship"
             className="absolute inset-0 w-full h-full object-cover opacity-30"
           />
           <div className="relative z-10 container-full h-full flex items-center">
             <div className="max-w-4xl text-white">
-              <Link to="/scholarship/fully-funded" className="inline-flex items-center text-orange-300 hover:text-orange-200 mb-4">
+              <Link to="/scholarship/north-america" className="inline-flex items-center text-orange-300 hover:text-orange-200 mb-4">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Fully Funded Scholarships
+                Back to North America Scholarships
               </Link>
               <div className="flex items-center mb-4">
-                <span className="text-4xl mr-3">🇬🇧</span>
+                <span className="text-4xl mr-3">🇺🇸</span>
                 <span className="bg-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                  University of Cambridge
+                  Johns Hopkins University
                 </span>
               </div>
               <h1 className="text-5xl font-bold mb-4 leading-tight">
-                Gates Cambridge Scholarship
+                Johns Hopkins University Scholarship
               </h1>
               <p className="text-xl mb-6 opacity-90">
-                Full-cost scholarship to study at the University of Cambridge
+                Financial aid and scholarships at a world-renowned research university
               </p>
               <div className="flex items-center space-x-6">
                 <div className="flex items-center">
                   <DollarSign className="h-5 w-5 mr-2" />
-                  <span className="font-semibold">Full Coverage</span>
+                  <span className="font-semibold">Full Need Coverage</span>
                 </div>
                 <div className="flex items-center">
                   <Calendar className="h-5 w-5 mr-2" />
-                  <span>December Deadline</span>
+                  <span>January Deadline</span>
                 </div>
               </div>
             </div>
@@ -72,25 +72,25 @@ const GatesCambridgeScholarship = () => {
                   <div className="bg-orange-500 bg-opacity-10 border-l-4 border-orange-500 p-6 rounded-r-lg">
                     <h3 className="text-orange-500 font-bold text-lg mb-2">Program Highlights</h3>
                     <ul className="list-disc list-inside space-y-1 text-gray-300">
-                      <li>Full cost of studying at Cambridge</li>
-                      <li>Maintenance allowance for a single student</li>
-                      <li>One economy single airfare at beginning and end</li>
-                      <li>Inbound visa costs and health surcharge</li>
-                      <li>Family allowance and fieldwork funding available</li>
+                      <li>100% demonstrated need met for all students</li>
+                      <li>Average need-based grant: $42,000</li>
+                      <li>Merit-based Bloomberg Scholarships available</li>
+                      <li>Research opportunities with stipends</li>
+                      <li>No student loans for families earning under $100,000</li>
                     </ul>
                   </div>
 
                   <div>
-                    <h2 className="text-3xl font-bold text-white mb-6">About Gates Cambridge Scholarships</h2>
+                    <h2 className="text-3xl font-bold text-white mb-6">About Johns Hopkins Financial Aid</h2>
                     <p className="text-lg leading-relaxed mb-6">
-                      The Gates Cambridge Scholarship programme was established through a donation of US$210m from the Bill and Melinda Gates Foundation to the University of Cambridge. The programme enables outstanding graduate students from outside the UK to pursue a full-time postgraduate degree.
+                      Johns Hopkins University is committed to making its world-class education accessible to all qualified students. The university meets 100% of demonstrated financial need and offers both need-based and merit-based aid.
                     </p>
                   </div>
 
                   <div className="border-t border-gray-700 pt-8">
                     <h3 className="text-2xl font-bold text-white mb-4">Ready to Apply?</h3>
                     <p className="text-lg leading-relaxed mb-6">
-                      Gates Cambridge Scholarships are awarded to exceptional candidates who demonstrate outstanding intellectual ability, leadership potential, and a commitment to improving the lives of others.
+                      Johns Hopkins offers excellent financial support for students pursuing research and medical careers. Our experts can help you navigate the application and aid process.
                     </p>
                     <Button 
                       onClick={scrollToConsultation}
@@ -111,4 +111,4 @@ const GatesCambridgeScholarship = () => {
   );
 };
 
-export default GatesCambridgeScholarship;
+export default JohnsHopkinsScholarship;
