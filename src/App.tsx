@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -119,8 +118,13 @@ import GatesCambridgeScholarship from './pages/scholarships/GatesCambridgeSchola
 import KnightHennesyStanfordScholarship from './pages/scholarships/KnightHennesyStanfordScholarship';
 import VanierCanadaGraduateScholarship from './pages/scholarships/VanierCanadaGraduateScholarship';
 import BolashakInternationalScholarship from './pages/scholarships/BolashakInternationalScholarship';
-import ChineseGovernmentScholarship from './pages/scholarships/ChineseGovernmentScholarship';
-import SingaporeGovernmentScholarship from './pages/scholarships/SingaporeGovernmentScholarship';
+import ChineseGovernmentScholarship from './pages/ChineseGovernmentScholarship';
+import SingaporeGovernmentScholarship from './pages/SingaporeGovernmentScholarship';
+
+// Add new imports for the detailed pages
+import FullyFundedScholarshipsForInternationalStudents2024 from './pages/scholarship/FullyFundedScholarshipsForInternationalStudents2024';
+import PartiallyFundedScholarshipsInternationalStudents2024 from './pages/scholarship/PartiallyFundedScholarshipsInternationalStudents2024';
+import CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 from './pages/blogs/CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024';
 
 function App() {
   return (
@@ -244,6 +248,11 @@ function App() {
             <Route path="/scholarships/bolashak-international-scholarship" element={<BolashakInternationalScholarship />} />
             <Route path="/scholarships/chinese-government-scholarship" element={<ChineseGovernmentScholarship />} />
             <Route path="/scholarships/singapore-government-scholarship" element={<SingaporeGovernmentScholarship />} />
+
+            {/* New detailed scholarship and blog routes with complete titles as URLs */}
+            <Route path="/scholarship/fully-funded-scholarships-for-international-students-2024" element={<FullyFundedScholarshipsForInternationalStudents2024 />} />
+            <Route path="/scholarship/partially-funded-scholarships-international-students-2024" element={<PartiallyFundedScholarshipsInternationalStudents2024 />} />
+            <Route path="/blogs/complete-guide-to-studying-in-canada-top-universities-and-scholarships-2024" element={<CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 />} />
           </Routes>
         </Router>
       </div>
