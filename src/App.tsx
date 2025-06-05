@@ -1,8 +1,7 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -62,9 +61,6 @@ import DAADScholarship from './pages/scholarships/DAADScholarship';
 import ChevelingScholarshipUK from './pages/scholarships/ChevelingScholarshipUK';
 import MarshallScholarshipUK from './pages/scholarships/MarshallScholarshipUK';
 import GatesCambridgeScholarship from './pages/scholarships/GatesCambridgeScholarship';
-import CaltechScholarship from './pages/scholarships/CaltechScholarship';
-import ChicagoScholarship from './pages/scholarships/ChicagoScholarship';
-import JohnsHopkinsScholarship from './pages/scholarships/JohnsHopkinsScholarship';
 
 // Additional scholarship pages with complete titles
 import KnightHennesyStanfordScholarship from './pages/scholarships/KnightHennesyStanfordScholarship';

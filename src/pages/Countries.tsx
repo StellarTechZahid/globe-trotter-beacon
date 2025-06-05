@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Countries = () => {
   const countries = [
@@ -18,40 +19,47 @@ const Countries = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black w-full">
+      <Helmet>
+        <title>Study Destinations | Countries | Abroad Academics</title>
+        <meta name="description" content="Explore study destinations worldwide. Find the perfect country for your international education." />
+      </Helmet>
+      
       <Navbar />
       
-      <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800">
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">Study Destinations</h1>
-            <p className="text-xl">Discover world-class education opportunities across the globe</p>
+      <div className="main-content">
+        <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800 full-width-container">
+          <div className="absolute inset-0 bg-black bg-opacity-40" />
+          <div className="relative z-10 container-full h-full flex items-center justify-center">
+            <div className="text-center text-white">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4">Study Destinations</h1>
+              <p className="text-xl">Discover world-class education opportunities across the globe</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {countries.map((country, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg p-6 border border-orange-500 hover:border-orange-400 transition-colors">
-                <div className="h-48 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-gray-400">{country.name} Image</span>
+        <section className="py-20 full-width-container">
+          <div className="container-full">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {countries.map((country, index) => (
+                <div key={index} className="bg-gray-900 rounded-lg p-6 border border-orange-500 hover:border-orange-400 transition-colors">
+                  <div className="h-48 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                    <span className="text-gray-400">{country.name} Image</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{country.name}</h3>
+                  <p className="text-gray-300 mb-4">{country.description}</p>
+                  <Link
+                    to={`/countries/${country.slug}`}
+                    className="inline-block bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-2 rounded"
+                  >
+                    Explore {country.name} →
+                  </Link>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{country.name}</h3>
-                <p className="text-gray-300 mb-4">{country.description}</p>
-                <Link
-                  to={`/countries/${country.slug}`}
-                  className="inline-block bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-2 rounded"
-                >
-                  Explore {country.name} →
-                </Link>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <Footer />
     </div>
