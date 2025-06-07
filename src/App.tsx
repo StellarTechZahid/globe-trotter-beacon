@@ -118,13 +118,16 @@ import GatesCambridgeScholarship from './pages/scholarships/GatesCambridgeSchola
 import KnightHennesyStanfordScholarship from './pages/scholarships/KnightHennesyStanfordScholarship';
 import VanierCanadaGraduateScholarship from './pages/scholarships/VanierCanadaGraduateScholarship';
 import BolashakInternationalScholarship from './pages/scholarships/BolashakInternationalScholarship';
-import ChineseGovernmentScholarship from './pages/ChineseGovernmentScholarship';
+import ChineseGovernmentScholarship from './pages/scholarships/ChineseGovernmentScholarship';
 import SingaporeGovernmentScholarship from './pages/SingaporeGovernmentScholarship';
 
 // Add new imports for the detailed pages
 import FullyFundedScholarshipsForInternationalStudents2024 from './pages/scholarship/FullyFundedScholarshipsForInternationalStudents2024';
 import PartiallyFundedScholarshipsInternationalStudents2024 from './pages/scholarship/PartiallyFundedScholarshipsInternationalStudents2024';
 import CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 from './pages/blogs/CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024';
+import DAADScholarshipsForDevelopmentRelatedPostgraduateCourses2024 from './pages/scholarship/DAADScholarshipsForDevelopmentRelatedPostgraduateCourses2024';
+import AustraliaAwardsScholarshipsForInternationalStudents2024 from './pages/scholarship/AustraliaAwardsScholarshipsForInternationalStudents2024';
+import TopUniversitiesInUSAForInternationalStudents2024 from './pages/blogs/TopUniversitiesInUSAForInternationalStudents2024';
 
 function App() {
   return (
@@ -253,6 +256,9 @@ function App() {
             <Route path="/scholarship/fully-funded-scholarships-for-international-students-2024" element={<FullyFundedScholarshipsForInternationalStudents2024 />} />
             <Route path="/scholarship/partially-funded-scholarships-international-students-2024" element={<PartiallyFundedScholarshipsInternationalStudents2024 />} />
             <Route path="/blogs/complete-guide-to-studying-in-canada-top-universities-and-scholarships-2024" element={<CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 />} />
+            <Route path="/scholarship/daad-scholarships-for-development-related-postgraduate-courses-2024" element={<DAADScholarshipsForDevelopmentRelatedPostgraduateCourses2024 />} />
+            <Route path="/scholarship/australia-awards-scholarships-for-international-students-2024" element={<AustraliaAwardsScholarshipsForInternationalStudents2024 />} />
+            <Route path="/blogs/top-universities-in-usa-for-international-students-2024" element={<TopUniversitiesInUSAForInternationalStudents2024 />} />
           </Routes>
         </Router>
       </div>
