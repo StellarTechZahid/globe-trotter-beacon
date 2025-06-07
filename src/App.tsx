@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -134,12 +133,17 @@ import ChevelingScholarshipsForMastersAndPhDStudents2024 from './pages/scholarsh
 import FullbrightForeignStudentProgramUSA2024 from './pages/scholarship/FullbrightForeignStudentProgramUSA2024';
 import CommonwealthScholarshipsForDevelopingCountries2024 from './pages/scholarship/CommonwealthScholarshipsForDevelopingCountries2024';
 import GatesCambridgeScholarshipsForInternationalStudents2024 from './pages/scholarship/GatesCambridgeScholarshipsForInternationalStudents2024';
+import ErasmusMundusJointMasterDegreeScholarships2024 from './pages/scholarship/ErasmusMundusJointMasterDegreeScholarships2024';
+import SwissGovernmentExcellenceScholarships2024 from './pages/scholarship/SwissGovernmentExcellenceScholarships2024';
+import JapanMEXTScholarshipForInternationalStudents2024 from './pages/scholarship/JapanMEXTScholarshipForInternationalStudents2024';
+import NetherlandsScholarshipProgramme2024 from './pages/scholarship/NetherlandsScholarshipProgramme2024';
 
 // New blog/news/article/tip pages
 import BestCountriesToStudyAbroadForInternationalStudents2024 from './pages/blogs/BestCountriesToStudyAbroadForInternationalStudents2024';
 import HowToWriteWinningScholarshipEssaysStepByStepGuide2024 from './pages/articles/HowToWriteWinningScholarshipEssaysStepByStepGuide2024';
 import TopTipsForInternationalStudentVisaApplications2024 from './pages/tips/TopTipsForInternationalStudentVisaApplications2024';
 import UKPostStudyWorkVisaChangesForInternationalStudents2024 from './pages/news/UKPostStudyWorkVisaChangesForInternationalStudents2024';
+import StudyingInGermanyCompleteGuideForInternationalStudents2024 from './pages/blogs/StudyingInGermanyCompleteGuideForInternationalStudents2024';
 
 function App() {
   return (
@@ -263,29 +267,26 @@ function App() {
             <Route path="/scholarships/bolashak-international-scholarship" element={<BolashakInternationalScholarship />} />
             <Route path="/scholarships/chinese-government-scholarship" element={<ChineseGovernmentScholarship />} />
 
-            {/* Detailed scholarship routes with complete titles as URLs */}
+            {/* Detailed scholarship and blog pages with complete titles as URLs */}
             <Route path="/scholarship/fully-funded-scholarships-for-international-students-2024" element={<FullyFundedScholarshipsForInternationalStudents2024 />} />
             <Route path="/scholarship/partially-funded-scholarships-international-students-2024" element={<PartiallyFundedScholarshipsInternationalStudents2024 />} />
+            <Route path="/blogs/complete-guide-to-studying-in-canada-top-universities-and-scholarships-2024" element={<CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 />} />
             <Route path="/scholarship/daad-scholarships-for-development-related-postgraduate-courses-2024" element={<DAADScholarshipsForDevelopmentRelatedPostgraduateCourses2024 />} />
             <Route path="/scholarship/australia-awards-scholarships-for-international-students-2024" element={<AustraliaAwardsScholarshipsForInternationalStudents2024 />} />
+            <Route path="/blogs/top-universities-in-usa-for-international-students-2024" element={<TopUniversitiesInUSAForInternationalStudents2024 />} />
             <Route path="/scholarship/chevening-scholarships-for-masters-and-phd-students-2024" element={<ChevelingScholarshipsForMastersAndPhDStudents2024 />} />
             <Route path="/scholarship/fulbright-foreign-student-program-usa-2024" element={<FullbrightForeignStudentProgramUSA2024 />} />
             <Route path="/scholarship/commonwealth-scholarships-for-developing-countries-2024" element={<CommonwealthScholarshipsForDevelopingCountries2024 />} />
             <Route path="/scholarship/gates-cambridge-scholarships-for-international-students-2024" element={<GatesCambridgeScholarshipsForInternationalStudents2024 />} />
-
-            {/* Detailed blog routes with complete titles as URLs */}
-            <Route path="/blogs/complete-guide-to-studying-in-canada-top-universities-and-scholarships-2024" element={<CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 />} />
-            <Route path="/blogs/top-universities-in-usa-for-international-students-2024" element={<TopUniversitiesInUSAForInternationalStudents2024 />} />
+            <Route path="/scholarship/erasmus-mundus-joint-master-degree-scholarships-2024" element={<ErasmusMundusJointMasterDegreeScholarships2024 />} />
+            <Route path="/scholarship/swiss-government-excellence-scholarships-2024" element={<SwissGovernmentExcellenceScholarships2024 />} />
+            <Route path="/scholarship/japan-mext-scholarship-for-international-students-2024" element={<JapanMEXTScholarshipForInternationalStudents2024 />} />
+            <Route path="/scholarship/netherlands-scholarship-programme-2024" element={<NetherlandsScholarshipProgramme2024 />} />
             <Route path="/blogs/best-countries-to-study-abroad-for-international-students-2024" element={<BestCountriesToStudyAbroadForInternationalStudents2024 />} />
-
-            {/* Detailed article routes with complete titles as URLs */}
             <Route path="/articles/how-to-write-winning-scholarship-essays-step-by-step-guide-2024" element={<HowToWriteWinningScholarshipEssaysStepByStepGuide2024 />} />
-
-            {/* Detailed tip routes with complete titles as URLs */}
             <Route path="/tips/top-tips-for-international-student-visa-applications-2024" element={<TopTipsForInternationalStudentVisaApplications2024 />} />
-
-            {/* Detailed news routes with complete titles as URLs */}
             <Route path="/news/uk-post-study-work-visa-changes-for-international-students-2024" element={<UKPostStudyWorkVisaChangesForInternationalStudents2024 />} />
+            <Route path="/blogs/studying-in-germany-complete-guide-for-international-students-2024" element={<StudyingInGermanyCompleteGuideForInternationalStudents2024 />} />
           </Routes>
         </Router>
       </div>
