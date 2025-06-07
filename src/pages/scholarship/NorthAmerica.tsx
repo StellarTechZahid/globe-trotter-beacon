@@ -32,8 +32,10 @@ const NorthAmerica = () => {
 
   // Define scholarship paths for redirection
   const scholarshipPaths = {
-    "Fulbright": "/scholarships/fulbright-scholarship",
-    "Vanier CGS": "/scholarships/vanier-cgs"
+    "Australia Awards": "/scholarship/australia-awards-scholarship-2024",
+    "Vanier Canada Graduate": "/scholarship/canada-graduate-scholarships-2024", 
+    "National Merit": "/scholarship/usa-merit-scholarships-2024",
+    "Fulbright": "/scholarship/fulbright-foreign-student-program-usa-2024"
     // More scholarships can be added here as they're created
   };
 

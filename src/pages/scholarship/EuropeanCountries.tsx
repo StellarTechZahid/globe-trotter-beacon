@@ -38,7 +38,9 @@ const EuropeanCountries = () => {
 
   // Define scholarship paths for redirection
   const scholarshipPaths = {
-    "DAAD": "/scholarships/daad-scholarship"
+    "DAAD": "/scholarship/daad-scholarships-germany-2024",
+    "Deutschlandstipendium": "/scholarship/daad-scholarships-germany-2024",
+    "Heinrich Böll": "/scholarship/daad-scholarships-germany-2024"
     // More scholarships can be added here as they're created
   };
 

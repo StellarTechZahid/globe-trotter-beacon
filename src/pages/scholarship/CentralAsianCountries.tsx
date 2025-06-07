@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -38,7 +37,8 @@ const CentralAsianCountries = () => {
 
   // Define scholarship paths for redirection
   const scholarshipPaths = {
-    "Bolashak Scholarship": "/scholarships/bolashak-scholarship"
+    "Bolashak Scholarship": "/scholarships/bolashak-international-scholarship",
+    "Government Scholarships": "/#consultation-form"
     // More scholarships can be added here as they're created
   };
 

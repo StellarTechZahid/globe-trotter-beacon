@@ -145,6 +145,16 @@ import TopTipsForInternationalStudentVisaApplications2024 from './pages/tips/Top
 import UKPostStudyWorkVisaChangesForInternationalStudents2024 from './pages/news/UKPostStudyWorkVisaChangesForInternationalStudents2024';
 import StudyingInGermanyCompleteGuideForInternationalStudents2024 from './pages/blogs/StudyingInGermanyCompleteGuideForInternationalStudents2024';
 
+// New scholarship pages
+import DAADScholarshipsGermany2024 from './pages/scholarship/DAADScholarshipsGermany2024';
+import AustraliaAwardsScholarship2024 from './pages/scholarship/AustraliaAwardsScholarship2024';
+import CanadaGraduateScholarships2024 from './pages/scholarship/CanadaGraduateScholarships2024';
+import USAMeritScholarships2024 from './pages/scholarship/USAMeritScholarships2024';
+
+// New content pages
+import UniversityApplicationTipsForInternationalStudents2024 from './pages/articles/UniversityApplicationTipsForInternationalStudents2024';
+import NewZealandStudentVisaUpdates2024 from './pages/news/NewZealandStudentVisaUpdates2024';
+
 function App() {
   return (
     <HelmetProvider>
@@ -287,6 +297,16 @@ function App() {
             <Route path="/tips/top-tips-for-international-student-visa-applications-2024" element={<TopTipsForInternationalStudentVisaApplications2024 />} />
             <Route path="/news/uk-post-study-work-visa-changes-for-international-students-2024" element={<UKPostStudyWorkVisaChangesForInternationalStudents2024 />} />
             <Route path="/blogs/studying-in-germany-complete-guide-for-international-students-2024" element={<StudyingInGermanyCompleteGuideForInternationalStudents2024 />} />
+
+            {/* New scholarship routes */}
+            <Route path="/scholarship/daad-scholarships-germany-2024" element={<DAADScholarshipsGermany2024 />} />
+            <Route path="/scholarship/australia-awards-scholarship-2024" element={<AustraliaAwardsScholarship2024 />} />
+            <Route path="/scholarship/canada-graduate-scholarships-2024" element={<CanadaGraduateScholarships2024 />} />
+            <Route path="/scholarship/usa-merit-scholarships-2024" element={<USAMeritScholarships2024 />} />
+
+            {/* New content routes */}
+            <Route path="/articles/university-application-tips-for-international-students-2024" element={<UniversityApplicationTipsForInternationalStudents2024 />} />
+            <Route path="/news/new-zealand-student-visa-updates-2024" element={<NewZealandStudentVisaUpdates2024 />} />
           </Routes>
         </Router>
       </div>
