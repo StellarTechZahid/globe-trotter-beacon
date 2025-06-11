@@ -139,6 +139,21 @@ const Articles = () => {
       featured: false,
       keywords: ["educational technology", "digital learning", "online education"],
        slug: "/articles/technology-in-education"
+    },
+    {
+      id: 9,
+      title: "How to Write a Strong SOP for Foreign Universities",
+      excerpt: "A complete guide to crafting a compelling Statement of Purpose (SOP) that enhances your chances of admission to top international universities.",
+      content: "Your Statement of Purpose (SOP) is a key element in your study abroad application. It reflects your goals, personality, and motivation to pursue higher studies. In this article, we break down what makes a strong SOP, its structure, and tips to help you write one that stands out.\n\nFrom a captivating introduction to well-articulated academic background and clear career goals, each section of your SOP should reflect clarity, purpose, and authenticity. Tailor your SOP to the course and university, highlighting how their offerings align with your aspirations.\n\nAdmissions committees look for passion, commitment, and relevance in your SOP. Avoid generic content—make your story personal, yet professional. Edit and proofread thoroughly before submission.",
+      image: "https://images.unsplash.com/photo-1581093588401-9f7c3ca6a63c?w=600&h=350&fit=crop",
+      author: "Admissions Coach",
+      date: "June 11, 2025",
+      category: "Study Abroad Guide",
+      readTime: "8 min read",
+      views: "1.2k",
+      featured: false,
+      keywords: ["statement of purpose", "SOP writing", "study abroad application"],
+      slug: "/articles/how-to-write-a-strong-sop"
     }
   ];
 

@@ -56,11 +56,16 @@ import Tips from './pages/Tips';
 import News from './pages/News';
 
 // Blog/Article/Tip/News Detail Pages
+import WhyStudyInAustraliaBestUniversitiesAndStudentLifeGuide2025 from './pages/blogs/WhyStudyInAustraliaBestUniversitiesAndStudentLifeGuide2025';
 import StudyingInCanada from './pages/blogs/StudyingInCanada';
+import TopScholarships2024 from './pages/blogs/StudyingInCanada';
 import ChoosingStudyDestination from './pages/articles/ChoosingStudyDestination';
+import TechnologyInEducation from './pages/articles/TechnologyInEducation';
 import FirstTimeInternationalStudents from './pages/tips/FirstTimeInternationalStudents';
 import CareerPathways from './pages/articles/CareerPathways';
+import SOPGuide from './pages/articles/SOPGuide';
 import EducationEconomicsAnalysis from './pages/articles/EducationEconomicsAnalysis';
+import ResearchOpportunities from './pages/articles/ResearchOpportunities';
 import UniversityRankingsDecoded from './pages/articles/UniversityRankingsDecoded';
 import VisaRequirementAnalysis from './pages/articles/VisaRequirementAnalysis';
 import CulturalIntelligence from './pages/articles/CulturalIntelligence';
@@ -291,6 +296,8 @@ function App() {
 
             {/* Blog Routes */}
             <Route path="/blogs/studying-in-canada" element={<StudyingInCanada />} />
+            <Route path="/blogs/top-scholarships" element={<TopScholarships2024 />} />
+            <Route path="/blogs/studying-in-australia" element={<WhyStudyInAustraliaBestUniversitiesAndStudentLifeGuide2025 />} />
             <Route path="/blogs/complete-guide-to-studying-in-canada-top-universities-and-scholarships-2024" element={<CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 />} />
             <Route path="/blogs/top-universities-in-usa-for-international-students-2024" element={<TopUniversitiesInUSAForInternationalStudents2024 />} />
             <Route path="/blogs/best-countries-to-study-abroad-for-international-students-2024" element={<BestCountriesToStudyAbroadForInternationalStudents2024 />} />
@@ -301,7 +308,10 @@ function App() {
             <Route path="/articles/visa-requirements-analysis" element={<VisaRequirementAnalysis />} /> 
             <Route path="/articles/cultural-intelligence" element={<CulturalIntelligence />} /> 
             <Route path="/articles/economics-of-education" element={<EducationEconomicsAnalysis />} />
-             <Route path="/articles/career-pathways-graduates" element={<CareerPathways />} />
+            <Route path="/articles/how-to-write-a-strong-sop" element={<SOPGuide />} />
+            <Route path="/articles/research-opportunities" element={<ResearchOpportunities />} />
+            <Route path="/articles/technology-in-education" element={<TechnologyInEducation />} />
+            <Route path="/articles/career-pathways-graduates" element={<CareerPathways />} />
             <Route path="/articles/university-rankings-decoded" element={<UniversityRankingsDecoded />} />
             <Route path="/articles/how-to-write-winning-scholarship-essays-step-by-step-guide-2024" element={<HowToWriteWinningScholarshipEssaysStepByStepGuide2024 />} />
             <Route path="/articles/university-application-tips-for-international-students-2024" element={<UniversityApplicationTipsForInternationalStudents2024 />} />
