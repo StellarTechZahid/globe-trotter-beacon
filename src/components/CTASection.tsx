@@ -10,6 +10,21 @@ const CTASection = () => {
     }
   };
 
+  const handleInstallClick = () => {
+    const event = window.deferredPrompt; // Access deferredPrompt from global scope
+    if (event) {
+      (event as any)?.prompt();
+      (event as any)?.userChoice.then((choiceResult: { outcome: string }) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User installed the PWA');
+        }
+        (window as any).deferredPrompt = null;
+      });
+    } else {
+      alert('Open your browser menu and select "Add to Home Screen" to install our app!');
+    }
+  };
+
   const benefits = [
     "Free 30-minute consultation call",
     "Personalized study abroad roadmap", 
@@ -62,7 +77,16 @@ const CTASection = () => {
 
           <div className="mt-8">
             <h3 className="text-2xl font-bold text-black mb-4">Download Our App!</h3>
-            <p className="text-black/80">Install the Abroad Academics app for instant access to study abroad resources. Visit us on your mobile device and tap "Add to Home Screen"!</p>
+            <p className="text-black/80 mb-4">
+              Install the Abroad Academics app for instant access to study abroad resources. 
+              Click below or tap "Add to Home Screen" in your browser menu!
+            </p>
+            <Button 
+              onClick={handleInstallClick}
+              className="bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3"
+            >
+              Install Now
+            </Button>
           </div>
         </div>
       </div>
