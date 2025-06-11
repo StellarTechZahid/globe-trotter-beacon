@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { toast } from 'sonner';
+import { Toaster, toast } from 'sonner';
 import Navbar from '@/components/Navbar';
 import HeroCarousel from '@/components/HeroCarousel';
 import AboutUsSection from '@/components/AboutUsSection';
@@ -17,11 +17,13 @@ import { Button } from '@/components/ui/button';
 
 const Index = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
-  const [hasDismissedToast, setHasDismissedToast] = useState(false);
 
   useEffect(() => {
-    // Show toast on page load if not dismissed
-    if (!hasDismissedToast) {
+    // Check if toast was dismissed or app installed
+    const isToastDismissed = localStorage.getItem('pwaToastDismissed');
+    const isAppInstalled = localStorage.getItem('pwaInstalled');
+
+    if (!isToastDismissed && !isAppInstalled) {
       toast('Download Abroad Academics App!', {
         description: 'Get instant access to study abroad guidance by installing our app!',
         action: {
@@ -32,6 +34,7 @@ const Index = () => {
               (deferredPrompt as any)?.userChoice.then((choiceResult: { outcome: string }) => {
                 if (choiceResult.outcome === 'accepted') {
                   console.log('User installed the PWA');
+                  localStorage.setItem('pwaInstalled', 'true');
                 }
                 setDeferredPrompt(null);
               });
@@ -40,38 +43,33 @@ const Index = () => {
             }
           },
         },
-        onDismiss: () => setHasDismissedToast(true),
-        duration: 10000, // Show for 10 seconds
+        onDismiss: () => {
+          localStorage.setItem('pwaToastDismissed', 'true');
+        },
+        duration: 15000, // Show for 15 seconds
+        position: 'top-center', // Ensure visibility
       });
     }
 
-    // Handle beforeinstallprompt event
+    // Handle beforeinstallprompt
     const handler = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e);
-      if (!hasDismissedToast) {
-        toast('Install Abroad Academics App', {
-          description: 'Add our app to your home screen for quick access to study abroad guidance!',
-          action: {
-            label: 'Install',
-            onClick: () => {
-              (deferredPrompt as any)?.prompt();
-              (deferredPrompt as any)?.userChoice.then((choiceResult: { outcome: string }) => {
-                if (choiceResult.outcome === 'accepted') {
-                  console.log('User installed the PWA');
-                }
-                setDeferredPrompt(null);
-              });
-            },
-          },
-          onDismiss: () => setHasDismissedToast(true),
-          duration: 10000,
-        });
-      }
+      (window as any).deferredPrompt = e; // Store globally for CTASection
     };
     window.addEventListener('beforeinstallprompt', handler);
-    return () => window.removeEventListener('beforeinstallprompt', handler);
-  }, [hasDismissedToast, deferredPrompt]);
+
+    // Track app installation
+    window.addEventListener('appinstalled', () => {
+      console.log('PWA was installed');
+      localStorage.setItem('pwaInstalled', 'true');
+    });
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handler);
+      window.removeEventListener('appinstalled', () => {});
+    };
+  }, [deferredPrompt]);
 
   const handleInstallClick = () => {
     if (deferredPrompt) {
@@ -79,6 +77,7 @@ const Index = () => {
       (deferredPrompt as any)?.userChoice.then((choiceResult: { outcome: string }) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('User installed the PWA');
+          localStorage.setItem('pwaInstalled', 'true');
         }
         setDeferredPrompt(null);
       });
@@ -102,6 +101,7 @@ const Index = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://abroadacademics.vercel.app" />
       </Helmet>
+      <Toaster richColors position="top-center" />
       <Navbar />
       {deferredPrompt && (
         <div className="fixed bottom-4 right-4 z-50">
@@ -190,57 +190,57 @@ const Index = () => {
               <h3 className="text-3xl font-bold text-white mb-6">Best Study Abroad Consultants Since 2023</h3>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  <strong className="text-orange-600">Established Excellence:</strong> Founded in 2023, Abroad Academics has quickly 
-                  established itself as the most trusted name among study abroad consultants in Pakistan, helping thousands of students 
+                  <strong className="text-orange-500">Established Excellence:</strong> Founded in 2023, Abroad Academics has quickly 
+                  become the most trusted name among study abroad consultants in Pakistan, helping thousands of students 
                   achieve their international education goals with our innovative approach and dedicated support.
                 </p>
                 <p>
-                  <strong className="text-orange-600">Lahore's Leading Consultancy:</strong> As the best study abroad consultants 
+                  <strong className="text-orange-500">Lahore's Leading Consultancy:</strong> As the best study abroad consultants 
                   in Lahore, we provide personalized guidance to students across Punjab and Pakistan, ensuring each student 
                   receives expert attention tailored to their academic aspirations and career goals.
                 </p>
                 <p>
-                  <strong className="text-orange-600">Comprehensive Services:</strong> Our team of certified education consultants 
+                  <strong className="text-orange-500">Comprehensive Services:</strong> Our team of certified education consultants 
                   offers end-to-end services including university selection, application assistance, 
                   visa guidance, scholarship consultation, test preparation support, and pre-departure orientation.
                 </p>
                 <p>
-                  <strong className="text-orange-600">Global University Partnerships:</strong> We maintain strong relationships 
-                  with 285+ top universities in USA, UK, Canada, Australia, Germany, and other study destinations, giving our 
+                  <strong className="text-orange-500">Global University Partnerships:</strong> We maintain strong relationships 
+                  with 280+ top universities in USA, UK, Canada, Australia, Germany, and other study destinations, giving our 
                   students access to exclusive opportunities and fast-track admissions.
                 </p>
                 <p>
-                  <strong className="text-orange-600">Proven Success Record:</strong> With 98% visa success rate and over $150 million 
+                  <strong className="text-orange-500">Proven Success Record:</strong> With 98% visa success rate and over $150 million 
                   in scholarships secured for our students, we have established ourselves as Pakistan's most successful study abroad consultancy.
                 </p>
               </div>
             </div>
-            <div className="bg-black p-8 rounded-lg border border-orange-600">
-              <h4 className="text-2xl font-bold text-orange-600 mb-4">Our 2023 Success Metrics</h4>
+            <div className="bg-black p-8 rounded-lg border border-orange-500">
+              <h4 className="text-2xl font-bold text-orange-500 mb-4">Our 2023 Success Metrics</h4>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <p className="text-white">Students Successfully Placed</p>
-                  <p className="text-orange-500 font-bold">2,500+ students</p>
+                  <span className="text-white">Students Successfully Placed</span>
+                  <span className="text-orange-500 font-bold">2,500+</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <p className="text-white">Visa Success Rate</p>
-                  <p className="text-orange-500 font-bold">98%</p>
+                  <span className="text-white">Visa Success Rate</span>
+                  <span className="text-orange-500 font-bold">98%</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <p className="text-white">Scholarships Secured</p>
-                  <p className="text-orange-500 font-bold">$150M+</p>
+                  <span className="text-white">Scholarships Secured</span>
+                  <span className="text-orange-500 font-bold">$150M+</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <p className="text-white">Partner Universities</p>
-                  <p className="text-orange-500 font-bold">285+</p>
+                  <span className="text-white">Partner Universities</span>
+                  <span className="text-orange-500 font-bold">280+</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <p className="text-white">Countries Covered</p>
-                  <p className="text-orange-500 font-bold">15+</p>
+                  <span className="text-white">Countries Covered</span>
+                  <span className="text-orange-500 font-bold">15+</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <p className="text-white">Student Satisfaction</p>
-                  <p className="text-orange-500 font-bold">99.5%</p>
+                  <span className="text-white">Student Satisfaction</span>
+                  <span className="text-orange-500 font-bold">99.5%</span>
                 </div>
               </div>
             </div>
@@ -250,7 +250,7 @@ const Index = () => {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-orange-600 mb-6">
+            <h2 className="text-4xl font-bold text-orange-500 mb-6">
               Top Study Destinations - Expert Guidance from Pakistan's Best Consultants
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -260,20 +260,20 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-6 text-center">
-            <div className="bg-gray-900 p-6 rounded-lg border border-orange-600">
-              <h3 className="text-xl font-bold text-orange-600 mb-2">Study in USA</h3>
+            <div className="bg-gray-900 p-6 rounded-lg border border-orange-500">
+              <h3 className="text-xl font-bold text-orange-500 mb-2">Study in USA</h3>
               <p className="text-gray-300 text-sm">Top universities, STEM programs, OPT benefits</p>
             </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-orange-600">
-              <h3 className="text-xl font-bold text-orange-600 mb-2">Study in UK</h3>
+            <div className="bg-gray-900 p-6 rounded-lg border border-orange-500">
+              <h3 className="text-xl font-bold text-orange-500 mb-2">Study in UK</h3>
               <p className="text-gray-300 text-sm">Russell Group universities, post-study work visa</p>
             </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-orange-600">
-              <h3 className="text-xl font-bold text-orange-600 mb-2">Study in Canada</h3>
+            <div className="bg-gray-900 p-6 rounded-lg border border-orange-500">
+              <h3 className="text-xl font-bold text-orange-500 mb-2">Study in Canada</h3>
               <p className="text-gray-300 text-sm">PR pathways, affordable education, work permits</p>
             </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-orange-600">
-              <h3 className="text-xl font-bold text-orange-600 mb-2">Study in Australia</h3>
+            <div className="bg-gray-900 p-6 rounded-lg border border-orange-500">
+              <h3 className="text-xl font-bold text-orange-500 mb-2">Study in Australia</h3>
               <p className="text-gray-300 text-sm">Group of Eight universities, research opportunities</p>
             </div>
           </div>
