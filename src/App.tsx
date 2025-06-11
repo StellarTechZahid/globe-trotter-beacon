@@ -58,8 +58,12 @@ import News from './pages/News';
 // Blog/Article/Tip/News Detail Pages
 import StudyingInCanada from './pages/blogs/StudyingInCanada';
 import ChoosingStudyDestination from './pages/articles/ChoosingStudyDestination';
-import UniversityRankingsDecoded from './pages/articles/UniversityRankingsDecoded';
 import FirstTimeInternationalStudents from './pages/tips/FirstTimeInternationalStudents';
+import CareerPathways from './pages/articles/CareerPathways';
+import EducationEconomicsAnalysis from './pages/articles/EducationEconomicsAnalysis';
+import UniversityRankingsDecoded from './pages/articles/UniversityRankingsDecoded';
+import VisaRequirementAnalysis from './pages/articles/VisaRequirementAnalysis';
+import CulturalIntelligence from './pages/articles/CulturalIntelligence';
 import CanadaImmigrationTargets from './pages/news/CanadaImmigrationTargets';
 
 // Scholarship Category Pages
@@ -161,6 +165,7 @@ function App() {
       <div className="w-full min-h-screen flex flex-col">
         <Router>
           <Routes>
+            {/* Main Pages */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
@@ -205,22 +210,11 @@ function App() {
             <Route path="/services/post-arrival-support" element={<PostArrivalSupport />} />
             <Route path="/services/job-search-guidance" element={<JobSearchGuidance />} />
 
-            {/* Partnership Routes */}
-            <Route path="/partnership/universities" element={<Partnership />} />
-            <Route path="/partnership/accreditation" element={<Partnership />} />
-
             {/* Event Routes */}
             <Route path="/events/education-expo" element={<EducationExpo />} />
             <Route path="/events/education-events" element={<EducationEvents />} />
             <Route path="/events/seminars" element={<Seminars />} />
             <Route path="/events/campus-visits" element={<CampusVisits />} />
-
-            {/* Blog/Article/Tip/News Detail Routes */}
-            <Route path="/blogs/studying-in-canada" element={<StudyingInCanada />} />
-            <Route path="/articles/choosing-study-destination" element={<ChoosingStudyDestination />} />
-            <Route path="/articles/university-rankings-decoded" element={<UniversityRankingsDecoded />} />
-            <Route path="/tips/first-time-international-students" element={<FirstTimeInternationalStudents />} />
-            <Route path="/news/canada-immigration-targets" element={<CanadaImmigrationTargets />} />
 
             {/* Scholarship Category Routes */}
             <Route path="/scholarship/north-america" element={<NorthAmerica />} />
@@ -229,7 +223,25 @@ function App() {
             <Route path="/scholarship/fully-funded" element={<FullyFunded />} />
             <Route path="/scholarship/partially-funded" element={<PartiallyFunded />} />
 
-            {/* Individual Scholarship Routes */}
+            {/* Detailed Scholarship Routes with Full URLs */}
+            <Route path="/scholarship/fully-funded-scholarships-for-international-students-2024" element={<FullyFundedScholarshipsForInternationalStudents2024 />} />
+            <Route path="/scholarship/partially-funded-scholarships-international-students-2024" element={<PartiallyFundedScholarshipsInternationalStudents2024 />} />
+            <Route path="/scholarship/daad-scholarships-for-development-related-postgraduate-courses-2024" element={<DAADScholarshipsForDevelopmentRelatedPostgraduateCourses2024 />} />
+            <Route path="/scholarship/australia-awards-scholarships-for-international-students-2024" element={<AustraliaAwardsScholarshipsForInternationalStudents2024 />} />
+            <Route path="/scholarship/chevening-scholarships-for-masters-and-phd-students-2024" element={<ChevelingScholarshipsForMastersAndPhDStudents2024 />} />
+            <Route path="/scholarship/fulbright-foreign-student-program-usa-2024" element={<FullbrightForeignStudentProgramUSA2024 />} />
+            <Route path="/scholarship/commonwealth-scholarships-for-developing-countries-2024" element={<CommonwealthScholarshipsForDevelopingCountries2024 />} />
+            <Route path="/scholarship/gates-cambridge-scholarships-for-international-students-2024" element={<GatesCambridgeScholarshipsForInternationalStudents2024 />} />
+            <Route path="/scholarship/erasmus-mundus-joint-master-degree-scholarships-2024" element={<ErasmusMundusJointMasterDegreeScholarships2024 />} />
+            <Route path="/scholarship/swiss-government-excellence-scholarships-2024" element={<SwissGovernmentExcellenceScholarships2024 />} />
+            <Route path="/scholarship/japan-mext-scholarship-for-international-students-2024" element={<JapanMEXTScholarshipForInternationalStudents2024 />} />
+            <Route path="/scholarship/netherlands-scholarship-programme-2024" element={<NetherlandsScholarshipProgramme2024 />} />
+            <Route path="/scholarship/daad-scholarships-germany-2024" element={<DAADScholarshipsGermany2024 />} />
+            <Route path="/scholarship/australia-awards-scholarship-2024" element={<AustraliaAwardsScholarship2024 />} />
+            <Route path="/scholarship/canada-graduate-scholarships-2024" element={<CanadaGraduateScholarships2024 />} />
+            <Route path="/scholarship/usa-merit-scholarships-2024" element={<USAMeritScholarships2024 />} />
+
+            {/* Individual Scholarship Routes (Shorter URLs) */}
             <Route path="/scholarships/california-scholarship" element={<CaliforniaScholarship />} />
             <Route path="/scholarships/florida-scholarship" element={<FloridaScholarship />} />
             <Route path="/scholarships/new-york-scholarship" element={<NewYorkScholarship />} />
@@ -277,35 +289,30 @@ function App() {
             <Route path="/scholarships/bolashak-international-scholarship" element={<BolashakInternationalScholarship />} />
             <Route path="/scholarships/chinese-government-scholarship" element={<ChineseGovernmentScholarship />} />
 
-            {/* Detailed scholarship and blog pages with complete titles as URLs */}
-            <Route path="/scholarship/fully-funded-scholarships-for-international-students-2024" element={<FullyFundedScholarshipsForInternationalStudents2024 />} />
-            <Route path="/scholarship/partially-funded-scholarships-international-students-2024" element={<PartiallyFundedScholarshipsInternationalStudents2024 />} />
+            {/* Blog Routes */}
+            <Route path="/blogs/studying-in-canada" element={<StudyingInCanada />} />
             <Route path="/blogs/complete-guide-to-studying-in-canada-top-universities-and-scholarships-2024" element={<CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 />} />
-            <Route path="/scholarship/daad-scholarships-for-development-related-postgraduate-courses-2024" element={<DAADScholarshipsForDevelopmentRelatedPostgraduateCourses2024 />} />
-            <Route path="/scholarship/australia-awards-scholarships-for-international-students-2024" element={<AustraliaAwardsScholarshipsForInternationalStudents2024 />} />
             <Route path="/blogs/top-universities-in-usa-for-international-students-2024" element={<TopUniversitiesInUSAForInternationalStudents2024 />} />
-            <Route path="/scholarship/chevening-scholarships-for-masters-and-phd-students-2024" element={<ChevelingScholarshipsForMastersAndPhDStudents2024 />} />
-            <Route path="/scholarship/fulbright-foreign-student-program-usa-2024" element={<FullbrightForeignStudentProgramUSA2024 />} />
-            <Route path="/scholarship/commonwealth-scholarships-for-developing-countries-2024" element={<CommonwealthScholarshipsForDevelopingCountries2024 />} />
-            <Route path="/scholarship/gates-cambridge-scholarships-for-international-students-2024" element={<GatesCambridgeScholarshipsForInternationalStudents2024 />} />
-            <Route path="/scholarship/erasmus-mundus-joint-master-degree-scholarships-2024" element={<ErasmusMundusJointMasterDegreeScholarships2024 />} />
-            <Route path="/scholarship/swiss-government-excellence-scholarships-2024" element={<SwissGovernmentExcellenceScholarships2024 />} />
-            <Route path="/scholarship/japan-mext-scholarship-for-international-students-2024" element={<JapanMEXTScholarshipForInternationalStudents2024 />} />
-            <Route path="/scholarship/netherlands-scholarship-programme-2024" element={<NetherlandsScholarshipProgramme2024 />} />
             <Route path="/blogs/best-countries-to-study-abroad-for-international-students-2024" element={<BestCountriesToStudyAbroadForInternationalStudents2024 />} />
-            <Route path="/articles/how-to-write-winning-scholarship-essays-step-by-step-guide-2024" element={<HowToWriteWinningScholarshipEssaysStepByStepGuide2024 />} />
-            <Route path="/tips/top-tips-for-international-student-visa-applications-2024" element={<TopTipsForInternationalStudentVisaApplications2024 />} />
-            <Route path="/news/uk-post-study-work-visa-changes-for-international-students-2024" element={<UKPostStudyWorkVisaChangesForInternationalStudents2024 />} />
             <Route path="/blogs/studying-in-germany-complete-guide-for-international-students-2024" element={<StudyingInGermanyCompleteGuideForInternationalStudents2024 />} />
 
-            {/* New scholarship routes */}
-            <Route path="/scholarship/daad-scholarships-germany-2024" element={<DAADScholarshipsGermany2024 />} />
-            <Route path="/scholarship/australia-awards-scholarship-2024" element={<AustraliaAwardsScholarship2024 />} />
-            <Route path="/scholarship/canada-graduate-scholarships-2024" element={<CanadaGraduateScholarships2024 />} />
-            <Route path="/scholarship/usa-merit-scholarships-2024" element={<USAMeritScholarships2024 />} />
-
-            {/* New content routes */}
+            {/* Article Routes */}
+            <Route path="/articles/choosing-study-destination" element={<ChoosingStudyDestination />} />
+            <Route path="/articles/visa-requirements-analysis" element={<VisaRequirementAnalysis />} /> 
+            <Route path="/articles/cultural-intelligence" element={<CulturalIntelligence />} /> 
+            <Route path="/articles/economics-of-education" element={<EducationEconomicsAnalysis />} />
+             <Route path="/articles/career-pathways-graduates" element={<CareerPathways />} />
+            <Route path="/articles/university-rankings-decoded" element={<UniversityRankingsDecoded />} />
+            <Route path="/articles/how-to-write-winning-scholarship-essays-step-by-step-guide-2024" element={<HowToWriteWinningScholarshipEssaysStepByStepGuide2024 />} />
             <Route path="/articles/university-application-tips-for-international-students-2024" element={<UniversityApplicationTipsForInternationalStudents2024 />} />
+
+            {/* Tips Routes */}
+            <Route path="/tips/first-time-international-students" element={<FirstTimeInternationalStudents />} />
+            <Route path="/tips/top-tips-for-international-student-visa-applications-2024" element={<TopTipsForInternationalStudentVisaApplications2024 />} />
+
+            {/* News Routes */}
+            <Route path="/news/canada-immigration-targets" element={<CanadaImmigrationTargets />} />
+            <Route path="/news/uk-post-study-work-visa-changes-for-international-students-2024" element={<UKPostStudyWorkVisaChangesForInternationalStudents2024 />} />
             <Route path="/news/new-zealand-student-visa-updates-2024" element={<NewZealandStudentVisaUpdates2024 />} />
           </Routes>
         </Router>
