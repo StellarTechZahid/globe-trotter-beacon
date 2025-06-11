@@ -58,9 +58,15 @@ import News from './pages/News';
 // Blog/Article/Tip/News Detail Pages
 import WhyStudyInAustraliaBestUniversitiesAndStudentLifeGuide2025 from './pages/blogs/WhyStudyInAustraliaBestUniversitiesAndStudentLifeGuide2025';
 import StudyingInCanada from './pages/blogs/StudyingInCanada';
-import TopScholarships2024 from './pages/blogs/StudyingInCanada';
+import StudyInItalyGuide from './pages/blogs/StudyInItalyGuide';
+import TopGlobalScholarships2025 from './pages/blogs/TopGlobalScholarships2025';
+
+import ItalyStudentVisaGuide from './pages/blogs/ItalyStudentVisaGuide';
 import ChoosingStudyDestination from './pages/articles/ChoosingStudyDestination';
+import TopMistakesForeignColleges from './pages/articles/TopMistakesForeignColleges';
+import Top10ScholarshipsUK from './pages/articles/Top10ScholarshipsUK';
 import TechnologyInEducation from './pages/articles/TechnologyInEducation';
+import StudyInGermanyFree from './pages/articles/StudyInGermanyFree';
 import FirstTimeInternationalStudents from './pages/tips/FirstTimeInternationalStudents';
 import CareerPathways from './pages/articles/CareerPathways';
 import SOPGuide from './pages/articles/SOPGuide';
@@ -296,7 +302,11 @@ function App() {
 
             {/* Blog Routes */}
             <Route path="/blogs/studying-in-canada" element={<StudyingInCanada />} />
-            <Route path="/blogs/top-scholarships" element={<TopScholarships2024 />} />
+            
+            <Route path="/blogs/study-in-italy-complete-process" element={<StudyInItalyGuide />} />
+            <Route path="/blogs/study-in-germany-free-guide" element={<StudyInGermanyFree />} />
+            <Route path="/blogs/student-visa-italy-guide" element={<ItalyStudentVisaGuide />} />
+            <Route path="/blogs/top-scholarships" element={<TopGlobalScholarships2025 />} />
             <Route path="/blogs/studying-in-australia" element={<WhyStudyInAustraliaBestUniversitiesAndStudentLifeGuide2025 />} />
             <Route path="/blogs/complete-guide-to-studying-in-canada-top-universities-and-scholarships-2024" element={<CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 />} />
             <Route path="/blogs/top-universities-in-usa-for-international-students-2024" element={<TopUniversitiesInUSAForInternationalStudents2024 />} />
@@ -306,9 +316,11 @@ function App() {
             {/* Article Routes */}
             <Route path="/articles/choosing-study-destination" element={<ChoosingStudyDestination />} />
             <Route path="/articles/visa-requirements-analysis" element={<VisaRequirementAnalysis />} /> 
+            <Route path="/articles/top-mistakes-when-applying-abroad" element={<TopMistakesForeignColleges />} /> 
             <Route path="/articles/cultural-intelligence" element={<CulturalIntelligence />} /> 
             <Route path="/articles/economics-of-education" element={<EducationEconomicsAnalysis />} />
             <Route path="/articles/how-to-write-a-strong-sop" element={<SOPGuide />} />
+            <Route path="/articles/top-uk-scholarships-2025" element={<Top10ScholarshipsUK />} />
             <Route path="/articles/research-opportunities" element={<ResearchOpportunities />} />
             <Route path="/articles/technology-in-education" element={<TechnologyInEducation />} />
             <Route path="/articles/career-pathways-graduates" element={<CareerPathways />} />

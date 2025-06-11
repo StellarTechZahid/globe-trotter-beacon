@@ -157,19 +157,51 @@ const Blogs = () => {
     },
     {
       id: 10,
-      title: "Study Abroad Consultants in Lahore: Your Gateway to Global Education",
-      excerpt: "Discover the best study abroad consultants in Lahore offering comprehensive services for international students from application to visa.",
-      content: "Lahore, being the cultural capital of Pakistan, hosts some of the finest study abroad consultants who have helped thousands of students achieve their dreams...",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=350&fit=crop",
-      author: "Education Expert",
-      date: "December 18, 2023",
-      category: "Local Consultancy",
-      readTime: "10 min read",
-      views: "3.5k",
-      tags: ["Lahore", "Study Abroad", "Pakistan Consultants"],
+      title: "How to Apply for a Student Visa in Italy: A Step-by-Step Guide",
+      excerpt: "A detailed, step-by-step guide to help international students understand and complete the Italian student visa application process successfully.",
+      content: "Planning to study in Italy? Securing a student visa is a critical part of your journey. This guide breaks down the process step by step, from gathering your documents to attending your visa appointment.\n\nStart by securing admission to an Italian university. Next, prepare required documents like your acceptance letter, proof of accommodation, financial means, and health insurance. Submit your application to the nearest Italian consulate or visa center in your country.\n\nMake sure to apply well in advance and double-check the requirements, as they may vary slightly by country. This guide ensures you’re fully informed to avoid delays and set yourself up for a smooth transition to studying in Italy.",
+      image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&h=350&fit=crop",
+      author: "Visa Consultant",
+      date: "June 11, 2025",
+      category: "Visa & Immigration",
+      readTime: "8 min read",
+      views: "1.1k",
+      tags: ["Italy visa", "student visa", "study in Italy"],
       featured: false,
-      slug: "/blogs/study-abroad-consultants-lahore"
+      slug: "/blogs/student-visa-italy-guide"
+
+    },
+      {
+      id: 11,
+      title: "Complete Process to Study in Italy: From Admission Opening to Taking Classes at Your Dream University",
+      excerpt: "A complete walkthrough of the process to study in Italy—from university admissions to landing in your classroom.",
+      content: "Dreaming of studying in Italy? This guide takes you through every step of the process—from the moment applications open to the day you attend your first class. \n\nStart by researching Italian universities and programs that align with your goals. Once applications open, prepare and submit your documents, including academic transcripts, SOP, and language proficiency certificates. Once accepted, follow up with visa documentation, health insurance, accommodation, and financial proof.\n\nAfter receiving your student visa, book your flight, get ready for pre-departure preparations, and familiarize yourself with your university's orientation program. Once in Italy, register with local authorities, set up your bank and phone services, and start your classes with confidence.\n\nThis guide ensures you don’t miss any crucial steps in turning your dream of studying in Italy into reality.",
+      image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=350&fit=crop",
+      author: "Study Abroad Mentor",
+      date: "June 11, 2025",
+      category: "Study Abroad Guide",
+      readTime: "9 min read",
+      views: "860",
+      tags: ["study in Italy", "Italian universities", "student journey"],
+      featured: false,
+      slug: "/blogs/study-in-italy-complete-process"
+    },
+    {
+      id: 12,
+      title: "Scholarships in Italy for International Students – 2025 Update",
+      excerpt: "An updated guide to the best scholarships available in Italy for international students, including how to apply and eligibility criteria.",
+      content: "Studying in Italy as an international student can be financially feasible with the right scholarships. This 2025 update covers the top funding opportunities that can help reduce your educational expenses significantly.\n\nFrom government-funded programs like 'Invest Your Talent in Italy' to region-based grants such as Lazio Disco and EDISU Piemonte, Italy offers a wide range of scholarships. Most require academic excellence, a strong motivation letter, and sometimes financial need.\n\nTo apply, research each scholarship's deadlines, eligibility requirements, and required documents. Prepare a strong personal statement, ensure your academic records are translated and authenticated, and apply early.\n\nThis guide helps you discover the right opportunities, improve your chances of winning a scholarship, and turn your dream of studying in Italy into a reality without breaking the bank.",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=350&fit=crop",
+      author: "Scholarship Advisor",
+      date: "June 11, 2025",
+      category: "Financial Aid",
+      readTime: "8 min read",
+      views: "1.3k",
+      tags: ["Italy scholarships", "study in Italy", "international students"],
+      featured: false,
+      slug: "/blogs/italy-scholarships-2025"
     }
+
   ];
 
   // Add more blogs to reach 60 total

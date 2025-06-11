@@ -154,7 +154,68 @@ const Articles = () => {
       featured: false,
       keywords: ["statement of purpose", "SOP writing", "study abroad application"],
       slug: "/articles/how-to-write-a-strong-sop"
+    },
+    {
+      id: 10,
+      title: "Top Mistakes Students Make When Applying to Foreign Colleges",
+      excerpt: "Learn about the most common pitfalls students face during international college applications and how to avoid them for a successful admission.",
+      content: "Applying to foreign colleges can be both exciting and overwhelming. Many students, however, make avoidable mistakes that cost them admissions. This article highlights the top errors applicants make and provides guidance to help you submit a strong, error-free application.\n\nOne of the most common mistakes is submitting generic applications. Admissions teams value personalized content that reflects your understanding of the university and program. Another frequent error is missing deadlines due to poor planning.\n\nIgnoring language requirements, underestimating the importance of SOPs and recommendation letters, and providing incomplete documentation can also harm your chances. By being proactive, organized, and thorough, you can avoid these pitfalls and boost your chances of success.",
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=350&fit=crop",
+      author: "Admissions Advisor",
+      date: "June 11, 2025",
+      category: "Study Abroad Guide",
+      readTime: "7 min read",
+      views: "980",
+      featured: false,
+      keywords: ["application mistakes", "college admissions", "study abroad tips"],
+      slug: "/articles/top-mistakes-when-applying-abroad"
+    },
+    {
+      id: 11,
+      title: "Top Mistakes Students Make When Applying to Foreign Colleges",
+      excerpt: "Learn about the most common pitfalls students face during international college applications and how to avoid them for a successful admission.",
+      content: "Applying to foreign colleges can be both exciting and overwhelming. Many students, however, make avoidable mistakes that cost them admissions. This article highlights the top errors applicants make and provides guidance to help you submit a strong, error-free application.\n\nOne of the most common mistakes is submitting generic applications. Admissions teams value personalized content that reflects your understanding of the university and program. Another frequent error is missing deadlines due to poor planning.\n\nIgnoring language requirements, underestimating the importance of SOPs and recommendation letters, and providing incomplete documentation can also harm your chances. By being proactive, organized, and thorough, you can avoid these pitfalls and boost your chances of success.",
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=350&fit=crop",
+      author: "Admissions Advisor",
+      date: "June 11, 2025",
+      category: "Study Abroad Guide",
+      readTime: "7 min read",
+      views: "980",
+      featured: false,
+      keywords: ["application mistakes", "college admissions", "study abroad tips"],
+      slug: "/articles/top-mistakes-when-applying-abroad"
+    },
+    { 
+      id: 12,
+      title: "How to Study in Germany for Free: All You Need to Know",
+      excerpt: "A practical guide on how international students can access tuition-free education in Germany and manage living expenses effectively.",
+      content: "Germany is one of the few countries that offer world-class education at no tuition cost, even for international students. In this guide, we’ll walk you through how to take advantage of this opportunity and what steps are involved.\n\nStart by researching public universities in Germany that offer your desired program. Most do not charge tuition fees, especially for undergraduate programs. Prepare your academic documents, language proficiency certificates (German or English), and your Statement of Purpose.\n\nYou’ll also need to prove sufficient financial means through a blocked account, secure health insurance, and eventually apply for a student visa. Once in Germany, you can explore scholarships and part-time jobs to help cover living costs.\n\nWith careful planning and awareness of the requirements, studying in Germany for free is a realistic and achievable goal.",
+      image: "https://images.unsplash.com/photo-1603721344984-943828e3c174?w=600&h=350&fit=crop",
+      author: "Germany Study Guide Team",
+      date: "June 11, 2025",
+      category: "Study Abroad Guide",
+      readTime: "9 min read",
+      views: "1.6k",
+      featured: false,
+      keywords: ["study in Germany", "tuition-free education", "German universities"],
+      slug: "/articles/study-in-germany-free-guide"
+    },
+    {
+      id: 13,
+      title: "Top 10 Scholarships for International Students in the UK",
+      excerpt: "Explore the most prestigious and accessible scholarships available for international students aiming to study in the United Kingdom.",
+      content: "Studying in the UK can be expensive, but with the right scholarships, international students can significantly reduce or even eliminate tuition and living expenses. This guide presents the top 10 scholarships that can make your UK education dream a reality.\n\nFrom fully funded options like the Chevening Scholarship and Commonwealth Scholarships to university-specific grants such as the Rhodes Scholarship at Oxford and the Gates Cambridge Scholarship, there’s something for students from every background.\n\nEach listing in this guide includes eligibility requirements, what the scholarship covers, application timelines, and tips to increase your chances of winning. Many require strong academic records, leadership potential, and a compelling personal statement.\n\nWith thorough research and a strong application, you could join thousands of international students studying in the UK with financial support from these top programs.",
+      image: "https://images.unsplash.com/photo-1587613755377-5ec3e4f8f76c?w=600&h=350&fit=crop",
+      author: "UK Scholarships Team",
+      date: "June 11, 2025",
+      category: "Financial Aid",
+      readTime: "10 min read",
+      views: "1.9k",
+      featured: true,
+      keywords: ["UK scholarships", "study in UK", "international student funding"],
+      slug: "/articles/top-uk-scholarships-2025"
     }
+
   ];
 
   const totalPages = Math.ceil(allArticles.length / articlesPerPage);

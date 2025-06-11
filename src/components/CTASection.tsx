@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Phone, MessageCircle, Clock, CheckCircle } from 'lucide-react';
@@ -57,9 +56,14 @@ const CTASection = () => {
             </div>
           </div>
 
-          <p className="text-black/70 text-sm">
+          <p className="text-black/70 text-sm mb-8">
             No commitment required • Speak with certified education consultants • Get instant answers
           </p>
+
+          <div className="mt-8">
+            <h3 className="text-2xl font-bold text-black mb-4">Download Our App!</h3>
+            <p className="text-black/80">Install the Abroad Academics app for instant access to study abroad resources. Visit us on your mobile device and tap "Add to Home Screen"!</p>
+          </div>
         </div>
       </div>
     </section>

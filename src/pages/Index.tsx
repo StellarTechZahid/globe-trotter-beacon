@@ -1,5 +1,6 @@
-
-import React from 'react';
+import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { toast } from 'sonner';
 import Navbar from '@/components/Navbar';
 import HeroCarousel from '@/components/HeroCarousel';
 import AboutUsSection from '@/components/AboutUsSection';
@@ -12,12 +13,50 @@ import LatestInsightsSection from '@/components/LatestInsightsSection';
 import ConsultationForm from '@/components/ConsultationForm';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
+  const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      toast('Install Abroad Academics App', {
+        description: 'Add our app to your home screen for quick access to study abroad guidance!',
+        action: {
+          label: 'Install',
+          onClick: () => {
+            (deferredPrompt as any)?.prompt();
+            (deferredPrompt as any)?.userChoice.then((choiceResult: { outcome: string }) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User installed the PWA');
+              }
+              setDeferredPrompt(null);
+            });
+          }
+        }
+      });
+    };
+    window.addEventListener('beforeinstallprompt', handler);
+    return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
+
+  const handleInstallClick = () => {
+    if (deferredPrompt) {
+      (deferredPrompt as any)?.prompt();
+      (deferredPrompt as any)?.userChoice.then((choiceResult: { outcome: string }) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User installed the PWA');
+        }
+        setDeferredPrompt(null);
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black">
-      {/* Enhanced SEO Meta Tags for Best Study Abroad Consultants */}
-      <head>
+      <Helmet>
         <title>Best Study Abroad Consultants in Pakistan | Abroad Academics - Founded 2023</title>
         <meta name="description" content="Abroad Academics - Pakistan's #1 study abroad consultants since 2023. Expert guidance for USA, UK, Canada, Australia. Best study abroad consultants in Lahore with 98% visa success rate. Get free consultation today!" />
         <meta name="keywords" content="best study abroad consultants Pakistan, study abroad consultants Lahore, top education consultants Pakistan, overseas education consultants, international education consultants Pakistan, study abroad guidance Pakistan, university admission consultants" />
@@ -28,13 +67,17 @@ const Index = () => {
         <meta property="og:description" content="Pakistan's leading study abroad consultants since 2023. 98% visa success rate, $150M+ scholarships secured. Expert guidance for international education." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://abroadacademics.pk" />
-      </head>
-
+        <link rel="canonical" href="https://abroadacademics.vercel.app" />
+      </Helmet>
       <Navbar />
+      {deferredPrompt && (
+        <div className="fixed bottom-4 right-4 z-50">
+          <Button onClick={handleInstallClick} className="bg-orange-500 text-white hover:bg-orange-600">
+            Install Abroad Academics App
+          </Button>
+        </div>
+      )}
       <HeroCarousel />
-      
-      {/* Enhanced About Section with Strong SEO Keywords */}
       <section className="bg-gray-900 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -50,7 +93,6 @@ const Index = () => {
               most trusted name in international education consulting.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center bg-black p-8 rounded-lg border border-orange-500">
               <h2 className="text-2xl font-bold text-orange-500 mb-4">Best Study Abroad Consultants</h2>
@@ -79,14 +121,11 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       <AboutUsSection />
       <StudyDestinationsSection />
       <OurServicesSection />
       <PartnerUniversitiesSection />
       <OurImpactSection />
-      
-      {/* Enhanced Student Testimonials Section with SEO */}
       <section className="bg-black py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -95,15 +134,12 @@ const Index = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Hear from students who chose Abroad Academics as their study abroad consultants and successfully 
-              secured admissions to top universities worldwide since our founding in 2023. Our student success 
-              stories speak volumes about our expertise as the best education consultants in Pakistan.
+              secured admissions to top universities worldwide since our founding in 2023.
             </p>
           </div>
           <TestimonialsCarousel />
         </div>
       </section>
-
-      {/* Enhanced SEO Rich Content Section */}
       <section className="bg-gray-900 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -116,7 +152,6 @@ const Index = () => {
               international education in Pakistan.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-white mb-6">Best Study Abroad Consultants Since 2023</h3>
@@ -147,7 +182,6 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            
             <div className="bg-black p-8 rounded-lg border border-orange-500">
               <h4 className="text-2xl font-bold text-orange-500 mb-4">Our 2023 Success Metrics</h4>
               <div className="space-y-4">
@@ -180,8 +214,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Enhanced SEO Content for Study Destinations */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -194,7 +226,6 @@ const Index = () => {
               guidance for studying in USA, UK, Canada, Australia, Germany, and many more countries.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div className="bg-gray-900 p-6 rounded-lg border border-orange-500">
               <h3 className="text-xl font-bold text-orange-500 mb-2">Study in USA</h3>
@@ -215,7 +246,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       <LatestInsightsSection />
       <div id="consultation-form">
         <ConsultationForm />
