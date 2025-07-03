@@ -151,7 +151,7 @@ const ScholarshipsInItaly2025 = () => {
                     <ul className="list-disc pl-6 space-y-2 mb-4">
                       <li><strong>Government Scholarships:</strong> Funded by the Italian Ministry of Foreign Affairs (MAECI) or regional bodies, e.g., Italian Government Scholarships (€900/month stipend).</li>[](https://opportunitiesforyouth.org/2024/05/25/start-your-study-in-italy-italian-government-scholarship-2025-2026-for-italian-citizens-and-international-students/)
                       <li><strong>University Scholarships:</strong> Merit-based or need-based awards from institutions like University of Bologna or Politecnico di Milano (e.g., €6,500/year).</li>[](https://www.unibo.it/en/study/study-grants-and-subsidies/international-talents-unibo-scholarships-for-international-students)
-                      <li><strong>Regional Scholarships (DSU/ERDIS):</strong) to both Italian and international students based on financial need (e.g., €5,120/year + accommodation).</li>[](https://www.unimc.it/en/international/scholarships-for-international-students)
+                      <li><strong>Regional Scholarships (DSU/ERDIS):</strong> Offered to both Italian and international students based on financial need (e.g., €5,120/year + accommodation).</li>[](https://www.unimc.it/en/international/scholarships-for-international-students)
                       <li><strong>Private/International Scholarships:</strong> Offered by organizations like the Fulbright Program or corporate sponsors, often for specific fields (e.g., engineering, business).</li>
                     </ul>
                     <p className="mb-4">

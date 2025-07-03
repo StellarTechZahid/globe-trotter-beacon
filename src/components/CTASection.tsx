@@ -11,7 +11,7 @@ const CTASection = () => {
   };
 
   const handleInstallClick = () => {
-    const event = window.deferredPrompt; // Access deferredPrompt from global scope
+    const event = (window as any).deferredPrompt; // Access deferredPrompt from global scope
     if (event) {
       (event as any)?.prompt();
       (event as any)?.userChoice.then((choiceResult: { outcome: string }) => {

@@ -372,7 +372,7 @@ const StudyInGermanyFree = () => {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:underline transition-colors line-clamp-2">
-                    {h3.title}
+                    {article.title}
                   </h3>
                   <p className="text-gray-300 mb-4 line-clamp-3">{article.excerpt}</p>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
