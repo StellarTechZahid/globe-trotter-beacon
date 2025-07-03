@@ -30,21 +30,14 @@ const ConsultationForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Replace with your actual Sheets.best URL
-    const SHEETS_BEST_URL = 'https://sheet.best/api/sheets/YOUR_SHEETS_BEST_ID';
-
     try {
-      const response = await fetch(SHEETS_BEST_URL, {
+      const response = await fetch('https://ukdzoapwfritldskfzxo.supabase.co/functions/v1/send-consultation-email', {
         method: 'POST',
-        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrZHpvYXB3ZnJpdGxkc2tmenhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE1Mzc5OTcsImV4cCI6MjA2NzExMzk5N30.KMj-InYkxE9cHVpZgJpZvP9OB_YF2RkMQumlks-P2sQ`
         },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString(),
-          source: 'Consultation Form'
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {

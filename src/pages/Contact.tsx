@@ -32,24 +32,14 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Replace with your actual Sheets.best URL
-    const SHEETS_BEST_URL = 'https://sheet.best/api/sheets/YOUR_SHEETS_BEST_ID';
-
     try {
-      const response = await fetch(SHEETS_BEST_URL, {
+      const response = await fetch('https://ukdzoapwfritldskfzxo.supabase.co/functions/v1/send-contact-email', {
         method: 'POST',
-        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrZHpvYXB3ZnJpdGxkc2tmenhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE1Mzc5OTcsImV4cCI6MjA2NzExMzk5N30.KMj-InYkxE9cHVpZgJpZvP9OB_YF2RkMQumlks-P2sQ`
         },
-        body: JSON.stringify({
-          Name: formData.name,
-          Email: formData.email,
-          Subject: formData.subject,
-          Message: formData.message,
-          Timestamp: new Date().toISOString(),
-          Source: 'Contact Form'
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -262,11 +252,11 @@ const Contact = () => {
                 </button>
               </form>
 
-              {/* Setup Instructions */}
+              {/* Success Message */}
               <div className="mt-6 p-4 bg-black rounded-lg border border-orange-500">
-                <p className="text-orange-500 font-semibold text-sm mb-2">Setup Instructions:</p>
+                <p className="text-orange-500 font-semibold text-sm mb-2">✓ Connected to Supabase</p>
                 <p className="text-gray-300 text-xs">
-                  Replace 'YOUR_SHEETS_BEST_ID' with your actual Sheets.best ID to connect this form to Google Sheets.
+                  Your form submissions are now automatically saved and email notifications are sent.
                 </p>
               </div>
             </div>
