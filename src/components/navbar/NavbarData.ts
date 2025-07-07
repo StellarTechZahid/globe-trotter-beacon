@@ -56,11 +56,10 @@ export const navItems = [
     name: 'Scholarship', 
     href: '/scholarship',
     dropdown: [
-      { name: 'Fully Funded', href: '/scholarship/fully-funded' },
-      { name: 'Partially Funded', href: '/scholarship/partially-funded' },
-      { name: 'European Countries', href: '/scholarship/european-countries' },
-      { name: 'Central Asian Countries', href: '/scholarship/central-asian-countries' },
-      { name: 'North America', href: '/scholarship/north-america' }
+      { name: 'Undergraduate', href: '/scholarship/undergraduate' },
+      { name: 'Postgraduate', href: '/scholarship/postgraduate' },
+      { name: 'PhD', href: '/scholarship/phd' },
+      { name: 'Diploma', href: '/scholarship/diploma' }
     ]
   },
   { name: 'Virtual Consulting', href: '/virtual-consulting' },

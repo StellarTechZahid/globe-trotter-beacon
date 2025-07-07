@@ -170,6 +170,12 @@ import USAMeritScholarships2024 from './pages/scholarship/USAMeritScholarships20
 import UniversityApplicationTipsForInternationalStudents2024 from './pages/articles/UniversityApplicationTipsForInternationalStudents2024';
 import NewZealandStudentVisaUpdates2024 from './pages/news/NewZealandStudentVisaUpdates2024';
 
+// New scholarship category pages
+import Undergraduate from './pages/scholarship/Undergraduate';
+import Postgraduate from './pages/scholarship/Postgraduate';
+import PhD from './pages/scholarship/PhD';
+import Diploma from './pages/scholarship/Diploma';
+
 function App() {
   return (
     <HelmetProvider>
@@ -228,6 +234,11 @@ function App() {
             <Route path="/events/campus-visits" element={<CampusVisits />} />
 
             {/* Scholarship Category Routes */}
+            <Route path="/scholarship/undergraduate" element={<Undergraduate />} />
+            <Route path="/scholarship/postgraduate" element={<Postgraduate />} />
+            <Route path="/scholarship/phd" element={<PhD />} />
+            <Route path="/scholarship/diploma" element={<Diploma />} />
+            {/* Legacy routes */}
             <Route path="/scholarship/north-america" element={<NorthAmerica />} />
             <Route path="/scholarship/european-countries" element={<EuropeanCountries />} />
             <Route path="/scholarship/central-asian-countries" element={<CentralAsianCountries />} />
