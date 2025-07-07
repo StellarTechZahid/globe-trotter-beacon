@@ -13,36 +13,36 @@ const Scholarship = () => {
 
   const scholarshipTypes = [
     {
+      icon: GraduationCap,
+      title: "Undergraduate Scholarships",
+      description: "Bachelor's degree funding opportunities for high-achieving students worldwide",
+      amount: "Up to $150,000",
+      link: "/scholarship/undergraduate",
+      features: ["Merit-Based Awards", "Academic Excellence", "Leadership Programs", "International Student Support", "Living Stipends"]
+    },
+    {
       icon: Award,
-      title: "Fully Funded Scholarships",
-      description: "Complete financial coverage including tuition, living expenses, travel costs, and health insurance",
+      title: "Postgraduate Scholarships", 
+      description: "Master's degree funding for advanced studies and professional development",
       amount: "Up to $200,000",
-      link: "/scholarship/fully-funded",
-      features: ["100% Tuition Coverage", "Monthly Stipend", "Health Insurance", "Travel Allowance", "Research Funding"]
+      link: "/scholarship/postgraduate",
+      features: ["Research Funding", "Professional Development", "Industry Partnerships", "Academic Merit Awards", "Career Advancement"]
     },
     {
-      icon: DollarSign,
-      title: "Partially Funded Scholarships",
-      description: "Partial financial assistance covering significant portions of tuition or living expenses",
-      amount: "Up to $100,000",
-      link: "/scholarship/partially-funded",
-      features: ["50-80% Tuition Coverage", "Merit-Based Awards", "Need-Based Support", "Academic Excellence", "Leadership Programs"]
-    },
-    {
-      icon: Globe,
-      title: "European Scholarships",
-      description: "Exclusive opportunities in European universities including Erasmus+ and government scholarships",
-      amount: "Up to €150,000",
-      link: "/scholarship/european-countries",
-      features: ["Erasmus+ Programs", "Government Scholarships", "University Grants", "Research Fellowships", "Cultural Exchange"]
+      icon: BookOpen,
+      title: "PhD Scholarships",
+      description: "Doctoral research funding with full financial support and research allowances",
+      amount: "Up to $250,000",
+      link: "/scholarship/phd",
+      features: ["Full Research Funding", "Monthly Stipend", "Conference Support", "Publication Grants", "Supervision Excellence"]
     },
     {
       icon: Users,
-      title: "Regional Scholarships",
-      description: "Targeted funding for Central Asian, North American, and other regional scholarship programs",
-      amount: "Varies by Region",
-      link: "/scholarship/central-asian-countries",
-      features: ["Regional Partnerships", "Cultural Scholarships", "Bilateral Programs", "Development Grants", "Exchange Programs"]
+      title: "Diploma Scholarships",
+      description: "Professional diploma and certificate program funding for career-focused education",
+      amount: "Up to $75,000",
+      link: "/scholarship/diploma",
+      features: ["Career-Focused Training", "Industry Certification", "Practical Skills", "Job Placement Support", "Professional Development"]
     }
   ];
 

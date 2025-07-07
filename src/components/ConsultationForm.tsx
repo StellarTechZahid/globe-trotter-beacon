@@ -43,6 +43,11 @@ const ConsultationForm = () => {
       if (response.ok) {
         toast.success('Registration Successful!', {
           description: 'Thank you for registering. We will contact you within 24 hours to schedule your free consultation.',
+          style: {
+            background: '#ea580c',
+            color: 'white',
+            border: '1px solid #ea580c'
+          }
         });
 
         setFormData({
