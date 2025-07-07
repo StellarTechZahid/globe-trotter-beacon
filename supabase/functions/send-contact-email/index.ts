@@ -75,8 +75,8 @@ const handler = async (req: Request): Promise<Response> => {
             
             <div style="background: #ea580c; color: white; padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0;">
               <h3 style="margin: 0 0 10px 0;">Need Immediate Help?</h3>
-              <p style="margin: 0;">WhatsApp: +1 (234) 567-890<br/>
-              Email: info@abroadacademics.com<br/>
+               <p style="margin: 0;">WhatsApp: +1 (234) 567-890<br/>
+               Email: ahmadzahid50100@gmail.com<br/>
               Available 24/7 for urgent queries</p>
             </div>
             
@@ -94,7 +94,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send notification email to admin
     const adminEmailResponse = await resend.emails.send({
       from: "Abroad Academics <onboarding@resend.dev>",
-      to: ["info@abroadacademics.com"],
+      to: ["ahmadzahid50100@gmail.com"],
       subject: `New Contact Form: ${contactData.subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
