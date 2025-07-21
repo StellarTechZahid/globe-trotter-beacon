@@ -163,8 +163,8 @@ const Undergraduate = () => {
       
       <ScholarshipHero 
         title="Undergraduate Scholarships"
-        subtitle="Start your higher education journey with financial support"
-        description="Launch your academic career with comprehensive funding opportunities for undergraduate studies at prestigious universities worldwide."
+        subtitle="Launch your academic journey with funding for bachelor's programs"
+        description="Explore comprehensive funding opportunities for undergraduate studies abroad, designed to make your dream education accessible and affordable."
         icon={GraduationCap}
       />
 
@@ -178,7 +178,7 @@ const Undergraduate = () => {
 
       <section className="py-16 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {currentScholarships.map((scholarship, index) => (
               <ScholarshipCard 
                 key={index} 

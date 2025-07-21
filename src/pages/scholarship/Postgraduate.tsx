@@ -163,9 +163,9 @@ const Postgraduate = () => {
       
       <ScholarshipHero 
         title="Postgraduate Scholarships"
-        subtitle="Advance your career with master's degree funding"
-        description="Discover world-class scholarships for postgraduate studies across top universities globally. From research-focused programs to professional development opportunities."
-        icon={Award}
+        subtitle="Advance your career with funding for master's programs"
+        description="Discover world-class funding opportunities for postgraduate studies that will propel your career to new heights and open doors to global opportunities."
+        icon={BookOpen}
       />
 
       <ScholarshipFilters 
@@ -178,7 +178,7 @@ const Postgraduate = () => {
 
       <section className="py-16 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {currentScholarships.map((scholarship, index) => (
               <ScholarshipCard 
                 key={index} 

@@ -38,83 +38,83 @@ const ScholarshipCard: React.FC<ScholarshipCardProps> = ({ scholarship, onApply 
   return (
     <Card className="group bg-gradient-to-br from-gray-900 to-black border-2 border-orange-500/20 hover:border-orange-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/20 overflow-hidden">
       <div className="relative">
-        <div className="h-48 overflow-hidden">
+        <div className="h-32 sm:h-36 md:h-40 overflow-hidden">
           <img 
             src={getCountryImage(scholarship.country)} 
             alt={scholarship.country}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          <div className="absolute top-4 left-4">
-            <div className="flex items-center space-x-2 bg-orange-500/90 backdrop-blur-sm text-black px-3 py-1 rounded-full text-sm font-semibold">
-              <Globe className="h-4 w-4" />
+          <div className="absolute top-2 left-2">
+            <div className="flex items-center space-x-1 bg-orange-500/90 backdrop-blur-sm text-black px-2 py-1 rounded-full text-xs font-semibold">
+              <Globe className="h-3 w-3" />
               <span>{scholarship.country}</span>
             </div>
           </div>
-          <div className="absolute top-4 right-4">
-            <div className="bg-black/60 backdrop-blur-sm text-orange-500 px-3 py-1 rounded-full text-sm font-bold">
+          <div className="absolute top-2 right-2">
+            <div className="bg-black/60 backdrop-blur-sm text-orange-500 px-2 py-1 rounded-full text-xs font-bold">
               {scholarship.amount}
             </div>
           </div>
         </div>
       </div>
       
-      <CardContent className="p-6 space-y-4">
+      <CardContent className="p-4 space-y-3">
         <div className="space-y-2">
-          <h3 className="text-xl font-bold text-orange-500 group-hover:text-orange-400 transition-colors">
+          <h3 className="text-lg font-bold text-orange-500 group-hover:text-orange-400 transition-colors line-clamp-2">
             {scholarship.title}
           </h3>
-          <p className="text-gray-300 text-sm leading-relaxed">
+          <p className="text-gray-300 text-sm leading-relaxed line-clamp-2">
             {scholarship.description}
           </p>
-          <p className="text-gray-400 text-sm italic">
+          <p className="text-gray-400 text-xs italic line-clamp-1">
             {scholarship.university}
           </p>
         </div>
 
-        <div className="flex items-center justify-between py-3 px-4 bg-black/50 rounded-lg border border-orange-500/20">
+        <div className="flex items-center justify-between py-2 px-3 bg-black/50 rounded-lg border border-orange-500/20">
           <div className="flex items-center space-x-2">
-            <Calendar className="h-4 w-4 text-orange-500" />
-            <span className="text-white text-sm font-medium">Deadline</span>
+            <Calendar className="h-3 w-3 text-orange-500" />
+            <span className="text-white text-xs font-medium">Deadline</span>
           </div>
-          <span className="text-orange-500 text-sm font-bold">{scholarship.deadline}</span>
+          <span className="text-orange-500 text-xs font-bold">{scholarship.deadline}</span>
         </div>
 
-        <div className="space-y-3">
-          <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/10 p-4 rounded-lg border border-orange-500/20">
-            <div className="flex items-center space-x-2 mb-2">
-              <Award className="h-4 w-4 text-orange-500" />
-              <span className="text-white font-semibold text-sm">Coverage</span>
+        <div className="space-y-2">
+          <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/10 p-3 rounded-lg border border-orange-500/20">
+            <div className="flex items-center space-x-2 mb-1">
+              <Award className="h-3 w-3 text-orange-500" />
+              <span className="text-white font-semibold text-xs">Coverage</span>
             </div>
-            <p className="text-gray-300 text-sm">{scholarship.coverage}</p>
+            <p className="text-gray-300 text-xs line-clamp-2">{scholarship.coverage}</p>
           </div>
           
-          <div className="space-y-2">
-            <h4 className="text-orange-500 font-semibold text-sm flex items-center space-x-2">
-              <CheckCircle className="h-4 w-4" />
+          <div className="space-y-1">
+            <h4 className="text-orange-500 font-semibold text-xs flex items-center space-x-1">
+              <CheckCircle className="h-3 w-3" />
               <span>Requirements</span>
             </h4>
             <ul className="space-y-1">
-              {scholarship.requirements.slice(0, 3).map((req, idx) => (
+              {scholarship.requirements.slice(0, 2).map((req, idx) => (
                 <li key={idx} className="flex items-start space-x-2">
-                  <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0" />
-                  <span className="text-gray-300 text-xs">{req}</span>
+                  <div className="w-1 h-1 bg-orange-500 rounded-full mt-1.5 flex-shrink-0" />
+                  <span className="text-gray-300 text-xs line-clamp-1">{req}</span>
                 </li>
               ))}
-              {scholarship.requirements.length > 3 && (
-                <li className="text-orange-500 text-xs">+{scholarship.requirements.length - 3} more requirements</li>
+              {scholarship.requirements.length > 2 && (
+                <li className="text-orange-500 text-xs">+{scholarship.requirements.length - 2} more requirements</li>
               )}
             </ul>
           </div>
         </div>
 
-        <div className="pt-4">
+        <div className="pt-2">
           <Button 
             onClick={onApply}
-            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-bold py-3 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
+            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-bold py-2 text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
           >
             <span>Apply Now</span>
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className="ml-2 h-3 w-3" />
           </Button>
         </div>
       </CardContent>
