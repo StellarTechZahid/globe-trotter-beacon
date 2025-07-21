@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import ScholarshipCard from '@/components/scholarship/ScholarshipCard';
 import ScholarshipFilters from '@/components/scholarship/ScholarshipFilters';
 import ScholarshipHero from '@/components/scholarship/ScholarshipHero';
-import { Award } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 
 const Postgraduate = () => {
