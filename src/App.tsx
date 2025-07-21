@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -22,6 +23,10 @@ import Visa from "./pages/Visa";
 import Partnership from "./pages/Partnership";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
+import Undergraduate from "./pages/scholarship/Undergraduate";
+import Postgraduate from "./pages/scholarship/Postgraduate";
+import PhD from "./pages/scholarship/PhD";
+import Diploma from "./pages/scholarship/Diploma";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +47,10 @@ const App = () => (
             <Route path="/success-stories" element={<SuccessStories />} />
             <Route path="/consultation" element={<Consultation />} />
             <Route path="/scholarship" element={<Scholarship />} />
+            <Route path="/scholarship/undergraduate" element={<Undergraduate />} />
+            <Route path="/scholarship/postgraduate" element={<Postgraduate />} />
+            <Route path="/scholarship/phd" element={<PhD />} />
+            <Route path="/scholarship/diploma" element={<Diploma />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/privacy" element={<Privacy />} />
