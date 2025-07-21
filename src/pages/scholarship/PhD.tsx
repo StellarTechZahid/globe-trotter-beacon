@@ -1,16 +1,17 @@
+
 import React, { useState, useMemo } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScholarshipCard from '@/components/scholarship/ScholarshipCard';
 import ScholarshipFilters from '@/components/scholarship/ScholarshipFilters';
 import ScholarshipHero from '@/components/scholarship/ScholarshipHero';
-import { Microscope } from 'lucide-react';
+import { Microscope, Users, Award, Globe, TrendingUp, BookOpen } from 'lucide-react';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 
 const PhD = () => {
   const [selectedCountry, setSelectedCountry] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
 
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
@@ -136,6 +137,46 @@ const PhD = () => {
       deadline: "November 30, 2025",
       requirements: ["Law background", "Legal research skills", "Writing sample", "Ethical standards"],
       coverage: "Tuition fees + research grant + living costs"
+    },
+    {
+      title: "Psychology PhD Scholarships",
+      description: "Funding for doctoral research in psychology and behavioral sciences",
+      amount: "$30,000 - $70,000",
+      country: "Norway",
+      university: "Psychology Departments",
+      deadline: "December 31, 2025",
+      requirements: ["Psychology background", "Research experience", "Statistical skills", "Ethical training"],
+      coverage: "Full tuition + research stipend + conference travel"
+    },
+    {
+      title: "Computer Science PhD Awards",
+      description: "Support for doctoral research in computer science and artificial intelligence",
+      amount: "$45,000 - $85,000",
+      country: "Ireland",
+      university: "Technology Universities",
+      deadline: "January 15, 2026",
+      requirements: ["CS background", "Programming skills", "Research proposal", "Technical portfolio"],
+      coverage: "Full funding + equipment + industry partnerships"
+    },
+    {
+      title: "Economics PhD Fellowships",
+      description: "Funding for PhD candidates in economics and econometrics",
+      amount: "$35,000 - $75,000",
+      country: "Belgium",
+      university: "Economics Departments",
+      deadline: "February 15, 2026",
+      requirements: ["Economics background", "Mathematical skills", "Research interests", "GRE scores"],
+      coverage: "Tuition + research grant + data access"
+    },
+    {
+      title: "Mathematics PhD Scholarships",
+      description: "Support for doctoral research in pure and applied mathematics",
+      amount: "$30,000 - $70,000",
+      country: "New Zealand",
+      university: "Mathematics Departments",
+      deadline: "March 15, 2026",
+      requirements: ["Mathematics background", "Analytical skills", "Research proposal", "Academic excellence"],
+      coverage: "Full tuition + living stipend + conference support"
     }
   ];
 
@@ -167,6 +208,42 @@ const PhD = () => {
         icon={Microscope}
       />
 
+      {/* Statistics Section */}
+      <section className="py-12 bg-gradient-to-b from-black to-gray-900 border-b border-orange-500/20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center space-y-2">
+              <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto">
+                <BookOpen className="h-6 w-6 text-orange-500" />
+              </div>
+              <div className="text-2xl font-bold text-orange-500">200+</div>
+              <div className="text-gray-400 text-sm">PhD Programs</div>
+            </div>
+            <div className="text-center space-y-2">
+              <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto">
+                <Globe className="h-6 w-6 text-orange-500" />
+              </div>
+              <div className="text-2xl font-bold text-orange-500">20+</div>
+              <div className="text-gray-400 text-sm">Countries</div>
+            </div>
+            <div className="text-center space-y-2">
+              <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto">
+                <Award className="h-6 w-6 text-orange-500" />
+              </div>
+              <div className="text-2xl font-bold text-orange-500">$3B+</div>
+              <div className="text-gray-400 text-sm">Research Funding</div>
+            </div>
+            <div className="text-center space-y-2">
+              <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto">
+                <TrendingUp className="h-6 w-6 text-orange-500" />
+              </div>
+              <div className="text-2xl font-bold text-orange-500">98%</div>
+              <div className="text-gray-400 text-sm">Success Rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <ScholarshipFilters 
         selectedCountry={selectedCountry}
         onCountryChange={setSelectedCountry}
@@ -177,7 +254,7 @@ const PhD = () => {
 
       <section className="py-16 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {currentScholarships.map((scholarship, index) => (
               <ScholarshipCard 
                 key={index} 
@@ -209,17 +286,31 @@ const PhD = () => {
                       className={`${currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500/20 hover:text-orange-400'} text-white border-orange-500/30 transition-all`}
                     />
                   </PaginationItem>
-                  {Array.from({ length: totalPages }, (_, i) => (
-                    <PaginationItem key={i + 1}>
-                      <PaginationLink
-                        onClick={() => handlePageChange(i + 1)}
-                        isActive={currentPage === i + 1}
-                        className={`cursor-pointer transition-all ${currentPage === i + 1 ? 'bg-orange-500 text-black border-orange-500' : 'text-white hover:bg-orange-500/20 hover:text-orange-400 border-orange-500/30'}`}
-                      >
-                        {i + 1}
-                      </PaginationLink>
-                    </PaginationItem>
-                  ))}
+                  {Array.from({ length: Math.min(totalPages, 8) }, (_, i) => {
+                    let pageNum;
+                    if (totalPages <= 8) {
+                      pageNum = i + 1;
+                    } else {
+                      if (currentPage <= 4) {
+                        pageNum = i + 1;
+                      } else if (currentPage >= totalPages - 3) {
+                        pageNum = totalPages - 7 + i;
+                      } else {
+                        pageNum = currentPage - 3 + i;
+                      }
+                    }
+                    return (
+                      <PaginationItem key={pageNum}>
+                        <PaginationLink
+                          onClick={() => handlePageChange(pageNum)}
+                          isActive={currentPage === pageNum}
+                          className={`cursor-pointer transition-all ${currentPage === pageNum ? 'bg-orange-500 text-black border-orange-500' : 'text-white hover:bg-orange-500/20 hover:text-orange-400 border-orange-500/30'}`}
+                        >
+                          {pageNum}
+                        </PaginationLink>
+                      </PaginationItem>
+                    );
+                  })}
                   <PaginationItem>
                     <PaginationNext 
                       onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
