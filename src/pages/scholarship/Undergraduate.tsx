@@ -2,9 +2,10 @@
 import React, { useState, useMemo } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { GraduationCap, Users, DollarSign, CheckCircle, ArrowRight, BookOpen, Globe, Filter } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import ScholarshipCard from '@/components/scholarship/ScholarshipCard';
+import ScholarshipFilters from '@/components/scholarship/ScholarshipFilters';
+import ScholarshipHero from '@/components/scholarship/ScholarshipHero';
+import { GraduationCap } from 'lucide-react';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 
 const Undergraduate = () => {
@@ -19,93 +20,123 @@ const Undergraduate = () => {
   const scholarships = [
     {
       title: "Merit-Based Undergraduate Scholarships",
-      description: "Academic excellence scholarships for high-achieving students",
+      description: "Academic excellence scholarships for high-achieving students starting their university journey",
       amount: "$5,000 - $25,000",
       country: "USA",
       university: "Harvard University",
       deadline: "March 15, 2025",
-      requirements: ["High GPA (3.5+)", "SAT/ACT scores", "Leadership experience"],
-      coverage: "Partial tuition coverage"
+      requirements: ["High GPA (3.5+)", "SAT/ACT scores", "Leadership experience", "Community service"],
+      coverage: "Partial tuition coverage + book allowance"
     },
     {
       title: "International Student Excellence Award",
-      description: "Dedicated funding for international undergraduate students",
+      description: "Dedicated funding for international undergraduate students with exceptional academic records",
       amount: "$10,000 - $40,000",
       country: "UK",
       university: "Oxford University",
       deadline: "January 31, 2025",
-      requirements: ["International status", "English proficiency", "Academic merit"],
-      coverage: "Tuition + living allowance"
+      requirements: ["International status", "English proficiency", "Academic merit", "Personal statement"],
+      coverage: "Tuition + living allowance + accommodation"
     },
     {
       title: "Chancellor's Undergraduate Scholarship",
-      description: "Prestigious scholarship for outstanding academic performance",
+      description: "Prestigious scholarship for outstanding academic performance and leadership potential",
       amount: "$15,000 - $50,000",
       country: "Canada",
       university: "University of Toronto",
       deadline: "February 28, 2025",
-      requirements: ["Top 5% of class", "Community involvement", "Research experience"],
-      coverage: "Full tuition coverage"
+      requirements: ["Top 5% of class", "Community involvement", "Research experience", "Recommendation letters"],
+      coverage: "Full tuition coverage + research opportunities"
     },
     {
       title: "Australia Awards Undergraduate Program",
-      description: "Government-funded scholarships for developing countries",
+      description: "Government-funded scholarships for developing countries to study in Australia",
       amount: "Full funding",
       country: "Australia",
       university: "Australian National University",
       deadline: "April 30, 2025",
-      requirements: ["Citizenship requirements", "Academic excellence", "Leadership potential"],
-      coverage: "Full tuition + living expenses"
+      requirements: ["Citizenship requirements", "Academic excellence", "Leadership potential", "English proficiency"],
+      coverage: "Full tuition + living expenses + travel + health insurance"
     },
     {
       title: "DAAD Undergraduate Scholarships",
-      description: "German government scholarships for international students",
+      description: "German government scholarships for international students pursuing undergraduate degrees",
       amount: "€850/month + tuition",
       country: "Germany",
       university: "Technical University of Munich",
       deadline: "March 31, 2025",
-      requirements: ["German language proficiency", "Academic merit", "Study plan"],
-      coverage: "Monthly stipend + tuition"
+      requirements: ["German language proficiency", "Academic merit", "Study plan", "Cultural interest"],
+      coverage: "Monthly stipend + tuition waiver + cultural programs"
     },
     {
       title: "Swiss Excellence Scholarships",
-      description: "Swiss government scholarships for foreign students",
+      description: "Swiss government scholarships for foreign undergraduate students",
       amount: "CHF 1,920/month",
       country: "Switzerland",
       university: "ETH Zurich",
       deadline: "December 15, 2024",
-      requirements: ["Academic excellence", "Research proposal", "Language skills"],
-      coverage: "Monthly allowance + tuition waiver"
+      requirements: ["Academic excellence", "Research proposal", "Language skills", "Innovation potential"],
+      coverage: "Monthly allowance + tuition waiver + research support"
     },
     {
       title: "Vanier Canada Graduate Scholarships",
-      description: "Prestigious doctoral scholarships for international students",
+      description: "Prestigious scholarships for international students in Canada",
       amount: "$50,000/year",
       country: "Canada",
       university: "McGill University",
       deadline: "November 1, 2024",
-      requirements: ["PhD admission", "Research excellence", "Leadership skills"],
-      coverage: "Annual stipend for 3 years"
+      requirements: ["Academic excellence", "Research potential", "Leadership skills", "Innovation"],
+      coverage: "Annual stipend for 3 years + research funding"
     },
     {
       title: "Rhodes Scholarships",
-      description: "Historic scholarship program for Oxford University",
+      description: "Historic scholarship program for outstanding students to study at Oxford",
       amount: "Full funding",
       country: "UK",
       university: "Oxford University",
       deadline: "October 7, 2024",
-      requirements: ["Academic excellence", "Leadership", "Service to others"],
-      coverage: "Full Oxford fees + living expenses"
+      requirements: ["Academic excellence", "Leadership qualities", "Service to others", "Physical vigor"],
+      coverage: "Full Oxford fees + living expenses + travel + personal allowance"
     },
     {
       title: "Fulbright Foreign Student Program",
-      description: "US government's flagship educational exchange program",
+      description: "US government's flagship educational exchange program for international students",
       amount: "$20,000 - $40,000",
       country: "USA",
       university: "Various US Universities",
       deadline: "May 15, 2025",
-      requirements: ["Academic merit", "Leadership potential", "English proficiency"],
-      coverage: "Tuition + living allowance + travel"
+      requirements: ["Academic merit", "Leadership potential", "English proficiency", "Cultural exchange"],
+      coverage: "Tuition + living allowance + travel + cultural programs"
+    },
+    {
+      title: "Swedish Institute Scholarships",
+      description: "Scholarships for international students to study in Sweden",
+      amount: "SEK 9,000/month",
+      country: "Sweden",
+      university: "KTH Royal Institute of Technology",
+      deadline: "February 10, 2025",
+      requirements: ["Academic excellence", "Leadership experience", "Career goals", "Swedish interest"],
+      coverage: "Monthly allowance + tuition fees + cultural immersion"
+    },
+    {
+      title: "New Zealand International Scholarships",
+      description: "Government scholarships for international undergraduate students",
+      amount: "Full funding",
+      country: "New Zealand",
+      university: "University of Auckland",
+      deadline: "March 31, 2025",
+      requirements: ["Academic merit", "English proficiency", "Country eligibility", "Study commitment"],
+      coverage: "Full tuition + living costs + travel + settlement allowance"
+    },
+    {
+      title: "Netherlands Orange Knowledge Programme",
+      description: "Scholarships for students from developing countries",
+      amount: "€2,000/month",
+      country: "Netherlands",
+      university: "University of Amsterdam",
+      deadline: "February 1, 2025",
+      requirements: ["Country eligibility", "Academic excellence", "Professional relevance", "English proficiency"],
+      coverage: "Monthly allowance + tuition + travel + visa support"
     }
   ];
 
@@ -130,104 +161,53 @@ const Undergraduate = () => {
     <div className="min-h-screen bg-black">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800">
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">Undergraduate Scholarships</h1>
-            <p className="text-xl">Start your higher education journey with financial support</p>
-          </div>
-        </div>
-      </section>
+      <ScholarshipHero 
+        title="Undergraduate Scholarships"
+        subtitle="Start your higher education journey with financial support"
+        description="Launch your academic career with comprehensive funding opportunities for undergraduate studies at prestigious universities worldwide."
+        icon={GraduationCap}
+      />
 
-      {/* Filters Section */}
-      <section className="py-8 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Filter className="h-5 w-5 text-orange-500" />
-              <span className="text-white font-medium">Filter by Country:</span>
-              <Select value={selectedCountry} onValueChange={setSelectedCountry}>
-                <SelectTrigger className="w-[200px] bg-black border-orange-500 text-white">
-                  <SelectValue placeholder="Select Country" />
-                </SelectTrigger>
-                <SelectContent className="bg-black border-orange-500">
-                  <SelectItem value="all" className="text-white">All Countries</SelectItem>
-                  {countries.filter(c => c !== 'all').map(country => (
-                    <SelectItem key={country} value={country} className="text-white">
-                      {country}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="text-white">
-              Showing {currentScholarships.length} of {filteredScholarships.length} scholarships
-            </div>
-          </div>
-        </div>
-      </section>
+      <ScholarshipFilters 
+        selectedCountry={selectedCountry}
+        onCountryChange={setSelectedCountry}
+        countries={countries}
+        totalResults={filteredScholarships.length}
+        currentResults={currentScholarships.length}
+      />
 
-      {/* Scholarships Grid */}
-      <section className="py-20">
+      <section className="py-16 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {currentScholarships.map((scholarship, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-orange-500 mb-2">{scholarship.title}</h3>
-                    <p className="text-gray-300 mb-2">{scholarship.description}</p>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Globe className="h-4 w-4 text-orange-500" />
-                      <span className="text-white font-medium">{scholarship.country}</span>
-                    </div>
-                    <p className="text-gray-400 text-sm">{scholarship.university}</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-orange-500">{scholarship.amount}</div>
-                    <div className="text-sm text-gray-400">Deadline: {scholarship.deadline}</div>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <div className="bg-black rounded-lg p-4 mb-4">
-                    <p className="text-white font-medium mb-2">Coverage:</p>
-                    <p className="text-gray-300">{scholarship.coverage}</p>
-                  </div>
-                  
-                  <h4 className="text-lg font-semibold text-orange-500 mb-3">Requirements:</h4>
-                  <ul className="space-y-2">
-                    {scholarship.requirements.map((req, idx) => (
-                      <li key={idx} className="flex items-start space-x-2">
-                        <CheckCircle className="h-4 w-4 text-orange-500 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{req}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <Button 
-                  onClick={scrollToConsultation}
-                  className="bg-orange-500 hover:bg-orange-600 text-black w-full"
-                >
-                  Apply Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
+              <ScholarshipCard 
+                key={index} 
+                scholarship={scholarship} 
+                onApply={scrollToConsultation}
+              />
             ))}
           </div>
 
-          {/* Pagination */}
+          {filteredScholarships.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-gray-400 text-lg">No scholarships found for the selected country.</div>
+              <button 
+                onClick={() => setSelectedCountry('all')}
+                className="mt-4 text-orange-500 hover:text-orange-400 transition-colors"
+              >
+                Show all scholarships
+              </button>
+            </div>
+          )}
+
           {totalPages > 1 && (
-            <div className="mt-12 flex justify-center">
+            <div className="mt-16 flex justify-center">
               <Pagination>
-                <PaginationContent>
+                <PaginationContent className="bg-gray-900/50 backdrop-blur-sm rounded-full px-4 py-2 border border-orange-500/20">
                   <PaginationItem>
                     <PaginationPrevious 
                       onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
-                      className={`${currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500 hover:text-black'} text-white border-orange-500`}
+                      className={`${currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500/20 hover:text-orange-400'} text-white border-orange-500/30 transition-all`}
                     />
                   </PaginationItem>
                   {Array.from({ length: totalPages }, (_, i) => (
@@ -235,7 +215,7 @@ const Undergraduate = () => {
                       <PaginationLink
                         onClick={() => handlePageChange(i + 1)}
                         isActive={currentPage === i + 1}
-                        className={`cursor-pointer ${currentPage === i + 1 ? 'bg-orange-500 text-black' : 'text-white hover:bg-orange-500 hover:text-black'} border-orange-500`}
+                        className={`cursor-pointer transition-all ${currentPage === i + 1 ? 'bg-orange-500 text-black border-orange-500' : 'text-white hover:bg-orange-500/20 hover:text-orange-400 border-orange-500/30'}`}
                       >
                         {i + 1}
                       </PaginationLink>
@@ -244,7 +224,7 @@ const Undergraduate = () => {
                   <PaginationItem>
                     <PaginationNext 
                       onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
-                      className={`${currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500 hover:text-black'} text-white border-orange-500`}
+                      className={`${currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500/20 hover:text-orange-400'} text-white border-orange-500/30 transition-all`}
                     />
                   </PaginationItem>
                 </PaginationContent>

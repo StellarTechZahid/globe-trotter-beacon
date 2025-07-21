@@ -2,9 +2,10 @@
 import React, { useState, useMemo } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Award, Users, DollarSign, CheckCircle, ArrowRight, BookOpen, Globe, Filter, Calendar } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import ScholarshipCard from '@/components/scholarship/ScholarshipCard';
+import ScholarshipFilters from '@/components/scholarship/ScholarshipFilters';
+import ScholarshipHero from '@/components/scholarship/ScholarshipHero';
+import { Award } from 'lucide-react';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 
 const Postgraduate = () => {
@@ -19,73 +20,73 @@ const Postgraduate = () => {
   const scholarships = [
     {
       title: "Master's Excellence Scholarships",
-      description: "Merit-based funding for outstanding postgraduate students",
+      description: "Merit-based funding for outstanding postgraduate students pursuing advanced degrees in various fields",
       amount: "$20,000 - $50,000",
       country: "USA",
       university: "MIT",
       deadline: "January 15, 2025",
-      requirements: ["Bachelor's degree", "High GPA (3.7+)", "Research experience"],
-      coverage: "Partial to full tuition coverage"
+      requirements: ["Bachelor's degree with honors", "High GPA (3.7+)", "Research experience", "Strong recommendation letters"],
+      coverage: "Partial to full tuition coverage + research stipend"
     },
     {
       title: "Chevening Scholarships",
-      description: "UK government's global scholarship programme",
+      description: "UK government's prestigious global scholarship programme for future leaders",
       amount: "Full funding",
       country: "UK",
       university: "Various UK Universities",
       deadline: "November 7, 2024",
-      requirements: ["Leadership potential", "Work experience", "English proficiency"],
-      coverage: "Full tuition + living expenses + travel"
+      requirements: ["Leadership potential", "2+ years work experience", "English proficiency", "Return to home country"],
+      coverage: "Full tuition + living expenses + travel + visa costs"
     },
     {
       title: "Erasmus Mundus Joint Master Degrees",
-      description: "European Union funded international study programmes",
+      description: "European Union funded international study programmes with mobility across Europe",
       amount: "€1,400/month + tuition",
       country: "Europe",
       university: "Multiple European Universities",
       deadline: "Various deadlines",
-      requirements: ["Bachelor's degree", "Language requirements", "Academic excellence"],
-      coverage: "Monthly allowance + tuition coverage"
+      requirements: ["Bachelor's degree", "Language requirements", "Academic excellence", "EU mobility"],
+      coverage: "Monthly allowance + tuition coverage + travel grants"
     },
     {
       title: "Canada Graduate Scholarships",
-      description: "Support for high-calibre students in graduate studies",
+      description: "Support for high-calibre students in graduate studies and research",
       amount: "$17,500/year",
       country: "Canada",
       university: "Canadian Universities",
       deadline: "December 1, 2024",
-      requirements: ["Canadian citizenship/PR", "Academic excellence", "Research potential"],
-      coverage: "Annual stipend for 1 year"
+      requirements: ["Canadian citizenship/PR", "Academic excellence", "Research potential", "Supervisor support"],
+      coverage: "Annual stipend for 1 year + research allowance"
     },
     {
       title: "Australia Awards Scholarships",
-      description: "Long-term development scholarships for priority countries",
+      description: "Long-term development scholarships for priority countries in the Indo-Pacific",
       amount: "Full funding",
       country: "Australia",
       university: "Australian Universities",
       deadline: "April 30, 2025",
-      requirements: ["Country eligibility", "Work experience", "Leadership skills"],
-      coverage: "Full tuition + living allowance + travel"
+      requirements: ["Country eligibility", "Work experience", "Leadership skills", "Development focus"],
+      coverage: "Full tuition + living allowance + travel + health insurance"
     },
     {
       title: "DAAD Scholarships for Graduate Students",
-      description: "German academic exchange service scholarships",
+      description: "German academic exchange service scholarships for international students",
       amount: "€1,200/month",
       country: "Germany",
       university: "German Universities",
       deadline: "October 31, 2024",
-      requirements: ["Bachelor's degree", "German language", "Academic merit"],
-      coverage: "Monthly stipend + tuition waiver"
+      requirements: ["Bachelor's degree", "German language proficiency", "Academic merit", "Research proposal"],
+      coverage: "Monthly stipend + tuition waiver + health insurance"
     },
     {
       title: "Swedish Institute Scholarships",
-      description: "Scholarships for global professionals",
+      description: "Scholarships for global professionals and future leaders",
       amount: "SEK 9,000/month",
       country: "Sweden",
       university: "Swedish Universities",
       deadline: "February 10, 2025",
-      requirements: ["Leadership experience", "Academic excellence", "Career goals"],
-      coverage: "Monthly allowance + tuition fees"
+      requirements: ["Leadership experience", "Academic excellence", "Career goals", "Professional network"],
+      coverage: "Monthly allowance + tuition fees + insurance"
     },
     {
       title: "New Zealand Development Scholarships",
@@ -94,8 +95,8 @@ const Postgraduate = () => {
       country: "New Zealand",
       university: "New Zealand Universities",
       deadline: "March 31, 2025",
-      requirements: ["Country eligibility", "Development focus", "English proficiency"],
-      coverage: "Full tuition + living costs + travel"
+      requirements: ["Country eligibility", "Development focus", "English proficiency", "Return commitment"],
+      coverage: "Full tuition + living costs + travel + establishment allowance"
     },
     {
       title: "Netherlands Fellowship Programmes",
@@ -104,8 +105,38 @@ const Postgraduate = () => {
       country: "Netherlands",
       university: "Dutch Universities",
       deadline: "February 1, 2025",
-      requirements: ["Professional experience", "Development relevance", "English proficiency"],
-      coverage: "Monthly allowance + tuition + travel"
+      requirements: ["Professional experience", "Development relevance", "English proficiency", "Employer support"],
+      coverage: "Monthly allowance + tuition + travel + visa costs"
+    },
+    {
+      title: "Swiss Government Excellence Scholarships",
+      description: "Research and doctoral scholarships for foreign students",
+      amount: "CHF 1,920/month",
+      country: "Switzerland",
+      university: "Swiss Universities",
+      deadline: "December 15, 2024",
+      requirements: ["Academic excellence", "Research proposal", "Language skills", "Supervisor agreement"],
+      coverage: "Monthly stipend + tuition waiver + health insurance"
+    },
+    {
+      title: "Irish Government Scholarships",
+      description: "Government of Ireland International Education Scholarships",
+      amount: "€10,000",
+      country: "Ireland",
+      university: "Irish Universities",
+      deadline: "March 15, 2025",
+      requirements: ["International student status", "Academic merit", "Research proposal", "English proficiency"],
+      coverage: "Tuition contribution + living allowance"
+    },
+    {
+      title: "Belgian Development Cooperation Scholarships",
+      description: "Master's and training programmes in Belgium",
+      amount: "€1,150/month",
+      country: "Belgium",
+      university: "Belgian Universities",
+      deadline: "February 28, 2025",
+      requirements: ["Developing country citizen", "Work experience", "Language proficiency", "Return commitment"],
+      coverage: "Monthly allowance + tuition + travel + insurance"
     }
   ];
 
@@ -130,107 +161,53 @@ const Postgraduate = () => {
     <div className="min-h-screen bg-black">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-orange-600 to-orange-800">
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
-        <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">Postgraduate Scholarships</h1>
-            <p className="text-xl">Advanced your career with master's degree funding</p>
-          </div>
-        </div>
-      </section>
+      <ScholarshipHero 
+        title="Postgraduate Scholarships"
+        subtitle="Advance your career with master's degree funding"
+        description="Discover world-class scholarships for postgraduate studies across top universities globally. From research-focused programs to professional development opportunities."
+        icon={Award}
+      />
 
-      {/* Filters Section */}
-      <section className="py-8 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Filter className="h-5 w-5 text-orange-500" />
-              <span className="text-white font-medium">Filter by Country:</span>
-              <Select value={selectedCountry} onValueChange={setSelectedCountry}>
-                <SelectTrigger className="w-[200px] bg-black border-orange-500 text-white">
-                  <SelectValue placeholder="Select Country" />
-                </SelectTrigger>
-                <SelectContent className="bg-black border-orange-500">
-                  <SelectItem value="all" className="text-white">All Countries</SelectItem>
-                  {countries.filter(c => c !== 'all').map(country => (
-                    <SelectItem key={country} value={country} className="text-white">
-                      {country}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="text-white">
-              Showing {currentScholarships.length} of {filteredScholarships.length} scholarships
-            </div>
-          </div>
-        </div>
-      </section>
+      <ScholarshipFilters 
+        selectedCountry={selectedCountry}
+        onCountryChange={setSelectedCountry}
+        countries={countries}
+        totalResults={filteredScholarships.length}
+        currentResults={currentScholarships.length}
+      />
 
-      {/* Scholarships Grid */}
-      <section className="py-20">
+      <section className="py-16 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {currentScholarships.map((scholarship, index) => (
-              <div key={index} className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-orange-500 mb-2">{scholarship.title}</h3>
-                    <p className="text-gray-300 mb-2">{scholarship.description}</p>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Globe className="h-4 w-4 text-orange-500" />
-                      <span className="text-white font-medium">{scholarship.country}</span>
-                    </div>
-                    <p className="text-gray-400 text-sm">{scholarship.university}</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-orange-500">{scholarship.amount}</div>
-                    <div className="text-sm text-gray-400 flex items-center gap-1">
-                      <Calendar className="h-3 w-3" />
-                      {scholarship.deadline}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <div className="bg-black rounded-lg p-4 mb-4">
-                    <p className="text-white font-medium mb-2">Coverage:</p>
-                    <p className="text-gray-300">{scholarship.coverage}</p>
-                  </div>
-                  
-                  <h4 className="text-lg font-semibold text-orange-500 mb-3">Requirements:</h4>
-                  <ul className="space-y-2">
-                    {scholarship.requirements.map((req, idx) => (
-                      <li key={idx} className="flex items-start space-x-2">
-                        <CheckCircle className="h-4 w-4 text-orange-500 mt-1 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{req}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <Button 
-                  onClick={scrollToConsultation}
-                  className="bg-orange-500 hover:bg-orange-600 text-black w-full"
-                >
-                  Apply Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
+              <ScholarshipCard 
+                key={index} 
+                scholarship={scholarship} 
+                onApply={scrollToConsultation}
+              />
             ))}
           </div>
 
-          {/* Pagination */}
+          {filteredScholarships.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-gray-400 text-lg">No scholarships found for the selected country.</div>
+              <button 
+                onClick={() => setSelectedCountry('all')}
+                className="mt-4 text-orange-500 hover:text-orange-400 transition-colors"
+              >
+                Show all scholarships
+              </button>
+            </div>
+          )}
+
           {totalPages > 1 && (
-            <div className="mt-12 flex justify-center">
+            <div className="mt-16 flex justify-center">
               <Pagination>
-                <PaginationContent>
+                <PaginationContent className="bg-gray-900/50 backdrop-blur-sm rounded-full px-4 py-2 border border-orange-500/20">
                   <PaginationItem>
                     <PaginationPrevious 
                       onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
-                      className={`${currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500 hover:text-black'} text-white border-orange-500`}
+                      className={`${currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500/20 hover:text-orange-400'} text-white border-orange-500/30 transition-all`}
                     />
                   </PaginationItem>
                   {Array.from({ length: totalPages }, (_, i) => (
@@ -238,7 +215,7 @@ const Postgraduate = () => {
                       <PaginationLink
                         onClick={() => handlePageChange(i + 1)}
                         isActive={currentPage === i + 1}
-                        className={`cursor-pointer ${currentPage === i + 1 ? 'bg-orange-500 text-black' : 'text-white hover:bg-orange-500 hover:text-black'} border-orange-500`}
+                        className={`cursor-pointer transition-all ${currentPage === i + 1 ? 'bg-orange-500 text-black border-orange-500' : 'text-white hover:bg-orange-500/20 hover:text-orange-400 border-orange-500/30'}`}
                       >
                         {i + 1}
                       </PaginationLink>
@@ -247,7 +224,7 @@ const Postgraduate = () => {
                   <PaginationItem>
                     <PaginationNext 
                       onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
-                      className={`${currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500 hover:text-black'} text-white border-orange-500`}
+                      className={`${currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500/20 hover:text-orange-400'} text-white border-orange-500/30 transition-all`}
                     />
                   </PaginationItem>
                 </PaginationContent>
