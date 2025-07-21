@@ -1,10 +1,17 @@
-import React from 'react';
+
+import React, { useState, useMemo } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { GraduationCap, Users, Calendar, DollarSign, CheckCircle, ArrowRight, BookOpen, Award } from 'lucide-react';
+import { Award, Users, DollarSign, CheckCircle, ArrowRight, BookOpen, Globe, Filter, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 
 const Postgraduate = () => {
+  const [selectedCountry, setSelectedCountry] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
   const scrollToConsultation = () => {
     window.location.href = '/#consultation-form';
   };
@@ -12,42 +19,112 @@ const Postgraduate = () => {
   const scholarships = [
     {
       title: "Master's Excellence Scholarships",
-      description: "Merit-based funding for outstanding master's degree candidates",
-      amount: "$10,000 - $50,000",
-      countries: ["UK", "USA", "Canada", "Australia", "Germany"],
-      requirements: ["Bachelor's degree with honors", "Research proposal", "Academic references"]
+      description: "Merit-based funding for outstanding postgraduate students",
+      amount: "$20,000 - $50,000",
+      country: "USA",
+      university: "MIT",
+      deadline: "January 15, 2025",
+      requirements: ["Bachelor's degree", "High GPA (3.7+)", "Research experience"],
+      coverage: "Partial to full tuition coverage"
     },
     {
-      title: "Research-Based Scholarships",
-      description: "Funding for research-intensive master's programs",
-      amount: "$15,000 - $60,000",
-      countries: ["UK", "Germany", "Netherlands", "Sweden"],
-      requirements: ["Research experience", "Publication record", "Supervisor agreement"]
+      title: "Chevening Scholarships",
+      description: "UK government's global scholarship programme",
+      amount: "Full funding",
+      country: "UK",
+      university: "Various UK Universities",
+      deadline: "November 7, 2024",
+      requirements: ["Leadership potential", "Work experience", "English proficiency"],
+      coverage: "Full tuition + living expenses + travel"
     },
     {
-      title: "Professional Development Scholarships",
-      description: "Support for career-focused master's programs",
-      amount: "$8,000 - $35,000",
-      countries: ["USA", "Canada", "Australia", "Singapore"],
-      requirements: ["Work experience", "Career goals alignment", "Professional references"]
+      title: "Erasmus Mundus Joint Master Degrees",
+      description: "European Union funded international study programmes",
+      amount: "€1,400/month + tuition",
+      country: "Europe",
+      university: "Multiple European Universities",
+      deadline: "Various deadlines",
+      requirements: ["Bachelor's degree", "Language requirements", "Academic excellence"],
+      coverage: "Monthly allowance + tuition coverage"
     },
     {
-      title: "International Graduate Fellowships",
-      description: "Comprehensive support for international postgraduate students",
-      amount: "Full tuition + stipend",
-      countries: ["USA", "UK", "Canada", "Australia"],
-      requirements: ["International status", "Academic excellence", "Leadership potential"]
+      title: "Canada Graduate Scholarships",
+      description: "Support for high-calibre students in graduate studies",
+      amount: "$17,500/year",
+      country: "Canada",
+      university: "Canadian Universities",
+      deadline: "December 1, 2024",
+      requirements: ["Canadian citizenship/PR", "Academic excellence", "Research potential"],
+      coverage: "Annual stipend for 1 year"
+    },
+    {
+      title: "Australia Awards Scholarships",
+      description: "Long-term development scholarships for priority countries",
+      amount: "Full funding",
+      country: "Australia",
+      university: "Australian Universities",
+      deadline: "April 30, 2025",
+      requirements: ["Country eligibility", "Work experience", "Leadership skills"],
+      coverage: "Full tuition + living allowance + travel"
+    },
+    {
+      title: "DAAD Scholarships for Graduate Students",
+      description: "German academic exchange service scholarships",
+      amount: "€1,200/month",
+      country: "Germany",
+      university: "German Universities",
+      deadline: "October 31, 2024",
+      requirements: ["Bachelor's degree", "German language", "Academic merit"],
+      coverage: "Monthly stipend + tuition waiver"
+    },
+    {
+      title: "Swedish Institute Scholarships",
+      description: "Scholarships for global professionals",
+      amount: "SEK 9,000/month",
+      country: "Sweden",
+      university: "Swedish Universities",
+      deadline: "February 10, 2025",
+      requirements: ["Leadership experience", "Academic excellence", "Career goals"],
+      coverage: "Monthly allowance + tuition fees"
+    },
+    {
+      title: "New Zealand Development Scholarships",
+      description: "Contribute to development of Pacific and developing countries",
+      amount: "Full funding",
+      country: "New Zealand",
+      university: "New Zealand Universities",
+      deadline: "March 31, 2025",
+      requirements: ["Country eligibility", "Development focus", "English proficiency"],
+      coverage: "Full tuition + living costs + travel"
+    },
+    {
+      title: "Netherlands Fellowship Programmes",
+      description: "Fellowships for professionals from developing countries",
+      amount: "€2,000/month",
+      country: "Netherlands",
+      university: "Dutch Universities",
+      deadline: "February 1, 2025",
+      requirements: ["Professional experience", "Development relevance", "English proficiency"],
+      coverage: "Monthly allowance + tuition + travel"
     }
   ];
 
-  const applicationSteps = [
-    "Research programs and funding opportunities early",
-    "Prepare strong academic transcripts and test scores",
-    "Develop a compelling research proposal or statement of purpose",
-    "Secure strong academic and professional references",
-    "Meet application deadlines (typically 6-12 months in advance)",
-    "Prepare for interviews if required"
-  ];
+  const countries = ['all', ...new Set(scholarships.map(s => s.country))];
+
+  const filteredScholarships = useMemo(() => {
+    return scholarships.filter(scholarship => 
+      selectedCountry === 'all' || scholarship.country === selectedCountry
+    );
+  }, [selectedCountry]);
+
+  const totalPages = Math.ceil(filteredScholarships.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentScholarships = filteredScholarships.slice(startIndex, startIndex + itemsPerPage);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen bg-black">
@@ -64,113 +141,119 @@ const Postgraduate = () => {
         </div>
       </section>
 
-      {/* Overview Section */}
-      <section className="py-20">
+      {/* Filters Section */}
+      <section className="py-8 bg-gray-900">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-orange-500 mb-6">Master's Degree Scholarships</h2>
-              <p className="text-xl text-gray-300 leading-relaxed">
-                Advance your career with postgraduate scholarships for master's programs. Whether you're pursuing 
-                research-based or professional master's degrees, find funding opportunities that match your goals.
-              </p>
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div className="flex items-center gap-4">
+              <Filter className="h-5 w-5 text-orange-500" />
+              <span className="text-white font-medium">Filter by Country:</span>
+              <Select value={selectedCountry} onValueChange={setSelectedCountry}>
+                <SelectTrigger className="w-[200px] bg-black border-orange-500 text-white">
+                  <SelectValue placeholder="Select Country" />
+                </SelectTrigger>
+                <SelectContent className="bg-black border-orange-500">
+                  <SelectItem value="all" className="text-white">All Countries</SelectItem>
+                  {countries.filter(c => c !== 'all').map(country => (
+                    <SelectItem key={country} value={country} className="text-white">
+                      {country}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-gray-900 rounded-lg p-6 border border-orange-500 text-center">
-                <Award className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Merit Awards</h3>
-                <p className="text-gray-300">Excellence-based scholarships for top performers</p>
-              </div>
-              
-              <div className="bg-gray-900 rounded-lg p-6 border border-orange-500 text-center">
-                <BookOpen className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Research Funding</h3>
-                <p className="text-gray-300">Support for research-intensive programs</p>
-              </div>
-              
-              <div className="bg-gray-900 rounded-lg p-6 border border-orange-500 text-center">
-                <Users className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Professional Growth</h3>
-                <p className="text-gray-300">Career-focused program support</p>
-              </div>
+            <div className="text-white">
+              Showing {currentScholarships.length} of {filteredScholarships.length} scholarships
             </div>
           </div>
         </div>
       </section>
 
-      {/* Scholarship Types */}
-      <section className="py-20 bg-gray-900">
+      {/* Scholarships Grid */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-orange-500 text-center mb-16">Available Funding Options</h2>
-            
-            <div className="grid gap-8">
-              {scholarships.map((scholarship, index) => (
-                <div key={index} className="bg-black rounded-lg p-8 border border-orange-500">
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="md:col-span-2">
-                      <h3 className="text-2xl font-bold text-orange-500 mb-3">{scholarship.title}</h3>
-                      <p className="text-gray-300 mb-4">{scholarship.description}</p>
-                      <div className="space-y-2">
-                        <p className="text-white"><strong>Amount:</strong> {scholarship.amount}</p>
-                        <p className="text-white"><strong>Countries:</strong> {scholarship.countries.join(", ")}</p>
-                      </div>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {currentScholarships.map((scholarship, index) => (
+              <div key={index} className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-orange-500 mb-2">{scholarship.title}</h3>
+                    <p className="text-gray-300 mb-2">{scholarship.description}</p>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Globe className="h-4 w-4 text-orange-500" />
+                      <span className="text-white font-medium">{scholarship.country}</span>
                     </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-orange-500 mb-3">Requirements</h4>
-                      <ul className="space-y-2">
-                        {scholarship.requirements.map((req, idx) => (
-                          <li key={idx} className="flex items-start space-x-2">
-                            <CheckCircle className="h-4 w-4 text-orange-500 mt-1 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{req}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <p className="text-gray-400 text-sm">{scholarship.university}</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-orange-500">{scholarship.amount}</div>
+                    <div className="text-sm text-gray-400 flex items-center gap-1">
+                      <Calendar className="h-3 w-3" />
+                      {scholarship.deadline}
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Application Process */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-orange-500 text-center mb-16">Application Process</h2>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              {applicationSteps.map((step, index) => (
-                <div key={index} className="flex items-start space-x-3 bg-gray-900 p-4 rounded-lg border border-orange-500">
-                  <div className="bg-orange-500 text-black rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">
-                    {index + 1}
+                
+                <div className="mb-6">
+                  <div className="bg-black rounded-lg p-4 mb-4">
+                    <p className="text-white font-medium mb-2">Coverage:</p>
+                    <p className="text-gray-300">{scholarship.coverage}</p>
                   </div>
-                  <p className="text-gray-300">{step}</p>
+                  
+                  <h4 className="text-lg font-semibold text-orange-500 mb-3">Requirements:</h4>
+                  <ul className="space-y-2">
+                    {scholarship.requirements.map((req, idx) => (
+                      <li key={idx} className="flex items-start space-x-2">
+                        <CheckCircle className="h-4 w-4 text-orange-500 mt-1 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{req}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-black mb-6">Ready to Pursue Your Master's Degree?</h2>
-          <p className="text-xl text-black mb-8 opacity-90">
-            Get expert guidance on postgraduate scholarships and application strategies
-          </p>
-          <Button 
-            onClick={scrollToConsultation}
-            className="bg-black hover:bg-gray-800 text-white px-8 py-3 text-lg"
-          >
-            <GraduationCap className="mr-2 h-5 w-5" />
-            Start Your Application Journey
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+                <Button 
+                  onClick={scrollToConsultation}
+                  className="bg-orange-500 hover:bg-orange-600 text-black w-full"
+                >
+                  Apply Now
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="mt-12 flex justify-center">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious 
+                      onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                      className={`${currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500 hover:text-black'} text-white border-orange-500`}
+                    />
+                  </PaginationItem>
+                  {Array.from({ length: totalPages }, (_, i) => (
+                    <PaginationItem key={i + 1}>
+                      <PaginationLink
+                        onClick={() => handlePageChange(i + 1)}
+                        isActive={currentPage === i + 1}
+                        className={`cursor-pointer ${currentPage === i + 1 ? 'bg-orange-500 text-black' : 'text-white hover:bg-orange-500 hover:text-black'} border-orange-500`}
+                      >
+                        {i + 1}
+                      </PaginationLink>
+                    </PaginationItem>
+                  ))}
+                  <PaginationItem>
+                    <PaginationNext 
+                      onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                      className={`${currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer hover:bg-orange-500 hover:text-black'} text-white border-orange-500`}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
+            </div>
+          )}
         </div>
       </section>
 
