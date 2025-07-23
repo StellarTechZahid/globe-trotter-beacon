@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Bot, User, Send, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
 
 interface Message {
   id: string;
@@ -59,25 +60,27 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/functions/v1/groq-chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+      console.log('Sending message to groq-chat function...');
+      
+      const { data, error } = await supabase.functions.invoke('groq-chat', {
+        body: {
           messages: [...messages, userMessage].map(msg => ({
             role: msg.role,
             content: msg.content
           }))
-        }),
+        }
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to get AI response');
+      if (error) {
+        console.error('Supabase function error:', error);
+        throw new Error(`Function error: ${error.message}`);
       }
 
-      const data = await response.json();
-      const aiResponse = data.choices[0]?.message?.content || "I'm sorry, I couldn't process that request.";
+      console.log('Response from groq-chat:', data);
+
+      const aiResponse = data?.choices?.[0]?.message?.content || 
+                        data?.message?.content ||
+                        "I'm sorry, I couldn't process that request. Please try again.";
 
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -89,7 +92,17 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Error sending message:', error);
-      toast.error('Failed to send message. Please try again.');
+      toast.error('Failed to get AI response. Please try again.');
+      
+      // Add an error message to the chat
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        content: "I'm experiencing some technical difficulties. Please try again in a moment, or contact our support team for immediate assistance.",
+        role: 'assistant',
+        timestamp: new Date(),
+      };
+      
+      setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
@@ -103,18 +116,23 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
   };
 
   return (
-    <Card className="h-[500px] flex flex-col bg-gray-900 border-orange-500">
-      <CardHeader className="bg-gradient-to-r from-orange-500 to-orange-600 text-black p-4">
+    <Card className="h-[500px] flex flex-col bg-gray-900 border-orange-500 shadow-2xl">
+      <CardHeader className="bg-gradient-to-r from-orange-500 to-orange-600 text-black p-4 rounded-t-lg">
         <CardTitle className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Bot className="h-6 w-6" />
-            <span className="font-bold">AI Assistant</span>
+          <div className="flex items-center space-x-3">
+            <div className="bg-black/20 p-2 rounded-full">
+              <Bot className="h-6 w-6" />
+            </div>
+            <div>
+              <span className="font-bold text-lg">AI Study Assistant</span>
+              <p className="text-sm opacity-80">Powered by Advanced AI</p>
+            </div>
           </div>
           <Button 
             variant="ghost" 
             size="sm" 
             onClick={onClose}
-            className="text-black hover:bg-black/20"
+            className="text-black hover:bg-black/20 h-8 w-8 p-0"
           >
             ×
           </Button>
@@ -130,7 +148,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
                 className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[80%] rounded-lg p-3 ${
+                  className={`max-w-[85%] rounded-lg p-3 ${
                     message.role === 'user'
                       ? 'bg-orange-500 text-black'
                       : 'bg-gray-800 text-white border border-orange-500/20'
@@ -143,17 +161,19 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
                     {message.role === 'user' && (
                       <User className="h-4 w-4 mt-0.5 flex-shrink-0" />
                     )}
-                    <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+                    <div className="flex-1">
+                      <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                      <p className="text-xs opacity-70 mt-2">
+                        {message.timestamp.toLocaleTimeString()}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-xs opacity-70 mt-1">
-                    {message.timestamp.toLocaleTimeString()}
-                  </p>
                 </div>
               </div>
             ))}
             {isLoading && (
               <div className="flex justify-start">
-                <div className="max-w-[80%] rounded-lg p-3 bg-gray-800 text-white border border-orange-500/20">
+                <div className="max-w-[85%] rounded-lg p-3 bg-gray-800 text-white border border-orange-500/20">
                   <div className="flex items-center space-x-2">
                     <Bot className="h-4 w-4 text-orange-500" />
                     <Loader2 className="h-4 w-4 animate-spin text-orange-500" />
@@ -165,25 +185,25 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
           </div>
         </ScrollArea>
 
-        <div className="p-4 border-t border-orange-500/20">
+        <div className="p-4 border-t border-orange-500/20 bg-gray-800/50">
           <div className="flex space-x-2">
             <Input
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ask me about studying abroad..."
-              className="flex-1 bg-gray-800 border-orange-500/20 text-white placeholder-gray-400"
+              placeholder="Ask about studying abroad, scholarships, visas..."
+              className="flex-1 bg-gray-800 border-orange-500/30 text-white placeholder-gray-400 focus:border-orange-500"
               disabled={isLoading}
             />
             <Button
               onClick={sendMessage}
               disabled={!inputMessage.trim() || isLoading}
-              className="bg-orange-500 hover:bg-orange-600 text-black"
+              className="bg-orange-500 hover:bg-orange-600 text-black px-4"
             >
               <Send className="h-4 w-4" />
             </Button>
           </div>
-          <p className="text-xs text-gray-400 mt-2">
+          <p className="text-xs text-gray-400 mt-2 text-center">
             For detailed consultation, register for a free call with our experts
           </p>
         </div>

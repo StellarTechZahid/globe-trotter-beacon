@@ -23,10 +23,55 @@ import Visa from "./pages/Visa";
 import Partnership from "./pages/Partnership";
 import NotFound from "./pages/NotFound";
 import Index from "./pages/Index";
+import Events from "./pages/Events";
+import Blogs from "./pages/Blogs";
+import News from "./pages/News";
+import Articles from "./pages/Articles";
+import Tips from "./pages/Tips";
+
+// Scholarship pages
 import Undergraduate from "./pages/scholarship/Undergraduate";
 import Postgraduate from "./pages/scholarship/Postgraduate";
 import PhD from "./pages/scholarship/PhD";
 import Diploma from "./pages/scholarship/Diploma";
+import FullyFunded from "./pages/scholarship/FullyFunded";
+import PartiallyFunded from "./pages/scholarship/PartiallyFunded";
+import NorthAmerica from "./pages/scholarship/NorthAmerica";
+import EuropeanCountries from "./pages/scholarship/EuropeanCountries";
+import CentralAsianCountries from "./pages/scholarship/CentralAsianCountries";
+
+// Country pages
+import UKPage from "./pages/countries/UKPage";
+import USAPage from "./pages/countries/USAPage";
+import CanadaPage from "./pages/countries/CanadaPage";
+import AustraliaPage from "./pages/countries/AustraliaPage";
+import MalaysiaPage from "./pages/countries/MalaysiaPage";
+import GermanyPage from "./pages/countries/GermanyPage";
+import ItalyPage from "./pages/countries/ItalyPage";
+import NewZealandPage from "./pages/countries/NewZealandPage";
+
+// Service pages
+import CareerCounseling from "./pages/services/CareerCounseling";
+import UniversitySelection from "./pages/services/UniversitySelection";
+import ProfileEvaluation from "./pages/services/ProfileEvaluation";
+import TestPreparation from "./pages/services/TestPreparation";
+import ApplicationSupport from "./pages/services/ApplicationSupport";
+import ScholarshipConsulting from "./pages/services/ScholarshipConsulting";
+import VisaAssistance from "./pages/services/VisaAssistance";
+import AccommodationSupport from "./pages/services/AccommodationSupport";
+import PreDepartureOrientation from "./pages/services/PreDepartureOrientation";
+import PostArrivalSupport from "./pages/services/PostArrivalSupport";
+import JobSearchGuidance from "./pages/services/JobSearchGuidance";
+
+// Event pages
+import EducationExpo from "./pages/events/EducationExpo";
+import EducationEvents from "./pages/events/EducationEvents";
+import Seminars from "./pages/events/Seminars";
+import CampusVisits from "./pages/events/CampusVisits";
+
+// Partnership pages
+import PartnerUniversities from "./pages/partnership/Universities";
+import Accreditation from "./pages/partnership/Accreditation";
 
 const queryClient = new QueryClient();
 
@@ -47,10 +92,6 @@ const App = () => (
             <Route path="/success-stories" element={<SuccessStories />} />
             <Route path="/consultation" element={<Consultation />} />
             <Route path="/scholarship" element={<Scholarship />} />
-            <Route path="/scholarship/undergraduate" element={<Undergraduate />} />
-            <Route path="/scholarship/postgraduate" element={<Postgraduate />} />
-            <Route path="/scholarship/phd" element={<PhD />} />
-            <Route path="/scholarship/diploma" element={<Diploma />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/privacy" element={<Privacy />} />
@@ -58,6 +99,55 @@ const App = () => (
             <Route path="/virtual-consulting" element={<VirtualConsulting />} />
             <Route path="/visa" element={<Visa />} />
             <Route path="/partnership" element={<Partnership />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/tips" element={<Tips />} />
+            
+            {/* Scholarship Routes */}
+            <Route path="/scholarship/undergraduate" element={<Undergraduate />} />
+            <Route path="/scholarship/postgraduate" element={<Postgraduate />} />
+            <Route path="/scholarship/phd" element={<PhD />} />
+            <Route path="/scholarship/diploma" element={<Diploma />} />
+            <Route path="/scholarship/fully-funded" element={<FullyFunded />} />
+            <Route path="/scholarship/partially-funded" element={<PartiallyFunded />} />
+            <Route path="/scholarship/north-america" element={<NorthAmerica />} />
+            <Route path="/scholarship/european-countries" element={<EuropeanCountries />} />
+            <Route path="/scholarship/central-asian-countries" element={<CentralAsianCountries />} />
+
+            {/* Country Routes */}
+            <Route path="/countries/uk" element={<UKPage />} />
+            <Route path="/countries/usa" element={<USAPage />} />
+            <Route path="/countries/canada" element={<CanadaPage />} />
+            <Route path="/countries/australia" element={<AustraliaPage />} />
+            <Route path="/countries/malaysia" element={<MalaysiaPage />} />
+            <Route path="/countries/germany" element={<GermanyPage />} />
+            <Route path="/countries/italy" element={<ItalyPage />} />
+            <Route path="/countries/new-zealand" element={<NewZealandPage />} />
+
+            {/* Service Routes */}
+            <Route path="/services/career-counseling" element={<CareerCounseling />} />
+            <Route path="/services/university-selection" element={<UniversitySelection />} />
+            <Route path="/services/profile-evaluation" element={<ProfileEvaluation />} />
+            <Route path="/services/test-preparation" element={<TestPreparation />} />
+            <Route path="/services/application-support" element={<ApplicationSupport />} />
+            <Route path="/services/scholarship-consulting" element={<ScholarshipConsulting />} />
+            <Route path="/services/visa-assistance" element={<VisaAssistance />} />
+            <Route path="/services/accommodation-support" element={<AccommodationSupport />} />
+            <Route path="/services/pre-departure-orientation" element={<PreDepartureOrientation />} />
+            <Route path="/services/post-arrival-support" element={<PostArrivalSupport />} />
+            <Route path="/services/job-search-guidance" element={<JobSearchGuidance />} />
+
+            {/* Event Routes */}
+            <Route path="/events/education-expo" element={<EducationExpo />} />
+            <Route path="/events/education-events" element={<EducationEvents />} />
+            <Route path="/events/seminars" element={<Seminars />} />
+            <Route path="/events/campus-visits" element={<CampusVisits />} />
+
+            {/* Partnership Routes */}
+            <Route path="/partnership/universities" element={<PartnerUniversities />} />
+            <Route path="/partnership/accreditation" element={<Accreditation />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>

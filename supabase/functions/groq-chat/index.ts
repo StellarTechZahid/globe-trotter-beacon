@@ -17,8 +17,11 @@ serve(async (req) => {
     const GROQ_API_KEY = Deno.env.get('GROQ_API_KEY');
 
     if (!GROQ_API_KEY) {
-      throw new Error('GROQ_API_KEY is not set');
+      console.error('GROQ_API_KEY is not set');
+      throw new Error('GROQ_API_KEY is not configured');
     }
+
+    console.log('Sending request to Groq API...');
 
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
@@ -31,7 +34,7 @@ serve(async (req) => {
         messages: [
           {
             role: "system",
-            content: "You are an AI assistant for Abroad Academics, a study abroad consultancy. Help students with questions about studying abroad, university applications, scholarships, visa processes, and country information. Be helpful, informative, and encouraging. If someone needs detailed consultation, recommend they book a free consultation call with our expert counselors."
+            content: "You are an AI assistant for Abroad Academics, a premier study abroad consultancy. Help students with questions about studying abroad, university applications, scholarships, visa processes, and country information. Be helpful, informative, encouraging, and professional. Keep responses concise but comprehensive. If someone needs detailed consultation, recommend they book a free consultation call with our expert counselors. Always maintain a friendly and supportive tone."
           },
           ...messages
         ],
@@ -42,14 +45,29 @@ serve(async (req) => {
       }),
     });
 
+    if (!response.ok) {
+      console.error('Groq API response not ok:', response.status, response.statusText);
+      const errorText = await response.text();
+      console.error('Error response:', errorText);
+      throw new Error(`Groq API error: ${response.status} ${response.statusText}`);
+    }
+
     const data = await response.json();
+    console.log('Successfully got response from Groq API');
     
     return new Response(JSON.stringify(data), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch (error) {
     console.error('Error in groq-chat function:', error);
-    return new Response(JSON.stringify({ error: error.message }), {
+    return new Response(JSON.stringify({ 
+      error: error.message,
+      choices: [{ 
+        message: { 
+          content: "I'm experiencing technical difficulties. Please try again in a moment or contact our support team for immediate assistance." 
+        } 
+      }]
+    }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
