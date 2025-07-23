@@ -19,6 +19,7 @@ import Disclaimer from "./pages/Disclaimer";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import VirtualConsulting from "./pages/VirtualConsulting";
+import VirtualConsultingPage from "./pages/VirtualConsultingPage";
 import Visa from "./pages/Visa";
 import Partnership from "./pages/Partnership";
 import NotFound from "./pages/NotFound";
@@ -73,6 +74,19 @@ import CampusVisits from "./pages/events/CampusVisits";
 import PartnerUniversities from "./pages/partnership/Universities";
 import Accreditation from "./pages/partnership/Accreditation";
 
+// Blog pages
+import TopUniversitiesInUSAForInternationalStudents2024 from "./pages/blogs/TopUniversitiesInUSAForInternationalStudents2024";
+import StudyInCanadaComplete2024 from "./pages/blogs/StudyInCanadaComplete2024";
+
+// Article pages
+import BestScholarshipsForInternationalStudents2024 from "./pages/articles/BestScholarshipsForInternationalStudents2024";
+
+// News pages
+import GlobalEducationTrends2024 from "./pages/news/GlobalEducationTrends2024";
+
+// Tips pages
+import StudyAbroadPreparationChecklist2024 from "./pages/tips/StudyAbroadPreparationChecklist2024";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -97,6 +111,7 @@ const App = () => (
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/virtual-consulting" element={<VirtualConsulting />} />
+            <Route path="/virtual-consulting-services" element={<VirtualConsultingPage />} />
             <Route path="/visa" element={<Visa />} />
             <Route path="/partnership" element={<Partnership />} />
             <Route path="/events" element={<Events />} />
@@ -148,6 +163,19 @@ const App = () => (
             {/* Partnership Routes */}
             <Route path="/partnership/universities" element={<PartnerUniversities />} />
             <Route path="/partnership/accreditation" element={<Accreditation />} />
+
+            {/* Blog Routes */}
+            <Route path="/blogs/top-universities-in-usa-for-international-students-2024" element={<TopUniversitiesInUSAForInternationalStudents2024 />} />
+            <Route path="/blogs/study-in-canada-complete-2024" element={<StudyInCanadaComplete2024 />} />
+
+            {/* Article Routes */}
+            <Route path="/articles/best-scholarships-for-international-students-2024" element={<BestScholarshipsForInternationalStudents2024 />} />
+
+            {/* News Routes */}
+            <Route path="/news/global-education-trends-2024" element={<GlobalEducationTrends2024 />} />
+
+            {/* Tips Routes */}
+            <Route path="/tips/study-abroad-preparation-checklist-2024" element={<StudyAbroadPreparationChecklist2024 />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
