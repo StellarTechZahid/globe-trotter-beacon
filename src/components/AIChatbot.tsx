@@ -55,19 +55,24 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
       timestamp: new Date(),
     };
 
+    // Add user message immediately
     setMessages(prev => [...prev, userMessage]);
+    const currentInput = inputMessage;
     setInputMessage('');
     setIsLoading(true);
 
     try {
       console.log('Sending message to groq-chat function...');
       
+      // Pass all messages including the new user message for context
+      const conversationHistory = [...messages, userMessage].map(msg => ({
+        role: msg.role,
+        content: msg.content
+      }));
+
       const { data, error } = await supabase.functions.invoke('groq-chat', {
         body: {
-          messages: [...messages, userMessage].map(msg => ({
-            role: msg.role,
-            content: msg.content
-          }))
+          messages: conversationHistory
         }
       });
 
@@ -114,8 +119,19 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
     }
   };
 
+  const clearChat = () => {
+    setMessages([
+      {
+        id: '1',
+        content: "Hello! I'm your AI Study Assistant from Abroad Academics! 🎓 I'm here to help you with questions about studying abroad, scholarships, universities, and visa processes. How can I assist you on your educational journey today?",
+        role: 'assistant',
+        timestamp: new Date(),
+      }
+    ]);
+  };
+
   return (
-    <Card className="h-[600px] flex flex-col bg-gray-900 border-orange-500 shadow-2xl shadow-orange-500/20 rounded-2xl overflow-hidden">
+    <Card className="h-[700px] flex flex-col bg-gray-900 border-orange-500 shadow-2xl shadow-orange-500/20 rounded-2xl overflow-hidden">
       <CardHeader className="bg-gradient-to-r from-orange-500 to-orange-600 text-black p-6 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
@@ -137,14 +153,24 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
               <p className="text-sm opacity-80 font-medium">Powered by Advanced AI • Always Ready to Help</p>
             </div>
           </div>
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            onClick={onClose}
-            className="text-black hover:bg-black/20 h-10 w-10 p-0 rounded-xl font-bold text-lg"
-          >
-            ×
-          </Button>
+          <div className="flex items-center space-x-2">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={clearChat}
+              className="text-black hover:bg-black/20 h-10 px-3 rounded-xl font-bold text-sm"
+            >
+              Clear
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={onClose}
+              className="text-black hover:bg-black/20 h-10 w-10 p-0 rounded-xl font-bold text-lg"
+            >
+              ×
+            </Button>
+          </div>
         </CardTitle>
       </CardHeader>
 
@@ -152,12 +178,12 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800"></div>
         
-        <ScrollArea className="flex-1 p-6 relative z-10" ref={scrollAreaRef}>
+        <ScrollArea className="flex-1 p-6 relative z-10 max-h-[500px]" ref={scrollAreaRef}>
           <div className="space-y-6">
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
               >
                 <div
                   className={`max-w-[85%] rounded-2xl p-4 shadow-lg ${
@@ -190,7 +216,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
               </div>
             ))}
             {isLoading && (
-              <div className="flex justify-start">
+              <div className="flex justify-start animate-pulse">
                 <div className="max-w-[85%] rounded-2xl p-4 bg-gray-800 text-white border border-orange-500/30 shadow-lg shadow-orange-500/10">
                   <div className="flex items-center space-x-3">
                     <div className="bg-orange-500/20 p-2 rounded-full">

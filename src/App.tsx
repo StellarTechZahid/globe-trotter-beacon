@@ -80,12 +80,14 @@ import StudyInCanadaComplete2024 from "./pages/blogs/StudyInCanadaComplete2024";
 
 // Article pages
 import BestScholarshipsForInternationalStudents2024 from "./pages/articles/BestScholarshipsForInternationalStudents2024";
+import CareerPathways from "./pages/articles/CareerPathways";
 
 // News pages
 import GlobalEducationTrends2024 from "./pages/news/GlobalEducationTrends2024";
 
 // Tips pages
 import StudyAbroadPreparationChecklist2024 from "./pages/tips/StudyAbroadPreparationChecklist2024";
+import FirstTimeInternationalStudents from "./pages/tips/FirstTimeInternationalStudents";
 
 const queryClient = new QueryClient();
 
@@ -170,12 +172,14 @@ const App = () => (
 
             {/* Article Routes */}
             <Route path="/articles/best-scholarships-for-international-students-2024" element={<BestScholarshipsForInternationalStudents2024 />} />
+            <Route path="/articles/career-pathways" element={<CareerPathways />} />
 
             {/* News Routes */}
             <Route path="/news/global-education-trends-2024" element={<GlobalEducationTrends2024 />} />
 
             {/* Tips Routes */}
             <Route path="/tips/study-abroad-preparation-checklist-2024" element={<StudyAbroadPreparationChecklist2024 />} />
+            <Route path="/tips/first-time-international-students" element={<FirstTimeInternationalStudents />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
