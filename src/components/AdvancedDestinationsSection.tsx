@@ -32,6 +32,7 @@ const AdvancedDestinationsSection = () => {
     {
       country: "Canada",
       slug: "canada", 
+      flag: "🇨🇦",
       image: "https://images.unsplash.com/photo-1517935706615-2717063c2225?w=800&h=600&fit=crop",
       description: "Quality education with excellent post-study work opportunities and PR pathways",
       stats: { universities: "100+", students: "800K+" },
