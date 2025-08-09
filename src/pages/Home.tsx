@@ -3,8 +3,9 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroCarousel from '@/components/HeroCarousel';
-import OurServicesSection from '@/components/OurServicesSection';
-import StudyDestinationsSection from '@/components/StudyDestinationsSection';
+import AdvancedDestinationsSection from '@/components/AdvancedDestinationsSection';
+import AdvancedProcessSection from '@/components/AdvancedProcessSection';
+import AdvancedServicesSection from '@/components/AdvancedServicesSection';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import AboutUsSection from '@/components/AboutUsSection';
 import ConsultationForm from '@/components/ConsultationForm';
@@ -141,8 +142,9 @@ const Home = () => {
           </div>
         </section>
         
-        <OurServicesSection />
-        <StudyDestinationsSection />
+        <AdvancedDestinationsSection />
+        <AdvancedProcessSection />
+        <AdvancedServicesSection />
         <AboutUsSection />
         <PartnerUniversitiesSection />
         <OurImpactSection />
