@@ -32,12 +32,17 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 flex-shrink-0">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-2 rounded-lg">
-                <span className="text-black font-bold text-lg">AA</span>
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-3 rounded-xl shadow-lg">
+                <span className="text-black font-bold text-xl">AA</span>
               </div>
-              <span className="text-xl font-bold text-white">
-                Abroad Academics
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white leading-tight">
+                  Abroad Academics
+                </span>
+                <span className="text-xs text-orange-400 font-medium tracking-wider">
+                  STUDY ABROAD CONSULTANTS
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation - Always Visible on Large Screens */}

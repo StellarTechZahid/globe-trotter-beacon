@@ -50,6 +50,7 @@ import MalaysiaPage from "./pages/countries/MalaysiaPage";
 import GermanyPage from "./pages/countries/GermanyPage";
 import ItalyPage from "./pages/countries/ItalyPage";
 import NewZealandPage from "./pages/countries/NewZealandPage";
+import UAEPage from "./pages/countries/UAEPage";
 
 // Service pages
 import CareerCounseling from "./pages/services/CareerCounseling";
@@ -142,6 +143,7 @@ const App = () => (
             <Route path="/countries/germany" element={<GermanyPage />} />
             <Route path="/countries/italy" element={<ItalyPage />} />
             <Route path="/countries/new-zealand" element={<NewZealandPage />} />
+            <Route path="/countries/uae" element={<UAEPage />} />
 
             {/* Service Routes */}
             <Route path="/services/career-counseling" element={<CareerCounseling />} />
