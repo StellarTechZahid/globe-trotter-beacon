@@ -11,24 +11,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white border-t border-orange-500">
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-orange-600 to-orange-700 py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-4 text-black">Ready to Transform Your Future?</h3>
-            <p className="text-xl text-black mb-8 opacity-90">
-              Get personalized guidance from our expert counselors and take the first step towards your dream education abroad.
-            </p>
-            <Button 
-              onClick={scrollToConsultation}
-              className="bg-black hover:bg-gray-800 text-white h-12 px-8 font-semibold"
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Book Free Consultation Call
-            </Button>
-          </div>
-        </div>
-      </div>
 
       {/* Main Footer */}
       <div className="py-16">

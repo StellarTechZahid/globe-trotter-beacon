@@ -40,13 +40,13 @@ const UniversityCarousel = () => {
         {getVisibleUniversities().map((university, index) => (
           <Card 
             key={`${university.name}-${currentIndex}-${index}`}
-            className="min-w-[280px] hover:shadow-xl transition-all duration-300 bg-white border-0 hover:-translate-y-1"
+            className="min-w-[240px] sm:min-w-[280px] hover:shadow-xl transition-all duration-300 bg-white border-0 hover:-translate-y-1"
           >
-            <CardContent className="p-6 text-center">
-              <div className="text-4xl mb-4">{university.logo}</div>
-              <h3 className="text-xl font-bold text-slate-800 mb-2">{university.name}</h3>
-              <p className="text-slate-600 mb-2">{university.country}</p>
-              <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+            <CardContent className="p-4 sm:p-6 text-center">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{university.logo}</div>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 leading-tight">{university.name}</h3>
+              <p className="text-slate-600 mb-2 text-sm sm:text-base">{university.country}</p>
+              <div className="bg-blue-100 text-blue-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">
                 {university.ranking}
               </div>
             </CardContent>

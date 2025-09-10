@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Toaster, toast } from 'sonner';
+import { Toaster } from 'sonner';
 import Navbar from '@/components/Navbar';
 import HeroCarousel from '@/components/HeroCarousel';
 import AboutUsSection from '@/components/AboutUsSection';
@@ -13,46 +13,12 @@ import LatestInsightsSection from '@/components/LatestInsightsSection';
 import ConsultationFormWrapper from '@/components/ConsultationFormWrapper';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
+import PWAInstallNotification from '@/components/PWAInstallNotification';
 
 const Index = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
 
   useEffect(() => {
-    // Check if toast was dismissed or app installed
-    const isToastDismissed = localStorage.getItem('pwaToastDismissed');
-    const isAppInstalled = localStorage.getItem('pwaInstalled');
-
-    // Only show once per session, for 5 seconds
-    if (!isToastDismissed && !isAppInstalled && !sessionStorage.getItem('pwaToastShown')) {
-      sessionStorage.setItem('pwaToastShown', 'true');
-      toast('Download Our App!', {
-        description: 'Get instant access to study abroad guidance!',
-        action: {
-          label: 'Install',
-          onClick: () => {
-            if (deferredPrompt) {
-              (deferredPrompt as any)?.prompt();
-              (deferredPrompt as any)?.userChoice.then((choiceResult: { outcome: string }) => {
-                if (choiceResult.outcome === 'accepted') {
-                  console.log('User installed the PWA');
-                  localStorage.setItem('pwaInstalled', 'true');
-                }
-                setDeferredPrompt(null);
-              });
-            } else {
-              toast.info('Open your browser menu and select "Add to Home Screen" to install!');
-            }
-          },
-        },
-        onDismiss: () => {
-          localStorage.setItem('pwaToastDismissed', 'true');
-        },
-        duration: 5000, // Show for 5 seconds only
-        position: 'top-center',
-      });
-    }
-
     // Handle beforeinstallprompt
     const handler = (e: Event) => {
       e.preventDefault();
@@ -83,9 +49,11 @@ const Index = () => {
         }
         setDeferredPrompt(null);
       });
-    } else {
-      toast.info('Open your browser menu and select "Add to Home Screen" to install!');
     }
+  };
+
+  const handleNotificationDismiss = () => {
+    localStorage.setItem('pwaToastDismissed', 'true');
   };
 
   return (
@@ -104,14 +72,12 @@ const Index = () => {
         <link rel="canonical" href="https://abroadacademics.vercel.app" />
       </Helmet>
       <Toaster richColors position="top-center" />
+      <PWAInstallNotification 
+        deferredPrompt={deferredPrompt}
+        onInstall={handleInstallClick}
+        onDismiss={handleNotificationDismiss}
+      />
       <Navbar />
-      {deferredPrompt && (
-        <div className="fixed bottom-4 right-4 z-50">
-          <Button onClick={handleInstallClick} className="bg-orange-500 text-white hover:bg-orange-600">
-            Install Abroad Academics App
-          </Button>
-        </div>
-      )}
       <HeroCarousel />
       <AboutUsSection />
       <StudyDestinationsSection />
