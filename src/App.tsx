@@ -78,17 +78,49 @@ import Accreditation from "./pages/partnership/Accreditation";
 // Blog pages
 import TopUniversitiesInUSAForInternationalStudents2024 from "./pages/blogs/TopUniversitiesInUSAForInternationalStudents2024";
 import StudyInCanadaComplete2024 from "./pages/blogs/StudyInCanadaComplete2024";
+import BestCountriesToStudyAbroadForInternationalStudents2024 from "./pages/blogs/BestCountriesToStudyAbroadForInternationalStudents2024";
+import CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024 from "./pages/blogs/CompleteGuideToStudyingInCanadaTopUniversitiesAndScholarships2024";
+import ItalyStudentVisaGuide from "./pages/blogs/ItalyStudentVisaGuide";
+import ScholarshipsInItaly2025 from "./pages/blogs/ScholarshipsInItaly2025";
+import StudyInItalyGuide from "./pages/blogs/StudyInItalyGuide";
+import StudyingInCanada from "./pages/blogs/StudyingInCanada";
+import StudyingInGermanyCompleteGuideForInternationalStudents2024 from "./pages/blogs/StudyingInGermanyCompleteGuideForInternationalStudents2024";
+import TopGlobalScholarships2025 from "./pages/blogs/TopGlobalScholarships2025";
+import StudyingInAustralia from "./pages/blogs/WhyStudyInAustraliaBestUniversitiesAndStudentLifeGuide2025";
 
 // Article pages
 import BestScholarshipsForInternationalStudents2024 from "./pages/articles/BestScholarshipsForInternationalStudents2024";
 import CareerPathways from "./pages/articles/CareerPathways";
+import ChoosingStudyDestination from "./pages/articles/ChoosingStudyDestination";
+import VisaRequirementAnalysis from "./pages/articles/VisaRequirementAnalysis";
+import EducationEconomicsAnalysis from "./pages/articles/EducationEconomicsAnalysis";
+import UniversityRankingsDecoded from "./pages/articles/UniversityRankingsDecoded";
+import CulturalIntelligence from "./pages/articles/CulturalIntelligence";
+import ResearchOpportunities from "./pages/articles/ResearchOpportunities";
+import TechnologyInEducation from "./pages/articles/TechnologyInEducation";
+import SOPGuide from "./pages/articles/SOPGuide";
+import TopMistakesForeignColleges from "./pages/articles/TopMistakesForeignColleges";
+import StudyInGermanyFree from "./pages/articles/StudyInGermanyFree";
+import Top10ScholarshipsUK from "./pages/articles/Top10ScholarshipsUK";
+import UniversityApplicationTipsForInternationalStudents2024 from "./pages/articles/UniversityApplicationTipsForInternationalStudents2024";
+import HowToWriteWinningScholarshipEssaysStepByStepGuide2024 from "./pages/articles/HowToWriteWinningScholarshipEssaysStepByStepGuide2024";
 
 // News pages
 import GlobalEducationTrends2024 from "./pages/news/GlobalEducationTrends2024";
+import CanadaImmigrationTargets from "./pages/news/CanadaImmigrationTargets";
+import NewZealandStudentVisaUpdates2024 from "./pages/news/NewZealandStudentVisaUpdates2024";
+import UKPostStudyWorkVisaChangesForInternationalStudents2024 from "./pages/news/UKPostStudyWorkVisaChangesForInternationalStudents2024";
 
 // Tips pages
 import StudyAbroadPreparationChecklist2024 from "./pages/tips/StudyAbroadPreparationChecklist2024";
 import FirstTimeInternationalStudents from "./pages/tips/FirstTimeInternationalStudents";
+import TopTipsForInternationalStudentVisaApplications2024 from "./pages/tips/TopTipsForInternationalStudentVisaApplications2024";
+
+// Fallback detail pages
+import BlogDetailFallback from "./pages/blogs/BlogDetailFallback";
+import ArticleDetailFallback from "./pages/articles/ArticleDetailFallback";
+import NewsDetailFallback from "./pages/news/NewsDetailFallback";
+import TipsDetailFallback from "./pages/tips/TipsDetailFallback";
 
 const queryClient = new QueryClient();
 
@@ -171,18 +203,59 @@ const App = () => (
             {/* Blog Routes */}
             <Route path="/blogs/top-universities-in-usa-for-international-students-2024" element={<TopUniversitiesInUSAForInternationalStudents2024 />} />
             <Route path="/blogs/study-in-canada-complete-2024" element={<StudyInCanadaComplete2024 />} />
+            <Route path="/blogs/studying-in-canada" element={<StudyingInCanada />} />
+            <Route path="/blogs/studying-in-australia" element={<StudyingInAustralia />} />
+            <Route path="/blogs/top-scholarships" element={<TopGlobalScholarships2025 />} />
+            <Route path="/blogs/uk-universities-guide" element={<UniversityRankingsDecoded />} />
+            <Route path="/blogs/usa-student-visa-guide" element={<VisaRequirementAnalysis />} />
+            <Route path="/blogs/german-universities" element={<StudyingInGermanyCompleteGuideForInternationalStudents2024 />} />
+            <Route path="/blogs/study-abroad-preparation" element={<StudyAbroadPreparationChecklist2024 />} />
+            <Route path="/blogs/student-visa-italy-guide" element={<ItalyStudentVisaGuide />} />
+            <Route path="/blogs/study-in-italy-complete-process" element={<StudyInItalyGuide />} />
+            <Route path="/blogs/italy-scholarships-2025" element={<ScholarshipsInItaly2025 />} />
+            <Route path="/blogs/:slug" element={<BlogDetailFallback />} />
 
             {/* Article Routes */}
             <Route path="/articles/best-scholarships-for-international-students-2024" element={<BestScholarshipsForInternationalStudents2024 />} />
             <Route path="/articles/career-pathways" element={<CareerPathways />} />
+            <Route path="/articles/choosing-study-destination" element={<ChoosingStudyDestination />} />
+            <Route path="/articles/visa-requirements-analysis" element={<VisaRequirementAnalysis />} />
+            <Route path="/articles/economics-of-education" element={<EducationEconomicsAnalysis />} />
+            <Route path="/articles/university-rankings-decoded" element={<UniversityRankingsDecoded />} />
+            <Route path="/articles/cultural-intelligence" element={<CulturalIntelligence />} />
+            <Route path="/articles/career-pathways-graduates" element={<CareerPathways />} />
+            <Route path="/articles/research-opportunities" element={<ResearchOpportunities />} />
+            <Route path="/articles/technology-in-education" element={<TechnologyInEducation />} />
+            <Route path="/articles/how-to-write-a-strong-sop" element={<SOPGuide />} />
+            <Route path="/articles/top-mistakes-when-applying-abroad" element={<TopMistakesForeignColleges />} />
+            <Route path="/articles/study-in-germany-free-guide" element={<StudyInGermanyFree />} />
+            <Route path="/articles/top-uk-scholarships-2025" element={<Top10ScholarshipsUK />} />
+            <Route path="/articles/:slug" element={<ArticleDetailFallback />} />
 
             {/* News Routes */}
             <Route path="/news/global-education-trends-2024" element={<GlobalEducationTrends2024 />} />
+            <Route path="/news/canada-immigration-targets" element={<CanadaImmigrationTargets />} />
+            <Route path="/news/uk-post-study-visa" element={<UKPostStudyWorkVisaChangesForInternationalStudents2024 />} />
+            <Route path="/news/australia-scholarship-program" element={<GlobalEducationTrends2024 />} />
+            <Route path="/news/germany-visa-simplification" element={<GlobalEducationTrends2024 />} />
+            <Route path="/news/us-student-enrollment" element={<GlobalEducationTrends2024 />} />
+            <Route path="/news/new-zealand-borders-open" element={<NewZealandStudentVisaUpdates2024 />} />
+            <Route path="/news/erasmus-expansion" element={<GlobalEducationTrends2024 />} />
+            <Route path="/news/digital-transformation" element={<GlobalEducationTrends2024 />} />
+            <Route path="/news/:slug" element={<NewsDetailFallback />} />
 
             {/* Tips Routes */}
             <Route path="/tips/study-abroad-preparation-checklist-2024" element={<StudyAbroadPreparationChecklist2024 />} />
             <Route path="/tips/first-time-international-students" element={<FirstTimeInternationalStudents />} />
-            
+            <Route path="/tips/scholarship-application-secrets" element={<HowToWriteWinningScholarshipEssaysStepByStepGuide2024 />} />
+            <Route path="/tips/budget-friendly-study-abroad" element={<EducationEconomicsAnalysis />} />
+            <Route path="/tips/ielts-speaking-strategies" element={<TopTipsForInternationalStudentVisaApplications2024 />} />
+            <Route path="/tips/university-application-essays" element={<SOPGuide />} />
+            <Route path="/tips/cultural-adaptation" element={<CulturalIntelligence />} />
+            <Route path="/tips/part-time-work-legal" element={<VisaRequirementAnalysis />} />
+            <Route path="/tips/time-management-tips" element={<FirstTimeInternationalStudents />} />
+            <Route path="/tips/:slug" element={<TipsDetailFallback />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingConsultationButton />
