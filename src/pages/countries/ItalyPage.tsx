@@ -1692,12 +1692,6 @@ const ItalyPage = () => {
         </div>
       </section>
 
-      <CTASection />
-      <Footer />
-    </div>
-  );
-};
-
 export default ItalyPage;
 
       {/* Why Study in Italy - Detailed Section */}
