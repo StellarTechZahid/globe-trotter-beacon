@@ -1,6 +1,6 @@
 {
-  "name": "Abroad Academics",
-  "short_name": "AbroadAcad",
+  "name": "Abroad Academics", icon-512x512-v2
+  "short_name": "AbroGo",
   "description": "Pakistan's leading study abroad consultants since 2023. Expert guidance for USA, UK, Canada, Australia with 98% visa success rate.",
   "start_url": "/",
   "display": "standalone",
@@ -8,12 +8,12 @@
   "theme_color": "#f97316",
   "icons": [
     {
-      "src": "/icons/icon-192x192-v2.png",
+      "src": "/icons/icon-192x192-v3.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-512x512-v2.png",
+      "src": "/icons/icon-512x512-v3.png",
       "sizes": "512x512",
       "type": "image/png"
     }
