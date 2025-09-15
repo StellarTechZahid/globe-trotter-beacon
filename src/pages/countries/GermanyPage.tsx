@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -10,13 +9,32 @@ import { Button } from '@/components/ui/button';
 const GermanyPage = () => {
   const quickLinks = [
     { name: "Technical University of Munich", id: "technical-university-of-munich" },
-    { name: "University of Heidelberg", id: "university-of-heidelberg" },
-    { name: "Humboldt University Berlin", id: "humboldt-university-berlin" },
-    { name: "University of Freiburg", id: "university-of-freiburg" },
+    { name: "Ludwig Maximilian University of Munich", id: "ludwig-maximilian-university-of-munich" },
+    { name: "Heidelberg University", id: "heidelberg-university" },
+    { name: "Humboldt University of Berlin", id: "humboldt-university-of-berlin" },
+    { name: "University of Bonn", id: "university-of-bonn" },
     { name: "RWTH Aachen University", id: "rwth-aachen-university" },
+    { name: "Charité Universitätsmedizin Berlin", id: "charite-universitatsmedizin-berlin" },
+    { name: "University of Tübingen", id: "university-of-tubingen" },
+    { name: "Free University of Berlin", id: "free-university-of-berlin" },
     { name: "University of Göttingen", id: "university-of-gottingen" },
-    { name: "University of Frankfurt", id: "university-of-frankfurt" },
-    { name: "University of Hamburg", id: "university-of-hamburg" }
+    { name: "University of Freiburg", id: "university-of-freiburg" },
+    { name: "University of Hamburg", id: "university-of-hamburg" },
+    { name: "Technical University of Berlin", id: "technical-university-of-berlin" },
+    { name: "University of Cologne", id: "university-of-cologne" },
+    { name: "Technical University Dresden", id: "technical-university-dresden" },
+    { name: "University of Würzburg", id: "university-of-wurzburg" },
+    { name: "Karlsruhe Institute of Technology", id: "karlsruhe-institute-of-technology" },
+    { name: "University of Münster", id: "university-of-munster" },
+    { name: "University of Ulm", id: "university-of-ulm" },
+    { name: "University of Mannheim", id: "university-of-mannheim" },
+    { name: "University of Konstanz", id: "university-of-konstanz" },
+    { name: "Leipzig University", id: "leipzig-university" },
+    { name: "University of Rostock", id: "university-of-rostock" },
+    { name: "University of Greifswald", id: "university-of-greifswald" },
+    { name: "University of Halle-Wittenberg", id: "university-of-halle-wittenberg" },
+    { name: "University of Marburg", id: "university-of-marburg" },
+    { name: "University of Jena", id: "university-of-jena" }
   ];
 
   const scrollToConsultation = () => {
@@ -32,7 +50,7 @@ const GermanyPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `url(https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1920&h=1080&fit=crop)` 
+            backgroundImage: `ur[](https://images.unsplash.com/photo-1467269204020)` 
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -128,98 +146,166 @@ const GermanyPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Technical University of Munich</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #37 Worldwide (QS 2025)</p>
-                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Munich, Bavaria</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #28 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Munich</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 45,000+ (International: 38%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1868</p>
                   </div>
                   <p className="text-gray-300 mb-6">
-                    Technical University of Munich, Germany's top technical university, offers world-class programs in engineering, technology, and natural sciences with excellent industry partnerships.
+                    Germany's top technical university, offering world-class programs in engineering and technology.
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-                      <p className="text-white">€150/semester + Living costs</p>
+                      <p className="text-white">€150/semester</p>
                     </div>
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
                       <p className="text-white">IELTS 6.5+, TestAS</p>
                     </div>
                   </div>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Apply with Expert Guidance
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
                   </Button>
                 </div>
                 <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">TU Munich Campus</span>
+                  <span className="text-gray-400">Technical University of Munich Campus</span>
                 </div>
               </div>
             </div>
 
-            {/* University of Heidelberg */}
-            <div id="university-of-heidelberg" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+            {/* Ludwig Maximilian University of Munich */}
+            <div id="ludwig-maximilian-university-of-munich" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">University of Heidelberg Campus</span>
+                  <span className="text-gray-400">Ludwig Maximilian University of Munich Campus</span>
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">University of Heidelberg</h3>
+                  <h3 className="text-3xl font-bold text-white mb-4">Ludwig Maximilian University of Munich</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #87 Worldwide</p>
-                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Heidelberg, Baden-Württemberg</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #59 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Munich</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 51,000+ (International: 15%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1472</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    One of Germany's oldest universities, known for research in humanities and sciences.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Heidelberg University */}
+            <div id="heidelberg-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Heidelberg University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #84 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Heidelberg</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 30,000+ (International: 20%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1386</p>
                   </div>
                   <p className="text-gray-300 mb-6">
-                    Located in historic Heidelberg, this university is Germany's oldest and renowned for medicine, natural sciences, and research excellence with beautiful campus setting.
+                    Germany's oldest university, renowned for medicine and natural sciences.
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-                      <p className="text-white">€150/semester + Living costs</p>
+                      <p className="text-white">€150/semester</p>
                     </div>
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
                       <p className="text-white">IELTS 6.5+, TestAS</p>
                     </div>
                   </div>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Get Admission Assistance
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Heidelberg University Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Humboldt University of Berlin */}
+            <div id="humboldt-university-of-berlin" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Humboldt University of Berlin Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Humboldt University of Berlin</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #126 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Berlin</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 35,000+ (International: 18%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1810</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Historic university in Berlin, known for humanities and social sciences.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€300/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
                   </Button>
                 </div>
               </div>
             </div>
 
-            {/* Humboldt University Berlin */}
-            <div id="humboldt-university-berlin" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+            {/* University of Bonn */}
+            <div id="university-of-bonn" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">Humboldt University Berlin</h3>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Bonn</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #120 Worldwide</p>
-                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Berlin, Germany</p>
-                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 35,000+ (International: 18%)</p>
-                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1810</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #239 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Bonn</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 35,000+ (International: 13%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1818</p>
                   </div>
                   <p className="text-gray-300 mb-6">
-                    Humboldt University Berlin is a historic university in Germany's capital, known for outstanding research, humanities, and social sciences with vibrant student life.
+                    Renowned for research in mathematics, physics, and economics.
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-                      <p className="text-white">€300/semester + Living costs</p>
+                      <p className="text-white">€150/semester</p>
                     </div>
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
                       <p className="text-white">IELTS 6.5+, TestAS</p>
                     </div>
                   </div>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Start Your Berlin Journey
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
                   </Button>
                 </div>
                 <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">Humboldt University Campus</span>
+                  <span className="text-gray-400">University of Bonn Campus</span>
                 </div>
               </div>
             </div>
@@ -228,21 +314,746 @@ const GermanyPage = () => {
             <div id="rwth-aachen-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">RWTH Aachen Campus</span>
+                  <span className="text-gray-400">RWTH Aachen University Campus</span>
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">RWTH Aachen University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #106 Worldwide</p>
-                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Aachen, North Rhine-Westphalia</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #99 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Aachen</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 47,000+ (International: 22%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1870</p>
                   </div>
                   <p className="text-gray-300 mb-6">
-                    RWTH Aachen is Germany's largest technical university with excellent engineering programs and strong industry connections throughout Europe.
+                    Largest technical university in Germany, famous for engineering and technology programs.
                   </p>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Apply Now with Us
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
                   </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Charité Universitätsmedizin Berlin */}
+            <div id="charite-universitatsmedizin-berlin" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Charité Universitätsmedizin Berlin</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #90 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Berlin</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 8,000+ (International: 15%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1710</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Europe's largest university hospital, leading in medical research and education.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Charité Universitätsmedizin Berlin Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Tübingen */}
+            <div id="university-of-tubingen" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Tübingen Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Tübingen</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #222 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Tübingen</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 27,000+ (International: 14%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1477</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for theology, medicine, and humanities in a picturesque town.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Free University of Berlin */}
+            <div id="free-university-of-berlin" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Free University of Berlin</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #97 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Berlin</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 35,000+ (International: 22%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1948</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Leading research university in Berlin, strong in social sciences and humanities.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€300/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Free University of Berlin Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Göttingen */}
+            <div id="university-of-gottingen" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Göttingen Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Göttingen</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #232 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Göttingen</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 30,000+ (International: 12%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1737</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Famous for natural sciences and mathematics, with numerous Nobel laureates.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Freiburg */}
+            <div id="university-of-freiburg" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Freiburg</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #212 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Freiburg</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 18%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1457</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Strong in environmental sciences and humanities in the Black Forest region.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Freiburg Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Hamburg */}
+            <div id="university-of-hamburg" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Hamburg Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Hamburg</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #205 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Hamburg</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 43,000+ (International: 13%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1919</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Large university in the port city, strong in law, economics, and sciences.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€300/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Technical University of Berlin */}
+            <div id="technical-university-of-berlin" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Technical University of Berlin</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #147 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Berlin</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 35,000+ (International: 22%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1879</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Leading technical university in Berlin, known for engineering and computer science.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€300/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Technical University of Berlin Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Cologne */}
+            <div id="university-of-cologne" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Cologne Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Cologne</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #268 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Cologne</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 50,000+ (International: 10%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1388</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    One of Europe's oldest universities, strong in economics and management.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Technical University Dresden */}
+            <div id="technical-university-dresden" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Technical University Dresden</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #246 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Dresden</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 32,000+ (International: 14%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1828</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Leading technical university in East Germany, known for engineering and materials science.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Technical University Dresden Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Würzburg */}
+            <div id="university-of-wurzburg" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Würzburg Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Würzburg</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #397 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Würzburg</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 28,000+ (International: 9%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1402</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for medicine, psychology, and life sciences.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Karlsruhe Institute of Technology */}
+            <div id="karlsruhe-institute-of-technology" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Karlsruhe Institute of Technology</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #102 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Karlsruhe</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 20%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 2009 (merger)</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Leading research institution in engineering and natural sciences.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Karlsruhe Institute of Technology Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Münster */}
+            <div id="university-of-munster" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Münster Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Münster</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #382 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Münster</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 45,000+ (International: 8%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1780</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Large university known for law, medicine, and theology.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Ulm */}
+            <div id="university-of-ulm" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Ulm</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #375 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Ulm</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 10,000+ (International: 13%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Modern university focused on medicine, sciences, and engineering.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Ulm Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Mannheim */}
+            <div id="university-of-mannheim" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Mannheim Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Mannheim</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #194 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Mannheim</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 12,000+ (International: 16%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Top for business and economics in Germany.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Konstanz */}
+            <div id="university-of-konstanz" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Konstanz</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #478 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Konstanz</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 11,000+ (International: 12%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1966</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Modern university strong in politics, law, and psychology.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Konstanz Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Leipzig University */}
+            <div id="leipzig-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Leipzig University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Leipzig University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #479 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Leipzig</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 30,000+ (International: 10%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1409</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    One of Germany's oldest universities, known for music, literature, and medicine.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Rostock */}
+            <div id="university-of-rostock" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Rostock</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #761-770 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Rostock</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 13,000+ (International: 9%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1419</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Northern Europe's oldest university, strong in life sciences and engineering.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Rostock Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Greifswald */}
+            <div id="university-of-greifswald" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Greifswald Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Greifswald</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #401-450 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Greifswald</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 10,000+ (International: 8%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1456</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Historic university known for medicine and environmental sciences.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Halle-Wittenberg */}
+            <div id="university-of-halle-wittenberg" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Halle-Wittenberg</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #601-650 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Halle</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 20,000+ (International: 10%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1502</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for agriculture, medicine, and humanities.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Halle-Wittenberg Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Marburg */}
+            <div id="university-of-marburg" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Marburg Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Marburg</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #801-850 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Marburg</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 12%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1527</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Famous for philosophy and medicine, with a historic campus.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Jena */}
+            <div id="university-of-jena" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Jena</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #461 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Jena</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 18,000+ (International: 11%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1558</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for optics, physics, and philosophy, with strong industry ties.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">€150/semester</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, TestAS</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Jena Campus</span>
                 </div>
               </div>
             </div>
