@@ -50,7 +50,7 @@ const GermanyPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `ur[](https://images.unsplash.com/photo-1467269204020)` 
+            backgroundImage: `ur[](https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1920&h=1080&fit=crop)` 
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-60" />
