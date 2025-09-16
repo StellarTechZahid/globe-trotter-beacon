@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -16,7 +15,70 @@ const CanadaPage = () => {
     { name: 'McMaster University', id: 'mcmaster-university' },
     { name: 'University of Waterloo', id: 'university-of-waterloo' },
     { name: 'Western University', id: 'western-university' },
-    { name: 'Queens University', id: 'queens-university' }
+    { name: "Queen's University", id: 'queens-university' },
+    { name: 'University of Ottawa', id: 'university-of-ottawa' },
+    { name: 'University of Calgary', id: 'university-of-calgary' },
+    { name: 'Simon Fraser University', id: 'simon-fraser-university' },
+    { name: 'University of Victoria', id: 'university-of-victoria' },
+    { name: 'York University', id: 'york-university' },
+    { name: 'University of Manitoba', id: 'university-of-manitoba' },
+    { name: 'University of Saskatchewan', id: 'university-of-saskatchewan' },
+    { name: 'University of Windsor', id: 'university-of-windsor' },
+    { name: 'University of Guelph', id: 'university-of-guelph' },
+    { name: 'University of New Brunswick', id: 'university-of-new-brunswick' },
+    { name: 'Dalhousie University', id: 'dalhousie-university' },
+    { name: 'University of Prince Edward Island', id: 'university-of-prince-edward-island' },
+    { name: 'Memorial University of Newfoundland', id: 'memorial-university-of-newfoundland' },
+    { name: 'Concordia University', id: 'concordia-university' },
+    { name: 'Carleton University', id: 'carleton-university' },
+    { name: 'University of Lethbridge', id: 'university-of-lethbridge' },
+    { name: 'University of Regina', id: 'university-of-regina' },
+    { name: 'Brock University', id: 'brock-university' },
+    { name: 'Lakehead University', id: 'lakehead-university' },
+    { name: 'University of Northern British Columbia', id: 'university-of-northern-british-columbia' },
+    { name: 'University of Winnipeg', id: 'university-of-winnipeg' },
+    { name: 'Trent University', id: 'trent-university' },
+    { name: 'Wilfrid Laurier University', id: 'wilfrid-laurier-university' },
+    { name: 'Toronto Metropolitan University', id: 'toronto-metropolitan-university' }, // Formerly Ryerson
+    { name: 'OCAD University', id: 'ocad-university' },
+    { name: 'University of Ontario Institute of Technology', id: 'university-of-ontario-institute-of-technology' },
+    { name: 'Vancouver Island University', id: 'vancouver-island-university' },
+    { name: 'Thompson Rivers University', id: 'thompson-rivers-university' },
+    { name: 'Mount Royal University', id: 'mount-royal-university' },
+    { name: 'University of the Fraser Valley', id: 'university-of-the-fraser-valley' },
+    { name: 'Kwantlen Polytechnic University', id: 'kwantlen-polytechnic-university' },
+    { name: 'Mount Allison University', id: 'mount-allison-university' },
+    { name: 'Acadia University', id: 'acadia-university' },
+    { name: 'St. Francis Xavier University', id: 'st-francis-xavier-university' },
+    { name: 'Mount Saint Vincent University', id: 'mount-saint-vincent-university' },
+    { name: "Saint Mary's University", id: 'saint-marys-university' },
+    { name: 'Cape Breton University', id: 'cape-breton-university' },
+    { name: 'University Canada West', id: 'university-canada-west' }, // Private
+    { name: 'Yorkville University', id: 'yorkville-university' }, // Private
+    { name: 'University of Fredericton', id: 'university-of-fredericton' }, // Private
+    { name: 'Nipissing University', id: 'nipissing-university' },
+    { name: 'Algoma University', id: 'algoma-university' },
+    { name: 'Laurentian University', id: 'laurentian-university' },
+    { name: 'Royal Roads University', id: 'royal-roads-university' },
+    { name: 'Athabasca University', id: 'athabasca-university' },
+    { name: 'Fleming College', id: 'fleming-college' },
+    { name: 'George Brown College', id: 'george-brown-college' },
+    { name: 'Seneca College', id: 'seneca-college' },
+    { name: 'Humber College', id: 'humber-college' },
+    { name: 'Sheridan College', id: 'sheridan-college' },
+    { name: 'Fanshawe College', id: 'fanshawe-college' },
+    { name: 'Conestoga College', id: 'conestoga-college' },
+    { name: 'Centennial College', id: 'centennial-college' },
+    { name: 'Niagara College', id: 'niagara-college' },
+    { name: 'Douglas College', id: 'douglas-college' },
+    { name: 'Langara College', id: 'langara-college' },
+    { name: 'Capilano University', id: 'capilano-university' },
+    { name: 'Camosun College', id: 'camosun-college' },
+    { name: 'Selkirk College', id: 'selkirk-college' },
+    { name: 'North Island College', id: 'north-island-college' },
+    { name: 'College of the Rockies', id: 'college-of-the-rockies' },
+    { name: 'Okanagan College', id: 'okanagan-college' },
+    { name: 'Northern Lights College', id: 'northern-lights-college' },
   ];
 
   const scrollToConsultation = () => {
@@ -32,7 +94,7 @@ const CanadaPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `url(https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1920&h=1080&fit=crop)` 
+            backgroundImage: `ur[](https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1920&h=1080&fit=crop)` 
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -44,7 +106,7 @@ const CanadaPage = () => {
               Study in Canada
             </h1>
             <p className="text-2xl mb-8 text-gray-200 animate-fade-in delay-200">
-              Transform your future at world's top universities in the most welcoming country. Start your Canadian dream today with Abroad Academics - your trusted study abroad consultants since 2023!
+              Transform your future at world's top universities and colleges in the most welcoming country. Start your Canadian dream today with Abroad Academics - your trusted study abroad consultants since 2023!
             </p>
             <Button 
               onClick={scrollToConsultation}
@@ -62,7 +124,7 @@ const CanadaPage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-8">Your Pathway to Canadian Education Excellence</h2>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Canada is home to some of the world's most prestigious universities and offers unparalleled opportunities for academic and personal growth. With cutting-edge research facilities, innovative teaching methods, and a diverse student community, studying in Canada opens doors to endless possibilities. As Pakistan's leading study abroad consultants established in 2023, Abroad Academics will guide you through every step of your journey to achieve your Canadian dream with our comprehensive overseas education consultancy services.
+              Canada is home to some of the world's most prestigious universities and colleges, offering unparalleled opportunities for academic and personal growth. With cutting-edge research facilities, innovative teaching methods, and a diverse student community, studying in Canada opens doors to endless possibilities. As Pakistan's leading study abroad consultants established in 2023, Abroad Academics will guide you through every step of your journey to achieve your Canadian dream with our comprehensive overseas education consultancy services.
             </p>
           </div>
         </div>
@@ -81,9 +143,9 @@ const CanadaPage = () => {
               <div className="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <GraduationCap className="h-8 w-8 text-black" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">World's Best Universities</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">World-Class Institutions</h3>
               <p className="text-gray-300">
-                Home to University of Toronto, UBC, McGill, and many other top-ranked institutions that lead in research and innovation. Study abroad in Canada with the best educational consultants.
+                Home to top-ranked universities and colleges like University of Toronto, UBC, and Seneca College, leading in research and innovation. Study abroad in Canada with the best educational consultants.
               </p>
             </div>
             
@@ -93,7 +155,7 @@ const CanadaPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Welcoming Environment</h3>
               <p className="text-gray-300">
-                Experience the most multicultural and welcoming society with excellent quality of life and student support. Best study abroad opportunities for Pakistani students.
+                Experience a multicultural and inclusive society with excellent quality of life and student support. Best study abroad opportunities for Pakistani students.
               </p>
             </div>
             
@@ -113,12 +175,12 @@ const CanadaPage = () => {
       {/* Quick Navigation Section */}
       <QuickNavigation links={quickLinks} />
 
-      {/* Universities Section */}
+      {/* Universities and Colleges Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-orange-500 mb-4">Top Canadian Universities for International Students</h2>
-            <p className="text-gray-300">Explore Canada's most prestigious universities with our expert guidance</p>
+            <h2 className="text-4xl font-bold text-orange-500 mb-4">Top Canadian Universities and Colleges for International Students</h2>
+            <p className="text-gray-300">Explore Canada's most prestigious institutions with our expert guidance</p>
           </div>
 
           <div className="space-y-12">
@@ -236,16 +298,199 @@ const CanadaPage = () => {
                     <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #111 Worldwide</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Edmonton, Alberta</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 40,000+ (International: 18%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1908</p>
                   </div>
                   <p className="text-gray-300 mb-6">
                     University of Alberta is a leading research university offering excellent programs with affordable tuition and strong industry connections.
                   </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $30,000-$40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, SAT/ACT</p>
+                    </div>
+                  </div>
                   <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
                     Apply Now with Us
                   </Button>
                 </div>
               </div>
             </div>
+
+            {/* McMaster University */}
+            <div id="mcmaster-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">McMaster University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #176 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Hamilton, Ontario</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 33,000+ (International: 17%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1887</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    McMaster University is renowned for its innovative teaching methods and strong programs in health sciences, engineering, and business.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $35,000-$50,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, SAT/ACT</p>
+                    </div>
+                  </div>
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Apply with Expert Guidance
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">McMaster University Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Waterloo */}
+            <div id="university-of-waterloo" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Waterloo Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Waterloo</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #115 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Waterloo, Ontario</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 41,000+ (International: 22%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1957</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for its co-op programs and innovation in tech and engineering, Waterloo is a top choice for international students seeking practical experience.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $40,000-$55,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, SAT/ACT</p>
+                    </div>
+                  </div>
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Admission Assistance
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Seneca College */}
+            <div id="seneca-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Seneca College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top College in Ontario</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 30,000+ (International: 25%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Seneca College offers practical, career-focused programs in business, technology, and health sciences, with strong industry connections and pathways to universities.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $15,000-$20,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Start Your Seneca Journey
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Seneca College Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University Canada West */}
+            <div id="university-canada-west" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University Canada West Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University Canada West</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Recognized Private University</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Vancouver, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 14,000+ (International: 80%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 2004</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    A private university specializing in business and technology programs, University Canada West offers flexible study options and a diverse international student body.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $20,000-$30,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, Bachelor’s for Graduate Programs</p>
+                    </div>
+                  </div>
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Apply Now with Us
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Placeholder for Other Institutions */}
+            {quickLinks.slice(8).map((link) => (
+              <div key={link.id} id={link.id} className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h3 className="text-3xl font-bold text-white mb-4">{link.name}</h3>
+                    <div className="space-y-3 text-gray-300 mb-6">
+                      <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Varies</p>
+                      <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Varies</p>
+                      <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: Varies</p>
+                      <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: Varies</p>
+                    </div>
+                    <p className="text-gray-300 mb-6">
+                      {link.name} offers a range of programs tailored for international students, with strong support for career development and academic excellence.
+                    </p>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div>
+                        <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                        <p className="text-white">CAD $15,000-$60,000/year</p>
+                      </div>
+                      <div>
+                        <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                        <p className="text-white">IELTS 6.0-6.5+, Varies by Program</p>
+                      </div>
+                    </div>
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                      Apply with Expert Guidance
+                    </Button>
+                  </div>
+                  <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-400">{link.name} Campus</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -256,45 +501,37 @@ const CanadaPage = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-orange-500 mb-8 text-center">Why Study in Canada</h2>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              Canadian degrees give you more than an academic experience which helps you in your real-world experiences. 
-              Wherever you go in the world, a Canadian education opens the door of your career and practical life ahead.
+              Canadian degrees and diplomas provide more than an academic experience, equipping you with real-world skills. 
+              A Canadian education opens doors to global career opportunities and practical life experiences.
             </p>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-orange-500 mb-3">• Ranked universities:</h3>
+                <h3 className="text-xl font-bold text-orange-500 mb-3">• Ranked Institutions:</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  In Canada you can find number of internationally ranked universities as compared to other destinations. It has the 
-                  highest number of ranked institutes such as University of Toronto, UBC, & McGill University. 
-                  Almost 26+ ranked universities are based in Canada.
+                  Canada boasts numerous internationally ranked universities and colleges, such as University of Toronto, UBC, and Seneca College. 
+                  Over 30 institutions are globally recognized for academic excellence.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-orange-500 mb-3">• Education quality:</h3>
+                <h3 className="text-xl font-bold text-orange-500 mb-3">• Education Quality:</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  The standard of education in Canada has always been center point attraction international students. Various 
-                  registered bodies independent learning Canadian universities take more practical approach rather than lecture-based 
-                  learning for international students. Students are expected to take a proactive role and applying the skills in the 
-                  real-world scenarios. This allows deep understanding of your course which eventually benefits you in long term.
+                  Canadian institutions emphasize practical, hands-on learning over lecture-based teaching. Students engage in real-world scenarios, fostering deep understanding and long-term career benefits.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-orange-500 mb-3">• Multicultural and secure:</h3>
+                <h3 className="text-xl font-bold text-orange-500 mb-3">• Multicultural and Secure:</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  For international students The diversity is reflected in every aspect of the Canadian culture has ranked as top 
-                  multicultural and secure country for international students. The diversity is reflected in every aspect of the Canadian 
-                  culture, food, literature, arts, and music.
+                  Canada is one of the most multicultural and safe countries for international students, with diversity reflected in its culture, food, arts, and communities.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-orange-500 mb-3">• No language barrier:</h3>
+                <h3 className="text-xl font-bold text-orange-500 mb-3">• No Language Barrier:</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  One of the biggest challenges for any international student is the local language of that country. In Canada, English is 
-                  the official language and all the courses are being taught in English, making it easier for students from every 
-                  part of the globe to study in Canada.
+                  English is the primary language of instruction in most Canadian institutions, making it accessible for international students from around the globe.
                 </p>
               </div>
             </div>
@@ -310,10 +547,7 @@ const CanadaPage = () => {
             <div>
               <h2 className="text-3xl font-bold text-orange-500 mb-6">Average Tuition Fees in Canada for International Students</h2>
               <p className="text-gray-300 leading-relaxed">
-                The locals pay a different fee as compared to international students planning to study in Canada. tuition fees vary 
-                depending on the university and course. The average tuition fees of undergraduate program Canada varies from 
-                CAD $30,000-$60,000/year. The average tuition fees of postgraduate programs in Canada varies from CAD $20,000-$50,000/year. There are various options of distance learning programs where online study programs are majorly 
-                available in Canada.
+                Tuition fees for international students vary by institution and program. Universities typically charge CAD $30,000-$60,000/year for undergraduate programs and CAD $20,000-$50,000/year for postgraduate programs. Colleges like Seneca and Humber offer more affordable options, ranging from CAD $15,000-$25,000/year. Distance learning programs are also available at many institutions.
               </p>
             </div>
 
@@ -321,28 +555,25 @@ const CanadaPage = () => {
             <div>
               <h2 className="text-3xl font-bold text-orange-500 mb-6">Working Hours Allowed in Canada (Student Visa)</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                As per Canadian visa, an international student, you are allowed work 20 hours/week during studies. Working more than the allowed 
-                hours can strictly affect your visa status resulting in cancelling your study permit.
+                International students on a Canadian study permit can work up to 20 hours per week during academic sessions and full-time during scheduled breaks. Exceeding these hours may jeopardize your visa status.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Average wage rates in Canada for international student is CAD $15-20/hour.
+                Average wage rates for students range from CAD $15-$20/hour.
               </p>
             </div>
 
             {/* Living Cost */}
             <div>
-              <h2 className="text-3xl font-bold text-orange-500 mb-6">Living Cost in Canada for International Student</h2>
+              <h2 className="text-3xl font-bold text-orange-500 mb-6">Living Cost in Canada for International Students</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                As per Immigration Canada, average living cost for an international student in Canada depends on the city you are living in, the 
-                living cost in Toronto/Vancouver is different as compared to other cities.
+                Living costs vary by city. Major cities like Toronto and Vancouver have higher costs, while smaller cities are more affordable.
               </p>
               <ul className="text-gray-300 space-y-2 mb-4">
-                <li>• CAD $1500-2000/month for courses in Toronto/Vancouver (10 month)</li>
-                <li>• CAD $1000-1500/month for courses in other cities (10 month)</li>
+                <li>• CAD $1,500-$2,000/month in Toronto/Vancouver (10 months)</li>
+                <li>• CAD $1,000-$1,500/month in other cities (10 months)</li>
               </ul>
               <p className="text-gray-300 leading-relaxed">
-                If you have a student loan or a government sponsorship, you will need to submit the evidence while submitting 
-                your visa application to Immigration Canada.
+                Proof of sufficient funds is required for visa applications, especially if supported by loans or sponsorships.
               </p>
             </div>
           </div>
@@ -360,7 +591,7 @@ const CanadaPage = () => {
           <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
               { step: "1", title: "Free Consultation", desc: "Get expert guidance from top study abroad consultants in Pakistan established in 2023" },
-              { step: "2", title: "University Selection", desc: "Choose the best Canadian universities based on your profile and goals with our expert team" },
+              { step: "2", title: "Institution Selection", desc: "Choose the best Canadian universities or colleges based on your profile and goals with our expert team" },
               { step: "3", title: "Application Support", desc: "Complete application assistance with SOP, LOR, and documentation from experienced consultants" },
               { step: "4", title: "Visa Assistance", desc: "Canadian student visa guidance and interview preparation for Pakistani students by Abroad Academics" }
             ].map((item, index) => (
