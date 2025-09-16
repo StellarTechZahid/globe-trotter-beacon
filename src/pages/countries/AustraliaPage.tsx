@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -9,14 +8,47 @@ import { Button } from '@/components/ui/button';
 
 const AustraliaPage = () => {
   const quickLinks = [
-    { name: "University of Melbourne", id: "university-of-melbourne" },
-    { name: "Australian National University", id: "australian-national-university" },
-    { name: "University of Sydney", id: "university-of-sydney" },
-    { name: "University of Queensland", id: "university-of-queensland" },
+    { name: "The University of Melbourne", id: "the-university-of-melbourne" },
+    { name: "The University of Sydney", id: "the-university-of-sydney" },
+    { name: "The University of New South Wales", id: "the-university-of-new-south-wales" },
+    { name: "The University of Queensland", id: "the-university-of-queensland" },
     { name: "Monash University", id: "monash-university" },
-    { name: "University of Western Australia", id: "university-of-western-australia" },
-    { name: "University of Adelaide", id: "university-of-adelaide" },
-    { name: "UNSW Sydney", id: "unsw-sydney" }
+    { name: "Australian National University", id: "australian-national-university" },
+    { name: "The University of Western Australia", id: "the-university-of-western-australia" },
+    { name: "The University of Adelaide", id: "the-university-of-adelaide" },
+    { name: "University of Technology Sydney", id: "university-of-technology-sydney" },
+    { name: "Macquarie University", id: "macquarie-university" },
+    { name: "RMIT University", id: "rmit-university" },
+    { name: "Curtin University", id: "curtin-university" },
+    { name: "Griffith University", id: "griffith-university" },
+    { name: "Deakin University", id: "deakin-university" },
+    { name: "University of Wollongong", id: "university-of-wollongong" },
+    { name: "La Trobe University", id: "la-trobe-university" },
+    { name: "Swinburne University of Technology", id: "swinburne-university-of-technology" },
+    { name: "James Cook University", id: "james-cook-university" },
+    { name: "University of Tasmania", id: "university-of-tasmania" },
+    { name: "Western Sydney University", id: "western-sydney-university" },
+    { name: "Flinders University", id: "flinders-university" },
+    { name: "Murdoch University", id: "murdoch-university" },
+    { name: "University of South Australia", id: "university-of-south-australia" },
+    { name: "Edith Cowan University", id: "edith-cowan-university" },
+    { name: "Southern Cross University", id: "southern-cross-university" },
+    { name: "University of Newcastle", id: "university-of-newcastle" },
+    { name: "Charles Darwin University", id: "charles-darwin-university" },
+    { name: "University of Canberra", id: "university-of-canberra" },
+    { name: "Victoria University", id: "victoria-university" },
+    { name: "Bond University", id: "bond-university" },
+    { name: "University of Notre Dame Australia", id: "university-of-notre-dame-australia" },
+    { name: "Torrens University Australia", id: "torrens-university-australia" },
+    { name: "SP Jain School of Global Management", id: "sp-jain-school-of-global-management" },
+    { name: "Kaplan Business School", id: "kaplan-business-school" },
+    { name: "Australian Institute of Music", id: "australian-institute-of-music" },
+    { name: "International College of Management, Sydney", id: "international-college-of-management-sydney" },
+    { name: "Endeavour College of Natural Health", id: "endeavour-college-of-natural-health" },
+    { name: "Australian Catholic University", id: "australian-catholic-university" },
+    { name: "Charles Sturt University", id: "charles-sturt-university" },
+    { name: "Central Queensland University", id: "central-queensland-university" },
+    { name: "University of Southern Queensland", id: "university-of-southern-queensland" }
   ];
 
   const scrollToConsultation = () => {
@@ -32,7 +64,7 @@ const AustraliaPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `url(https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop)` 
+            backgroundImage: `ur[](https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop)` 
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -122,36 +154,172 @@ const AustraliaPage = () => {
           </div>
 
           <div className="space-y-12">
-            {/* University of Melbourne */}
-            <div id="university-of-melbourne" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+            {/* The University of Melbourne */}
+            <div id="the-university-of-melbourne" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">University of Melbourne</h3>
+                  <h3 className="text-3xl font-bold text-white mb-4">The University of Melbourne</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #14 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #13 Worldwide (QS 2025)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Melbourne, Victoria</p>
-                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 51,000+ (International: 45%)</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 52,000+ (International: 45%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1853</p>
                   </div>
                   <p className="text-gray-300 mb-6">
-                    University of Melbourne, Australia's top university, offers world-class programs across all disciplines. Known for producing leaders in business, politics, science, and arts.
+                    Australia's leading university, renowned for research and teaching excellence across disciplines.
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-                      <p className="text-white">AUD $45,000-$50,000/year</p>
+                      <p className="text-white">AUD 45,000-50,000/year</p>
                     </div>
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-                      <p className="text-white">IELTS 6.5+, ATAR</p>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
                     </div>
                   </div>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Apply with Expert Guidance
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
                   </Button>
                 </div>
                 <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">University of Melbourne Campus</span>
+                  <span className="text-gray-400">The University of Melbourne Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* The University of Sydney */}
+            <div id="the-university-of-sydney" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">The University of Sydney Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">The University of Sydney</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #18 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 74,000+ (International: 47%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1850</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Australia's oldest university, known for its beautiful campus and research strengths.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 44,000-52,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* The University of New South Wales */}
+            <div id="the-university-of-new-south-wales" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">The University of New South Wales</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #19 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 64,000+ (International: 47%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1949</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Leading university in engineering, business, and law with strong innovation focus.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 45,000-50,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">The University of New South Wales Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* The University of Queensland */}
+            <div id="the-university-of-queensland" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">The University of Queensland Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">The University of Queensland</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #40 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Brisbane, Queensland</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 55,000+ (International: 41%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1909</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Renowned for research in biotechnology and environmental sciences.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 42,000-48,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Monash University */}
+            <div id="monash-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Monash University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #37 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Melbourne, Victoria</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 86,000+ (International: 38%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1958</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Global university with campuses worldwide, strong in engineering and medicine.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 40,000-50,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Monash University Campus</span>
                 </div>
               </div>
             </div>
@@ -160,89 +328,1222 @@ const AustraliaPage = () => {
             <div id="australian-national-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">ANU Campus</span>
+                  <span className="text-gray-400">Australian National University Campus</span>
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Australian National University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #34 Worldwide</p>
-                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Canberra, ACT</p>
-                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 42%)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #30 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Canberra, Australian Capital Territory</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 50%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1946</p>
                   </div>
                   <p className="text-gray-300 mb-6">
-                    Located in Australia's capital, ANU is renowned for research excellence, politics, and international relations. Australia's national university with strong government connections.
+                    National research university with excellence in politics and international relations.
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-                      <p className="text-white">AUD $43,000-$48,000/year</p>
+                      <p className="text-white">AUD 45,000-50,000/year</p>
                     </div>
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-                      <p className="text-white">IELTS 6.5+, ATAR</p>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
                     </div>
                   </div>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Get Admission Assistance
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
                   </Button>
                 </div>
               </div>
             </div>
 
-            {/* University of Sydney */}
-            <div id="university-of-sydney" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+            {/* The University of Western Australia */}
+            <div id="the-university-of-western-australia" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">University of Sydney</h3>
+                  <h3 className="text-3xl font-bold text-white mb-4">The University of Western Australia</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #19 Worldwide</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #77 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Perth, Western Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 32%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1911</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Research-intensive university with strengths in mining and agriculture.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 38,000-45,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">The University of Western Australia Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* The University of Adelaide */}
+            <div id="the-university-of-adelaide" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">The University of Adelaide Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">The University of Adelaide</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #82 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Adelaide, South Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 30,000+ (International: 30%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1874</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Member of Group of Eight, strong in health sciences and wine studies.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 40,000-48,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Technology Sydney */}
+            <div id="university-of-technology-sydney" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Technology Sydney</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #88 Worldwide (QS 2025)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, New South Wales</p>
-                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 70,000+ (International: 47%)</p>
-                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1850</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 45,000+ (International: 27%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1988</p>
                   </div>
                   <p className="text-gray-300 mb-6">
-                    University of Sydney is Australia's oldest university, known for its beautiful campus and excellent graduate employment rates in the heart of Sydney.
+                    Innovative university with focus on technology and design.
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-                      <p className="text-white">AUD $44,000-$52,000/year</p>
+                      <p className="text-white">AUD 35,000-45,000/year</p>
                     </div>
                     <div>
                       <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-                      <p className="text-white">IELTS 6.5+, ATAR</p>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
                     </div>
                   </div>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Start Your Sydney Journey
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
                   </Button>
                 </div>
                 <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">University of Sydney Campus</span>
+                  <span className="text-gray-400">University of Technology Sydney Campus</span>
                 </div>
               </div>
             </div>
 
-            {/* University of Queensland */}
-            <div id="university-of-queensland" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+            {/* Macquarie University */}
+            <div id="macquarie-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">University of Queensland Campus</span>
+                  <span className="text-gray-400">Macquarie University Campus</span>
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">University of Queensland</h3>
+                  <h3 className="text-3xl font-bold text-white mb-4">Macquarie University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #43 Worldwide</p>
-                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Brisbane, Queensland</p>
-                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 54,000+ (International: 38%)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #133 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 40,000+ (International: 27%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1964</p>
                   </div>
                   <p className="text-gray-300 mb-6">
-                    University of Queensland is a leading research university offering excellent programs with strong industry partnerships and beautiful campus in Brisbane.
+                    Known for business and linguistics.
                   </p>
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Apply Now with Us
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 35,000-42,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
                   </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* RMIT University */}
+            <div id="rmit-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">RMIT University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #123 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Melbourne, Victoria</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 87,000+ (International: 26%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1887</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Technology-focused university with strong design and media programs.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 35,000-45,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">RMIT University Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Curtin University */}
+            <div id="curtin-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Curtin University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Curtin University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #174 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Perth, Western Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 50,000+ (International: 25%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1966</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for mining engineering and business.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Griffith University */}
+            <div id="griffith-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Griffith University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #255 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Brisbane, Queensland</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 50,000+ (International: 16%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1971</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Innovative university with strong film and environmental science programs.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Griffith University Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Deakin University */}
+            <div id="deakin-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Deakin University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Deakin University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #197 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Melbourne, Victoria</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 60,000+ (International: 23%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1974</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for sports science and digital innovation.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Wollongong */}
+            <div id="university-of-wollongong" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Wollongong</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #162 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Wollongong, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 35,000+ (International: 30%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1975</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Strong in engineering and health sciences.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Wollongong Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* La Trobe University */}
+            <div id="la-trobe-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">La Trobe University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">La Trobe University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #217 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Melbourne, Victoria</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 38,000+ (International: 26%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for archaeology and nursing.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Swinburne University of Technology */}
+            <div id="swinburne-university-of-technology" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Swinburne University of Technology</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #285 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Melbourne, Victoria</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 45,000+ (International: 30%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1908</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Technology-focused with strong aviation and design programs.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Swinburne University of Technology Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* James Cook University */}
+            <div id="james-cook-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">James Cook University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">James Cook University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #445 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Townsville, Queensland</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 22,000+ (International: 12%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1970</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for marine biology and tropical medicine.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Tasmania */}
+            <div id="university-of-tasmania" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Tasmania</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #293 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Hobart, Tasmania</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 34,000+ (International: 27%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1890</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for oceanography and Antarctic studies.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Tasmania Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Western Sydney University */}
+            <div id="western-sydney-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Western Sydney University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Western Sydney University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #414 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 48,000+ (International: 14%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1989</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Multicultural university with strong community engagement.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 28,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Flinders University */}
+            <div id="flinders-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Flinders University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #336 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Adelaide, South Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 26,000+ (International: 20%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1966</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for medicine and public health.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Flinders University Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Murdoch University */}
+            <div id="murdoch-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Murdoch University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Murdoch University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #431 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Perth, Western Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 23,000+ (International: 47%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1973</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for media studies and veterinary science.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of South Australia */}
+            <div id="university-of-south-australia" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of South Australia</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #326 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Adelaide, South Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 37,000+ (International: 17%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1991</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Practical-focused with strong business and IT programs.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of South Australia Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Edith Cowan University */}
+            <div id="edith-cowan-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Edith Cowan University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Edith Cowan University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #529 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Perth, Western Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 31,000+ (International: 16%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1991</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for nursing and performing arts.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Southern Cross University */}
+            <div id="southern-cross-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Southern Cross University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #576 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Lismore, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 18,000+ (International: 22%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1994</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for tourism and environmental science.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 28,000-32,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Southern Cross University Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Newcastle */}
+            <div id="university-of-newcastle" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Newcastle Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Newcastle</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #250 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Newcastle, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 37,000+ (International: 22%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1965</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Strong in engineering and medicine.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Charles Darwin University */}
+            <div id="charles-darwin-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Charles Darwin University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #621 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Darwin, Northern Territory</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 21,000+ (International: 30%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 2003</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for Indigenous studies and environmental science.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 25,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Charles Darwin University Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Canberra */}
+            <div id="university-of-canberra" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Canberra Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Canberra</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #403 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Canberra, Australian Capital Territory</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 17,000+ (International: 33%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1990</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for sports science and public administration.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Victoria University */}
+            <div id="victoria-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Victoria University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #711 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Melbourne, Victoria</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 28,000+ (International: 21%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1916</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for dual-sector education in business and sport.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 25,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Victoria University Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Bond University */}
+            <div id="bond-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Bond University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Bond University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #587 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Gold Coast, Queensland</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 4,000+ (International: 46%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1989</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Private university with accelerated degrees and small class sizes.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 40,000-50,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Notre Dame Australia */}
+            <div id="university-of-notre-dame-australia" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Notre Dame Australia</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1401+ Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Fremantle, Western Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 12,000+ (International: 5%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1989</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Private Catholic university with strong ethics and health programs.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Notre Dame Australia Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Torrens University Australia */}
+            <div id="torrens-university-australia" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Torrens University Australia Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Torrens University Australia</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: N/A</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Adelaide, South Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 19,000+ (International: 60%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 2012</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Private university with programs in design, business, and health.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 25,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* SP Jain School of Global Management */}
+            <div id="sp-jain-school-of-global-management" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">SP Jain School of Global Management</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: N/A</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 1,000+ (International: 90%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 2004</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Private business school with global campuses, focusing on management.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 30,000-40,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">SP Jain School of Global Management Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Kaplan Business School */}
+            <div id="kaplan-business-school" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Kaplan Business School Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Kaplan Business School</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: N/A</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 2,000+ (International: 80%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 2008</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Private business school offering undergraduate and postgraduate degrees.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 20,000-25,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Australian Institute of Music */}
+            <div id="australian-institute-of-music" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Australian Institute of Music</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: N/A</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 1,500+ (International: 20%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1968</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Private music institute offering degrees in music and entertainment management.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 25,000-30,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Australian Institute of Music Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* International College of Management, Sydney */}
+            <div id="international-college-of-management-sydney" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">International College of Management, Sydney Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">International College of Management, Sydney</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: N/A</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 2,000+ (International: 50%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1996</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Private college specializing in hospitality, event management, and business.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 25,000-30,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Endeavour College of Natural Health */}
+            <div id="endeavour-college-of-natural-health" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Endeavour College of Natural Health</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: N/A</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Multiple campuses, Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 4,000+ (International: 10%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1975</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Private college specializing in natural health and wellness programs.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 20,000-25,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Endeavour College of Natural Health Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Australian Catholic University */}
+            <div id="australian-catholic-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Australian Catholic University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Australian Catholic University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #401 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Multiple campuses, Australia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 34,000+ (International: 11%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1991</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Public university with Catholic ethos, strong in education and health sciences.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 25,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Charles Sturt University */}
+            <div id="charles-sturt-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Charles Sturt University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #801 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Bathurst, New South Wales</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 43,000+ (International: 24%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1989</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Regional university strong in agriculture and veterinary science.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 25,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Charles Sturt University Campus</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Central Queensland University */}
+            <div id="central-queensland-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Central Queensland University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Central Queensland University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #590 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Rockhampton, Queensland</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 35,000+ (International: 35%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1992</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Regional university with strong online programs.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 25,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* University of Southern Queensland */}
+            <div id="university-of-southern-queensland" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">University of Southern Queensland</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #410 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toowoomba, Queensland</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 28,000+ (International: 18%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1992</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Known for astronomy and agricultural science.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">AUD 25,000-35,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High school diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">University of Southern Queensland Campus</span>
                 </div>
               </div>
             </div>
@@ -379,6 +1680,10 @@ const AustraliaPage = () => {
       <CTASection />
       <Footer />
     </div>
+  );
+};
+
+export default AustraliaPage;
   );
 };
 
