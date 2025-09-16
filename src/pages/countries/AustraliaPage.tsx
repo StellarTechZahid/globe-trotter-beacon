@@ -1684,6 +1684,4 @@ const AustraliaPage = () => {
 };
 
 export default AustraliaPage;
-  );
-};
 
