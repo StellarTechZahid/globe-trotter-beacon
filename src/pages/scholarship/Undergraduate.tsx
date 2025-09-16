@@ -177,6 +177,96 @@ const Undergraduate = () => {
       deadline: "March 31, 2025",
       requirements: ["Academic merit", "Leadership potential", "Community service", "English proficiency"],
       coverage: "Monthly allowance + tuition + accommodation + travel"
+    },
+    {
+      title: "Japanese MEXT Scholarships",
+      description: "Government scholarships for international undergraduate students",
+      amount: "¥117,000/month",
+      country: "Japan",
+      university: "University of Tokyo",
+      deadline: "May 31, 2025",
+      requirements: ["Academic excellence", "Japanese language interest", "Cultural adaptability", "Research proposal"],
+      coverage: "Monthly stipend + tuition waiver + travel allowance"
+    },
+    {
+      title: "Korean Government Scholarships",
+      description: "KGSP scholarships for international students",
+      amount: "₩900,000/month",
+      country: "South Korea",
+      university: "Seoul National University",
+      deadline: "March 31, 2025",
+      requirements: ["Academic merit", "Korean language study", "Cultural interest", "Health certificate"],
+      coverage: "Monthly allowance + tuition + Korean language training + medical insurance"
+    },
+    {
+      title: "French Government Scholarships",
+      description: "Eiffel Excellence Scholarship Programme",
+      amount: "€1,181/month",
+      country: "France",
+      university: "Sorbonne University",
+      deadline: "January 8, 2025",
+      requirements: ["Academic excellence", "French language skills", "Study plan", "Motivation letter"],
+      coverage: "Monthly allowance + tuition reduction + cultural activities"
+    },
+    {
+      title: "Brazilian Government Scholarships",
+      description: "Science without Borders Programme",
+      amount: "R$2,400/month",
+      country: "Brazil",
+      university: "University of São Paulo",
+      deadline: "April 15, 2025",
+      requirements: ["STEM field focus", "Portuguese language", "Academic merit", "Research interest"],
+      coverage: "Monthly stipend + tuition + research support + language training"
+    },
+    {
+      title: "South African Scholarships",
+      description: "Mandela Rhodes Foundation Scholarships",
+      amount: "R180,000/year",
+      country: "South Africa",
+      university: "University of Cape Town",
+      deadline: "August 31, 2024",
+      requirements: ["African citizenship", "Leadership potential", "Academic excellence", "Community service"],
+      coverage: "Tuition + accommodation + living expenses + leadership development"
+    },
+    {
+      title: "Indian Government Scholarships",
+      description: "ICCR Scholarships for International Students",
+      amount: "₹25,000/month",
+      country: "India",
+      university: "Delhi University",
+      deadline: "February 28, 2025",
+      requirements: ["International student status", "Academic merit", "Cultural interest", "Medical fitness"],
+      coverage: "Monthly stipend + tuition waiver + accommodation + medical coverage"
+    },
+    {
+      title: "Mexican Government Scholarships",
+      description: "AMEXCID Scholarships Programme",
+      amount: "$8,500/month",
+      country: "Mexico",
+      university: "UNAM",
+      deadline: "March 15, 2025",
+      requirements: ["Latin American citizenship", "Spanish proficiency", "Academic excellence", "Cultural exchange"],
+      coverage: "Monthly allowance + tuition + health insurance + cultural immersion"
+    },
+    {
+      title: "Turkish Government Scholarships",
+      description: "Türkiye Scholarships Programme",
+      amount: "₺2,500/month",
+      country: "Turkey",
+      university: "Boğaziçi University",
+      deadline: "February 20, 2025",
+      requirements: ["International student status", "Academic merit", "Cultural interest", "Language proficiency"],
+      coverage: "Monthly stipend + tuition + accommodation + health insurance + Turkish language course"
+    },
+    {
+      title: "UAE Excellence Scholarships",
+      description: "Mohammed bin Rashid Al Maktoum Foundation",
+      amount: "AED 50,000/year",
+      country: "UAE",
+      university: "American University of Dubai",
+      deadline: "April 30, 2025",
+      requirements: ["Academic excellence", "Leadership skills", "English proficiency", "Innovation potential"],
+      coverage: "Tuition support + living allowance + internship opportunities"
     }
   ];
 
@@ -259,7 +349,10 @@ const Undergraduate = () => {
               <ScholarshipCard 
                 key={index} 
                 scholarship={scholarship} 
-                onApply={scrollToConsultation}
+                onApply={() => {
+                  const slug = scholarship.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                  window.open(`/scholarship-details/${slug}`, '_blank');
+                }}
               />
             ))}
           </div>
