@@ -1686,5 +1686,3 @@ const AustraliaPage = () => {
 export default AustraliaPage;
   );
 };
-
-export default AustraliaPage;
