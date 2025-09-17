@@ -40,6 +40,7 @@ import PartiallyFunded from "./pages/scholarship/PartiallyFunded";
 import NorthAmerica from "./pages/scholarship/NorthAmerica";
 import EuropeanCountries from "./pages/scholarship/EuropeanCountries";
 import CentralAsianCountries from "./pages/scholarship/CentralAsianCountries";
+import ScholarshipDetail from "./pages/scholarship/ScholarshipDetail";
 
 // Country pages
 import UKPage from "./pages/countries/UKPage";
@@ -165,6 +166,7 @@ const App = () => (
             <Route path="/scholarship/north-america" element={<NorthAmerica />} />
             <Route path="/scholarship/european-countries" element={<EuropeanCountries />} />
             <Route path="/scholarship/central-asian-countries" element={<CentralAsianCountries />} />
+            <Route path="/scholarship-details/:slug" element={<ScholarshipDetail />} />
 
             {/* Country Routes */}
             <Route path="/countries/uk" element={<UKPage />} />
