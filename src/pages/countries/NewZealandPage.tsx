@@ -1063,16 +1063,132 @@ const NewZealandPage = () => {
       </section>
 
       {/* Why Study in New Zealand - Detailed Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-orange-500 mb-8 text-center">Why Study in New Zealand</h2>
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              A New Zealand education combines academic excellence with practical skills and a unique lifestyle. Degrees and diplomas from New Zealand institutions are globally recognized, opening doors to international career opportunities.
-            </p>
+<section className="py-20 bg-gray-900">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-4xl font-bold text-orange-500 mb-8 text-center">Why Study in New Zealand</h2>
+      <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+        New Zealand degrees provide you with globally recognized qualifications and practical skills that prepare you for
+        real-world experiences. Wherever you go in the world, a New Zealand education opens the doors for your career
+        and future opportunities.
+      </p>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-bold text-orange-500 mb-3">• Globally Ranked Universities:</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  All eight New Zealand universities are ranked in the top 3% globally (QS 2025), offering world-class programs in diverse fields like business, science, and arts.
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-xl font-bold text-orange-500 mb-3">• World-ranked universities:</h3>
+          <p className="text-gray-300 leading-relaxed">
+            All 8 universities in New Zealand are ranked among the top universities worldwide. They are known for their
+            research-led teaching, student support, and innovative programs that attract thousands of international students.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-orange-500 mb-3">• Education quality:</h3>
+          <p className="text-gray-300 leading-relaxed">
+            New Zealand follows a British-based education system with a focus on practical learning and research. Students
+            are encouraged to actively participate, apply skills in real-life scenarios, and think critically — ensuring long-term
+            benefits in both career and life.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-orange-500 mb-3">• Safe and welcoming country:</h3>
+          <p className="text-gray-300 leading-relaxed">
+            New Zealand is consistently ranked as one of the safest countries in the world. Its diverse and inclusive culture is
+            reflected in everyday life, from friendly communities to its rich heritage, arts, food, and natural beauty.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-orange-500 mb-3">• Affordable education:</h3>
+          <p className="text-gray-300 leading-relaxed">
+            New Zealand offers affordable, high-quality education with excellent scholarship opportunities for international
+            students. Tuition fees are reasonable compared to other popular destinations, while academic standards remain
+            world-class.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Additional Sections */}
+<section className="py-20">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto space-y-12">
+      {/* Tuition Fees */}
+      <div>
+        <h2 className="text-3xl font-bold text-orange-500 mb-6">Average Tuition Fees in New Zealand for International Students</h2>
+        <p className="text-gray-300 leading-relaxed">
+          Tuition fees vary depending on the university and course. On average, undergraduate programs in New Zealand
+          cost NZ$22,000–NZ$32,000/year, while postgraduate programs range from NZ$26,000–NZ$37,000/year. Certain
+          specialized courses like medicine or MBA may be higher.
+        </p>
+      </div>
+
+      {/* Working Hours */}
+      <div>
+        <h2 className="text-3xl font-bold text-orange-500 mb-6">Working Hours Allowed in New Zealand (Student Visa)</h2>
+        <p className="text-gray-300 leading-relaxed mb-4">
+          International students in New Zealand are allowed to work up to 20 hours/week during semesters and full-time
+          during scheduled holidays. Exceeding the permitted hours can affect your visa status.
+        </p>
+        <p className="text-gray-300 leading-relaxed">
+          Average wage rates in New Zealand for international students are around NZ$21–NZ$25/hour.
+        </p>
+      </div>
+
+      {/* Living Cost */}
+      <div>
+        <h2 className="text-3xl font-bold text-orange-500 mb-6">Living Cost in New Zealand for International Students</h2>
+        <p className="text-gray-300 leading-relaxed mb-4">
+          Living costs in New Zealand depend on the city. Auckland and Wellington are more expensive compared to smaller
+          cities like Hamilton or Christchurch.
+        </p>
+        <ul className="text-gray-300 space-y-2 mb-4">
+          <li>• NZ$1,200–1,600/month in Auckland/Wellington</li>
+          <li>• NZ$1,000–1,400/month in other cities</li>
+        </ul>
+        <p className="text-gray-300 leading-relaxed">
+          Students may be required to show proof of financial support or sponsorship when applying for a student visa at the
+          New Zealand consulate.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Study Abroad Process */}
+<section className="py-20 bg-gray-900">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-orange-500 mb-6">Study in New Zealand from Pakistan - Step by Step Process</h2>
+      <p className="text-xl text-gray-300">Our proven process for studying abroad in New Zealand with Abroad Academics - Pakistan's most trusted study abroad consultants since 2023</p>
+    </div>
+
+    <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      {[
+        { step: "1", title: "Free Consultation", desc: "Get expert guidance from top study abroad consultants in Pakistan established in 2023" },
+        { step: "2", title: "University Selection", desc: "Choose the best New Zealand universities based on your profile and goals with our expert team" },
+        { step: "3", title: "Application Support", desc: "Complete application assistance with SOP, LOR, and documentation from experienced consultants" },
+        { step: "4", title: "Visa Assistance", desc: "New Zealand student visa guidance and interview preparation for Pakistani students by Abroad Academics" }
+      ].map((item, index) => (
+        <div key={index} className="text-center">
+          <div className="bg-orange-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span className="text-black font-bold text-2xl">{item.step}</span>
+          </div>
+          <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+          <p className="text-gray-300">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<CTASection />
+<Footer />
+</div>
+);
+};
+
+export default NewZealandPage;
