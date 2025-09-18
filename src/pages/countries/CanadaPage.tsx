@@ -82,7 +82,12 @@ const CanadaPage = () => {
   ];
 
   const scrollToConsultation = () => {
-    window.location.href = '/#consultation-form';
+    const element = document.getElementById('consultation-form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/#consultation-form';
+    }
   };
 
   return (
@@ -94,7 +99,7 @@ const CanadaPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `url[](https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1920&h=1080&fit=crop)` 
+            backgroundImage: `ur[](https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1920&h=1080&fit=crop)` 
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -190,7 +195,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Toronto</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #21 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #29 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 97,000+ (International: 25%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1827</p>
@@ -227,7 +232,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of British Columbia</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #34 Worldwide</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #40 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Vancouver, British Columbia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 68,000+ (International: 30%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1908</p>
@@ -258,7 +263,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">McGill University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #30 Worldwide</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #27 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Montreal, Quebec</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 40,000+ (International: 31%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1821</p>
@@ -295,7 +300,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Alberta</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #111 Worldwide</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #94 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Edmonton, Alberta</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 40,000+ (International: 18%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1908</p>
@@ -326,7 +331,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">McMaster University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #176 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #173 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Hamilton, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 33,000+ (International: 17%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1887</p>
@@ -363,7 +368,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Waterloo</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #115 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #119 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Waterloo, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 41,000+ (International: 22%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1957</p>
@@ -394,7 +399,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Western University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #222 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #151 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: London, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 31,000+ (International: 20%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1878</p>
@@ -431,7 +436,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Queen's University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #193 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #191 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Kingston, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 15%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1841</p>
@@ -462,7 +467,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Ottawa</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #177 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #219 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Ottawa, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 42,000+ (International: 17%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1848</p>
@@ -499,7 +504,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Calgary</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #182 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #211 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Calgary, Alberta</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 35,000+ (International: 20%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1966</p>
@@ -530,7 +535,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Simon Fraser University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #319 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #308 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Burnaby, British Columbia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 35,000+ (International: 20%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1965</p>
@@ -567,7 +572,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Victoria</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #349 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #358 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Victoria, British Columbia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 22,000+ (International: 21%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1963</p>
@@ -598,7 +603,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">York University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #362 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #333 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 55,000+ (International: 20%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1959</p>
@@ -635,7 +640,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Manitoba</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #351 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #643 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Winnipeg, Manitoba</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 30,000+ (International: 18%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1877</p>
@@ -666,7 +671,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Saskatchewan</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #345 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #378 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Saskatoon, Saskatchewan</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 17%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1907</p>
@@ -703,7 +708,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Windsor</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #641 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #546 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Windsor, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 16,000+ (International: 23%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1963</p>
@@ -734,7 +739,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Guelph</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #486 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #504 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Guelph, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 30,000+ (International: 12%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1964</p>
@@ -771,7 +776,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of New Brunswick</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #681 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #622 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Fredericton, New Brunswick</p>
                   <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 10,000+ (International: 15%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1785</p>
@@ -802,7 +807,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Dalhousie University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #275 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #283 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Halifax, Nova Scotia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 20,000+ (International: 24%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1818</p>
@@ -839,7 +844,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Prince Edward Island</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Charlottetown, Prince Edward Island</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 5,000+ (International: 12%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1969</p>
@@ -870,7 +875,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Memorial University of Newfoundland</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #641 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #660 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: St. John's, Newfoundland and Labrador</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 19,000+ (International: 20%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1925</p>
@@ -907,7 +912,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Concordia University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #387 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #465 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Montreal, Quebec</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 46,000+ (International: 30%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1974</p>
@@ -938,7 +943,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Carleton University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #671 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #781-790 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Ottawa, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 31,000+ (International: 21%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1942</p>
@@ -975,7 +980,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Lethbridge</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Lethbridge, Alberta</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 9,000+ (International: 8%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
@@ -1006,7 +1011,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Regina</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1001 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1001 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Regina, Saskatchewan</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 16,000+ (International: 16%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1974</p>
@@ -1043,7 +1048,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Brock University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: St. Catharines, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 19,000+ (International: 10%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1964</p>
@@ -1074,7 +1079,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Lakehead University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Thunder Bay, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 8,000+ (International: 15%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1965</p>
@@ -1111,7 +1116,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Northern British Columbia</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Prince George, British Columbia</p>
                   <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 4,000+ (International: 12%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1990</p>
@@ -1142,7 +1147,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Winnipeg</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Winnipeg, Manitoba</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 10,000+ (International: 15%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
@@ -1179,7 +1184,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Trent University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Peterborough, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 11,000+ (International: 10%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1964</p>
@@ -1210,7 +1215,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Wilfrid Laurier University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Waterloo, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 19,000+ (International: 10%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1911</p>
@@ -1247,7 +1252,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Toronto Metropolitan University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #801 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #801 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 45,000+ (International: 8%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1948</p>
@@ -1278,7 +1283,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">OCAD University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #101 in Art & Design (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #101 in Art & Design (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 4,000+ (International: 25%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1876</p>
@@ -1315,7 +1320,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of Ontario Institute of Technology</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Oshawa, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 10,000+ (International: 10%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 2002</p>
@@ -1346,7 +1351,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Vancouver Island University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Nanaimo, British Columbia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 16,000+ (International: 15%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1969</p>
@@ -1383,7 +1388,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Thompson Rivers University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Kamloops, British Columbia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 14%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1970</p>
@@ -1414,7 +1419,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Mount Royal University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Calgary, Alberta</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 14,000+ (International: 8%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1910</p>
@@ -1451,7 +1456,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">University of the Fraser Valley</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Abbotsford, British Columbia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 15,000+ (International: 15%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1974</p>
@@ -1482,7 +1487,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Kwantlen Polytechnic University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Surrey, British Columbia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 20,000+ (International: 10%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1981</p>
@@ -1519,7 +1524,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Mount Allison University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sackville, New Brunswick</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 2,000+ (International: 12%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1839</p>
@@ -1550,7 +1555,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Acadia University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Wolfville, Nova Scotia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 4,000+ (International: 10%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1838</p>
@@ -1587,7 +1592,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">St. Francis Xavier University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Antigonish, Nova Scotia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 5,000+ (International: 10%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1853</p>
@@ -1618,7 +1623,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Mount Saint Vincent University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Halifax, Nova Scotia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 4,000+ (International: 8%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1873</p>
@@ -1655,7 +1660,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Saint Mary's University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Halifax, Nova Scotia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 7,000+ (International: 35%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1802</p>
@@ -1686,7 +1691,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Cape Breton University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sydney, Nova Scotia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 5,500+ (International: 50%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1974</p>
@@ -1822,7 +1827,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Nipissing University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: North Bay, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 5,000+ (International: 5%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1992</p>
@@ -1859,7 +1864,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Algoma University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sault Ste. Marie, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 1,600+ (International: 45%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1965</p>
@@ -1890,7 +1895,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Laurentian University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Sudbury, Ontario</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 9,000+ (International: 9%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1960</p>
@@ -1927,7 +1932,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Royal Roads University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Victoria, British Columbia</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 5,000+ (International: 15%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1995</p>
@@ -1958,7 +1963,7 @@ const CanadaPage = () => {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-4">Athabasca University</h3>
                   <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2025)</p>
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1201 Worldwide (QS 2026)</p>
                     <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Athabasca, Alberta</p>
                     <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 40,000+ (International: 5%)</p>
                     <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1970</p>
