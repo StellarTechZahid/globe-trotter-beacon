@@ -2089,514 +2089,514 @@ const CanadaPage = () => {
             </div>
 
             {/* Humber College */}
-<div id="humber-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Humber College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Humber College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top 5 Colleges in Canada</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 43,000+ (International: 20%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Humber College is known for its polytechnic approach, offering hands-on learning in creative, business, health, and technology fields with strong co-op and industry partnerships.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $16,000-$18,000/year</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.5+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            <div id="humber-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Humber College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Humber College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top 5 Colleges in Canada</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 43,000+ (International: 20%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Humber College is known for its polytechnic approach, offering hands-on learning in creative, business, health, and technology fields with strong co-op and industry partnerships.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $16,000-$18,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Sheridan College */}
-<div id="sheridan-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Sheridan College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Sheridan College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1 Research College in Canada</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Oakville, Ontario</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 25%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Sheridan College excels in animation, film, design, and applied arts, with world-renowned programs and strong industry ties in the creative sector.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $15,000-$20,000/year</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.5+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Sheridan College */}
+            <div id="sheridan-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Sheridan College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Sheridan College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1 Research College in Canada</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Oakville, Ontario</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 25%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Sheridan College excels in animation, film, design, and applied arts, with world-renowned programs and strong industry ties in the creative sector.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $15,000-$20,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Fanshawe College */}
-<div id="fanshawe-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Fanshawe College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Fanshawe College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top College for Co-op Programs</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: London, Ontario</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 43,000+ (International: 15%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Fanshawe College provides comprehensive programs in aviation, health, business, and technology, emphasizing practical training and regional industry partnerships.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $14,000-$17,000/year</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.0+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Fanshawe College */}
+            <div id="fanshawe-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Fanshawe College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Fanshawe College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top College for Co-op Programs</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: London, Ontario</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 43,000+ (International: 15%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Fanshawe College provides comprehensive programs in aviation, health, business, and technology, emphasizing practical training and regional industry partnerships.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $14,000-$17,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Conestoga College */}
-<div id="conestoga-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Conestoga College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Conestoga College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1 College in Ontario for Graduate Employment</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Kitchener, Ontario</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 24,000+ (International: 50%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Conestoga College specializes in engineering, IT, health sciences, and business, with a focus on innovation, entrepreneurship, and high graduate employment rates.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $13,000-$16,000/year</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.5+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Conestoga College */}
+            <div id="conestoga-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Conestoga College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Conestoga College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #1 College in Ontario for Graduate Employment</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Kitchener, Ontario</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 24,000+ (International: 50%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Conestoga College specializes in engineering, IT, health sciences, and business, with a focus on innovation, entrepreneurship, and high graduate employment rates.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $13,000-$16,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Centennial College */}
-<div id="centennial-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Centennial College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Centennial College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Leading Polytechnic College</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 28,000+ (International: 30%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1966</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Centennial College offers diverse programs in transportation, community services, engineering technology, and liberal arts, with a strong emphasis on experiential learning.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $15,000-$18,000/year</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.0+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Centennial College */}
+            <div id="centennial-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Centennial College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Centennial College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Leading Polytechnic College</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 28,000+ (International: 30%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1966</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Centennial College offers diverse programs in transportation, community services, engineering technology, and liberal arts, with a strong emphasis on experiential learning.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $15,000-$18,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Niagara College */}
-<div id="niagara-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Niagara College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Niagara College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top for Tourism and Hospitality</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Niagara-on-the-Lake, Ontario</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 12,000+ (International: 20%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Niagara College is renowned for programs in culinary arts, tourism, viticulture, and environmental technology, leveraging its unique location near Niagara Falls.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $13,000-$16,000/year</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.0+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Niagara College */}
+            <div id="niagara-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Niagara College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Niagara College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top for Tourism and Hospitality</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Niagara-on-the-Lake, Ontario</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 12,000+ (International: 20%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1967</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Niagara College is renowned for programs in culinary arts, tourism, viticulture, and environmental technology, leveraging its unique location near Niagara Falls.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $13,000-$16,000/year</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Douglas College */}
-<div id="douglas-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Douglas College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Douglas College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Leading College in BC</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: New Westminster, British Columbia</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 10%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1970</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Douglas College offers university-transfer programs, career-focused diplomas, and degrees in health, business, arts, and sciences, with a supportive learning environment.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $6,000-$8,000/year (Domestic)</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.5+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Douglas College */}
+            <div id="douglas-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Douglas College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Douglas College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Leading College in BC</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: New Westminster, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 25,000+ (International: 10%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1970</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Douglas College offers university-transfer programs, career-focused diplomas, and degrees in health, business, arts, and sciences, with a supportive learning environment.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $6,000-$8,000/year (Domestic)</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Langara College */}
-<div id="langara-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Langara College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Langara College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top Transfer College</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Vancouver, British Columbia</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 23,000+ (International: 15%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1970</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Langara College provides arts and science transfer programs, continuing studies, and career training in a vibrant urban setting with pathways to major universities.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $6,500-$9,000/year (Domestic)</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.5+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Langara College */}
+            <div id="langara-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Langara College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Langara College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top Transfer College</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Vancouver, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 23,000+ (International: 15%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1970</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Langara College provides arts and science transfer programs, continuing studies, and career training in a vibrant urban setting with pathways to major universities.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $6,500-$9,000/year (Domestic)</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Capilano University */}
-<div id="capilano-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Capilano University Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Capilano University</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top University in BC</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: North Vancouver, British Columbia</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 7,500+ (International: 20%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1973</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Capilano University offers baccalaureate degrees, diplomas, and certificates in arts, sciences, business, and tourism, emphasizing small class sizes and outdoor learning.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $7,000-$10,000/year (Domestic)</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.5+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Capilano University */}
+            <div id="capilano-university" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Capilano University Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Capilano University</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top University in BC</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: North Vancouver, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 7,500+ (International: 20%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1973</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Capilano University offers baccalaureate degrees, diplomas, and certificates in arts, sciences, business, and tourism, emphasizing small class sizes and outdoor learning.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $7,000-$10,000/year (Domestic)</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Camosun College */}
-<div id="camosun-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Camosun College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Camosun College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Strong in Trades and Health</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Victoria, British Columbia</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 19,000+ (International: 10%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1971</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Camosun College delivers university-transfer, vocational, and continuing education programs in a scenic coastal setting, with strengths in health and applied technologies.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $5,500-$8,000/year (Domestic)</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.5+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Camosun College */}
+            <div id="camosun-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Camosun College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Camosun College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Strong in Trades and Health</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Victoria, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 19,000+ (International: 10%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1971</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Camosun College delivers university-transfer, vocational, and continuing education programs in a scenic coastal setting, with strengths in health and applied technologies.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $5,500-$8,000/year (Domestic)</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Selkirk College */}
-<div id="selkirk-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Selkirk College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Selkirk College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Excellence in Arts and Environment</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Castlegar, British Columbia</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 5,500+ (International: 5%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1966</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Selkirk College focuses on fine arts, environmental studies, health, and trades in the Kootenay region, offering personalized education in a natural setting.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $5,000-$7,500/year (Domestic)</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.0+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Selkirk College */}
+            <div id="selkirk-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Selkirk College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Selkirk College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Excellence in Arts and Environment</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Castlegar, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 5,500+ (International: 5%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1966</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Selkirk College focuses on fine arts, environmental studies, health, and trades in the Kootenay region, offering personalized education in a natural setting.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $5,000-$7,500/year (Domestic)</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* North Island College */}
-<div id="north-island-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">North Island College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">North Island College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Regional Excellence</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Courtenay, British Columbia</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 3,000+ (International: 10%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1975</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        North Island College serves Vancouver Island with transfer programs in arts, sciences, health, and trades, emphasizing community and coastal opportunities.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $4,500-$7,000/year (Domestic)</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.0+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* North Island College */}
+            <div id="north-island-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">North Island College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">North Island College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Regional Excellence</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Courtenay, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 3,000+ (International: 10%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1975</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    North Island College serves Vancouver Island with transfer programs in arts, sciences, health, and trades, emphasizing community and coastal opportunities.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $4,500-$7,000/year (Domestic)</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* College of the Rockies */}
-<div id="college-of-the-rockies" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">College of the Rockies Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">College of the Rockies</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Strong Community College</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Cranbrook, British Columbia</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 2,500+ (International: 5%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1972</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        College of the Rockies offers university-transfer, vocational, and adult education programs in the East Kootenays, with a focus on mining, tourism, and health.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $4,000-$6,500/year (Domestic)</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.0+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* College of the Rockies */}
+            <div id="college-of-the-rockies" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">College of the Rockies Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">College of the Rockies</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Strong Community College</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Cranbrook, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 2,500+ (International: 5%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1972</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    College of the Rockies offers university-transfer, vocational, and adult education programs in the East Kootenays, with a focus on mining, tourism, and health.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $4,000-$6,500/year (Domestic)</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Okanagan College */}
-<div id="okanagan-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Okanagan College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Okanagan College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top for Applied Degrees</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Kelowna, British Columbia</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 9,000+ (International: 15%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1963</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Okanagan College provides baccalaureate degrees, diplomas, and certificates in business, health, arts, and wine-related programs in the scenic Okanagan Valley.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $5,500-$8,500/year (Domestic)</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.5+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Okanagan College */}
+            <div id="okanagan-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Okanagan College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Okanagan College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Top for Applied Degrees</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Kelowna, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 9,000+ (International: 15%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1963</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Okanagan College provides baccalaureate degrees, diplomas, and certificates in business, health, arts, and wine-related programs in the scenic Okanagan Valley.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $5,500-$8,500/year (Domestic)</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.5+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
-{/* Northern Lights College */}
-<div id="northern-lights-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-  <div className="grid md:grid-cols-2 gap-8 items-center">
-    <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-      <span className="text-gray-400">Northern Lights College Campus</span>
-    </div>
-    <div>
-      <h3 className="text-3xl font-bold text-white mb-4">Northern Lights College</h3>
-      <div className="space-y-3 text-gray-300 mb-6">
-        <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Northern BC Leader</p>
-        <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Dawson Creek, British Columbia</p>
-        <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 3,500+ (International: 5%)</p>
-        <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1975</p>
-      </div>
-      <p className="text-gray-300 mb-6">
-        Northern Lights College offers programs in trades, health, business, and university studies tailored to northern communities, with flexible delivery options.
-      </p>
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-          <p className="text-white">CAD $4,000-$6,000/year (Domestic)</p>
-        </div>
-        <div>
-          <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-          <p className="text-white">IELTS 6.0+, High School Diploma</p>
-        </div>
-      </div>
-      <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-        Get Free Consultation
-      </Button>
-    </div>
-  </div>
-</div>
+            {/* Northern Lights College */}
+            <div id="northern-lights-college" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-gray-400">Northern Lights College Campus</span>
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Northern Lights College</h3>
+                  <div className="space-y-3 text-gray-300 mb-6">
+                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: Northern BC Leader</p>
+                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Dawson Creek, British Columbia</p>
+                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 3,500+ (International: 5%)</p>
+                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1975</p>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Northern Lights College offers programs in trades, health, business, and university studies tailored to northern communities, with flexible delivery options.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
+                      <p className="text-white">CAD $4,000-$6,000/year (Domestic)</p>
+                    </div>
+                    <div>
+                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
+                      <p className="text-white">IELTS 6.0+, High School Diploma</p>
+                    </div>
+                  </div>
+                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </div>
+              </div>
+            </div>
 
       {/* Why Study in Canada - Detailed Section */}
       <section className="py-20 bg-gray-900">
