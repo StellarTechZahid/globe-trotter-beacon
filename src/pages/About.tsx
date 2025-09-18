@@ -11,10 +11,10 @@ const About = () => {
   };
 
   const stats = [
-    { number: "15+", label: "Years of Experience", description: "Helping students achieve their dreams" },
-    { number: "50,000+", label: "Students Placed", description: "Successfully placed in top universities" },
-    { number: "180+", label: "Partner Universities", description: "Across 15+ countries worldwide" },
-    { number: "95%", label: "Visa Success Rate", description: "Highest in the industry" }
+    { number: "3+", label: "Years of Experience", description: "Helping students achieve their dreams" },
+    { number: "500+", label: "Students Placed", description: "Successfully placed in top universities" },
+    { number: "20+", label: "Partner Universities", description: "Across 15+ countries worldwide" },
+    { number: "90%", label: "Visa Success Rate", description: "Highest in the industry" }
   ];
 
   const values = [
@@ -42,25 +42,25 @@ const About = () => {
 
   const team = [
     {
-      name: "Dr. Sarah Johnson",
+      name: "Ahmad Zahid",
       position: "Founder & CEO",
-      education: "PhD Education Policy, Harvard University",
-      experience: "20+ years in international education",
+      education: "Bachelors in Education Policy",
+      experience: "2+ years in international education",
       description: "Visionary leader with extensive experience in global education policies and student mobility."
     },
     {
-      name: "Michael Chen",
-      position: "Director of Operations",
-      education: "MBA, Stanford Graduate School",
-      experience: "15+ years in education consulting",
-      description: "Expert in operational excellence and process optimization for student services."
+      name: "Under Recuritement",
+      position: "N/A",
+      education: "N/A",
+      experience: "N/A",
+      description: "N/A"
     },
     {
-      name: "Dr. Priya Sharma",
-      position: "Head of Academic Counseling",
-      education: "PhD Psychology, Oxford University",
-      experience: "12+ years in academic counseling",
-      description: "Specialist in student psychology and academic pathway planning."
+      name: "Under Recuritement",
+      position: "N/A",
+      education: "N/A",
+      experience: "N/A",
+      description: "N/A"
     }
   ];
 
@@ -113,15 +113,15 @@ const About = () => {
             
             <div className="space-y-8 text-gray-300 leading-relaxed">
               <p className="text-lg">
-                Founded in 2008, Abroad Academics began as a small consultancy with a big dream: to make quality international education accessible to students from all backgrounds. What started as a passionate endeavor by a group of education enthusiasts has grown into one of the most trusted names in international education consulting.
+                Founded in 2023, Abroad Academics began as a small consultancy with a big dream: to make quality international education accessible to students from all backgrounds. What started as a passionate endeavor by a group of education enthusiasts has grown into one of the most trusted names in international education consulting.
               </p>
               
               <p className="text-lg">
-                Over the years, we have helped more than 50,000 students achieve their dreams of studying abroad. Our success stories span across prestigious universities in the UK, USA, Canada, Australia, Germany, and many other countries. We take pride in our personalized approach, ensuring that each student receives guidance tailored to their unique aspirations and circumstances.
+                Over the years, we have helped more than 500 students achieve their dreams of studying abroad. Our success stories span across prestigious universities in the UK, USA, Canada, Australia, Germany, and many other countries. We take pride in our personalized approach, ensuring that each student receives guidance tailored to their unique aspirations and circumstances.
               </p>
               
               <p className="text-lg">
-                Today, Abroad Academics stands as a beacon of excellence in international education consulting, with partnerships with over 180 universities worldwide and a track record that speaks for itself. Our commitment to student success remains unwavering as we continue to evolve and adapt to the changing landscape of global education.
+                Today, Abroad Academics stands as a beacon of excellence in international education consulting, with partnerships with over 20+ universities worldwide and a track record that speaks for itself. Our commitment to student success remains unwavering as we continue to evolve and adapt to the changing landscape of global education.
               </p>
             </div>
           </div>
