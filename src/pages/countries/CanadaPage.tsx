@@ -94,7 +94,7 @@ const CanadaPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `ur[](https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1920&h=1080&fit=crop)` 
+            backgroundImage: `url[](https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1920&h=1080&fit=crop)` 
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-60" />
