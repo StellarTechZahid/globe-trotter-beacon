@@ -58,6 +58,22 @@ const About = () => {
       experience: '2+ years in international education',
       description: 'Visionary leader with extensive experience in global education policies and student mobility.',
     },
+    {
+      id: 'under-recuritement',
+      name: 'Under Recuritement',
+      position: 'Director of Operations',
+      education: 'N/A',
+      experience: 'N/A',
+      description: 'N/A',
+    },
+    {
+      id: 'under-recuritement',
+      name: 'Under Recuritement',
+      position: 'Scholarship Advisory Team',
+      education: 'N/A',
+      experience: 'N/A',
+      description: 'N/A',
+    },
   ];
 
   const achievements = [
