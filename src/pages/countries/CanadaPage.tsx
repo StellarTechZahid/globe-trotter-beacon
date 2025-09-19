@@ -99,7 +99,7 @@ const CanadaPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: `ur[](https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1920&h=1080&fit=crop)` 
+            backgroundImage: `url[](https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1920&h=1080&fit=crop)` 
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-60" />
@@ -180,48 +180,51 @@ const CanadaPage = () => {
       {/* Quick Navigation Section */}
       <QuickNavigation links={quickLinks} />
 
-      {/* Universities Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-orange-500 mb-4">Top Canadian Universities for International Students</h2>
-            <p className="text-gray-300">Explore Canada's most prestigious universities with our expert guidance</p>
-          </div>
+      {/* Why Choose Canada Section */}
+<section className="py-20 bg-gray-900">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-orange-500 mb-4">Why Choose Canada for International Education?</h2>
+      <p className="text-xl text-gray-300">Discover why thousands of international students choose Canada every year for their higher studies</p>
+    </div>
+    
+    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="text-center bg-black rounded-lg p-8 border border-orange-500">
+        <div className="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+          <GraduationCap className="h-8 w-8 text-black" />
+        </div>
+        <h3 className="text-2xl font-bold text-white mb-4">Top-Quality Universities</h3>
+        <p className="text-gray-300">
+          Home to world-renowned institutions like University of Toronto, McGill, and UBC, offering
+          cutting-edge programs and global research opportunities.
+        </p>
+      </div>
+      
+      <div className="text-center bg-black rounded-lg p-8 border border-orange-500">
+        <div className="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Globe className="h-8 w-8 text-black" />
+        </div>
+        <h3 className="text-2xl font-bold text-white mb-4">Affordable & Supportive</h3>
+        <p className="text-gray-300">
+          Benefit from reasonable tuition fees, numerous scholarships, and a welcoming support system
+          for international students across Canada.
+        </p>
+      </div>
+      
+      <div className="text-center bg-black rounded-lg p-8 border border-orange-500">
+        <div className="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Briefcase className="h-8 w-8 text-black" />
+        </div>
+        <h3 className="text-2xl font-bold text-white mb-4">Work & Career Opportunities</h3>
+        <p className="text-gray-300">
+          Enjoy post-graduation work permits up to 3 years and excellent job opportunities in one of
+          the world’s strongest and most diverse economies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div className="space-y-12">
-            {/* University of Toronto */}
-            <div id="university-of-toronto" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">University of Toronto</h3>
-                  <div className="space-y-3 text-gray-300 mb-6">
-                    <p className="flex items-center"><Award className="h-5 w-5 text-orange-500 mr-2" />Ranking: #29 Worldwide (QS 2026)</p>
-                    <p className="flex items-center"><MapPin className="h-5 w-5 text-orange-500 mr-2" />Location: Toronto, Ontario</p>
-                    <p className="flex items-center"><Users className="h-5 w-5 text-orange-500 mr-2" />Students: 97,000+ (International: 25%)</p>
-                    <p className="flex items-center"><Clock className="h-5 w-5 text-orange-500 mr-2" />Established: 1827</p>
-                  </div>
-                  <p className="text-gray-300 mb-6">
-                    University of Toronto, Canada's top university, offers world-class programs across all disciplines. Known for producing leaders in business, politics, science, and technology.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div>
-                      <h4 className="text-orange-500 font-semibold mb-2">Tuition Fee</h4>
-                      <p className="text-white">CAD $58,000-$65,000/year</p>
-                    </div>
-                    <div>
-                      <h4 className="text-orange-500 font-semibold mb-2">Requirements</h4>
-                      <p className="text-white">IELTS 6.5+, SAT/ACT</p>
-                    </div>
-                  </div>
-                  <Button onClick={scrollToConsultation} className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Get Free Consultation
-                  </Button>
-                </div>
-                <div className="h-64 bg-gray-700 rounded-lg flex items-center justify-center">
-                  <span className="text-gray-400">University of Toronto Campus</span>
-                </div>
-              </div>
-            </div>
 
             {/* University of British Columbia */}
             <div id="university-of-british-columbia" className="bg-gray-900 rounded-lg p-8 border border-orange-500">
