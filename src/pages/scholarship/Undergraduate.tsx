@@ -267,6 +267,76 @@ const Undergraduate = () => {
       deadline: "April 30, 2025",
       requirements: ["Academic excellence", "Leadership skills", "English proficiency", "Innovation potential"],
       coverage: "Tuition support + living allowance + internship opportunities"
+    },
+    {
+      title: "GKS Global Korea Scholarship",
+      description: "Korean government scholarship for outstanding international undergraduate students",
+      amount: "₩900,000/month + tuition",
+      country: "South Korea",
+      university: "Seoul National University",
+      deadline: "March 31, 2025",
+      requirements: ["Academic excellence", "Korean language interest", "Cultural adaptability", "Health certificate"],
+      coverage: "Full tuition + monthly stipend + Korean language training + medical insurance + airfare"
+    },
+    {
+      title: "Bolashak Government Scholarship",
+      description: "Kazakhstan government scholarship for international education development",
+      amount: "Full funding",
+      country: "Kazakhstan",
+      university: "Nazarbayev University",
+      deadline: "February 15, 2025",
+      requirements: ["Kazakhstan citizenship", "Academic merit", "English proficiency", "Return commitment"],
+      coverage: "Full tuition + living expenses + travel + health insurance + pre-departure training"
+    },
+    {
+      title: "MBZUAI Scholarship",
+      description: "Muhammad bin Zayed University of Artificial Intelligence full scholarship program",
+      amount: "Full funding",
+      country: "UAE",
+      university: "MBZUAI Abu Dhabi",
+      deadline: "January 31, 2025",
+      requirements: ["STEM background", "AI/CS interest", "Academic excellence", "Research potential"],
+      coverage: "Full tuition + monthly stipend + accommodation + health insurance + laptop"
+    },
+    {
+      title: "Regional Scholarships Italy",
+      description: "Italian government regional scholarships for international students",
+      amount: "€11,059/year",
+      country: "Italy",
+      university: "University of Bologna",
+      deadline: "May 31, 2025",
+      requirements: ["Academic merit", "Income requirements", "Italian language proficiency", "EU residency or special status"],
+      coverage: "Tuition waiver + accommodation + meal allowance + health coverage"
+    },
+    {
+      title: "Study in Saudi Arabia Scholarship",
+      description: "Ministry of Education Saudi Arabia scholarship for international students",
+      amount: "SAR 3,000/month",
+      country: "Saudi Arabia",
+      university: "King Abdulaziz University",
+      deadline: "April 15, 2025",
+      requirements: ["Academic excellence", "Arabic language study", "Islamic studies interest", "Cultural adaptability"],
+      coverage: "Monthly stipend + tuition waiver + accommodation + Arabic language course + medical care"
+    },
+    {
+      title: "Universitas Sebelas Maret Scholarship",
+      description: "Indonesian government scholarship for international undergraduate students",
+      amount: "IDR 2,500,000/month",
+      country: "Indonesia",
+      university: "Universitas Sebelas Maret",
+      deadline: "March 15, 2025",
+      requirements: ["Academic merit", "Bahasa Indonesia interest", "Cultural exchange commitment", "Health certificate"],
+      coverage: "Monthly allowance + tuition waiver + accommodation + Indonesian language course + cultural programs"
+    },
+    {
+      title: "Al Bukhari University Scholarship",
+      description: "Malaysian Islamic university scholarship for international students",
+      amount: "RM 1,500/month",
+      country: "Malaysia",
+      university: "Al Bukhari International University",
+      deadline: "June 30, 2025",
+      requirements: ["Islamic studies background", "Academic excellence", "English/Malay proficiency", "Character references"],
+      coverage: "Tuition reduction + monthly allowance + accommodation assistance + Islamic studies support"
     }
   ];
 
