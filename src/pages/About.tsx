@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Award, Users, Globe, Target, CheckCircle, Star, ArrowRight, MessageCircle } from 'lucide-react';
@@ -70,7 +70,7 @@ const About = () => {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>About Abroad Academics | International Education Consultants</title>
         <meta
           name="description"
@@ -82,7 +82,7 @@ const About = () => {
           property="og:description"
           content="Discover our mission, vision, and achievements in helping students study abroad."
         />
-      </Head>
+      </Helmet>
       <div className="min-h-screen bg-black">
         <Navbar />
 

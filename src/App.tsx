@@ -258,6 +258,9 @@ const App = () => (
             <Route path="/tips/time-management-tips" element={<FirstTimeInternationalStudents />} />
             <Route path="/tips/:slug" element={<TipsDetailFallback />} />
 
+            {/* Scholarship Detail Routes */}
+            <Route path="/scholarship/undergraduate/:slug" element={<ScholarshipDetail />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingConsultationButton />

@@ -351,7 +351,7 @@ const Undergraduate = () => {
                 scholarship={scholarship} 
                 onApply={() => {
                   const slug = scholarship.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                  window.open(`/scholarship-details/${slug}`, '_blank');
+                  window.open(`/scholarship/undergraduate/${slug}`, '_blank');
                 }}
               />
             ))}
