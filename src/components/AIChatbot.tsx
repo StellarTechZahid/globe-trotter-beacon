@@ -30,6 +30,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [connectionStatus, setConnectionStatus] = useState<'connected' | 'connecting' | 'error'>('connected');
   const scrollAreaRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -62,6 +63,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
     setIsLoading(true);
 
     try {
+      setConnectionStatus('connecting');
       console.log('Sending message to groq-chat function...');
       
       // Pass all messages including the new user message for context
@@ -78,14 +80,24 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
 
       if (error) {
         console.error('Supabase function error:', error);
+        setConnectionStatus('error');
         throw new Error(`Function error: ${error.message}`);
       }
 
       console.log('Response from groq-chat:', data);
+      setConnectionStatus('connected');
 
-      const aiResponse = data?.choices?.[0]?.message?.content || 
-                        data?.message?.content ||
-                        "I'm sorry, I couldn't process that request. Please try again or contact our support team for immediate assistance.";
+      // Handle different response formats from the API
+      let aiResponse;
+      if (data?.choices?.[0]?.message?.content) {
+        aiResponse = data.choices[0].message.content;
+      } else if (data?.message?.content) {
+        aiResponse = data.message.content;
+      } else if (typeof data === 'string') {
+        aiResponse = data;
+      } else {
+        aiResponse = "I'm sorry, I couldn't process that request. Please try again or contact our support team for immediate assistance.";
+      }
 
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -97,6 +109,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Error sending message:', error);
+      setConnectionStatus('error');
       toast.error('Failed to get AI response. Please try again.');
       
       const errorMessage: Message = {
@@ -150,7 +163,19 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ onClose }) => {
                 <span className="font-bold text-xl">AI Study Assistant</span>
                 <Sparkles className="h-5 w-5 text-black animate-pulse" />
               </div>
-              <p className="text-sm opacity-80 font-medium">Powered by Advanced AI • Always Ready to Help</p>
+              <div className="flex items-center space-x-2">
+                <p className="text-sm opacity-80 font-medium">Powered by Advanced AI</p>
+                <div className={`w-2 h-2 rounded-full ${
+                  connectionStatus === 'connected' ? 'bg-green-500' : 
+                  connectionStatus === 'connecting' ? 'bg-yellow-500 animate-pulse' : 
+                  'bg-red-500'
+                }`} />
+                <span className="text-xs opacity-70">
+                  {connectionStatus === 'connected' ? 'Online' : 
+                   connectionStatus === 'connecting' ? 'Connecting...' : 
+                   'Connection Error'}
+                </span>
+              </div>
             </div>
           </div>
           <div className="flex items-center space-x-2">

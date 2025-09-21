@@ -42,6 +42,15 @@ import EuropeanCountries from "./pages/scholarship/EuropeanCountries";
 import CentralAsianCountries from "./pages/scholarship/CentralAsianCountries";
 import ScholarshipDetail from "./pages/scholarship/ScholarshipDetail";
 
+// Undergraduate scholarship pages
+import GKSGlobalKoreaScholarship from "./pages/scholarship/undergraduate/GKSGlobalKoreaScholarship";
+import BolashakGovernmentScholarship from "./pages/scholarship/undergraduate/BolashakGovernmentScholarship";
+import MBZUAIScholarship from "./pages/scholarship/undergraduate/MBZUAIScholarship";
+import RegionalScholarshipsItaly from "./pages/scholarship/undergraduate/RegionalScholarshipsItaly";
+import StudyInSaudiArabiaScholarship from "./pages/scholarship/undergraduate/StudyInSaudiArabiaScholarship";
+import UniversitasSebelasMareScholarship from "./pages/scholarship/undergraduate/UniversitasSebelasMareScholarship";
+import AlBukhariUniversityScholarship from "./pages/scholarship/undergraduate/AlBukhariUniversityScholarship";
+
 // Country pages
 import UKPage from "./pages/countries/UKPage";
 import USAPage from "./pages/countries/USAPage";
@@ -259,6 +268,13 @@ const App = () => (
             <Route path="/tips/:slug" element={<TipsDetailFallback />} />
 
             {/* Scholarship Detail Routes */}
+            <Route path="/scholarship/undergraduate/gks-global-korea-scholarship" element={<GKSGlobalKoreaScholarship />} />
+            <Route path="/scholarship/undergraduate/bolashak-government-scholarship" element={<BolashakGovernmentScholarship />} />
+            <Route path="/scholarship/undergraduate/mbzuai-scholarship" element={<MBZUAIScholarship />} />
+            <Route path="/scholarship/undergraduate/regional-scholarships-italy" element={<RegionalScholarshipsItaly />} />
+            <Route path="/scholarship/undergraduate/study-in-saudi-arabia-scholarship" element={<StudyInSaudiArabiaScholarship />} />
+            <Route path="/scholarship/undergraduate/universitas-sebelas-maret-scholarship" element={<UniversitasSebelasMareScholarship />} />
+            <Route path="/scholarship/undergraduate/al-bukhari-university-scholarship" element={<AlBukhariUniversityScholarship />} />
             <Route path="/scholarship/undergraduate/:slug" element={<ScholarshipDetail />} />
 
             <Route path="*" element={<NotFound />} />
