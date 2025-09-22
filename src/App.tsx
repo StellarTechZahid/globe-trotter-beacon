@@ -48,6 +48,9 @@ import BolashakGovernmentScholarship from "./pages/scholarship/undergraduate/Bol
 import MBZUAIScholarship from "./pages/scholarship/undergraduate/MBZUAIScholarship";
 import RegionalScholarshipsItaly from "./pages/scholarship/undergraduate/RegionalScholarshipsItaly";
 import StudyInSaudiArabiaScholarship from "./pages/scholarship/undergraduate/StudyInSaudiArabiaScholarship";
+
+// PhD scholarship pages
+import GatesCambridgeScholarship from "./pages/scholarship/phd/GatesCambridgeScholarship";
 import UniversitasSebelasMareScholarship from "./pages/scholarship/undergraduate/UniversitasSebelasMareScholarship";
 import AlBukhariUniversityScholarship from "./pages/scholarship/undergraduate/AlBukhariUniversityScholarship";
 
@@ -176,6 +179,9 @@ const App = () => (
             <Route path="/scholarship/european-countries" element={<EuropeanCountries />} />
             <Route path="/scholarship/central-asian-countries" element={<CentralAsianCountries />} />
             <Route path="/scholarship-details/:slug" element={<ScholarshipDetail />} />
+            
+            {/* PhD Scholarship Detail Routes */}
+            <Route path="/scholarship/phd/gates-cambridge-scholarships" element={<GatesCambridgeScholarship />} />
 
             {/* Country Routes */}
             <Route path="/countries/uk" element={<UKPage />} />

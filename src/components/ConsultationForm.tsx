@@ -35,11 +35,10 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onSuccess }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://ukdzoapwfritldskfzxo.supabase.co/functions/v1/send-consultation-email', {
+      const response = await fetch('/api/functions/v1/send-consultation-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrZHpvYXB3ZnJpdGxkc2tmenhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE1Mzc5OTcsImV4cCI6MjA2NzExMzk5N30.KMj-InYkxE9cHVpZgJpZvP9OB_YF2RkMQumlks-P2sQ`
         },
         body: JSON.stringify(formData),
       });

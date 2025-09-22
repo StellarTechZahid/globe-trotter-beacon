@@ -13,8 +13,9 @@ const PhD = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
 
-  const scrollToConsultation = () => {
-    window.location.href = '/#consultation-form';
+  const handleScholarshipClick = (title: string) => {
+    const slug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    window.location.href = `/scholarship/phd/${slug}`;
   };
 
   const scholarships = [
@@ -299,7 +300,7 @@ const PhD = () => {
               <ScholarshipCard 
                 key={index} 
                 scholarship={scholarship} 
-                onApply={scrollToConsultation}
+                onApply={() => handleScholarshipClick(scholarship.title)}
               />
             ))}
           </div>
