@@ -19,164 +19,204 @@ const PhD = () => {
 
   const scholarships = [
     {
-      title: "Global Research Grants",
-      description: "Funding for PhD candidates pursuing research in any field, worldwide",
-      amount: "$30,000 - $70,000",
-      country: "Europe",
-      university: "Various Universities",
-      deadline: "December 15, 2024",
-      requirements: ["Research proposal", "Academic transcripts", "Letters of recommendation", "Statement of purpose"],
-      coverage: "Full tuition + living stipend + research expenses"
-    },
-    {
-      title: "STEM Doctoral Fellowships",
-      description: "Dedicated funding for PhD students in science, technology, engineering, and mathematics",
-      amount: "$35,000 - $75,000",
-      country: "USA",
-      university: "Top Research Universities",
-      deadline: "January 31, 2025",
-      requirements: ["STEM background", "Research experience", "GRE scores", "Faculty endorsement"],
-      coverage: "Tuition + health insurance + conference travel"
-    },
-    {
-      title: "Social Sciences PhD Awards",
-      description: "Support for doctoral research in social sciences, humanities, and related fields",
-      amount: "$25,000 - $65,000",
+      title: "Gates Cambridge Scholarships",
+      description: "Full-cost scholarships for outstanding applicants from outside the UK to pursue graduate studies at the University of Cambridge",
+      amount: "£40,000 - £60,000",
       country: "UK",
-      university: "Leading UK Universities",
-      deadline: "February 28, 2025",
-      requirements: ["Social science background", "Research interests", "Writing sample", "References"],
-      coverage: "Tuition fees + research grant + living costs"
+      university: "University of Cambridge",
+      deadline: "October 11, 2024 (US Citizens), December 5, 2024 (Other Countries)",
+      requirements: ["Outstanding intellectual ability", "Leadership potential", "Commitment to improving lives of others", "Good fit for Cambridge"],
+      coverage: "Full tuition + living stipend + development funding + family allowance"
     },
     {
-      title: "International PhD Scholarships",
-      description: "Funding for international students pursuing doctoral studies in various disciplines",
-      amount: "$20,000 - $60,000",
+      title: "Rhodes Scholarships",
+      description: "World's oldest international scholarship programme, enabling outstanding young people from around the world to study at the University of Oxford",
+      amount: "£17,310 - £19,340",
+      country: "UK",
+      university: "University of Oxford",
+      deadline: "Various (July-October 2024 by constituency)",
+      requirements: ["Academic excellence", "Energy to use talents to the full", "Truth, courage, devotion to duty", "Sympathy, kindness, unselfishness"],
+      coverage: "University + college fees + living stipend + travel costs + visa fees"
+    },
+    {
+      title: "Fulbright Foreign Student Program",
+      description: "Flagship international educational exchange program sponsored by the U.S. government for graduate study, research, and teaching in the United States",
+      amount: "$25,000 - $45,000",
+      country: "USA",
+      university: "Various US Universities",
+      deadline: "May - October 2024 (varies by country)",
+      requirements: ["Bachelor's degree", "English proficiency", "Leadership potential", "Return to home country commitment"],
+      coverage: "Tuition + living stipend + airfare + health insurance"
+    },
+    {
+      title: "Australian Government Research Training Program (RTP)",
+      description: "Competitive merit-based scholarships providing fee offset and living allowance for domestic and international Higher Degree by Research students",
+      amount: "AUD $31,000 - $35,000",
       country: "Australia",
-      university: "Group of Eight Universities",
-      deadline: "March 31, 2025",
-      requirements: ["International student status", "Academic excellence", "Research potential", "English proficiency"],
-      coverage: "Partial tuition + living allowance + visa support"
+      university: "All Australian Universities",
+      deadline: "Various (typically May-August)",
+      requirements: ["First-class honours or equivalent", "Research proposal", "Academic transcripts", "References"],
+      coverage: "Tuition fees + living allowance + thesis allowance + overseas student health cover"
     },
     {
-      title: "Innovation and Technology PhD Grants",
-      description: "Funding for PhD research focused on innovation, technology, and entrepreneurship",
-      amount: "$40,000 - $80,000",
+      title: "Vanier Canada Graduate Scholarships",
+      description: "Canada's most prestigious doctoral scholarships, attracting and retaining world-class doctoral students and establishing Canada as a global center of excellence",
+      amount: "CAD $50,000 annually for 3 years",
       country: "Canada",
-      university: "Top Canadian Universities",
-      deadline: "April 15, 2025",
-      requirements: ["Innovation focus", "Technical skills", "Project proposal", "Industry experience"],
-      coverage: "Full funding + mentorship + commercialization support"
+      university: "Eligible Canadian Universities",
+      deadline: "November 2, 2024",
+      requirements: ["Nominated by Canadian institution", "Academic excellence", "Research potential", "Leadership"],
+      coverage: "Annual stipend of $50,000 for three years"
     },
     {
-      title: "Environmental Science PhD Fellowships",
-      description: "Support for doctoral research in environmental science, sustainability, and conservation",
-      amount: "$30,000 - $70,000",
+      title: "DAAD Research Grants for Doctoral Candidates",
+      description: "Funding for highly qualified foreign graduates to pursue doctoral studies at German universities and research institutions",
+      amount: "€1,400 monthly + benefits",
       country: "Germany",
-      university: "Technical Universities",
-      deadline: "May 31, 2025",
-      requirements: ["Environmental science background", "Research interests", "Fieldwork experience", "German language"],
-      coverage: "Tuition + research stipend + travel grants"
+      university: "German Universities and Research Institutes",
+      deadline: "Various deadlines throughout the year",
+      requirements: ["Master's degree", "Research project", "Academic excellence", "German or English proficiency"],
+      coverage: "Monthly stipend + travel allowance + health insurance + family allowance"
     },
     {
-      title: "Medical Research PhD Scholarships",
-      description: "Funding for PhD candidates conducting medical research in various healthcare fields",
-      amount: "$35,000 - $75,000",
-      country: "Sweden",
-      university: "Medical Universities",
-      deadline: "June 30, 2025",
-      requirements: ["Medical background", "Research experience", "Clinical skills", "Ethical standards"],
-      coverage: "Full tuition + research funding + conference attendance"
-    },
-    {
-      title: "Engineering PhD Awards",
-      description: "Support for doctoral research in engineering disciplines, including civil, mechanical, and electrical",
-      amount: "$25,000 - $65,000",
-      country: "Netherlands",
-      university: "Technological Universities",
-      deadline: "July 31, 2025",
-      requirements: ["Engineering background", "Technical skills", "Research proposal", "Industry connections"],
-      coverage: "Tuition fees + research grant + living costs"
-    },
-    {
-      title: "Business and Management PhD Grants",
-      description: "Funding for PhD research in business administration, management, and economics",
-      amount: "$40,000 - $80,000",
-      country: "Singapore",
-      university: "Business Schools",
-      deadline: "August 15, 2025",
-      requirements: ["Business background", "Analytical skills", "Research interests", "GMAT scores"],
-      coverage: "Full funding + mentorship + networking opportunities"
-    },
-    {
-      title: "Arts and Humanities PhD Scholarships",
-      description: "Support for doctoral research in arts, humanities, and cultural studies",
-      amount: "$30,000 - $70,000",
-      country: "Italy",
-      university: "Art and Humanities Universities",
-      deadline: "September 30, 2025",
-      requirements: ["Arts/Humanities background", "Research interests", "Writing sample", "Language proficiency"],
-      coverage: "Tuition + research stipend + travel grants"
-    },
-    {
-      title: "Education PhD Fellowships",
-      description: "Funding for PhD candidates pursuing research in education, pedagogy, and learning sciences",
-      amount: "$35,000 - $75,000",
-      country: "Finland",
-      university: "Education Universities",
-      deadline: "October 31, 2025",
-      requirements: ["Education background", "Teaching experience", "Research proposal", "Educational philosophy"],
-      coverage: "Full tuition + research funding + conference attendance"
-    },
-    {
-      title: "Law and Legal Studies PhD Awards",
-      description: "Support for doctoral research in law, legal studies, and human rights",
-      amount: "$25,000 - $65,000",
+      title: "Swiss Government Excellence Scholarships",
+      description: "Scholarships for foreign scholars and artists for research or studies at Swiss public funded universities and research institutes",
+      amount: "CHF 1,920 monthly",
       country: "Switzerland",
-      university: "Law Schools",
-      deadline: "November 30, 2025",
-      requirements: ["Law background", "Legal research skills", "Writing sample", "Ethical standards"],
-      coverage: "Tuition fees + research grant + living costs"
+      university: "Swiss Universities and Federal Institutes of Technology",
+      deadline: "Various (September-December 2024)",
+      requirements: ["Master's degree", "Research project", "Academic merit", "Language proficiency"],
+      coverage: "Monthly allowance + tuition fee exemption + health insurance + housing allowance"
     },
     {
-      title: "Psychology PhD Scholarships",
-      description: "Funding for doctoral research in psychology and behavioral sciences",
-      amount: "$30,000 - $70,000",
-      country: "Norway",
-      university: "Psychology Departments",
-      deadline: "December 31, 2025",
-      requirements: ["Psychology background", "Research experience", "Statistical skills", "Ethical training"],
-      coverage: "Full tuition + research stipend + conference travel"
+      title: "Japan MEXT Scholarships (Research Students)",
+      description: "Japanese government scholarships for international students to pursue graduate studies and research at Japanese universities",
+      amount: "¥143,000 - ¥145,000 monthly",
+      country: "Japan",
+      university: "Japanese National, Public and Private Universities",
+      deadline: "May - June 2024 (Embassy track), December - January (University track)",
+      requirements: ["Bachelor's/Master's degree", "Research plan", "Language proficiency", "Age limits apply"],
+      coverage: "Monthly allowance + tuition exemption + airfare + preparatory education"
     },
     {
-      title: "Computer Science PhD Awards",
-      description: "Support for doctoral research in computer science and artificial intelligence",
-      amount: "$45,000 - $85,000",
+      title: "Erasmus Mundus Joint Doctoral Programmes",
+      description: "High-quality joint, integrated doctoral programmes offered by consortiums of higher education institutions from different European countries",
+      amount: "€1,400 - €1,800 monthly",
+      country: "Europe",
+      university: "European University Consortiums",
+      deadline: "Various (typically January-March 2025)",
+      requirements: ["Master's degree", "Mobility requirement", "English proficiency", "Research excellence"],
+      coverage: "Monthly living allowance + travel costs + participation costs + visa fees"
+    },
+    {
+      title: "Chinese Government Scholarship (CGS)",
+      description: "Bilateral or multilateral scholarship programs established by the Chinese government with other governments, institutions, universities or international organizations",
+      amount: "¥3,500 - ¥4,200 monthly",
+      country: "China",
+      university: "Designated Chinese Universities",
+      deadline: "January - April 2024 (varies by program)",
+      requirements: ["Master's degree", "Research plan", "Health certificate", "Age under 40"],
+      coverage: "Tuition exemption + accommodation + living allowance + medical insurance"
+    },
+    {
+      title: "Singapore International Graduate Award (SINGA)",
+      description: "Joint scholarship by A*STAR Graduate Academy, Nanyang Technological University, National University of Singapore and Singapore University of Technology and Design",
+      amount: "SGD $24,000 - $30,000 annually",
+      country: "Singapore",
+      university: "NTU, NUS, SUTD",
+      deadline: "January 31, 2025",
+      requirements: ["Bachelor's degree with honors", "TOEFL/IELTS scores", "Research interests", "Commitment to 3-year program"],
+      coverage: "Monthly stipend + tuition fees + conference allowance + thesis allowance"
+    },
+    {
+      title: "Netherlands Fellowship Programmes (NFP)",
+      description: "Demand-driven fellowship programme that promotes capacity building and human resources development in 51 countries",
+      amount: "€1,200 - €2,000 monthly",
+      country: "Netherlands",
+      university: "Dutch Universities and Institutes",
+      deadline: "February 1, 2025 (Round 1), May 1, 2025 (Round 2)",
+      requirements: ["Master's degree", "2+ years work experience", "Return commitment", "English proficiency"],
+      coverage: "Monthly allowance + tuition fees + international travel + visa costs"
+    },
+    {
+      title: "Swedish Institute Study Scholarships (SISS)",
+      description: "Scholarships for highly qualified students from developing countries to pursue full-time master's studies in Sweden",
+      amount: "SEK 10,000 monthly",
+      country: "Sweden",
+      university: "Swedish Universities",
+      deadline: "February 1, 2025",
+      requirements: ["Bachelor's degree", "Leadership experience", "Work experience", "English proficiency"],
+      coverage: "Living allowance + travel grant + insurance + some course materials"
+    },
+    {
+      title: "Commonwealth PhD Scholarships",
+      description: "Scholarships for citizens of developing Commonwealth countries to pursue doctoral studies in the UK",
+      amount: "£15,000 - £18,000",
+      country: "UK",
+      university: "UK Universities",
+      deadline: "December 15, 2024",
+      requirements: ["First-class or upper second-class honours degree", "Commonwealth citizenship", "Research proposal", "Return commitment"],
+      coverage: "University tuition fees + thesis grant + monthly stipend + airfare + arrival allowance"
+    },
+    {
+      title: "Irish Research Council Postgraduate Scholarships",
+      description: "Funding for excellent research conducted by postgraduate students in any discipline in Ireland",
+      amount: "€18,000 annually",
       country: "Ireland",
-      university: "Technology Universities",
-      deadline: "January 15, 2026",
-      requirements: ["CS background", "Programming skills", "Research proposal", "Technical portfolio"],
-      coverage: "Full funding + equipment + industry partnerships"
+      university: "Irish Higher Education Institutions",
+      deadline: "February 2025",
+      requirements: ["Bachelor's/Master's degree", "Research proposal", "Institutional support", "Academic excellence"],
+      coverage: "Annual stipend + fees contribution + research expenses"
     },
     {
-      title: "Economics PhD Fellowships",
-      description: "Funding for PhD candidates in economics and econometrics",
-      amount: "$35,000 - $75,000",
+      title: "Austrian Marshall Plan Scholarships",
+      description: "Scholarships for young Austrian and American students to conduct part of their studies or research in the respective other country",
+      amount: "€1,050 monthly",
+      country: "Austria",
+      university: "Austrian Universities",
+      deadline: "January 31, 2025",
+      requirements: ["Enrolled in graduate program", "US citizenship/permanent residence", "Academic excellence", "Project proposal"],
+      coverage: "Monthly allowance + travel costs + insurance"
+    },
+    {
+      title: "Denmark Government Scholarships",
+      description: "Government scholarships under the Cultural Agreements with various countries for studies at Danish institutions of higher education",
+      amount: "DKK 7,000 monthly",
+      country: "Denmark",
+      university: "Danish Universities",
+      deadline: "March 15, 2025",
+      requirements: ["Bachelor's degree", "Academic merit", "Cultural agreement country citizenship", "Language proficiency"],
+      coverage: "Monthly allowance + tuition fee waiver + travel support"
+    },
+    {
+      title: "Belgium Development Cooperation Scholarships",
+      description: "Scholarships for students from developing countries to pursue doctoral studies in Belgium",
+      amount: "€1,100 - €1,300 monthly",
       country: "Belgium",
-      university: "Economics Departments",
-      deadline: "February 15, 2026",
-      requirements: ["Economics background", "Mathematical skills", "Research interests", "GRE scores"],
-      coverage: "Tuition + research grant + data access"
+      university: "Belgian Universities",
+      deadline: "February 28, 2025",
+      requirements: ["Master's degree", "Professional experience", "Development project relevance", "Return commitment"],
+      coverage: "Monthly allowance + accommodation + international travel + insurance"
     },
     {
-      title: "Mathematics PhD Scholarships",
-      description: "Support for doctoral research in pure and applied mathematics",
-      amount: "$30,000 - $70,000",
+      title: "New Zealand Development Scholarships (NZDS)",
+      description: "Scholarships for people from developing countries, particularly in the Pacific and Latin America, to study in New Zealand",
+      amount: "NZD $25,000 - $30,000",
       country: "New Zealand",
-      university: "Mathematics Departments",
-      deadline: "March 15, 2026",
-      requirements: ["Mathematics background", "Analytical skills", "Research proposal", "Academic excellence"],
-      coverage: "Full tuition + living stipend + conference support"
+      university: "New Zealand Universities",
+      deadline: "April 30, 2025",
+      requirements: ["Bachelor's degree", "Work experience", "Leadership potential", "English proficiency"],
+      coverage: "Tuition fees + living allowance + travel costs + insurance + establishment allowance"
+    },
+    {
+      title: "Taiwan ICDF Scholarships",
+      description: "Scholarships for international students from diplomatic allies and developing countries to pursue higher education in Taiwan",
+      amount: "NT$40,000 monthly",
+      country: "Taiwan",
+      university: "Taiwanese Universities",
+      deadline: "March 31, 2025",
+      requirements: ["Bachelor's/Master's degree", "Academic excellence", "Diplomatic ally/developing country citizen", "Health certificate"],
+      coverage: "Tuition + monthly allowance + airfare + insurance"
     }
   ];
 
