@@ -35,22 +35,28 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onSuccess }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/functions/v1/send-consultation-email', {
+      const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+      const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+      
+      if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+        throw new Error('Configuration error. Please contact support.');
+      }
+
+      const response = await fetch(`${SUPABASE_URL}/functions/v1/send-consultation-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${SUPABASE_PUBLISHABLE_KEY}`
         },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok || data.success) {
         toast.success('Registration Successful!', {
           description: 'Thank you for registering. We will contact you within 24 hours to schedule your free consultation.',
-          style: {
-            background: '#ea580c',
-            color: 'white',
-            border: '1px solid #ea580c'
-          }
+          duration: 5000,
         });
 
         setFormData({
@@ -66,18 +72,18 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onSuccess }) => {
           phoneNumber: ''
         });
 
-        // Call onSuccess callback if provided
         if (onSuccess) {
           onSuccess();
         }
       } else {
-        throw new Error('Failed to submit');
+        throw new Error(data.error || 'Failed to submit');
       }
 
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error('Something went wrong!', {
-        description: 'Please try again or contact us directly.',
+      toast.error('Submission Error', {
+        description: error instanceof Error ? error.message : 'Please try again or contact us directly at ahmadzahid50100@gmail.com',
+        duration: 6000,
       });
     } finally {
       setIsSubmitting(false);

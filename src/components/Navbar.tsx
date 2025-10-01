@@ -45,13 +45,13 @@ const Navbar = () => {
               </div>
             </Link>
 
-            {/* Desktop Navigation - Always Visible on Large Screens */}
-            <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+            {/* Desktop Navigation - Optimized for all screen sizes */}
+            <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
                     to={item.href}
-                    className="text-white hover:text-orange-500 transition-colors duration-200 font-medium flex items-center px-2 xl:px-3 py-2 whitespace-nowrap text-sm xl:text-base"
+                    className="text-white hover:text-orange-500 transition-colors duration-200 font-medium flex items-center px-1.5 lg:px-2 xl:px-3 py-2 whitespace-nowrap text-xs lg:text-sm xl:text-base"
                   >
                     {item.name}
                     {item.dropdown && <ChevronDown className="ml-1 h-3 w-3" />}
@@ -75,24 +75,9 @@ const Navbar = () => {
               ))}
               <Button 
                 onClick={scrollToConsultation}
-                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-4 py-2 ml-4 text-sm xl:text-base whitespace-nowrap"
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-2 lg:px-3 xl:px-4 py-2 ml-2 lg:ml-4 text-xs lg:text-sm xl:text-base whitespace-nowrap"
               >
                 Free Consultation
-              </Button>
-            </div>
-
-            {/* Tablet Navigation */}
-            <div className="hidden md:flex lg:hidden items-center space-x-1">
-              <Link to="/" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Home</Link>
-              <Link to="/services" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Services</Link>
-              <Link to="/countries" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Countries</Link>
-              <Link to="/scholarship" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Scholarships</Link>
-              <Link to="/contact" className="text-white hover:text-orange-500 px-2 py-1 text-sm">Contact</Link>
-              <Button 
-                onClick={scrollToConsultation}
-                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-2 py-1 ml-2 text-xs"
-              >
-                Free Call
               </Button>
             </div>
 
