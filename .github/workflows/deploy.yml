@@ -3,7 +3,7 @@ name: Deploy Abroad Academics Frontend to AWS
 on:
   push:
     branches:
-      - main  # or master
+      - main  # or master if that's your main branch
 
 jobs:
   deploy:
@@ -24,11 +24,11 @@ jobs:
         with:
           args: --acl public-read --delete
         env:
-          AWS_S3_BUCKET: ${{ secrets.BUCKET_NAME }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-          SOURCE_DIR: 'dist'  # or 'build' if using Create React App
+          SOURCE_DIR: 'dist'  # or 'build', depending on your project
 
       - name: Invalidate CloudFront cache
         uses: chetan/invalidate-cloudfront-action@v2
@@ -38,3 +38,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
+
