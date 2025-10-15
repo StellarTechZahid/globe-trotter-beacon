@@ -3,7 +3,7 @@ name: Deploy Abroad Academics Frontend to AWS
 on:
   push:
     branches:
-      - main  # or master if that's your main branch
+      - main  # or master if your repo uses that
 
 jobs:
   deploy:
@@ -28,7 +28,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-          SOURCE_DIR: 'dist'  # or 'build', depending on your project
+          SOURCE_DIR: 'dist'  # or 'build' if using React, adjust accordingly
 
       - name: Invalidate CloudFront cache
         uses: chetan/invalidate-cloudfront-action@v2
