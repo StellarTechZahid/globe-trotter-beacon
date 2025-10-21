@@ -136,16 +136,6 @@ const OurImpactSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300 bg-clip-text text-transparent">
-            Our Journey of Excellence
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Since 2023, we've been transforming dreams into reality through exceptional education consultancy services. 
-            Our commitment to excellence has made us Pakistan's most trusted study abroad partner.
-          </p>
-        </div>
-
         {/* Interactive Stats Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => {
