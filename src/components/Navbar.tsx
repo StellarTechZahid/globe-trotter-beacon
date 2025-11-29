@@ -47,6 +47,12 @@ const Navbar = () => {
 
             {/* Desktop Navigation - Optimized for all screen sizes */}
             <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
+              <Link
+                to="/student-portal"
+                className="text-white hover:text-orange-500 transition-colors duration-200 font-medium px-1.5 lg:px-2 xl:px-3 py-2 whitespace-nowrap text-xs lg:text-sm xl:text-base border border-orange-500 rounded-lg"
+              >
+                Student Portal
+              </Link>
               {navItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <Link
@@ -83,6 +89,12 @@ const Navbar = () => {
 
             {/* Mobile Navigation */}
             <div className="md:hidden flex items-center space-x-2">
+              <Link 
+                to="/student-portal"
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-2 py-1 text-xs rounded"
+              >
+                Portal
+              </Link>
               <Button 
                 onClick={scrollToConsultation}
                 className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-2 py-1 text-xs"
