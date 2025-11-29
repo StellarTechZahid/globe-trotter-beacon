@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import FloatingConsultationButton from "@/components/FloatingConsultationButton";
 import Home from "./pages/Home";
+import Auth from "./pages/Auth";
+import StudentPortal from "./pages/StudentPortal";
+import AdminPortal from "./pages/AdminPortal";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Countries from "./pages/Countries";
@@ -145,6 +148,9 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/student-portal" element={<StudentPortal />} />
+            <Route path="/admin" element={<AdminPortal />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />

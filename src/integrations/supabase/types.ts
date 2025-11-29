@@ -14,6 +14,116 @@ export type Database = {
   }
   public: {
     Tables: {
+      application_documents: {
+        Row: {
+          admin_feedback: string | null
+          application_id: string | null
+          created_at: string | null
+          document_type: string
+          file_name: string | null
+          file_url: string | null
+          id: string
+          reviewed_at: string | null
+          status: string | null
+          updated_at: string | null
+          uploaded_at: string | null
+        }
+        Insert: {
+          admin_feedback?: string | null
+          application_id?: string | null
+          created_at?: string | null
+          document_type: string
+          file_name?: string | null
+          file_url?: string | null
+          id?: string
+          reviewed_at?: string | null
+          status?: string | null
+          updated_at?: string | null
+          uploaded_at?: string | null
+        }
+        Update: {
+          admin_feedback?: string | null
+          application_id?: string | null
+          created_at?: string | null
+          document_type?: string
+          file_name?: string | null
+          file_url?: string | null
+          id?: string
+          reviewed_at?: string | null
+          status?: string | null
+          updated_at?: string | null
+          uploaded_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "application_documents_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "applications"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      applications: {
+        Row: {
+          application_deadline: string | null
+          assigned_counselor: string | null
+          created_at: string | null
+          id: string
+          notes: string | null
+          program_id: string | null
+          program_name: string
+          progress_percent: number | null
+          status: string | null
+          student_id: string | null
+          university_name: string
+          updated_at: string | null
+        }
+        Insert: {
+          application_deadline?: string | null
+          assigned_counselor?: string | null
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          program_id?: string | null
+          program_name: string
+          progress_percent?: number | null
+          status?: string | null
+          student_id?: string | null
+          university_name: string
+          updated_at?: string | null
+        }
+        Update: {
+          application_deadline?: string | null
+          assigned_counselor?: string | null
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          program_id?: string | null
+          program_name?: string
+          progress_percent?: number | null
+          status?: string | null
+          student_id?: string | null
+          university_name?: string
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "applications_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "programs"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "applications_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       consultation_forms: {
         Row: {
           budget: string
@@ -89,6 +199,283 @@ export type Database = {
           name?: string
           subject?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      eligibility_results: {
+        Row: {
+          created_at: string | null
+          eligible_countries: string[] | null
+          id: string
+          ineligible_countries: string[] | null
+          recommendations: string[] | null
+          requirements_missing: string[] | null
+          student_id: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          eligible_countries?: string[] | null
+          id?: string
+          ineligible_countries?: string[] | null
+          recommendations?: string[] | null
+          requirements_missing?: string[] | null
+          student_id?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          eligible_countries?: string[] | null
+          id?: string
+          ineligible_countries?: string[] | null
+          recommendations?: string[] | null
+          requirements_missing?: string[] | null
+          student_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "eligibility_results_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          budget_max: number | null
+          budget_min: number | null
+          created_at: string | null
+          current_education: string | null
+          date_of_birth: string | null
+          email: string
+          english_test_score: number | null
+          english_test_type: string | null
+          full_name: string
+          gpa: number | null
+          id: string
+          intake_preference: string | null
+          nationality: string | null
+          phone_number: string | null
+          preferred_countries: string[] | null
+          preferred_programs: string[] | null
+          profile_completion_percent: number | null
+          updated_at: string | null
+          work_experience_years: number | null
+        }
+        Insert: {
+          budget_max?: number | null
+          budget_min?: number | null
+          created_at?: string | null
+          current_education?: string | null
+          date_of_birth?: string | null
+          email: string
+          english_test_score?: number | null
+          english_test_type?: string | null
+          full_name: string
+          gpa?: number | null
+          id: string
+          intake_preference?: string | null
+          nationality?: string | null
+          phone_number?: string | null
+          preferred_countries?: string[] | null
+          preferred_programs?: string[] | null
+          profile_completion_percent?: number | null
+          updated_at?: string | null
+          work_experience_years?: number | null
+        }
+        Update: {
+          budget_max?: number | null
+          budget_min?: number | null
+          created_at?: string | null
+          current_education?: string | null
+          date_of_birth?: string | null
+          email?: string
+          english_test_score?: number | null
+          english_test_type?: string | null
+          full_name?: string
+          gpa?: number | null
+          id?: string
+          intake_preference?: string | null
+          nationality?: string | null
+          phone_number?: string | null
+          preferred_countries?: string[] | null
+          preferred_programs?: string[] | null
+          profile_completion_percent?: number | null
+          updated_at?: string | null
+          work_experience_years?: number | null
+        }
+        Relationships: []
+      }
+      programs: {
+        Row: {
+          application_deadline: string | null
+          created_at: string | null
+          currency: string | null
+          degree_level: string
+          description: string | null
+          duration_months: number | null
+          english_requirement: string | null
+          field_of_study: string
+          id: string
+          intake_months: string[] | null
+          min_english_score: number | null
+          min_gpa: number | null
+          name: string
+          program_url: string | null
+          tuition_fee_annual: number | null
+          university_id: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          application_deadline?: string | null
+          created_at?: string | null
+          currency?: string | null
+          degree_level: string
+          description?: string | null
+          duration_months?: number | null
+          english_requirement?: string | null
+          field_of_study: string
+          id?: string
+          intake_months?: string[] | null
+          min_english_score?: number | null
+          min_gpa?: number | null
+          name: string
+          program_url?: string | null
+          tuition_fee_annual?: number | null
+          university_id?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          application_deadline?: string | null
+          created_at?: string | null
+          currency?: string | null
+          degree_level?: string
+          description?: string | null
+          duration_months?: number | null
+          english_requirement?: string | null
+          field_of_study?: string
+          id?: string
+          intake_months?: string[] | null
+          min_english_score?: number | null
+          min_gpa?: number | null
+          name?: string
+          program_url?: string | null
+          tuition_fee_annual?: number | null
+          university_id?: string | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "programs_university_id_fkey"
+            columns: ["university_id"]
+            isOneToOne: false
+            referencedRelation: "universities"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      scholarships: {
+        Row: {
+          amount_max: number | null
+          amount_min: number | null
+          application_url: string | null
+          countries: string[] | null
+          created_at: string | null
+          currency: string | null
+          deadline: string | null
+          degree_levels: string[] | null
+          description: string | null
+          eligibility_criteria: string | null
+          fields_of_study: string[] | null
+          id: string
+          min_gpa: number | null
+          name: string
+          nationality_restrictions: string[] | null
+          provider: string
+          updated_at: string | null
+        }
+        Insert: {
+          amount_max?: number | null
+          amount_min?: number | null
+          application_url?: string | null
+          countries?: string[] | null
+          created_at?: string | null
+          currency?: string | null
+          deadline?: string | null
+          degree_levels?: string[] | null
+          description?: string | null
+          eligibility_criteria?: string | null
+          fields_of_study?: string[] | null
+          id?: string
+          min_gpa?: number | null
+          name: string
+          nationality_restrictions?: string[] | null
+          provider: string
+          updated_at?: string | null
+        }
+        Update: {
+          amount_max?: number | null
+          amount_min?: number | null
+          application_url?: string | null
+          countries?: string[] | null
+          created_at?: string | null
+          currency?: string | null
+          deadline?: string | null
+          degree_levels?: string[] | null
+          description?: string | null
+          eligibility_criteria?: string | null
+          fields_of_study?: string[] | null
+          id?: string
+          min_gpa?: number | null
+          name?: string
+          nationality_restrictions?: string[] | null
+          provider?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      universities: {
+        Row: {
+          city: string | null
+          country: string
+          country_ranking: number | null
+          created_at: string | null
+          description: string | null
+          id: string
+          is_partner: boolean | null
+          logo_url: string | null
+          name: string
+          updated_at: string | null
+          website_url: string | null
+          world_ranking: number | null
+        }
+        Insert: {
+          city?: string | null
+          country: string
+          country_ranking?: number | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          is_partner?: boolean | null
+          logo_url?: string | null
+          name: string
+          updated_at?: string | null
+          website_url?: string | null
+          world_ranking?: number | null
+        }
+        Update: {
+          city?: string | null
+          country?: string
+          country_ranking?: number | null
+          created_at?: string | null
+          description?: string | null
+          id?: string
+          is_partner?: boolean | null
+          logo_url?: string | null
+          name?: string
+          updated_at?: string | null
+          website_url?: string | null
+          world_ranking?: number | null
         }
         Relationships: []
       }
