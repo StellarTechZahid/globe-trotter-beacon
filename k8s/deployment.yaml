@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: globe-trotter-beacon
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: globe-trotter
+  template:
+    metadata:
+      labels:
+        app: globe-trotter
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80

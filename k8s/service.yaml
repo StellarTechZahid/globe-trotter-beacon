@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: globe-trotter-service
+spec:
+  selector:
+    app: globe-trotter
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
